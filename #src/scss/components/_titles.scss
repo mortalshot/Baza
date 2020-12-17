@@ -1,3 +1,20 @@
 .title {
-    
+
+    &-h2 {
+        font-weight: 600;
+        font-size: calc(20px + 34 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(69 / 54);
+        color: rgba($color: $Black, $alpha: 0.1);
+    }
+
+    &-h1 {
+        font-weight: 800;
+        font-size: calc(18px + 20 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(46 / 38);
+    }
+    &-h3 {
+        font-weight: 600;
+        font-size: calc(14px + 12 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        line-height: calc(33 / 26);
+    }
 }

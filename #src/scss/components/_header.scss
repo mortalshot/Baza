@@ -186,6 +186,7 @@
 		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(18 / 14);
 		white-space: nowrap;
+		color: $Black;
 
 		@media screen and (max-width: 767px) {
 			display: none;

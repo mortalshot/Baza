@@ -22,3 +22,305 @@
 
 // === Pages ===
 @import "pages/index";
+
+.firstscreen {
+	@include adaptiv-value("padding-top", 136, 30, 0);
+	@include adaptiv-value("padding-bottom", 115, 30, 0);
+	@include adaptiv-value("margin-bottom", -417, 0, 1);
+
+	@media screen and (min-width: 2560px) {
+		@include adaptiv-value("margin-bottom", -53, 0, 0);
+	}
+	@media screen and (min-width: 1920px) {
+		@include adaptiv-value("margin-bottom", -200, 0, 1);
+	}
+	@media screen and (min-width: 1600px) {
+		@include adaptiv-value("margin-bottom", -300, 0, 1);
+	}
+	@media screen and (min-width: 1440px) {
+		@include adaptiv-value("margin-bottom", -350, 0, 1);
+	}
+
+	overflow-x: hidden;
+
+	&__row {
+		display: flex;
+
+		@media screen and (max-width: 575px) {
+			display: block;
+		}
+	}
+
+	&__content {
+		flex: 0 0 45.5%;
+		padding-right: 20px;
+
+		@media screen and (max-width: 575px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 74, 20, 1);
+		max-width: 476px;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 91%;
+		}
+		@media screen and (max-width: 575px) {
+			max-width: 100%;
+		}
+	}
+
+	&__text {
+		max-width: 410px;
+		font-size: calc(16px + 12 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(36 / 28);
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 78%;
+		}
+		@media screen and (max-width: 575px) {
+			max-width: 100%;
+		}
+	}
+
+	&__image {
+		flex: 0 0 100%;
+		@include adaptiv-value("margin-top", -53, 0, 0);
+
+		@media screen and (max-width: 575px) {
+			margin: 0;
+		}
+	}
+}
+// !firstscreen end
+
+.steps {
+	@include adaptiv-value("padding-bottom", 137, 20, 1);
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 110, 30, 1);
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.step-item {
+	flex: 0 0 100%;
+	display: flex;
+
+	@media screen and (max-width: 1200px) {
+		margin-bottom: 25px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	@media screen and (max-width: 450px) {
+		margin-bottom: 30px;
+	}
+
+	&__wrapper {
+		max-width: 494px;
+		display: flex;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 44%;
+		}
+		@media screen and (max-width: 767px) {
+			max-width: 100%;
+		}
+		@media screen and (max-width: 450px) {
+			display: block;
+		}
+	}
+
+	&__image {
+		flex: 0 0 120px;
+		@include adaptiv-value("margin-right", 45, 15, 0);
+
+		@media screen and (max-width: 767px) {
+			flex: 0 0 20%;
+		}
+		@media screen and (max-width: 450px) {
+			max-width: 100px;
+			margin: 0px 0px 10px 0px;
+			position: relative;
+			padding-bottom: 50%;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 35, 10, 1);
+		max-width: 285px;
+		display: flex;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 82%;
+		}
+		@media screen and (max-width: 767px) {
+			max-width: 100%;
+		}
+	}
+
+	&--flex-end {
+		justify-content: flex-end;
+
+		.step-item__image {
+			@include adaptiv-value("margin-right", 35, 15, 0);
+		}
+	}
+}
+// !steps end
+
+.capabilities {
+	&__container {
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 110, 20, 1);
+	}
+
+	&__items {
+	}
+
+	&__item {
+		@include adaptiv-value("margin-bottom", 140, 40, 1);
+	}
+}
+
+.capability {
+	&__row {
+		display: flex;
+
+		@media screen and (max-width: 650px) {
+			display: block;
+		}
+	}
+
+	&--reverse {
+		.capability__row {
+			flex-direction: row-reverse;
+		}
+
+		.capability__content {
+			@include adaptiv-value("padding-left", 30, 0, 1);
+			@include adaptiv-value("padding-right", 150, 20, 1);
+
+			@media screen and (max-width: 767px) {
+				padding: 0px 20px 0px 0;
+			}
+			@media screen and (max-width: 650px) {
+				padding: 0;
+			}
+		}
+	}
+	&__image {
+		flex: 0 0 48.5%;
+
+		@media screen and (max-width: 650px) {
+			max-width: 70%;
+			margin: 0 auto 30px;
+		}
+		@media screen and (max-width: 500px) {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+
+		img {
+			box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.15);
+			border-radius: 6px;
+
+			@media screen and (max-width: 500px) {
+				box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.15);
+			}
+		}
+	}
+
+	&__content {
+		@include adaptiv-value("padding-top", 45, 20, 1);
+		@include adaptiv-value("padding-left", 150, 20, 1);
+		flex: 1 1 auto;
+
+		@media screen and (max-width: 767px) {
+			padding: 0px 0px 0px 20px;
+		}
+		@media screen and (max-width: 650px) {
+			padding: 0;
+		}
+	}
+
+	&__title {
+		@include adaptiv-value("margin-bottom", 40, 10, 1);
+	}
+
+	.nav-pills {
+		@include adaptiv-value("margin-bottom", 32, 20, 0);
+	}
+
+	.nav-pills .nav-link {
+		font-weight: 600;
+		font-size: calc(16px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(28 / 22);
+		color: $Black;
+		transition: 0.3s ease all 0s;
+		border-radius: 0;
+		padding: 0;
+		@include adaptiv-value("margin-right", 32, 15, 0);
+
+		&::last-child {
+			margin-right: 0;
+		}
+	}
+
+	.nav-pills .nav-link.active,
+	.nav-pills .show > .nav-link {
+		background-color: transparent;
+		color: $GreenM;
+		border-bottom: 2px solid $LGray;
+	}
+
+	.tab-content {
+		max-width: 410px;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 90%;
+		}
+		@media screen and (max-width: 650px) {
+			max-width: 100%;
+		}
+	}
+
+	.tab-pane {
+		line-height: calc(22 / 16);
+	}
+
+	.rating {
+		@include adaptiv-value("margin-bottom", 32, 10, 1);
+	}
+}
+// !capabilities end
+
+.rating {
+	display: flex;
+
+	&__item {
+		@include adaptiv-value("margin-right", 14, 7, 1);
+		&::last-child {
+			margin-right: 0;
+		}
+	}
+}
+// !rating component
