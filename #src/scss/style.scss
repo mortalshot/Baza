@@ -100,7 +100,7 @@
 	@include adaptiv-value("padding-bottom", 137, 20, 1);
 
 	&__title {
-		@include adaptiv-value("margin-bottom", 110, 30, 1);
+		@include adaptiv-value("margin-bottom", 110, 20, 1);
 	}
 
 	&__items {
@@ -282,6 +282,12 @@
 
 		&::last-child {
 			margin-right: 0;
+		}
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $GreenM, $alpha: 0.75);
+			}
 		}
 	}
 

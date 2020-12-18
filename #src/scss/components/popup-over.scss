@@ -1,6 +1,18 @@
 .popup-over {
 	position: relative;
 
+	&:hover {
+		.popup-over__body {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+
+			@media screen and (max-width: 991px) {
+				display: block;
+			}
+		}
+	}
+
 	&--right {
 		.popup-over__body {
 			left: auto;
@@ -8,20 +20,18 @@
 		}
 	}
 
+	&--top {
+		.popup-over__body {
+			top: 10px;
+			bottom: auto;
+			transform: translate(0, -100%);
+			padding-top: 0;
+			@include adaptiv-value("padding-bottom", 25, 15, 1);
+		}
+	}
+
 	&__title {
 		cursor: context-menu;
-
-		&:hover {
-			& + .popup-over__body {
-				opacity: 1;
-				visibility: visible;
-				pointer-events: auto;
-
-				@media screen and (max-width: 991px) {
-					display: block;
-				}
-			}
-		}
 	}
 
 	&__body {

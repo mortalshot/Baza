@@ -1,0 +1,150 @@
+.footer {
+	background-color: $GreenM;
+	color: $White;
+
+	&__top {
+		@include adaptiv-value("padding-top", 244, 30, 1);
+		@include adaptiv-value("padding-bottom", 155, 30, 1);
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: calc(18px + 14 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(42 / 32);
+		max-width: 611px;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 80%;
+		}
+		@media screen and (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		font-size: calc(16px + 12 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(36 / 28);
+
+		.text-link {
+			color: $Black;
+
+			&::before {
+				border-color: $Black;
+			}
+
+			@media screen and (min-width: 992px) {
+				&:hover {
+					color: rgba($color: $Black, $alpha: 0.75);
+
+					&::before {
+						border-color: rgba($color: $Black, $alpha: 0.75);
+					}
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		@include adaptiv-value("padding-top", 38, 20, 1);
+		@include adaptiv-value("padding-bottom", 38, 20, 1);
+		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(18 / 14);
+	}
+
+	&__bottom-left {
+		padding-right: 15px;
+		display: flex;
+
+		@media screen and (max-width: 575px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__privacy {
+		@include adaptiv-value("padding-right", 40, 20, 1);
+
+		@media screen and (max-width: 575px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	.popup-over__title {
+		color: $White;
+		position: relative;
+		transition: 0.3s ease all 0s;
+		white-space: nowrap;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			border-bottom: 2px dashed $White;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transform: translate(0, 100%);
+			transition: 0.3s ease all 0s;
+		}
+	}
+
+	.popup-over__body {
+		min-width: 280px;
+	}
+
+	.icon-kan {
+		font-size: calc(20px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+	}
+}
+
+.info {
+	&__caption {
+		font-weight: 600;
+		color: $Black;
+		margin-bottom: 19px;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__link {
+		display: inline-flex;
+		text-decoration: underline;
+		color: $Black;
+		@include adaptiv-value("margin-bottom", 17, 10, 0);
+		transition: 0.3s ease all 0s;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				text-decoration: underline;
+				color: rgba($color: $Black, $alpha: 0.75);
+			}
+		}
+		@media screen and (max-width: 767px) {
+			font-size: 14px;
+		}
+	}
+}
+
+.kan-logo {
+	i {
+		&::before {
+			transition: 0.3s ease all 0s;
+		}
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				&::before {
+					color: rgba($color: $White, $alpha: 0.75);
+				}
+			}
+		}
+	}
+}
