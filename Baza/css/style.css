@@ -757,8 +757,8 @@ img {
 }
 
 .firstscreen {
-  padding-top: calc(30px + 106 * ((100vw - 320px) / (1046)));
-  padding-bottom: calc(30px + 85 * ((100vw - 320px) / (1046)));
+  padding-top: 136px;
+  padding-bottom: 115px;
   margin-bottom: -417px;
   overflow-x: hidden;
 }
@@ -809,9 +809,9 @@ img {
 }
 
 #car {
-  -webkit-transform: translate(120px, -84px);
-      -ms-transform: translate(120px, -84px);
-          transform: translate(120px, -84px);
+  -webkit-transform: translate(120px, -79px);
+      -ms-transform: translate(120px, -79px);
+          transform: translate(120px, -79px);
 }
 
 .steps {
@@ -1078,7 +1078,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 2200px) {
   .firstscreen {
     margin-bottom: -200px;
   }
@@ -1086,7 +1086,7 @@ img {
 
 @media screen and (min-width: 2560px) {
   .firstscreen {
-    margin-bottom: calc(0px + -53 * ((100vw - 320px) / (1046)));
+    margin-bottom: -100px;
   }
 }
 
@@ -1161,6 +1161,14 @@ img {
 
   .news__text {
     margin-bottom: calc(10px + 10 * ((100vw - 320px) / (1046)));
+  }
+
+  .firstscreen {
+    padding-top: calc(30px + 106 * ((100vw - 320px) / (1046)));
+  }
+
+  .firstscreen {
+    padding-bottom: calc(30px + 85 * ((100vw - 320px) / (1046)));
   }
 
   .firstscreen {
@@ -1281,6 +1289,10 @@ img {
 
   .info__link {
     font-size: 14px;
+  }
+
+  .firstscreen {
+    overflow: hidden;
   }
 
   .step-item__wrapper {
@@ -1476,10 +1488,12 @@ img {
 
   .firstscreen__row {
     display: block;
+    margin: 0 -15px;
   }
 
   .firstscreen__content {
     margin-bottom: 20px;
+    padding: 0 15px;
   }
 
   .firstscreen__title {
@@ -1491,7 +1505,13 @@ img {
   }
 
   .firstscreen__image {
-    margin: 0;
+    margin: 150px 0 0;
+    -webkit-transform: scale(1.6);
+        -ms-transform: scale(1.6);
+            transform: scale(1.6);
+    -webkit-transform-origin: 0;
+        -ms-transform-origin: 0;
+            transform-origin: 0;
   }
 }
 
@@ -1512,6 +1532,10 @@ img {
 }
 
 @media screen and (max-width: 450px) {
+  .firstscreen__image {
+    margin-top: 120px;
+  }
+
   .step-item {
     margin-bottom: 30px;
   }
@@ -1538,9 +1562,9 @@ img {
   }
 }
 
-@media screen and (min-width: 1920px) and (max-width: 1207px) {
-  .firstscreen {
-    margin-bottom: calc(0px + -200 * ((100vw - 320px) / (1046)));
+@media screen and (max-width: 400px) {
+  .firstscreen__image {
+    margin-top: 100px;
   }
 }
 
