@@ -92,8 +92,23 @@
 		@media screen and (max-width: 575px) {
 			margin: 0;
 		}
+
+		svg {
+			display: block;
+			max-width: 100%;
+			height: auto
+		}
 	}
 }
+
+#carrotLabel, #potatoLabel, #appleLabel, #products, #success {
+	opacity: 0
+}
+
+#car {
+	transform: translate(120px, -84px);
+}
+
 // !firstscreen end
 
 .steps {

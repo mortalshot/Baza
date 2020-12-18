@@ -794,6 +794,26 @@ img {
   margin-top: calc(0px + -53 * ((100vw - 320px) / (1046)));
 }
 
+.firstscreen__image svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#carrotLabel,
+#potatoLabel,
+#appleLabel,
+#products,
+#success {
+  opacity: 0;
+}
+
+#car {
+  -webkit-transform: translate(120px, -84px);
+      -ms-transform: translate(120px, -84px);
+          transform: translate(120px, -84px);
+}
+
 .steps {
   padding-bottom: 137px;
 }
