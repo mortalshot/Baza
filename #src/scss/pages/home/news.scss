@@ -30,6 +30,10 @@
 		flex: 1 1 auto;
 		color: $Black;
 		transition: 0.3s ease all 0s;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 
 		@media screen and (min-width: 992px) {
 			&:hover {

@@ -1,3 +1,24 @@
 .btn {
-    
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 3px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &-green {
+        background-color: $GreenM;
+        color: $White;
+        transition: 0.3s ease all 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                background-color: $Green;
+                color: $White;
+            }
+        }
+    }
 }

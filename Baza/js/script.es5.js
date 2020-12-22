@@ -1,5 +1,7 @@
 "use strict";
 
+function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
+
 $(document).ready(function () {
   function testWebP(callback) {
     var webP = new Image();
@@ -21,6 +23,37 @@ $(document).ready(function () {
   $('.header__burger').click(function (event) {
     $('.header__burger, #navbarSupportedContent').toggleClass('active');
     $('body').toggleClass('lock');
+  });
+  $(function () {
+    var section = $('.section'),
+        nav = $('.header .navbar'),
+        navHeight = nav.outerHeight(); // получаем высоту навигации 
+    // поворот экрана 
+
+    window.addEventListener('orientationchange', function () {
+      navHeight = (_readOnlyError("navHeight"), nav.outerHeight());
+    }, false);
+    $(window).on('scroll', function () {
+      var position = $(this).scrollTop();
+      section.each(function () {
+        var top = $(this).offset().top - navHeight - 5,
+            bottom = top + $(this).outerHeight();
+
+        if (position >= top && position <= bottom) {
+          nav.find('.nav-link').removeClass('active');
+          section.removeClass('active');
+          $(this).addClass('active');
+          nav.find('.nav-link[href="#' + $(this).attr('id') + '"]').addClass('active');
+        }
+      });
+    });
+    nav.find('.nav-link').on('click', function () {
+      var id = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(id).offset().top - navHeight
+      }, 487);
+      return false;
+    });
   });
   var phone = $('#phone');
   var carrotLabel = $('#carrotLabel');

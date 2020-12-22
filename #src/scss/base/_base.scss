@@ -1,8 +1,8 @@
 body {
     font-family: $fontMain;
     font-weight: $fontWeight;
-    font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-    line-height: calc(21 / 16);
+    font-size: 16px;
+    line-height: 21px;
     color: $Black;
     overflow-x: hidden;
 
@@ -35,7 +35,7 @@ body {
 .container {
     max-width: #{$size-container + px};
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 
     @media screen and (min-width: $layoutDesktop + "px") {
         max-width: 88%;
@@ -45,6 +45,8 @@ body {
     }
 
     &-fluid {
+        padding: 0 20px;
+
         @media screen and (min-width: 992px) {
             padding: 0 30px;
         }
@@ -63,7 +65,7 @@ img {
 
 .text-link {
     font-weight: 500;
-    color: $Green;
+    color: $GreenM;
     position: relative;
     transition: 0.3s ease all 0s;
 
@@ -82,10 +84,10 @@ img {
 
     @media screen and (min-width: 992px) {
         &:hover {
-            color: rgba($color: $Green, $alpha: 0.75);
+            color: $Blue;
 
             &::before {
-                border-bottom: 2px dashed rgba($color: $Green, $alpha: 0.75);
+                border-bottom: 2px dashed $Blue;
             }
         }
     }

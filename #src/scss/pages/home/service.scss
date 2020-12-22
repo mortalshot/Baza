@@ -2,7 +2,7 @@
 	@include adaptiv-value("margin-bottom", 145, 30, 1);
 
 	&__title {
-		@include adaptiv-value("margin-bottom", 80, 20, 1);
+		@include adaptiv-value("margin-bottom", 80, 46, 1);
 	}
 
 	&__row {
@@ -30,7 +30,7 @@
 		}
 		@media screen and (max-width: 575px) {
 			flex: 0 0 100%;
-			margin-bottom: 30px;
+			margin-bottom: 64px;
 		}
 
 		&:last-child {
@@ -47,7 +47,7 @@
 	&__image {
 		position: relative;
 		padding-bottom: 58%;
-		@include adaptiv-value("margin-bottom", 42, 15, 1);
+		@include adaptiv-value("margin-bottom", 42, 30, 1);
 
 		@media screen and (max-width: 575px) {
 			max-width: 70%;
@@ -70,7 +70,7 @@
 	}
 
 	&__title {
-		@include adaptiv-value("margin-bottom", 28, 10, 1);
+		@include adaptiv-value("margin-bottom", 28, 14, 1);
 		display: flex;
 		align-items: center;
 
