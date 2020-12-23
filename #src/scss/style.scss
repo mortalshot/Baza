@@ -377,6 +377,9 @@
 	.navigation-drawer {
 		display: none;
 	}
+	.header__inner {
+		display: none;
+	}
 }
 
 .drawer-on {
@@ -384,7 +387,12 @@
 		width: auto;
 		left: 280px;
 		right: 0px;
+
+		&__home {
+			display: none;
+		}
 	}
+
 	.site__main,
 	.footer {
 		padding-left: 280px;
@@ -469,7 +477,7 @@
 .filter {
 	&__stirps {
 		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
-		flex: 1 1 33.333%;
+		flex: 1 1 auto;
 		padding-top: 40px;
 		padding-bottom: 10px;
 
@@ -482,11 +490,11 @@
 	}
 
 	&__modals {
-		flex: 1 1 33.333%;
+		flex: 1 1 auto;
 	}
 
 	&__category {
-		flex: 1 1 33.333%;
+		flex: 1 1 auto;
 		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
 		padding-top: 40px;
 
@@ -500,8 +508,6 @@
 }
 
 .filter-stirps {
-
-
 	&__row {
 	}
 
@@ -511,6 +517,7 @@
 	&__checkbox {
 		display: flex;
 		align-items: center;
+		margin-bottom: 6px;
 
 		.checkbox__label {
 			margin: 0;
@@ -550,7 +557,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 15px 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
+
+		@media screen and (max-height: 768px) {
+			padding-top: calc(10px + (15 - 10) * ((100vh - 650px) / (768 - 650)));
+			padding-bottom: calc(10px + (15 - 10) * ((100vh - 650px) / (768 - 650)));
+		}
+		@media screen and (max-height: 650px) {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 
 		&::after {
 			content: "";

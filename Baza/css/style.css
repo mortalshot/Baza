@@ -1405,10 +1405,18 @@ textarea.form__input {
   display: none;
 }
 
+.drawer-off .header__inner {
+  display: none;
+}
+
 .drawer-on .header {
   width: auto;
   left: 280px;
   right: 0px;
+}
+
+.drawer-on .header__home {
+  display: none;
 }
 
 .drawer-on .site__main,
@@ -1504,22 +1512,22 @@ textarea.form__input {
 .filter__stirps {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.333%;
-          flex: 1 1 33.333%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding-top: 40px;
   padding-bottom: 10px;
 }
 
 .filter__modals {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.333%;
-          flex: 1 1 33.333%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .filter__category {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.333%;
-          flex: 1 1 33.333%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   padding-top: 40px;
 }
@@ -1531,6 +1539,7 @@ textarea.form__input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 6px;
 }
 
 .filter-stirps__checkbox .checkbox__label {
@@ -1579,7 +1588,8 @@ textarea.form__input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 15px 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .filter-modals__link::after {
@@ -2485,6 +2495,11 @@ textarea.form__input {
     padding-top: calc(10px + (40 - 10) * ((100vh - 650px) / (768 - 650)));
   }
 
+  .filter-modals__link {
+    padding-top: calc(10px + (15 - 10) * ((100vh - 650px) / (768 - 650)));
+    padding-bottom: calc(10px + (15 - 10) * ((100vh - 650px) / (768 - 650)));
+  }
+
   .filter-selected__items {
     margin-bottom: calc(10px + (30 - 10) * ((100vh - 650px) / (768 - 650)));
   }
@@ -2501,6 +2516,11 @@ textarea.form__input {
 
   .filter__category {
     padding-top: 10px;
+  }
+
+  .filter-modals__link {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .filter-selected__items {
