@@ -1,7 +1,5 @@
 "use strict";
 
-function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
-
 $(document).ready(function () {
   function testWebP(callback) {
     var webP = new Image();
@@ -31,7 +29,7 @@ $(document).ready(function () {
     // поворот экрана 
 
     window.addEventListener('orientationchange', function () {
-      navHeight = (_readOnlyError("navHeight"), nav.outerHeight());
+      navHeight = nav.outerHeight();
     }, false);
     $(window).on('scroll', function () {
       var position = $(this).scrollTop();
@@ -55,6 +53,48 @@ $(document).ready(function () {
       return false;
     });
   });
+  var animItems = document.querySelectorAll('._anim-items');
+
+  if (animItems.length > 0) {
+    var animOnScroll = function animOnScroll(params) {
+      for (var index = 0; index < animItems.length; index++) {
+        var animItem = animItems[index];
+        var animItemHeight = animItem.offsetHeight;
+        var animItemOffset = offset(animItem).top;
+        var animStart = 4; // Коэффициент старта анимации
+
+        var animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+        if (animItemHeight > window.innerHeight) {
+          animItemPoint = window.innerHeight - window.innerHeight / animStart;
+        }
+
+        if (pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {
+          animItem.classList.add('_active');
+        } else {
+          if (!animItem.classList.contains('_anim-no-hide')) {
+            animItem.classList.remove('_active');
+          }
+        }
+      }
+    };
+
+    var offset = function offset(el) {
+      var rect = el.getBoundingClientRect(),
+          scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft
+      };
+    };
+
+    window.addEventListener('scroll', animOnScroll);
+    setTimeout(function () {
+      animOnScroll();
+    }, 300);
+  }
+
   var phone = $('#phone');
   var carrotLabel = $('#carrotLabel');
   var carrotLabelShadow = $('#carrotLabelShadow');

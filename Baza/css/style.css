@@ -291,8 +291,8 @@ img {
 .header .navbar .nav-link {
   padding: 5px;
   font-weight: 500;
-  font-size: calc(12px + 4 * ((100vw - 320px) / (1366 - 320)));
-  line-height: calc(25 / 16);
+  font-size: 16px;
+  line-height: 156%;
   color: #000;
   white-space: nowrap;
   -webkit-transition: 0.3s ease all 0s;
@@ -302,7 +302,7 @@ img {
 }
 
 .header .navbar .nav-link::before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 2px;
@@ -310,18 +310,18 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  -webkit-transform: translate(0, 19px) scale(0);
-      -ms-transform: translate(0, 19px) scale(0);
-          transform: translate(0, 19px) scale(0);
+  -webkit-transform: translate(0, 22px) scale(0);
+      -ms-transform: translate(0, 22px) scale(0);
+          transform: translate(0, 22px) scale(0);
   -webkit-transition: 0.3s ease all 0s;
   -o-transition: 0.3s ease all 0s;
   transition: 0.3s ease all 0s;
 }
 
 .header .navbar .nav-link.active::before {
-  -webkit-transform: translate(0, 19px) scale(1);
-      -ms-transform: translate(0, 19px) scale(1);
-          transform: translate(0, 19px) scale(1);
+  -webkit-transform: translate(0, 22px) scale(1);
+      -ms-transform: translate(0, 22px) scale(1);
+          transform: translate(0, 22px) scale(1);
 }
 
 .header .navbar-brand {
@@ -495,9 +495,9 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transition: 0.3s ease all 0s;
-  -o-transition: 0.3s ease all 0s;
-  transition: 0.3s ease all 0s;
+  -webkit-transition: 0.6s ease all 0s;
+  -o-transition: 0.6s ease all 0s;
+  transition: 0.6s ease all 0s;
   z-index: 1;
   width: 100%;
 }
@@ -731,7 +731,7 @@ img {
 }
 
 .service-card__caption {
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -842,8 +842,8 @@ img {
 
 .firstscreen__text {
   max-width: 410px;
-  font-size: calc(16px + 12 * ((100vw - 320px) / (1366 - 320)));
-  line-height: calc(36 / 28);
+  font-size: 28px;
+  line-height: 36px;
 }
 
 .firstscreen__image {
@@ -875,6 +875,7 @@ img {
 
 .steps {
   padding-bottom: 137px;
+  overflow: hidden;
 }
 
 .steps__title {
@@ -1020,6 +1021,47 @@ img {
   margin-bottom: 32px;
 }
 
+._anim-left {
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: 0.5s ease all 0s;
+  -o-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+._anim-right {
+  opacity: 0;
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  -webkit-transition: 0.5s ease all 0s;
+  -o-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+._anim-top {
+  -webkit-transform: translate(0, 100%);
+      -ms-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  -webkit-transition: 0.5s ease all 0s;
+  -o-transition: 0.5s ease all 0s;
+  transition: 0.5s ease all 0s;
+}
+
+._anim-left._active,
+._active ._anim-left,
+._anim-right._active,
+._active ._anim-right,
+._anim-top._active,
+._active ._anim-top {
+  opacity: 1;
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+}
+
 @media screen and (min-width: 768px) {
   .phone {
     height: 100%;
@@ -1077,6 +1119,12 @@ img {
     color: rgba(255, 255, 255, 0.75);
   }
 
+  .service-card--no-image .popup-over__body {
+    width: 542px;
+    right: 0;
+    left: auto;
+  }
+
   .news__text:hover {
     color: rgba(0, 0, 0, 0.75);
   }
@@ -1110,7 +1158,7 @@ img {
   }
 
   .firstscreen__title {
-    max-width: 91%;
+    max-width: 100%;
   }
 
   .firstscreen__text {
@@ -1157,7 +1205,7 @@ img {
 @media screen and (max-width: 1365.98px) {
   .title-h2 {
     font-size: calc(40px + 14 * ((100vw - 320px) / (1366 - 320)));
-    line-height: calc(69 / 54);
+    line-height: 110%;
   }
 
   .title-h1 {
@@ -1179,6 +1227,11 @@ img {
     font-size: calc(20px + 8 * ((100vw - 320px) / (1366 - 320)));
     line-height: calc(36 / 28);
   }
+
+  .firstscreen__text {
+    font-size: calc(22px + 6 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(36 / 28);
+  }
 }
 
 @media (max-width: 1217px) {
@@ -1195,7 +1248,7 @@ img {
   }
 
   .popup-over__body {
-    min-width: calc(150px + 90 * ((100vw - 320px) / (1046)));
+    min-width: calc(180px + 60 * ((100vw - 320px) / (1046)));
   }
 
   .footer__top {
@@ -1267,7 +1320,7 @@ img {
   }
 
   .firstscreen__title {
-    margin-bottom: calc(48px + 26 * ((100vw - 320px) / (1046)));
+    margin-bottom: calc(30px + 44 * ((100vw - 320px) / (1046)));
   }
 
   .steps {
@@ -1325,6 +1378,26 @@ img {
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .header .navbar .nav-link::before {
+    -webkit-transform: translate(0, 23px) scale(0);
+        -ms-transform: translate(0, 23px) scale(0);
+            transform: translate(0, 23px) scale(0);
+  }
+
+  .header .navbar .nav-link.active::before {
+    -webkit-transform: translate(0, 23px) scale(1);
+        -ms-transform: translate(0, 23px) scale(1);
+            transform: translate(0, 23px) scale(1);
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .header .navbar .nav-link {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   .phone__label {
     display: none;
@@ -1369,6 +1442,22 @@ img {
   .header .navbar .nav-item {
     margin-right: 10px;
   }
+
+  .header .navbar .nav-link {
+    font-size: 13px;
+  }
+
+  .header .navbar .nav-link::before {
+    -webkit-transform: translate(0, 24px) scale(0);
+        -ms-transform: translate(0, 24px) scale(0);
+            transform: translate(0, 24px) scale(0);
+  }
+
+  .header .navbar .nav-link.active::before {
+    -webkit-transform: translate(0, 24px) scale(1);
+        -ms-transform: translate(0, 24px) scale(1);
+            transform: translate(0, 24px) scale(1);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1384,15 +1473,15 @@ img {
     margin: 0px 0px 10px 0px;
   }
 
+  .header .navbar .nav-link {
+    font-size: 20px;
+    line-height: 140%;
+  }
+
   .header .navbar .nav-link::before {
     -webkit-transform: translate(0, 0) scale(0);
         -ms-transform: translate(0, 0) scale(0);
             transform: translate(0, 0) scale(0);
-  }
-
-  .header .navbar .nav-link {
-    font-size: 20px;
-    line-height: 140%;
   }
 
   .header .navbar .nav-link.active::before {
@@ -1641,7 +1730,7 @@ img {
 
   .capability__image {
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 
   .capability__image img {

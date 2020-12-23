@@ -4,7 +4,7 @@ $('.header__burger').click(function (event) {
 })
 
 $(function () {
-    const section = $('.section'),
+    let section = $('.section'),
         nav = $('.header .navbar'),
         navHeight = nav.outerHeight(); // получаем высоту навигации 
 

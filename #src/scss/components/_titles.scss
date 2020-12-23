@@ -7,7 +7,7 @@
 
         @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(40px + 14 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-            line-height: calc(69 / 54);
+            line-height: 110%;
         }
     }
 

@@ -101,8 +101,20 @@
 	}
 
 	&__caption {
-		font-weight: 400;
+		font-weight: 600;
 		@include adaptiv-value("margin-bottom", 20, 10, 1);
+	}
+
+
+
+	&--no-image {
+		.popup-over__body {
+			@media screen and (min-width: 992px) {
+				width: 542px;
+				right: 0;
+				left: auto;
+			}
+		}
 	}
 }
 
