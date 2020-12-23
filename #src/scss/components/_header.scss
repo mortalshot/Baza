@@ -260,9 +260,7 @@
 		@media screen and (min-width: 992px) {
 			&:hover {
 				i {
-					&::before {
-						color: rgba($color: #595959, $alpha: 0.75);
-					}
+					color: rgba($color: $DGray, $alpha: 0.75);
 				}
 			}
 		}
@@ -271,6 +269,7 @@
 	i {
 		display: flex;
 		font-size: calc(14px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		color: $DGray;
 
 		@media screen and (max-width: 575px) {
 			font-size: 20px;

@@ -190,11 +190,11 @@
 
 	&__title {
 		@include adaptiv-value("margin-bottom", 35, 31, 1);
-		max-width: 285px;
+		max-width: 300px;
 		display: flex;
 
 		@media screen and (min-width: $layoutDesktop + "px") {
-			max-width: 82%;
+			max-width: 83%;
 		}
 		@media screen and (max-width: 767px) {
 			max-width: 100%;
@@ -371,6 +371,198 @@
 	opacity: 1;
 	transform: translate(0);
 }
-
-
 // !animation
+
+.drawer-off {
+	.navigation-drawer {
+		display: none;
+	}
+}
+
+.drawer-on {
+	.header {
+		width: auto;
+		left: 280px;
+		right: 0px;
+	}
+	.site__main,
+	.footer {
+		padding-left: 280px;
+	}
+}
+
+.navigation-drawer {
+	background-color: $DGray2;
+	height: 100vh;
+	width: 280px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	color: $White;
+	overflow: hidden;
+	padding: 18px 25px;
+	display: flex;
+	flex-direction: column;
+
+	&__account {
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__footer {
+	}
+}
+
+.account {
+	padding-bottom: 21px;
+	border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
+
+	&__row {
+	}
+
+	&__avatar {
+		border-radius: 50%;
+		display: block;
+		width: 34px;
+		height: 34px;
+		margin-right: 16px;
+		flex: 0 0 34px;
+	}
+
+	&__person {
+		flex: 1 1 auto;
+	}
+
+	&__name {
+		margin-bottom: 2px;
+		font-weight: 500;
+	}
+
+	&__role {
+		color: rgba($color: $White, $alpha: 0.6);
+		font-size: 14px;
+		line-height: 1;
+	}
+
+	&__logout {
+		color: $White;
+		font-size: 20px;
+	}
+}
+.filter {
+	&__stirps {
+		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
+		flex: 0 0 33.333%;
+	}
+
+	&__modals {
+		flex: 0 0 33.333%;
+	}
+
+	&__category {
+		flex: 0 0 33.333%;
+	}
+}
+
+.filter-stirps {
+	&__row {
+	}
+
+	&__item {
+	}
+
+	&__checkbox {
+		display: flex;
+		align-items: center;
+
+		.checkbox__label {
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+		.checkbox__input:checked + .checkbox__label {
+			color: rgba($color: $White, $alpha: 0.3);
+
+			.filter-stirps__icon {
+				opacity: 0.3;
+			}
+		}
+	}
+
+	&__icon {
+		max-width: 20px;
+		margin-right: 10px;
+		position: relative;
+		transition: 0.3s ease all 0s;
+	}
+
+	&__name {
+		transition: 0.3s ease all 0s;
+	}
+}
+
+.filter-modals {
+	&__row {
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 14px;
+			height: 15px;
+			background: url(../img/icons/chevron-right.svg) no-repeat center/cover;
+		}
+	}
+
+	&__name {
+	}
+
+	&__quantity {
+	}
+}
+
+.filter-category {
+	&__title {
+	}
+
+	&__row {
+	}
+
+	&__item {
+	}
+
+	&__label {
+	}
+}
+.filter-selected {
+	&__row {
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
+
+	&__name {
+	}
+
+	&__result {
+	}
+
+	&__reset {
+	}
+}

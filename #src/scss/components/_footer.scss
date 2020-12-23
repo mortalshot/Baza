@@ -144,15 +144,12 @@
 
 .kan-logo {
 	i {
-		&::before {
-			transition: 0.3s ease all 0s;
-		}
+		color: $White;
+		transition: 0.3s ease all 0s;
 
 		@media screen and (min-width: 992px) {
 			&:hover {
-				&::before {
-					color: rgba($color: $White, $alpha: 0.75);
-				}
+				color: rgba($color: $White, $alpha: 0.75);
 			}
 		}
 	}
