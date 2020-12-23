@@ -27,11 +27,9 @@
 
 .icon-2:before {
   content: "\e904";
-  color: #595959;
 }
 .icon-1:before {
   content: "\e917";
-  color: #595959;
 }
 .icon-cart:before {
   content: "\e900";

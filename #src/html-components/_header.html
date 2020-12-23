@@ -14,17 +14,17 @@
     <div class="site__wrap @@draverClass">
         <div class="navigation-drawer">
             <div class="navigation-drawer__account account">
-                <div class="account__row row">
-                    <div class="account__avatar">
+                <div class="account__row">
+                    <a href="" class="account__avatar">
                         <img src="img/market/avatar.png" alt="">
-                    </div>
+                    </a>
                     <div class="account__person">
-                        <div class="account__name">Рамиль Саидов</div>
+                        <a href="" class="account__name">Рамиль Саидов</a>
                         <div class="account__role">Покупатель</div>
                     </div>
-                    <div class="account__logout">
+                    <a href="" class="account__logout">
                         <i class="icon-exit"></i>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="navigation-drawer__content filter">
@@ -93,58 +93,76 @@
                     </div>
                 </div>
                 <div class="filter__modals filter-modals">
-                    <div class="filter-modals__row row">
-                        <div class="filter-modals__item">
-                            <a href="" class="filter-modals__link">
-                                <div class="filter-modals__name">Продукт</div>
+                    <div class="filter-modals__item">
+                        <a href="" class="filter-modals__link">
+                            <div class="filter-modals__name">
+                                <span>Продукт</span>
                                 <div class="filter-modals__quantity"></div>
-                            </a>
-                        </div>
-                        <div class="filter-modals__item">
-                            <a href="" class="filter-modals__link">
-                                <div class="filter-modals__name">Сорт</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="filter-modals__item">
+                        <a href="" class="filter-modals__link">
+                            <div class="filter-modals__name">
+                                <span>Сорт</span>
                                 <div class="filter-modals__quantity"></div>
-                            </a>
-                        </div>
-                        <div class="filter-modals__item">
-                            <a href="" class="filter-modals__link">
-                                <div class="filter-modals__name">Страна</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="filter-modals__item">
+                        <a href="" class="filter-modals__link">
+                            <div class="filter-modals__name">
+                                <span>Страна</span>
                                 <div class="filter-modals__quantity">4</div>
-                            </a>
-                        </div>
-                        <div class="filter-modals__item">
-                            <a href="" class="filter-modals__link">
-                                <div class="filter-modals__name">Местонахождение</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="filter-modals__item">
+                        <a href="" class="filter-modals__link">
+                            <div class="filter-modals__name">
+                                <span>Местонахождение</span>
                                 <div class="filter-modals__quantity"></div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="filter__category filter-category">
                     <div class="filter-category__title">Категория</div>
                     <div class="filter-category__row row">
-                        <div class="filter-category__item">
-                            <div class="filter-category__label">
-                                <span>Высший сорт</span>
-                                <i class="icon-up"></i>
+                        <div class="filter-category__item col-12 col-md-6">
+                            <div class="filter-category__checkbox checkbox">
+                                <input id="filterCategory-1" type="checkbox" name="category" class="checkbox__input">
+                                <label for="filterCategory-1" class="checkbox__label">
+                                    <div class="filter-category__name">Высший сорт</div>
+                                    <div class="filter-category__icon"><i class="icon-up"></i></div>
+                                </label>
                             </div>
                         </div>
-                        <div class="filter-category__item">
-                            <div class="filter-category__label">
-                                <span>Первый сорт</span>
-                                <i class="icon-1"></i>
+                        <div class="filter-category__item col-12 col-md-6">
+                            <div class="filter-category__checkbox checkbox">
+                                <input id="filterCategory-2" type="checkbox" name="category" class="checkbox__input">
+                                <label for="filterCategory-2" class="checkbox__label">
+                                    <div class="filter-category__name">Первый сорт</div>
+                                    <div class="filter-category__icon"><i class="icon-1"></i></div>
+                                </label>
                             </div>
                         </div>
-                        <div class="filter-category__item">
-                            <div class="filter-category__label">
-                                <span>Некондиция</span>
-                                <i class="icon-down"></i>
+                        <div class="filter-category__item col-12 col-md-6">
+                            <div class="filter-category__checkbox checkbox">
+                                <input id="filterCategory-3" type="checkbox" name="category" class="checkbox__input">
+                                <label for="filterCategory-3" class="checkbox__label">
+                                    <div class="filter-category__name">Некондиция</div>
+                                    <div class="filter-category__icon"><i class="icon-down"></i></div>
+                                </label>
                             </div>
                         </div>
-                        <div class="filter-category__item">
-                            <div class="filter-category__label">
-                                <span>Второй сорт</span>
-                                <i class="icon-2"></i>
+                        <div class="filter-category__item col-12 col-md-6">
+                            <div class="filter-category__checkbox checkbox">
+                                <input id="filterCategory-4" type="checkbox" name="category" class="checkbox__input">
+                                <label for="filterCategory-4" class="checkbox__label">
+                                    <div class="filter-category__name">Второй сорт</div>
+                                    <div class="filter-category__icon"><i class="icon-2"></i></div>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -152,7 +170,7 @@
             </div>
             <div class="navigation-drawer__footer">
                 <div class="filter-selected">
-                    <div class="filter-selected__row row">
+                    <div class="filter-selected__items">
                         <div class="filter-selected__item">
                             <a href="" class="filter-selected__link">
                                 <span class="filter-selected__name">овощи</span>
@@ -171,8 +189,26 @@
                                 <i class="icon-close"></i>
                             </a>
                         </div>
+                        <div class="filter-selected__item">
+                            <a href="" class="filter-selected__link">
+                                <span class="filter-selected__name">Россия</span>
+                                <i class="icon-close"></i>
+                            </a>
+                        </div>
+                        <div class="filter-selected__item">
+                            <a href="" class="filter-selected__link">
+                                <span class="filter-selected__name">Средняя Азия</span>
+                                <i class="icon-close"></i>
+                            </a>
+                        </div>
+                        <div class="filter-selected__item">
+                            <a href="" class="filter-selected__link">
+                                <span class="filter-selected__name">Южная Америка</span>
+                                <i class="icon-close"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="filter-selected__row row">
+                    <div class="filter-selected__row">
                         <div class="filter-selected__result">Результатов <span>10230</span></div>
                         <a href="" class="filter-selected__reset">Cбросить</a>
                     </div>
@@ -184,7 +220,7 @@
             <div class="header__container container-fluid">
                 <nav class="navbar navbar-expand-md">
                     <div class="navbar-brand">
-                        <a class="navbar-brand__link" href="#">БAZA</a>
+                        <a class="navbar-brand__link" href="/">БAZA</a>
                         <div class="navbar-brand__text">Онлайн B2B платформа</div>
                     </div>
                     <div class="header__burger">

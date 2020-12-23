@@ -414,6 +414,14 @@
 	}
 
 	&__footer {
+		padding-top: 40px;
+
+		@media screen and (max-height: 768px) {
+			padding-top: calc(10px + (40 - 10) * ((100vh - 650px) / (768 - 650)));
+		}
+		@media screen and (max-height: 650px) {
+			padding-top: 10px;
+		}
 	}
 }
 
@@ -422,6 +430,8 @@
 	border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
 
 	&__row {
+		display: flex;
+		align-items: center;
 	}
 
 	&__avatar {
@@ -440,6 +450,8 @@
 	&__name {
 		margin-bottom: 2px;
 		font-weight: 500;
+		display: inline-block;
+		color: $White;
 	}
 
 	&__role {
@@ -453,22 +465,43 @@
 		font-size: 20px;
 	}
 }
+
 .filter {
 	&__stirps {
 		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
-		flex: 0 0 33.333%;
+		flex: 1 1 33.333%;
+		padding-top: 40px;
+		padding-bottom: 10px;
+
+		@media screen and (max-height: 768px) {
+			padding-top: calc(10px + (40 - 10) * ((100vh - 650px) / (768 - 650)));
+		}
+		@media screen and (max-height: 650px) {
+			padding-top: 10px;
+		}
 	}
 
 	&__modals {
-		flex: 0 0 33.333%;
+		flex: 1 1 33.333%;
 	}
 
 	&__category {
-		flex: 0 0 33.333%;
+		flex: 1 1 33.333%;
+		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
+		padding-top: 40px;
+
+		@media screen and (max-height: 768px) {
+			padding-top: calc(10px + (40 - 10) * ((100vh - 650px) / (768 - 650)));
+		}
+		@media screen and (max-height: 650px) {
+			padding-top: 10px;
+		}
 	}
 }
 
 .filter-stirps {
+
+
 	&__row {
 	}
 
@@ -480,6 +513,8 @@
 		align-items: center;
 
 		.checkbox__label {
+			margin: 0;
+
 			&::before,
 			&::after {
 				display: none;
@@ -507,16 +542,15 @@
 }
 
 .filter-modals {
-	&__row {
-	}
-
 	&__item {
+		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
 	}
 
 	&__link {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding: 15px 0;
 
 		&::after {
 			content: "";
@@ -528,41 +562,141 @@
 	}
 
 	&__name {
+		display: flex;
+		align-items: center;
+		padding-right: 15px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 18px;
+		color: $White;
+		transition: 0.3s ease all 0s;
 	}
 
 	&__quantity {
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 15px;
+		color: $DGray2;
+		border-radius: 1px;
+		position: relative;
+		margin-left: 9px;
+		padding: 0 2px;
+		transition: 0.3s ease all 0s;
+
+		&::after {
+			content: "";
+			background-color: $White;
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
 	}
 }
 
 .filter-category {
 	&__title {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 15px;
 	}
 
-	&__row {
+	&__checkbox {
+		display: flex;
+		align-items: center;
+		color: $DGray;
+		margin-bottom: 15px;
+
+		.checkbox__label {
+			border-radius: 2px;
+			padding: 2px 5px;
+			background-color: $Orange;
+			margin: 0;
+			transition: 0.3s ease all 0s;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+		.checkbox__input:checked + .checkbox__label {
+			background-color: rgba($color: $Pink, $alpha: 0.8);
+		}
 	}
 
-	&__item {
+	&__name {
+		margin-right: 4px;
+		font-size: 12px;
+		line-height: 15px;
 	}
 
-	&__label {
+	&__icon {
+		display: flex;
+		font-size: 9px;
+		line-height: 1;
 	}
 }
+
 .filter-selected {
-	&__row {
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -7px;
+		margin-bottom: 30px;
+
+		@media screen and (max-height: 768px) {
+			margin-bottom: calc(10px + (30 - 10) * ((100vh - 650px) / (768 - 650)));
+		}
+		@media screen and (max-height: 650px) {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__item {
+		padding: 3px 7px;
 	}
 
 	&__link {
+		font-size: 14px;
+		line-height: 1;
+		color: rgba($color: $White, $alpha: 0.8);
+		display: flex;
+		align-items: center;
+		transition: 0.3s ease all 0s;
+
+		i {
+			font-size: 8px;
+			display: inline-flex;
+			margin-left: 2px;
+		}
 	}
 
 	&__name {
 	}
 
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
 	&__result {
+		font-size: 16px;
+		line-height: 21px;
+		padding-right: 10px;
 	}
 
 	&__reset {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1;
+		color: $White;
+		text-decoration: underline;
+		transition: 0.3s ease all 0s;
 	}
 }
