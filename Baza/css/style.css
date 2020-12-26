@@ -2677,7 +2677,7 @@ textarea.form__input {
   top: 0;
   left: 0;
   opacity: 0;
-  z-index: 6;
+  z-index: 52;
   visibility: hidden;
   overflow-y: auto;
   overflow-x: hidden;
@@ -2830,12 +2830,6 @@ textarea.form__input {
   font-weight: 600;
 }
 
-.to-cart__footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .to-cart__label {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -2875,6 +2869,14 @@ textarea.form__input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width: 451px) {
+  .to-cart__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -3340,6 +3342,18 @@ textarea.form__input {
   .to-cart__content {
     padding-right: calc(15px + 18 * ((100vw - 320px) / (1046)));
   }
+
+  .to-cart__heading {
+    margin-bottom: calc(15px + 20 * ((100vw - 320px) / (1046)));
+  }
+
+  .to-cart__body {
+    margin-bottom: calc(15px + 15 * ((100vw - 320px) / (1046)));
+  }
+
+  .to-cart__body .product-item__product {
+    margin-bottom: calc(15px + 15 * ((100vw - 320px) / (1046)));
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -3755,10 +3769,6 @@ textarea.form__input {
     padding: 0px 0px 0px 20px;
   }
 
-  .popup__content {
-    padding: 25px 10px 60px;
-  }
-
   .popup__close {
     top: 15px;
     right: 7px;
@@ -4092,8 +4102,8 @@ textarea.form__input {
     display: none;
   }
 
-  .popup__body {
-    padding: 30px 0;
+  .to-cart__label {
+    margin: 0px 0px 20px 0px;
   }
 }
 

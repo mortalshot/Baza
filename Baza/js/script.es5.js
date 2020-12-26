@@ -263,20 +263,22 @@ $(document).ready(function () {
       body.classList.add('lock');
     });
     $(document).mouseup(function (e) {
-      var div = $('.navigation-drawer__wrapper');
+      if (!$('.popup').hasClass('open')) {
+        var div = $('.navigation-drawer__wrapper');
 
-      if (!div.is(e.target) && div.has(e.target).length === 0) {
-        $('.navigation-drawer__wrapper, .navigation-drawer').removeClass('active');
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+          $('.navigation-drawer__wrapper, .navigation-drawer').removeClass('active');
 
-        if (lockPadding.length > 0) {
-          for (var index = 0; index < lockPadding.length; index++) {
-            var el = lockPadding[index];
-            el.style.paddingRight = '0px';
+          if (lockPadding.length > 0) {
+            for (var index = 0; index < lockPadding.length; index++) {
+              var el = lockPadding[index];
+              el.style.paddingRight = '0px';
+            }
           }
-        }
 
-        body.style.paddingRight = '0px';
-        body.classList.remove('lock');
+          body.style.paddingRight = '0px';
+          body.classList.remove('lock');
+        }
       }
     });
   });
