@@ -23,536 +23,6 @@
 // === Pages ===
 @import "pages/index";
 
-.drawer-off {
-	.navigation-drawer {
-		display: none;
-	}
-	.header__inner {
-		display: none;
-	}
-}
-
-.drawer-on {
-	.header {
-		width: auto;
-		left: 280px;
-		right: 0px;
-
-		@media screen and (max-width: 1100px) {
-			left: 65px;
-		}
-		@media screen and (max-width: 660px) {
-			left: 0;
-		}
-
-		&__home {
-			display: none;
-		}
-	}
-
-	.site__main,
-	.footer {
-		padding-left: 280px;
-
-		@media screen and (max-width: 1100px) {
-			padding-left: 65px;
-		}
-	}
-
-	.site__main {
-		@media screen and (max-width: 660px) {
-			padding-top: $size-inner-header-height-mobile;
-			padding-left: 0;
-		}
-	}
-}
-
-.navigation-drawer {
-	@media screen and (max-width: 660px) {
-		z-index: 51;
-		transition: 0.8s ease all 0s;
-
-		&.active {
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			background: rgba(11, 11, 11, 0.8);
-			top: 0;
-			left: 0;
-		}
-	}
-
-	&__mobile {
-		display: none;
-
-		.navigation-drawer__result,
-		.filter-selected__reset {
-			display: none;
-		}
-
-		@media screen and (max-width: 1100px) {
-			display: block;
-			background-color: $DGray2;
-			height: 100vh;
-			width: 65px;
-			position: fixed;
-			left: 0;
-			top: 0;
-			color: $White;
-			overflow: hidden;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-
-			.account__avatar {
-				margin: 21px 0 0;
-			}
-
-			.navigation-drawer__burger {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-		}
-
-		@media screen and (max-width: 660px) {
-			top: auto;
-			bottom: 0;
-			right: 0;
-			width: 100%;
-			height: 50px;
-			padding: 15px 20px;
-			align-items: center;
-			flex-direction: row;
-			z-index: 3;
-
-			.navigation-drawer__burger {
-				position: initial;
-				top: auto;
-				left: auto;
-				transform: translate(0);
-				margin-right: 15px;
-
-				rect {
-					fill-opacity: 1;
-				}
-			}
-
-			.navigation-drawer__result {
-				display: flex;
-				flex: 1 1 auto;
-			}
-
-			.filter-selected__reset {
-				display: inline-block;
-				font-size: 14px;
-				line-height: 14px;
-			}
-		}
-	}
-
-	&__wrapper {
-		background-color: $DGray2;
-		height: 100vh;
-		width: 280px;
-		position: fixed;
-		left: 0;
-		top: 0;
-		color: $White;
-		overflow: hidden;
-		padding: 18px 25px;
-		display: flex;
-		flex-direction: column;
-
-		@media screen and (max-width: 1100px) {
-			z-index: 51;
-			transform: translate(-150%, 0);
-			transition: 0.3s ease all 0s;
-
-			&.active {
-				transform: translate(0);
-			}
-		}
-		@media screen and (max-width: 660px) {
-			right: 0;
-			top: auto;
-			bottom: 0;
-			transform: translate(0, 100%);
-			width: 100%;
-
-			.account {
-				display: none;
-			}
-		}
-		@media screen and (max-width: 660px) {
-			padding: 18px 20px 0;
-			height: 70vh;
-		}
-	}
-
-	&__content {
-		display: flex;
-		flex-direction: column;
-		overflow-y: auto;
-		overflow-x: hidden;
-
-		scrollbar-width: thin;
-		&::-webkit-scrollbar {
-			width: 10px;
-		}
-		&::-webkit-scrollbar-track {
-			border-radius: 3px;
-			background-color: #000;
-		}
-		&::-webkit-scrollbar-thumb {
-			border-radius: 3px;
-			background-color: #595959;
-		}
-
-		@media screen and (max-width: 660px) {
-			padding-right: 20px;
-		}
-	}
-
-	&__footer {
-		flex: 1 1 auto;
-		padding-top: 30px;
-		display: flex;
-		align-items: flex-end;
-
-		@media screen and (max-height: 768px) {
-			padding-top: calc(10px + (30 - 10) * ((100vh - 650px) / (768 - 650)));
-		}
-		@media screen and (max-height: 650px) {
-			padding-top: 10px;
-		}
-		@media screen and (max-width: 660px) {
-			margin: 0 -20px;
-		}
-	}
-}
-
-.account {
-	padding-bottom: 21px;
-	border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
-
-	&__row {
-		display: flex;
-		align-items: center;
-	}
-
-	&__avatar {
-		border-radius: 50%;
-		display: block;
-		width: 34px;
-		height: 34px;
-		margin-right: 16px;
-		flex: 0 0 34px;
-	}
-
-	&__person {
-		flex: 1 1 auto;
-	}
-
-	&__name {
-		margin-bottom: 2px;
-		font-weight: 500;
-		display: inline-block;
-		color: $White;
-		transition: 0.3s ease all 0s;
-	}
-
-	&__role {
-		color: rgba($color: $White, $alpha: 0.6);
-		font-size: 14px;
-		line-height: 1;
-	}
-
-	&__logout {
-		color: $White;
-		font-size: 20px;
-		transition: 0.3s ease all 0s;
-	}
-}
-
-.filter {
-	&__stirps {
-		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
-		padding-top: 40px;
-		padding-bottom: 21px;
-
-		@media screen and (max-height: 768px) {
-			padding-top: calc(10px + (40 - 10) * ((100vh - 650px) / (768 - 650)));
-			padding-bottom: calc(0px + (21 - 0) * ((100vh - 650px) / (768 - 650)));
-		}
-		@media screen and (max-height: 650px) {
-			padding-top: 10px;
-			padding-bottom: 0;
-		}
-	}
-
-	&__category {
-		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
-		padding-top: 30px;
-		padding-bottom: 17px;
-
-		@media screen and (max-height: 768px) {
-			padding-top: calc(10px + (30 - 10) * ((100vh - 650px) / (768 - 650)));
-			padding-bottom: calc(0px + (17 - 0) * ((100vh - 650px) / (768 - 650)));
-		}
-		@media screen and (max-height: 650px) {
-			padding-top: 10px;
-			padding-bottom: 0px;
-		}
-	}
-}
-
-.filter-stirps {
-	&__checkbox {
-		display: flex;
-		align-items: center;
-		margin-bottom: 9px;
-
-		.checkbox__label {
-			margin: 0;
-
-			&::before,
-			&::after {
-				display: none;
-			}
-		}
-		.checkbox__input:checked + .checkbox__label {
-			color: rgba($color: $White, $alpha: 0.3);
-
-			.filter-stirps__icon {
-				opacity: 0.3;
-			}
-		}
-	}
-
-	&__icon {
-		margin-right: 10px;
-		transition: 0.3s ease all 0s;
-		width: 20px;
-		position: relative;
-		padding-bottom: 20px;
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
-	}
-
-	&__name {
-		transition: 0.3s ease all 0s;
-	}
-}
-
-.filter-modals {
-	&__item {
-		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
-	}
-
-	&__link {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding-top: 14px;
-		padding-bottom: 14px;
-
-		@media screen and (max-height: 768px) {
-			padding-top: calc(10px + (14 - 10) * ((100vh - 650px) / (768 - 650)));
-			padding-bottom: calc(10px + (14 - 10) * ((100vh - 650px) / (768 - 650)));
-		}
-		@media screen and (max-height: 650px) {
-			padding-top: 10px;
-			padding-bottom: 10px;
-		}
-
-		&::after {
-			content: "";
-			display: block;
-			width: 14px;
-			height: 15px;
-			background: url(../img/icons/chevron-right.svg) no-repeat center/cover;
-		}
-	}
-
-	&__name {
-		display: flex;
-		align-items: center;
-		padding-right: 15px;
-		font-weight: 600;
-		font-size: 14px;
-		line-height: 18px;
-		color: $White;
-		transition: 0.3s ease all 0s;
-	}
-
-	&__quantity {
-		font-weight: 600;
-		font-size: 12px;
-		line-height: 15px;
-		color: $DGray2;
-		border-radius: 1px;
-		position: relative;
-		margin-left: 9px;
-		padding: 0 2px;
-		transition: 0.3s ease all 0s;
-
-		&::after {
-			content: "";
-			background-color: $White;
-			display: block;
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
-			z-index: -1;
-		}
-	}
-}
-
-.filter-category {
-	&__title {
-		font-weight: 600;
-		font-size: 14px;
-		line-height: 18px;
-		margin-bottom: 15px;
-	}
-
-	&__checkbox {
-		display: flex;
-		align-items: center;
-		color: $DGray;
-		margin-bottom: 15px;
-
-		.checkbox__label {
-			border-radius: 2px;
-			padding: 2px 5px;
-			background-color: $Orange;
-			margin: 0;
-			transition: 0.3s ease all 0s;
-
-			&::before,
-			&::after {
-				display: none;
-			}
-		}
-		.checkbox__input:checked + .checkbox__label {
-			background-color: rgba($color: $Pink, $alpha: 0.8);
-		}
-	}
-
-	&__name {
-		margin-right: 4px;
-		font-size: 12px;
-		line-height: 15px;
-	}
-
-	&__icon {
-		display: flex;
-		font-size: 9px;
-		line-height: 1;
-	}
-}
-
-.filter-selected {
-	@media screen and (max-width: 660px) {
-		width: 100%;
-		padding: 14.5px 20px;
-		background-color: $GreenM;
-		position: relative;
-		z-index: 2;
-	}
-
-	&__items {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -7px;
-		margin-bottom: 28px;
-
-		@media screen and (max-height: 768px) {
-			margin-bottom: calc(10px + (28 - 10) * ((100vh - 650px) / (768 - 650)));
-		}
-		@media screen and (max-height: 650px) {
-			margin-bottom: 10px;
-		}
-		@media screen and (max-width: 660px) {
-			padding: 10px 0;
-		}
-	}
-
-	&__item {
-		padding: 3px 7px;
-	}
-
-	&__link {
-		font-size: 14px;
-		line-height: 1;
-		color: rgba($color: $White, $alpha: 0.8);
-		display: flex;
-		align-items: center;
-		transition: 0.3s ease all 0s;
-
-		i {
-			font-size: 8px;
-			display: inline-flex;
-			margin-left: 2px;
-		}
-	}
-
-	&__row {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: flex-end;
-		justify-content: space-between;
-
-		@media screen and (max-width: 660px) {
-			align-items: center;
-		}
-	}
-
-	&__result {
-		font-size: 16px;
-		line-height: 21px;
-		padding-right: 10px;
-	}
-
-	&__reset {
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 1;
-		color: $White;
-		text-decoration: underline;
-		transition: 0.3s ease all 0s;
-
-		@media screen and (max-width: 660px) {
-			display: none;
-		}
-	}
-
-	&__apply {
-		display: none;
-
-		@media screen and (max-width: 660px) {
-			display: inline-block;
-			font-weight: 700;
-			font-size: 12px;
-			line-height: 15px;
-			color: $White;
-			text-transform: uppercase;
-			transition: 0.3s ease all 0s;
-		}
-	}
-}
-// ! FILTER END
-
 .market {
 	@include adaptiv-value("padding-top", 33, 26, 1);
 	@include adaptiv-value("padding-bottom", 33, 26, 1);
@@ -1132,3 +602,203 @@
 		}
 	}
 }
+// ! market end
+
+// !Popup
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(11, 11, 11, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 6;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: 0.8s ease all 0s;
+
+	&.open {
+		opacity: 1;
+		visibility: visible;
+
+		.popup__content {
+			transform: perspective(600px) translate(0, 0) rotateX(0deg);
+			opacity: 1;
+		}
+	}
+
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 10px;
+
+		@media screen and (max-width: 450px) {
+			padding: 30px 0;
+		}
+	}
+
+	&__content {
+		// background: $card-color;
+		color: #fff;
+		padding: 60px 40px 64px;
+		width: 100%;
+		max-width: 950px;
+		position: relative;
+		opacity: 0;
+		transform: translate(0, -100%);
+		transition: 0.8s ease all 0s;
+
+		@media screen and (max-width: 767px) {
+			padding: 25px 10px 60px;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 25px;
+		right: 27px;
+		display: flex;
+
+		@media screen and (max-width: 767px) {
+			top: 15px;
+			right: 7px;
+		}
+	}
+}
+
+.to-cart {
+	&__content {
+		max-width: 488px;
+		background-color: $White;
+		color: $Black;
+		padding: 22px 33px 31px;
+		@include adaptiv-value("padding-left", 33, 15, 1);
+		@include adaptiv-value("padding-right", 33, 15, 1);
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 36%;
+		}
+	}
+
+	&__form {
+	}
+
+	&__heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 35px;
+	}
+
+	&__title {
+		padding-right: 15px;
+	}
+
+	.popup__close {
+		position: initial;
+	}
+
+	&__body {
+		font-size: 16px;
+		line-height: 21px;
+		margin-bottom: 30px;
+
+		.product-item__product {
+			display: flex;
+			align-items: center;
+			margin-bottom: 30px;
+		}
+
+		.product-item__product-image {
+			margin-right: 10px;
+		}
+	}
+
+	&__quantity {
+		display: flex;
+		align-items: center;
+		width: auto;
+		height: auto;
+
+		.quantity {
+			&__wrapper {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				background-color: $LGray3;
+				border-radius: 3px;
+				color: $Gray3;
+				padding-right: 18px;
+			}
+
+			&__input {
+				input {
+					background-color: $LGray3;
+					padding: 14px 18px;
+					text-align: left;
+					color: $Gray3;
+					border-radius: 3px;
+				}
+			}
+
+			&__button {
+				&::before,
+				&::after {
+					background-color: $Gray3;
+					width: 9px;
+					height: 2px;
+				}
+			}
+		}
+	}
+
+	&__measure {
+		padding-left: 20px;
+		font-weight: 600;
+	}
+
+	&__footer {
+		display: flex;
+	}
+
+	&__label {
+		flex: 1 1 auto;
+		margin-right: 47px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 23px;
+	}
+
+	&__weight {
+		white-space: nowrap;
+	}
+
+	&__summary {
+		white-space: nowrap;
+	}
+
+	&__button {
+		button {
+			display: flex;
+			align-items: center;
+
+			span {
+				font-size: 18px;
+				line-height: 23px;
+				min-width: 99px;
+				margin-right: 10px;
+			}
+
+			i {
+				font-size: 22px;
+				display: flex;
+			}
+		}
+	}
+}
+
+// ! modal to cart

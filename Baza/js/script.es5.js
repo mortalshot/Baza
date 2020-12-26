@@ -704,4 +704,167 @@ $(document).ready(function () {
       }
     }
   };
+
+  var popupLinks = document.querySelectorAll('.popup-link');
+  var body = document.querySelector('body');
+  var lockPadding = document.querySelectorAll(".lock-padding");
+  var unlock = true;
+  var timeout = 800;
+
+  if (popupLinks.length > 0) {
+    var _loop2 = function _loop2(index) {
+      var popupLink = popupLinks[index];
+      popupLink.addEventListener("click", function (e) {
+        var popupName = popupLink.getAttribute('href').replace('#', '');
+        var currentPopup = document.getElementById(popupName);
+        popupOpen(currentPopup);
+        e.preventDefault();
+      });
+    };
+
+    for (var index = 0; index < popupLinks.length; index++) {
+      _loop2(index);
+    }
+  }
+
+  var popupCloseIcon = document.querySelectorAll('.close-popup');
+
+  if (popupCloseIcon.length > 0) {
+    var _loop3 = function _loop3(_index4) {
+      var el = popupCloseIcon[_index4];
+      el.addEventListener('click', function (e) {
+        popupClose(el.closest('.popup'));
+        e.preventDefault();
+      });
+    };
+
+    for (var _index4 = 0; _index4 < popupCloseIcon.length; _index4++) {
+      _loop3(_index4);
+    }
+  }
+
+  function popupOpen(currentPopup) {
+    if (currentPopup && unlock) {
+      var popupActive = document.querySelector('.popup.open');
+
+      if (popupActive) {
+        popupClose(popupActive, false);
+      } else {
+        bodyLock();
+      }
+
+      currentPopup.classList.add('open');
+      currentPopup.addEventListener('click', function (e) {
+        if (!e.target.closest('.popup__content')) {
+          popupClose(e.target.closest('.popup'));
+        }
+      });
+    }
+  }
+
+  function popupClose(popupActive) {
+    var doUnlock = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+    if (unlock) {
+      popupActive.classList.remove('open');
+
+      if (doUnlock) {
+        bodyUnLock();
+      }
+    }
+  }
+
+  function bodyLock() {
+    var lockPaddingValue = window.innerWidth - document.querySelector('.site__main').offsetWidth + 'px'; //!обратить внимание на контейнер
+
+    if (lockPadding.length > 0) {
+      for (var _index5 = 0; _index5 < lockPadding.length; _index5++) {
+        var el = lockPadding[_index5];
+        el.style.paddingRight = lockPaddingValue;
+      }
+    }
+
+    body.style.paddingRight = lockPaddingValue;
+    body.classList.add('lock');
+    unlock = false;
+    setTimeout(function () {
+      unlock = true;
+    }, timeout);
+  }
+
+  function bodyUnLock() {
+    setTimeout(function () {
+      if (lockPadding.length > 0) {
+        for (var _index6 = 0; _index6 < lockPadding.length; _index6++) {
+          var el = lockPadding[_index6];
+          el.style.paddingRight = '0px';
+        }
+      }
+
+      body.style.paddingRight = '0px';
+      body.classList.remove('lock');
+    }, timeout);
+    unlock = false;
+    setTimeout(function () {
+      unlock = true;
+    }, timeout);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.which === 27) {
+      var popupActive = document.querySelector('.popup.open');
+      popupClose(popupActive);
+    }
+  });
+
+  (function () {
+    // проверяем поддержку
+    if (!Element.prototype.closest) {
+      // реализуем
+      Element.prototype.closest = function (css) {
+        var node = this;
+
+        while (node) {
+          if (node.matches(css)) return node;else node = node.parentElement;
+        }
+
+        return null;
+      };
+    }
+  })();
+
+  (function () {
+    // проверяем поддержку
+    if (!Element.prototype.matches) {
+      // определяем свойство
+      Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector;
+    }
+  })();
+
+  var quantityButtons = document.querySelectorAll('.quantity__button');
+
+  if (quantityButtons.length > 0) {
+    var _loop4 = function _loop4(_index7) {
+      var quantityButton = quantityButtons[_index7];
+      quantityButton.addEventListener("click", function (e) {
+        var value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
+
+        if (quantityButton.classList.contains('quantity__button--plus')) {
+          value++;
+        } else {
+          value = value - 1;
+
+          if (value < 1) {
+            value = 1;
+          }
+        }
+
+        quantityButton.closest('.quantity').querySelector('input').value = value;
+      });
+    };
+
+    for (var _index7 = 0; _index7 < quantityButtons.length; _index7++) {
+      _loop4(_index7);
+    }
+  }
 });

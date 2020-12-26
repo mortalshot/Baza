@@ -6,4 +6,6 @@
 @@include('components/menu.js')
 @@include('components/animation.js')
 @@include('components/select.js')
+@@include('components/popup.js')
+@@include('components/form.js')
 
