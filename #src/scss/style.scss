@@ -467,6 +467,8 @@
 		width: 100%;
 		padding: 14.5px 20px;
 		background-color: $GreenM;
+		position: relative;
+		z-index: 2;
 	}
 
 	&__items {
@@ -1074,49 +1076,47 @@
 	font-size: 14px;
 	line-height: 18px;
 	color: $DGray;
+	display: flex;
 
 	@media screen and (max-width: $layoutDesktop - 0.02 + "px") {
 		font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 		line-height: calc(18 / 14);
 	}
+	@media screen and (max-width: 850px) {
+		flex-wrap: wrap;
+	}
 
 	&__row {
 		display: flex;
-		margin: 0 -5px;
-
-		@media screen and (max-width: 767px) {
-			flex-wrap: wrap;
-		}
-	}
-
-	&__left {
-		flex: 0 0 21%;
-		padding: 5px;
-
-		@media screen and (max-width: 767px) {
-			flex: 0 0 50%;
-		}
-	}
-
-	&__item {
-		margin-bottom: 4px;
+		margin: 0 -5px 4px;
 
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 
-	&__title {
-		font-weight: 500;
-	}
+	&__left {
+		flex: 0 0 43%;
 
-	&__center {
-		flex: 0 0 21%;
-		padding: 5px;
-
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: 1250px) {
 			flex: 0 0 50%;
 		}
+		@media screen and (max-width: 850px) {
+			flex: 0 0 100%;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__column {
+		flex: 1 1 50%;
+		padding: 0 5px;
+	}
+
+	&__item {
+	}
+
+	&__title {
+		font-weight: 500;
 	}
 
 	&__text {
@@ -1124,7 +1124,6 @@
 
 	&__right {
 		flex: 1 1 auto;
-		padding: 5px;
 		display: flex;
 		flex-direction: column;
 
