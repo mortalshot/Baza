@@ -13,234 +13,253 @@
 <body class="site">
     <div class="site__wrap @@draverClass">
         <div class="navigation-drawer">
-            <div class="navigation-drawer__account account">
-                <div class="account__row">
+            <div class="navigation-drawer__mobile">
+                <div class="navigation-drawer__account" data-da="navbar__row, 2, 660">
                     <a href="" class="account__avatar">
                         <img src="img/market/avatar.png" alt="">
                     </a>
-                    <div class="account__person">
-                        <a href="" class="account__name">Рамиль Саидов</a>
-                        <div class="account__role">Покупатель</div>
-                    </div>
-                    <a href="" class="account__logout">
-                        <i class="icon-exit"></i>
-                    </a>
                 </div>
+                <div class="navigation-drawer__burger">
+                    <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="18.75" width="2" height="10" transform="rotate(-90 0.5 18.75)" fill="white" fill-opacity="0.2"/>
+                        <rect x="0.5" y="10.75" width="2" height="20" transform="rotate(-90 0.5 10.75)" fill="white" fill-opacity="0.2"/>
+                        <rect x="0.5" y="2.75" width="2" height="14" transform="rotate(-90 0.5 2.75)" fill="white" fill-opacity="0.2"/>
+                    </svg>
+                </div>
+                <div class="navigation-drawer__result">Фильтр (<span>10</span>)</div>
+                <a href="" class="filter-selected__reset">Cбросить</a>
             </div>
-            <div class="navigation-drawer__content filter">
-                <div class="filter__stirps filter-stirps">
-                    <div class="filter-stirps__row row">
-                        <div class="filter-stirps__item col-12 col-md-6">
-                            <div class="filter-stirps__checkbox checkbox">
-                                <input id="filterStirps-1" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="filterStirps-1" class="checkbox__label">
-                                    <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-1.png" alt="">
-                                    </div>
-                                    <div class="filter-stirps__name">Овощи</div>
-                                </label>
+            <div class="navigation-drawer__wrapper">
+                <div class="navigation-drawer__account account">
+                    <div class="account__row">
+                        <a href="" class="account__avatar">
+                            <img src="img/market/avatar.png" alt="">
+                        </a>
+                        <div class="account__person">
+                            <a href="" class="account__name">Рамиль Саидов</a>
+                            <div class="account__role">Покупатель</div>
+                        </div>
+                        <a href="" class="account__logout">
+                            <i class="icon-exit"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="navigation-drawer__content filter">
+                    <div class="filter__stirps filter-stirps">
+                        <div class="filter-stirps__row row">
+                            <div class="filter-stirps__item col-6">
+                                <div class="filter-stirps__checkbox checkbox">
+                                    <input id="filterStirps-1" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="filterStirps-1" class="checkbox__label">
+                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-1.png" alt="">
+                                        </div>
+                                        <div class="filter-stirps__name">Овощи</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-stirps__item col-6">
+                                <div class="filter-stirps__checkbox checkbox">
+                                    <input id="filterStirps-2" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="filterStirps-2" class="checkbox__label">
+                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-2.png" alt="">
+                                        </div>
+                                        <div class="filter-stirps__name">Грибы</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-stirps__item col-6">
+                                <div class="filter-stirps__checkbox checkbox">
+                                    <input id="filterStirps-3" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="filterStirps-3" class="checkbox__label">
+                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-3.png" alt="">
+                                        </div>
+                                        <div class="filter-stirps__name">Фрукты</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-stirps__item col-6">
+                                <div class="filter-stirps__checkbox checkbox">
+                                    <input id="filterStirps-4" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="filterStirps-4" class="checkbox__label">
+                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-4.png" alt="">
+                                        </div>
+                                        <div class="filter-stirps__name">Экзотика</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-stirps__item col-6">
+                                <div class="filter-stirps__checkbox checkbox">
+                                    <input id="filterStirps-5" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="filterStirps-5" class="checkbox__label">
+                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-5.png" alt="">
+                                        </div>
+                                        <div class="filter-stirps__name">Ягоды</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-stirps__item col-6">
+                                <div class="filter-stirps__checkbox checkbox">
+                                    <input id="filterStirps-6" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="filterStirps-6" class="checkbox__label">
+                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-6.png" alt="">
+                                        </div>
+                                        <div class="filter-stirps__name">Зелень</div>
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                        <div class="filter-stirps__item col-12 col-md-6">
-                            <div class="filter-stirps__checkbox checkbox">
-                                <input id="filterStirps-2" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="filterStirps-2" class="checkbox__label">
-                                    <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-2.png" alt="">
-                                    </div>
-                                    <div class="filter-stirps__name">Грибы</div>
-                                </label>
-                            </div>
+                    </div>
+                    <div class="filter__modals filter-modals">
+                        <div class="filter-modals__item">
+                            <a href="" class="filter-modals__link">
+                                <div class="filter-modals__name">
+                                    <span>Продукт</span>
+                                    <div class="filter-modals__quantity"></div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="filter-stirps__item col-12 col-md-6">
-                            <div class="filter-stirps__checkbox checkbox">
-                                <input id="filterStirps-3" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="filterStirps-3" class="checkbox__label">
-                                    <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-3.png" alt="">
-                                    </div>
-                                    <div class="filter-stirps__name">Фрукты</div>
-                                </label>
-                            </div>
+                        <div class="filter-modals__item">
+                            <a href="" class="filter-modals__link">
+                                <div class="filter-modals__name">
+                                    <span>Сорт</span>
+                                    <div class="filter-modals__quantity"></div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="filter-stirps__item col-12 col-md-6">
-                            <div class="filter-stirps__checkbox checkbox">
-                                <input id="filterStirps-4" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="filterStirps-4" class="checkbox__label">
-                                    <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-4.png" alt="">
-                                    </div>
-                                    <div class="filter-stirps__name">Экзотика</div>
-                                </label>
-                            </div>
+                        <div class="filter-modals__item">
+                            <a href="" class="filter-modals__link">
+                                <div class="filter-modals__name">
+                                    <span>Страна</span>
+                                    <div class="filter-modals__quantity">4</div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="filter-stirps__item col-12 col-md-6">
-                            <div class="filter-stirps__checkbox checkbox">
-                                <input id="filterStirps-5" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="filterStirps-5" class="checkbox__label">
-                                    <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-5.png" alt="">
-                                    </div>
-                                    <div class="filter-stirps__name">Ягоды</div>
-                                </label>
-                            </div>
+                        <div class="filter-modals__item">
+                            <a href="" class="filter-modals__link">
+                                <div class="filter-modals__name">
+                                    <span>Местонахождение</span>
+                                    <div class="filter-modals__quantity"></div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="filter-stirps__item col-12 col-md-6">
-                            <div class="filter-stirps__checkbox checkbox">
-                                <input id="filterStirps-6" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="filterStirps-6" class="checkbox__label">
-                                    <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-6.png" alt="">
-                                    </div>
-                                    <div class="filter-stirps__name">Зелень</div>
-                                </label>
+                    </div>
+                    <div class="filter__category filter-category">
+                        <div class="filter-category__title">Категория</div>
+                        <div class="filter-category__row row">
+                            <div class="filter-category__item col-6">
+                                <div class="filter-category__checkbox checkbox">
+                                    <input id="filterCategory-1" type="checkbox" name="category" class="checkbox__input">
+                                    <label for="filterCategory-1" class="checkbox__label">
+                                        <div class="filter-category__name">Высший сорт</div>
+                                        <div class="filter-category__icon"><i class="icon-up"></i></div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-category__item col-6">
+                                <div class="filter-category__checkbox checkbox">
+                                    <input id="filterCategory-2" type="checkbox" name="category" class="checkbox__input">
+                                    <label for="filterCategory-2" class="checkbox__label">
+                                        <div class="filter-category__name">Первый сорт</div>
+                                        <div class="filter-category__icon"><i class="icon-1"></i></div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-category__item col-6">
+                                <div class="filter-category__checkbox checkbox">
+                                    <input id="filterCategory-3" type="checkbox" name="category" class="checkbox__input">
+                                    <label for="filterCategory-3" class="checkbox__label">
+                                        <div class="filter-category__name">Некондиция</div>
+                                        <div class="filter-category__icon"><i class="icon-down"></i></div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter-category__item col-6">
+                                <div class="filter-category__checkbox checkbox">
+                                    <input id="filterCategory-4" type="checkbox" name="category" class="checkbox__input">
+                                    <label for="filterCategory-4" class="checkbox__label">
+                                        <div class="filter-category__name">Второй сорт</div>
+                                        <div class="filter-category__icon"><i class="icon-2"></i></div>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="filter__modals filter-modals">
-                    <div class="filter-modals__item">
-                        <a href="" class="filter-modals__link">
-                            <div class="filter-modals__name">
-                                <span>Продукт</span>
-                                <div class="filter-modals__quantity"></div>
+                <div class="navigation-drawer__footer">
+                    <div class="filter-selected">
+                        <div class="filter-selected__items" data-da="navigation-drawer__content, last, 660">
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">овощи</span>
+                                    <i class="icon-close"></i>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="filter-modals__item">
-                        <a href="" class="filter-modals__link">
-                            <div class="filter-modals__name">
-                                <span>Сорт</span>
-                                <div class="filter-modals__quantity"></div>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">фрукты</span>
+                                    <i class="icon-close"></i>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="filter-modals__item">
-                        <a href="" class="filter-modals__link">
-                            <div class="filter-modals__name">
-                                <span>Страна</span>
-                                <div class="filter-modals__quantity">4</div>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">грибы</span>
+                                    <i class="icon-close"></i>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="filter-modals__item">
-                        <a href="" class="filter-modals__link">
-                            <div class="filter-modals__name">
-                                <span>Местонахождение</span>
-                                <div class="filter-modals__quantity"></div>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">Россия</span>
+                                    <i class="icon-close"></i>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="filter__category filter-category">
-                    <div class="filter-category__title">Категория</div>
-                    <div class="filter-category__row row">
-                        <div class="filter-category__item col-12 col-md-6">
-                            <div class="filter-category__checkbox checkbox">
-                                <input id="filterCategory-1" type="checkbox" name="category" class="checkbox__input">
-                                <label for="filterCategory-1" class="checkbox__label">
-                                    <div class="filter-category__name">Высший сорт</div>
-                                    <div class="filter-category__icon"><i class="icon-up"></i></div>
-                                </label>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">Средняя Азия</span>
+                                    <i class="icon-close"></i>
+                                </a>
                             </div>
-                        </div>
-                        <div class="filter-category__item col-12 col-md-6">
-                            <div class="filter-category__checkbox checkbox">
-                                <input id="filterCategory-2" type="checkbox" name="category" class="checkbox__input">
-                                <label for="filterCategory-2" class="checkbox__label">
-                                    <div class="filter-category__name">Первый сорт</div>
-                                    <div class="filter-category__icon"><i class="icon-1"></i></div>
-                                </label>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">Южная Америка</span>
+                                    <i class="icon-close"></i>
+                                </a>
                             </div>
-                        </div>
-                        <div class="filter-category__item col-12 col-md-6">
-                            <div class="filter-category__checkbox checkbox">
-                                <input id="filterCategory-3" type="checkbox" name="category" class="checkbox__input">
-                                <label for="filterCategory-3" class="checkbox__label">
-                                    <div class="filter-category__name">Некондиция</div>
-                                    <div class="filter-category__icon"><i class="icon-down"></i></div>
-                                </label>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">Африка</span>
+                                    <i class="icon-close"></i>
+                                </a>
                             </div>
-                        </div>
-                        <div class="filter-category__item col-12 col-md-6">
-                            <div class="filter-category__checkbox checkbox">
-                                <input id="filterCategory-4" type="checkbox" name="category" class="checkbox__input">
-                                <label for="filterCategory-4" class="checkbox__label">
-                                    <div class="filter-category__name">Второй сорт</div>
-                                    <div class="filter-category__icon"><i class="icon-2"></i></div>
-                                </label>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">первый сорт</span>
+                                    <i class="icon-close"></i>
+                                </a>
+                            </div>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">высший сорт</span>
+                                    <i class="icon-close"></i>
+                                </a>
+                            </div>
+                            <div class="filter-selected__item">
+                                <a href="" class="filter-selected__link">
+                                    <span class="filter-selected__name">некондиция</span>
+                                    <i class="icon-close"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="navigation-drawer__footer">
-                <div class="filter-selected">
-                    <div class="filter-selected__items">
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">овощи</span>
-                                <i class="icon-close"></i>
-                            </a>
+                        <div class="filter-selected__row">
+                            <div class="filter-selected__result">Результатов <span>10230</span></div>
+                            <a href="" class="filter-selected__reset">Cбросить</a>
+                            <a href="" class="filter-selected__apply">Применить</a>
                         </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">фрукты</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">грибы</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">Россия</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">Средняя Азия</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">Южная Америка</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">Африка</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">первый сорт</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">высший сорт</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                        <div class="filter-selected__item">
-                            <a href="" class="filter-selected__link">
-                                <span class="filter-selected__name">некондиция</span>
-                                <i class="icon-close"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="filter-selected__row">
-                        <div class="filter-selected__result">Результатов <span>10230</span></div>
-                        <a href="" class="filter-selected__reset">Cбросить</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <header class="site__header header">
+        <header class="site__header header lock-padding">
             <div class="header__home">
                 <div class="header__container container-fluid">
                     <nav class="navbar navbar-expand-md">
@@ -280,23 +299,41 @@
             </div>
             <div class="header__inner">
                 <div class="header__container container-fluid">
-                    <nav class="navbar navbar-expand-md">
-                        <div class="navbar-brand">
-                            <a class="navbar-brand__link" href="/">Бaza</a>
-                        </div>
-                        <div class="header__burger">
-                            <span></span>
-                        </div>
-
-                        <div class="header__menu collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="">Рынок продуктов</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="">Мои заявки</a>
-                                </li>
-                            </ul>
+                    <nav class="navbar">
+                        <div class="navbar__row">
+                            <div class="navbar-brand">
+                                <a class="navbar-brand__link" href="/">Бaza</a>
+                            </div>
+                            <div class="header__menu">
+                                <ul class="navbar-nav flex-row">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="">Рынок продуктов</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">Мои заявки</a>
+                                    </li>
+                                </ul>
+                                <ul class="header__controls controls" data-da="header__inner .navbar, first, 660">
+                                    <li class="controls__item">
+                                        <a href="" class="controls__link"><i class="icon-unarchive"></i></a>
+                                    </li>
+                                    <li class="controls__item">
+                                        <a href="" class="controls__link"><i class="icon-team"></i></a>
+                                    </li>
+                                    <li class="controls__item">
+                                        <a href="" class="controls__link"><i class="icon-purse"></i></a>
+                                    </li>
+                                    <li class="controls__item">
+                                        <a href="" class="controls__link"><i class="icon-message"></i></a>
+                                    </li>
+                                    <li class="controls__item">
+                                        <a href="" class="controls__link"><i class="icon-notifications"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header__cart header-cart">
+                                <a href="" class="header-cart__link"><i class="icon-cart"></i></a>
+                            </div>
                         </div>
                     </nav>
                 </div>

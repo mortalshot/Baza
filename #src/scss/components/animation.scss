@@ -1,0 +1,27 @@
+._anim-left {
+	opacity: 0;
+	transform: translate(-100%, 0);
+	transition: 0.5s ease all 0s;
+}
+
+._anim-right {
+	opacity: 0;
+	transform: translate(100%, 0);
+	transition: 0.5s ease all 0s;
+}
+
+._anim-top {
+	transform: translate(0, 100%);
+	transition: 0.5s ease all 0s;
+}
+
+._anim-left._active,
+._active ._anim-left,
+._anim-right._active,
+._active ._anim-right,
+._anim-top._active,
+._active ._anim-top {
+	opacity: 1;
+	transform: translate(0);
+}
+// !animation

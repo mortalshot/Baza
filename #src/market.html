@@ -1,79 +1,1016 @@
 @@include('html-components/_header.html', {
-"title": "Home page",
+"title": "Рынок продуктов",
 "draverClass": "drawer-on",
 })
 
 <main class="site__main">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <section class="market">
+        <div class="market__container container">
+            <h1 class="market__title title-market">Рынок продуктов</h1>
+
+            <form action="" class="market__search search">
+                <input type="search" name="search" pattern=".*\S.*" required placeholder="Яблоки, Гренни Смит, высший сорт, Голландия|">
+                <button class="search__btn" type="submit"><i class="icon-search"></i></button>
+            </form>
+
+            <div class="market__catalog">
+                <div class="catalog__top">
+                    <div class="d-flex align-items-center">
+                        <div class="catalog__filter catalog-filter">
+                            <div class="catalog-filter__checkbox checkbox">
+                                <input id="catalogFilter-1" type="checkbox" name="stirp" class="checkbox__input">
+                                <label for="catalogFilter-1" class="checkbox__label"><div class="catalog-filter__name">Только новые</div></label>
+                            </div>
+                            <div class="catalog-filter__checkbox checkbox">
+                                <input id="catalogFilter-2" type="checkbox" name="stirp" class="checkbox__input">
+                                <label for="catalogFilter-2" class="checkbox__label"><div class="catalog-filter__name">За сегодня</div></label>
+                            </div>
+                            <div class="catalog-filter__checkbox checkbox">
+                                <input id="catalogFilter-3" type="checkbox" name="stirp" class="checkbox__input">
+                                <label for="catalogFilter-3" class="checkbox__label"><div class="catalog-filter__name">Срочные</div></label>
+                            </div>
+                            <div class="catalog-filter__checkbox checkbox">
+                                <input id="catalogFilter-4" type="checkbox" name="stirp" class="checkbox__input">
+                                <label for="catalogFilter-4" class="checkbox__label"><div class="catalog-filter__name">Другая ссылка</div></label>
+                            </div>
+                        </div>
+                        <div class="catalog__sorting catalog-sorting">
+                            <div class="catalog-sorting__item">
+                                <a href="" class="catalog-sorting__link">
+                                    <span>По цене</span>
+                                    <img src="img/icons/select.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="catalog-sorting__item">
+                                <a href="" class="catalog-sorting__link">
+                                    <span>По названию</span>
+                                    <img src="img/icons/select.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="catalog-sorting__item">
+                                <a href="" class="catalog-sorting__link">
+                                    <span>По дате</span>
+                                    <img src="img/icons/select.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog-filter__checkbox checkbox">
+                            <input id="catalogFilter-5" type="checkbox" name="stirp" class="checkbox__input">
+                            <label for="catalogFilter-5" class="checkbox__label"><div class="catalog-filter__name">Группами</div></label>
+                        </div>
+                        <div class="catalog__output catalog-output">
+                            <div class="catalog-output__options">
+                                <div class="options__item">
+                                    <input id="catalogCard" checked type="radio" name="catalogOutput" class="options__input">
+                                    <label for="catalogCard" class="options__label"><i class="icon-tile"></i></label>
+                                </div>
+                                <div class="options__item">
+                                    <input id="catalogList" type="radio" name="catalogOutput" class="options__input">
+                                    <label for="catalogList" class="options__label"><i class="icon-list"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__content">
+                    <div class="catalog__products catalog__products--card">
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Хасан Абасов</a>
+                                            <div class="product-item__company">ООО “ЮЭФСИ”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Киви свежие, Иран</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Первый сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-1"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">50 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Расул Магомедов</a>
+                                            <div class="product-item__company">ИП</div>
+                                            <div class="product-item__tax">БЕЗ НДС</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Москва</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-2.png" alt=""></div>
+                                            <div class="product-item__product-name">Мандарины Клементина, ЮАР</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Высший сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-up"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">60 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Игорь Матвеев</a>
+                                            <div class="product-item__company">ООО “Простые овощи”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Помидоры, Беларусь</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Некондиция</div>
+                                            <div class="product-item__category-icon"><i class="icon-down"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">78 руб. / кг.</div>
+                                        <div class="product-item__descr">от 10 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Хасан Абасов</a>
+                                            <div class="product-item__company">ООО “ЮЭФСИ”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Киви свежие, Иран</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Первый сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-1"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">50 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Расул Магомедов</a>
+                                            <div class="product-item__company">ИП</div>
+                                            <div class="product-item__tax">БЕЗ НДС</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Москва</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-2.png" alt=""></div>
+                                            <div class="product-item__product-name">Мандарины Клементина, ЮАР</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Высший сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-up"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">60 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Игорь Матвеев</a>
+                                            <div class="product-item__company">ООО “Простые овощи”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Помидоры, Беларусь</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Некондиция</div>
+                                            <div class="product-item__category-icon"><i class="icon-down"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">78 руб. / кг.</div>
+                                        <div class="product-item__descr">от 10 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Хасан Абасов</a>
+                                            <div class="product-item__company">ООО “ЮЭФСИ”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Киви свежие, Иран</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Первый сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-1"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">50 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Расул Магомедов</a>
+                                            <div class="product-item__company">ИП</div>
+                                            <div class="product-item__tax">БЕЗ НДС</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Москва</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-2.png" alt=""></div>
+                                            <div class="product-item__product-name">Мандарины Клементина, ЮАР</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Высший сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-up"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">60 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Игорь Матвеев</a>
+                                            <div class="product-item__company">ООО “Простые овощи”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Помидоры, Беларусь</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Некондиция</div>
+                                            <div class="product-item__category-icon"><i class="icon-down"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">78 руб. / кг.</div>
+                                        <div class="product-item__descr">от 10 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Хасан Абасов</a>
+                                            <div class="product-item__company">ООО “ЮЭФСИ”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Киви свежие, Иран</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Первый сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-1"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">50 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Расул Магомедов</a>
+                                            <div class="product-item__company">ИП</div>
+                                            <div class="product-item__tax">БЕЗ НДС</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Москва</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-2.png" alt=""></div>
+                                            <div class="product-item__product-name">Мандарины Клементина, ЮАР</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Высший сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-up"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">60 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Игорь Матвеев</a>
+                                            <div class="product-item__company">ООО “Простые овощи”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Помидоры, Беларусь</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Некондиция</div>
+                                            <div class="product-item__category-icon"><i class="icon-down"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">78 руб. / кг.</div>
+                                        <div class="product-item__descr">от 10 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Хасан Абасов</a>
+                                            <div class="product-item__company">ООО “ЮЭФСИ”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Киви свежие, Иран</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Первый сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-1"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">50 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Расул Магомедов</a>
+                                            <div class="product-item__company">ИП</div>
+                                            <div class="product-item__tax">БЕЗ НДС</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Москва</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-2.png" alt=""></div>
+                                            <div class="product-item__product-name">Мандарины Клементина, ЮАР</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Высший сорт</div>
+                                            <div class="product-item__category-icon"><i class="icon-up"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">60 руб. / кг.</div>
+                                        <div class="product-item__descr">от 5 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__product product-item">
+                            <div class="product-item__wrapper">
+                                <div class="product-item__body">
+                                    <div class="product-item__heading">
+                                        <div class="product-item__person">
+                                            <a href="" class="product-item__owner">Игорь Матвеев</a>
+                                            <div class="product-item__company">ООО “Простые овощи”</div>
+                                            <div class="product-item__tax">НДС 10%</div>
+                                        </div>
+                                        <div class="product-item__location">
+                                            <span>Санкт-Петербург</span>
+                                            <i class="icon-map-marker"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content">
+                                        <div class="product-item__product">
+                                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                                            <div class="product-item__product-name">Помидоры, Беларусь</div>
+                                        </div>
+                                        <div class="product-item__category">
+                                            <div class="product-item__category-name">Некондиция</div>
+                                            <div class="product-item__category-icon"><i class="icon-down"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__footer">
+                                        <div class="product-item__price">78 руб. / кг.</div>
+                                        <div class="product-item__descr">от 10 кг</div>
+                                        <a href="" class="product-item__cart"><i class="icon-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-item__popup product-popup">
+                                    <div class="product-popup__row">
+                                        <div class="product-popup__left">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Размерность</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Упаковка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__title">Квант</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__center">
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">56-72</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">Коробка</div>
+                                            </div>
+                                            <div class="product-popup__item">
+                                                <div class="product-popup__text">15</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-popup__right">
+                                            <div class="product-popup__title">Дополнительно</div>
+                                            <div class="product-popup__text">тут какая-то запись может быть в несколько строк текста, может быть что-то полезное</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 @@include('html-components/_footer.html', {
-    "footerClass": "d-none"
+"footerClass": "d-none"
 })

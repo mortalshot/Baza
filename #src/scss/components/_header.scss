@@ -25,21 +25,6 @@
 			height: $size-header-height-mobile;
 		}
 
-		.navbar-collapse {
-			height: 100%;
-		}
-
-		.nav-item {
-			@include adaptiv-value("margin-right", 29, 5, 0);
-
-			@media screen and (max-width: 800px) {
-				margin-right: 10px;
-			}
-			@media screen and (max-width: 767px) {
-				margin: 0px 0px 10px 0px;
-			}
-		}
-
 		.nav-link {
 			padding: 5px;
 			font-weight: 500;
@@ -58,13 +43,6 @@
 			@media screen and (max-width: 1080px) {
 				font-size: 14px;
 			}
-			@media screen and (max-width: 800px) {
-				font-size: 13px;
-			}
-			@media screen and (max-width: 767px) {
-				font-size: 20px;
-				line-height: 140%;
-			}
 
 			&::before {
 				content: "";
@@ -81,12 +59,6 @@
 				@media screen and (max-width: 1100px) {
 					transform: translate(0, 23px) scale(0);
 				}
-				@media screen and (max-width: 800px) {
-					transform: translate(0, 24px) scale(0);
-				}
-				@media screen and (max-width: 767px) {
-					transform: translate(0, 0) scale(0);
-				}
 			}
 
 			&.active {
@@ -96,20 +68,8 @@
 					@media screen and (max-width: 1100px) {
 						transform: translate(0, 23px) scale(1);
 					}
-					@media screen and (max-width: 800px) {
-						transform: translate(0, 24px) scale(1);
-					}
-					@media screen and (max-width: 767px) {
-						transform: translate(0, 0) scale(1);
-					}
 				}
 			}
-		}
-	}
-
-	.navbar-nav {
-		@media screen and (max-width: 767px) {
-			margin-bottom: 40px;
 		}
 	}
 
@@ -119,12 +79,14 @@
 
 		&__link {
 			font-weight: 700;
-			font-size: calc(16px + 14 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-			line-height: calc(38 / 30);
+			font-size: 30px;
+			line-height: 1;
 			color: $GreenM;
-			@include adaptiv-value("margin-right", 30, 15, 0);
 			transition: 0.3s ease all 0s;
 
+			@media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+				font-size: calc(16px + 14 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			}
 			@media screen and (min-width: 992px) {
 				&:hover {
 					color: rgba($color: $GreenM, $alpha: 0.75);
@@ -135,34 +97,19 @@
 		&__text {
 			font-weight: 400;
 			color: $DGray;
-			font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-			line-height: calc(17 / 14);
+			font-size: 14px;
+			line-height: 17px;
+
+			@media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+				font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(17 / 14);
+			}
 		}
 	}
 
 	&__menu {
+		display: flex;
 		justify-content: flex-end;
-
-		@media screen and (max-width: 767px) {
-			position: fixed;
-			top: -100%;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			background-color: $White;
-			padding: #{$size-header-height-mobile} 20px 25px;
-			z-index: 1;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: baseline;
-			transition: 0.3s ease all 0s;
-
-			&.active {
-				top: 0;
-			}
-		}
 	}
 
 	&__burger {
@@ -215,6 +162,246 @@
 				}
 			}
 		}
+	}
+
+	&__home {
+		.navbar {
+			.navbar-collapse {
+				height: 100%;
+			}
+
+			.nav-item {
+				@include adaptiv-value("margin-right", 29, 5, 1);
+
+				@media screen and (max-width: 800px) {
+					margin-right: 10px;
+				}
+				@media screen and (max-width: 767px) {
+					margin: 0px 0px 10px 0px;
+				}
+			}
+
+			.nav-link {
+				padding: 5px;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 156%;
+				color: $Black;
+				white-space: nowrap;
+				transition: 0.3s ease all 0s;
+				position: relative;
+
+				@media screen and (min-width: 992px) {
+					&:hover {
+						color: rgba($color: $Black, $alpha: 0.75);
+					}
+				}
+				@media screen and (max-width: 1080px) {
+					font-size: 14px;
+				}
+				@media screen and (max-width: 800px) {
+					font-size: 13px;
+				}
+				@media screen and (max-width: 767px) {
+					font-size: 20px;
+					line-height: 140%;
+				}
+
+				&::before {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: $GreenM;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					transform: translate(0, 22px) scale(0);
+					transition: 0.3s ease all 0s;
+
+					@media screen and (max-width: 1100px) {
+						transform: translate(0, 23px) scale(0);
+					}
+					@media screen and (max-width: 800px) {
+						transform: translate(0, 24px) scale(0);
+					}
+					@media screen and (max-width: 767px) {
+						transform: translate(0, 0) scale(0);
+					}
+				}
+
+				&.active {
+					&::before {
+						transform: translate(0, 22px) scale(1);
+
+						@media screen and (max-width: 1100px) {
+							transform: translate(0, 23px) scale(1);
+						}
+						@media screen and (max-width: 800px) {
+							transform: translate(0, 24px) scale(1);
+						}
+						@media screen and (max-width: 767px) {
+							transform: translate(0, 0) scale(1);
+						}
+					}
+				}
+			}
+		}
+
+		.navbar-brand {
+			.navbar-brand__link {
+				@include adaptiv-value("margin-right", 30, 15, 1);
+			}
+		}
+
+		.header__menu {
+			@media screen and (max-width: 767px) {
+				position: fixed;
+				top: -100%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: $White;
+				padding: #{$size-header-height-mobile} 20px 25px;
+				z-index: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: baseline;
+				transition: 0.3s ease all 0s;
+
+				&.active {
+					top: 0;
+				}
+			}
+		}
+
+		.navbar-nav {
+			@media screen and (max-width: 767px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__inner {
+		.container-fluid {
+			@media screen and (min-width: 992px) {
+				padding: 0 35px;
+			}
+			@media screen and (max-width: 660px) {
+				padding: 0;
+			}
+		}
+
+		.navbar {
+			justify-content: stretch;
+
+			@media screen and (max-width: 660px) {
+				height: $size-inner-header-height-mobile;
+				align-items: baseline;
+			}
+
+			&__row {
+				display: flex;
+				height: 100%;
+				width: 100%;
+
+				@media screen and (max-width: 660px) {
+					padding: 0 20px;
+					height: auto;
+				}
+			}
+
+			.nav-item {
+				@include adaptiv-value("margin-right", 32, 5, 1);
+			}
+			.nav-link {
+				&::before {
+					height: 4px;
+				}
+
+				&.active {
+					@media screen and (max-width: 767px) {
+						&::before {
+							transform: translate(0, 11px) scale(1);
+						}
+					}
+				}
+			}
+		}
+
+		.navbar-brand {
+			@include adaptiv-value("margin-right", 66, 15, 1);
+		}
+
+		.header__menu {
+			align-items: center;
+			justify-content: stretch;
+			flex: 1 1 auto;
+		}
+
+		.navbar-nav {
+			flex: 1 1 auto;
+		}
+	}
+}
+
+.controls {
+	display: flex;
+	margin: 0;
+
+	@media screen and (max-width: 660px) {
+		flex: 0 0 100%;
+		background-color: $GreenM;
+		justify-content: space-between;
+		padding: 9px 30px;
+	}
+
+	&__item {
+		@include adaptiv-value("margin-right", 36, 10, 1);
+
+		@media screen and (max-width: 660px) {
+			margin: 0;
+		}
+	}
+
+	&__link {
+		display: flex;
+		font-size: 20px;
+		color: $Gray;
+		transition: 0.3s ease all 0s;
+
+		@media screen and (max-width: 660px) {
+			color: $White;
+		}
+	}
+}
+
+.header-cart {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding-left: 25px;
+	border-left: 1px solid $LGray3;
+
+	@media screen and (min-width: 992px) {
+		margin-right: -10px;
+	}
+	@media screen and (max-width: 991px) {
+		padding-left: 20px;
+	}
+	@media screen and (max-width: 660px) {
+		height: auto;
+		border: 0;
+		padding: 0;
+	}
+
+	&__link {
+		display: flex;
+		font-size: 26px;
+		color: $GreenM;
+		transition: 0.3s ease all 0s;
 	}
 }
 
