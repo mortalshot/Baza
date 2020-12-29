@@ -1,4 +1,4 @@
-const slider = document.querySelector('.integrations__table');
+const slider = document.querySelector('.filter-stirps');
 let isDown = false;
 let startX;
 let scrollLeft;

@@ -43,6 +43,8 @@
 }
 
 .navigation-drawer {
+	z-index: 2;
+	
 	@media screen and (max-width: 660px) {
 		z-index: 51;
 		transition: 0.8s ease all 0s;
