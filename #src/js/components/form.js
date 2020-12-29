@@ -16,3 +16,8 @@ if (quantityButtons.length > 0) {
         });
     }
 }
+
+$('.catalog-sorting__link').on('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+})

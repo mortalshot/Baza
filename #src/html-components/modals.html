@@ -7,17 +7,20 @@
                         <div class="to-cart__title title-h4">Добавить в корзину</div>
 
                         <a href="" class="popup__close close-popup">
-                            <svg width="18" height="18" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.239502" y="2.31989" width="2.2461" height="23.2097"
                                     transform="rotate(-45 0.239502 2.31989)" fill="#C4C4C4" />
                                 <rect width="2.2461" height="23.2097"
-                                    transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 18.2395 2.31989)" fill="#C4C4C4" />
+                                    transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 18.2395 2.31989)"
+                                    fill="#C4C4C4" />
                             </svg>
                         </a>
                     </div>
                     <div class="to-cart__body">
                         <div class="product-item__product">
-                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt=""></div>
+                            <div class="product-item__product-image"><img src="img/market/stirp/stirp-1.png" alt="">
+                            </div>
                             <div class="product-item__product-name">Киви свежие, Иран</div>
                         </div>
                         <div class="to-cart__quantity quantity">
@@ -33,7 +36,8 @@
                     </div>
 
                     <div class="to-cart__footer">
-                        <div class="to-cart__label">Итого <span class="to-cart__weight">500 тонн</span> на сумму <span class="to-cart__summary">5 750 000</span> рублей</div>
+                        <div class="to-cart__label">Итого <span class="to-cart__weight">500 тонн</span> на сумму <span
+                                class="to-cart__summary">5 750 000</span> рублей</div>
                         <div class="to-cart__button">
                             <button type="submit" class="btn btn-green">
                                 <span>В корзину</span>
@@ -42,6 +46,173 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="filterProduct" class="popup filter-product">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="" class="popup__close close-popup">
+                    <svg width="18" height="18" viewBox="0 0 19 19" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.239502" y="2.31989" width="2.2461" height="23.2097"
+                            transform="rotate(-45 0.239502 2.31989)" fill="#C4C4C4" />
+                        <rect width="2.2461" height="23.2097"
+                            transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 18.2395 2.31989)"
+                            fill="#C4C4C4" />
+                    </svg>
+                </a>
+                <div class="filter-product__heading">
+                    <div class="filter-product__stirps">
+                        <div class="nav nav-tabs" id="filterStirpsTabs" role="tablist">
+                            <a class="nav-item nav-link active" id="filterProductStirps-1" data-toggle="tab" href="#filterProductStirpsLink-1"
+                                role="tab" aria-controls="filterProductStirpsLink-1" aria-selected="true">Овощи</a>
+                            <a class="nav-item nav-link" id="filterProductStirps-2" data-toggle="tab" href="#filterProductStirpsLink-2"
+                                role="tab" aria-controls="filterProductStirpsLink-2" aria-selected="false">Фрукты</a>
+                            <a class="nav-item nav-link" id="filterProductStirps-3" data-toggle="tab" href="#filterProductStirpsLink-3"
+                                role="tab" aria-controls="filterProductStirpsLink-3" aria-selected="false">Ягоды</a>
+                            <a class="nav-item nav-link" id="filterProductStirps-3" data-toggle="tab" href="#filterProductStirpsLink-4"
+                                role="tab" aria-controls="filterProductStirpsLink-4" aria-selected="false">Зелень</a>
+                            <a class="nav-item nav-link" id="filterProductStirps-3" data-toggle="tab" href="#filterProductStirpsLink-5"
+                                role="tab" aria-controls="filterProductStirpsLink-5" aria-selected="false">Грибы</a>
+                            <a class="nav-item nav-link" id="filterProductStirps-3" data-toggle="tab" href="#filterProductStirpsLink-6"
+                                role="tab" aria-controls="filterProductStirpsLink-6" aria-selected="false">Экзотика</a>
+                        </div>
+                    </div>
+                    <div class="filter-product__attr">
+                        <div class="nav nav-tabs" id="filterAttrTabs" role="tablist">
+                            <a class="nav-item nav-link active" id="filterAttrTab-1" data-toggle="tab" href="#filterAttrTabLink-1"
+                                role="tab" aria-controls="filterAttrTabLink-1" aria-selected="true">
+                                <div>Сорт</div>
+                                <div class="filter-modals__quantity">5</div>
+                            </a>
+                            <a class="nav-item nav-link" id="filterAttrTab-2" data-toggle="tab" href="#filterAttrTabLink-2"
+                                role="tab" aria-controls="filterAttrTabLink-2" aria-selected="false">
+                                <div>Страна</div>
+                                <div class="filter-modals__quantity">15</div>
+                            </a>
+                            <a class="nav-item nav-link" id="filterAttrTab-3" data-toggle="tab" href="#filterAttrTabLink-3"
+                                role="tab" aria-controls="filterAttrTabLink-3" aria-selected="false">
+                                <div>Местонахождение</div>
+                                <div class="filter-modals__quantity"></div>
+                            </a>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="filter-product__content">
+                    <div class="filter-product__stirps filter-stirps">
+                        <div class="tab-content" id="filterStirpsTabsContent">
+                            <div class="tab-pane fade show active" id="filterProductStirpsLink-1" role="tabpanel" aria-labelledby="filterProductStirps-1">
+                                <div class="filter-stirps__row">
+                                    <a href="#filterAttr-1-1" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__name">Все овощи</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-2" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-2.png" alt=""></div>
+                                            <div class="filter-stirps__name">Картофель</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-3" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-3.png" alt=""></div>
+                                            <div class="filter-stirps__name">Свекла</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-4" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-4.png" alt=""></div>
+                                            <div class="filter-stirps__name">Баклажан</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-2" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-2.png" alt=""></div>
+                                            <div class="filter-stirps__name">Картофель</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-3" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-3.png" alt=""></div>
+                                            <div class="filter-stirps__name">Свекла</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-4" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-4.png" alt=""></div>
+                                            <div class="filter-stirps__name">Баклажан</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-2" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-2.png" alt=""></div>
+                                            <div class="filter-stirps__name">Картофель</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-3" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-3.png" alt=""></div>
+                                            <div class="filter-stirps__name">Свекла</div>
+                                        </div>
+                                    </a>
+                                    <a href="#filterAttr-1-4" class="filter-stirps__item">
+                                        <div class="filter-stirps__body">
+                                            <div class="filter-stirps__img"><img src="img/market/stirp/stirp-4.png" alt=""></div>
+                                            <div class="filter-stirps__name">Баклажан</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="filterProductStirpsLink-2" role="tabpanel"
+                                aria-labelledby="filterProductStirps-2">...</div>
+                            <div class="tab-pane fade" id="filterProductStirpsLink-3" role="tabpanel"
+                                aria-labelledby="filterProductStirps-3">...</div>
+                        </div>
+                    </div>
+                    <div class="filter-product__attr filter-attributes">
+                        <div class="tab-content" id="filterAttrTabsContent">
+                            <div class="tab-pane fade show active" id="filterAttrTabLink-1" role="tabpanel" aria-labelledby="filterAttrTab-1">
+                                <div id="filterAttr-1-1" class="filter-attributes__item">
+                                    <a href="" class="filter-attributes__title">Помидор</a>
+                                    <div class="filter-attributes__links">
+                                        <a href="" class="filter-attributes__link">Барнаульский консервный</a>
+                                        <a href="" class="filter-attributes__link">Молдавский ранний</a>
+                                        <a href="" class="filter-attributes__link">Хурма</a>
+                                        <a href="" class="filter-attributes__link">Сортогруппа Де Барао</a>
+                                        <a href="" class="filter-attributes__link">Алпатьева 905-а</a>
+                                        <a href="" class="filter-attributes__link">Груша чёрная</a>
+                                    </div>
+                                </div>
+                                <div id="filterAttr-1-2" class="filter-attributes__item">
+                                    <a href="" class="filter-attributes__title">Брокколи</a>
+                                    <div class="filter-attributes__links">
+                                        <a href="" class="filter-attributes__link">Вярус</a>
+                                        <a href="" class="filter-attributes__link">Грин Мэджик F1</a>
+                                        <a href="" class="filter-attributes__link">Хурма</a>
+                                        <a href="" class="filter-attributes__link">Кудрявая голова</a>
+                                        <a href="" class="filter-attributes__link">Маратон F1</a>
+                                        <a href="" class="filter-attributes__link">Бомонт F1</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="filterAttrTabLink-2" role="tabpanel"
+                                aria-labelledby="filterAttrTab-2">Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Несколько которой даль силуэт вопрос.</div>
+                            <div class="tab-pane fade" id="filterAttrTabLink-3" role="tabpanel"
+                                aria-labelledby="filterAttrTab-3">...</div>
+                        </div>
+                        
+                        <div class="filter-attributes__summary attributes-summary">
+                            <div class="attributes-summary__label">Выбрано</div>
+                            <div class="attributes-summary__row">
+                                .attributes-summary__
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

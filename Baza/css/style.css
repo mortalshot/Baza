@@ -2493,6 +2493,18 @@ textarea.form__input {
   margin-right: 6px;
 }
 
+.catalog-sorting__link img {
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+}
+
+.catalog-sorting__link.active img {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
 .catalog-output__options {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2869,6 +2881,231 @@ textarea.form__input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.filter-product {
+  padding: 76px 0px 0px 280px;
+  height: 100vh;
+  z-index: 1;
+  background: transparent;
+}
+
+.filter-product .popup__body {
+  padding: 0;
+}
+
+.filter-product .popup__content {
+  background-color: #f5f5f5;
+  max-width: 100%;
+  height: calc(100vh - 76px);
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.filter-product .nav-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000;
+  position: relative;
+}
+
+.filter-product .nav-link::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #1d9f3a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(0, 9px) scale(0);
+      -ms-transform: translate(0, 9px) scale(0);
+          transform: translate(0, 9px) scale(0);
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+}
+
+.filter-product .nav-link.active {
+  color: #000;
+}
+
+.filter-product .nav-link.active::before {
+  -webkit-transform: translate(0, 9px) scale(1);
+      -ms-transform: translate(0, 9px) scale(1);
+          transform: translate(0, 9px) scale(1);
+}
+
+.filter-product__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 58px;
+}
+
+.filter-product__heading .nav-tabs {
+  border: 0;
+}
+
+.filter-product__heading .nav-tabs .nav-item {
+  margin: 0;
+  display: inline-block;
+  padding: 0;
+  margin-right: 40px;
+}
+
+.filter-product__heading .nav-tabs .nav-item:last-child {
+  margin-right: 0;
+}
+
+.filter-product__heading .nav-tabs .nav-item.show .nav-link {
+  background-color: transparent;
+}
+
+.filter-product__heading .nav-tabs .nav-link {
+  border: 0;
+  border-radius: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter-product__heading .nav-tabs .nav-link.active {
+  background-color: transparent;
+}
+
+.filter-product__stirps {
+  padding-right: 15px;
+}
+
+.filter-product__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter-product .filter-stirps__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -9px;
+}
+
+.filter-product .filter-stirps__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  padding: 9px;
+}
+
+.filter-product .filter-stirps__body {
+  text-align: center;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 10px;
+  padding-left: 27px;
+  padding-right: 27px;
+  height: 100%;
+}
+
+.filter-product .filter-stirps__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+}
+
+.filter-product .filter-stirps__img {
+  margin-right: 18px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  max-width: 30px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.filter-product .filter-stirps__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.filter-product .filter-attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filter-product .filter-attributes .tab-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.filter-product .filter-attributes__item {
+  padding: 18px 0;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+.filter-product .filter-attributes__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+  margin-bottom: 12px;
+  display: inline-block;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+}
+
+.filter-product .filter-attributes__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter-product .filter-attributes__link {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.filter-product .filter-attributes__link:last-child {
+  margin-right: 0;
 }
 
 @media screen and (min-width: 451px) {
@@ -3354,6 +3591,22 @@ textarea.form__input {
   .to-cart__body .product-item__product {
     margin-bottom: calc(15px + 15 * ((100vw - 320px) / (1046)));
   }
+
+  .filter-product__heading {
+    margin-bottom: calc(15px + 43 * ((100vw - 320px) / (1046)));
+  }
+
+  .filter-product__heading .nav-tabs .nav-item {
+    margin-right: calc(10px + 30 * ((100vw - 320px) / (1046)));
+  }
+
+  .filter-product .filter-stirps__body {
+    padding-left: calc(10px + 17 * ((100vw - 320px) / (1046)));
+  }
+
+  .filter-product .filter-stirps__body {
+    padding-right: calc(10px + 17 * ((100vw - 320px) / (1046)));
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -3461,6 +3714,10 @@ textarea.form__input {
     -webkit-transform: translate(0);
         -ms-transform: translate(0);
             transform: translate(0);
+  }
+
+  .filter-product {
+    padding-left: 65px;
   }
 }
 
@@ -3772,6 +4029,10 @@ textarea.form__input {
   .popup__close {
     top: 15px;
     right: 7px;
+  }
+
+  .filter-product {
+    padding: 54px 0px 0px 0px;
   }
 }
 

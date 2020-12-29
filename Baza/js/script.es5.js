@@ -869,4 +869,9 @@ $(document).ready(function () {
       _loop4(_index7);
     }
   }
+
+  $('.catalog-sorting__link').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+  });
 });
