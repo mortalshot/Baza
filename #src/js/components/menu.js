@@ -55,6 +55,8 @@ $(function () {
         }
         body.style.paddingRight = lockPaddingValue;
         body.classList.add('lock');
+
+        $('.filter-product').removeClass('open');
     });
 
     $(document).mouseup(function (e) {

@@ -8,4 +8,5 @@
 @@include('components/select.js')
 @@include('components/popup.js')
 @@include('components/form.js')
+@@include('components/accordion.js')
 
