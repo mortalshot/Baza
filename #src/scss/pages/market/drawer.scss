@@ -42,9 +42,70 @@
 	}
 }
 
+.drawer-closed {
+	.header {
+		left: 65px;
+	}
+
+	.site__main {
+		min-height: 100vh;
+	}
+
+	.site__main,
+	.footer {
+		padding-left: 65px;
+	}
+
+	.navigation-drawer {
+		&__mobile {
+			display: block;
+			background-color: $DGray2;
+			height: 100vh;
+			width: 65px;
+			position: fixed;
+			left: 0;
+			top: 0;
+			color: $White;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			cursor: pointer;
+
+			.account__avatar {
+				margin: 21px 0 0;
+			}
+
+			.navigation-drawer__burger {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		&__wrapper {
+			z-index: 51;
+			transform: translate(-150%, 0);
+			opacity: 0;
+			pointer-events: none;
+			visibility: hidden;
+			transition: 0.3s ease all 0s;
+			
+
+			&.active {
+				transform: translate(0);
+				opacity: 1;
+				pointer-events: auto;
+				visibility: visible;
+			}
+		}
+	}
+}
+
 .navigation-drawer {
 	z-index: 51;
-	
+
 	@media screen and (max-width: 660px) {
 		z-index: 51;
 		transition: 0.8s ease all 0s;
