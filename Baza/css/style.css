@@ -3570,6 +3570,7 @@ textarea.form__input {
   display: -ms-flexbox;
   display: flex;
   color: #000;
+  padding-right: 18px;
 }
 
 .country__accordion .accordion__title::before,
