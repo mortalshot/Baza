@@ -74,3 +74,13 @@ $('.filter-modals__link').on('click', function (e) {
     $('.filter-attributes .tab-pane').removeClass('active show');
     $(id).click();
 });
+
+if ('.market__catalog' && $('.catalog__products').hasClass('catalog__products--card')) {
+    let popupHeight = $('.catalog__product:last-child .product-popup').outerHeight();
+    $('.market__catalog').css({ 'padding-bottom': popupHeight });
+
+    $(window).resize(function () {
+        popupHeight = $('.catalog__product:last-child .product-popup').outerHeight();
+        $('.market__catalog').css({ 'padding-bottom': popupHeight });
+    })
+}

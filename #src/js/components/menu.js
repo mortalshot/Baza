@@ -83,3 +83,12 @@ $(document).mouseup(function (e) {
 $('.filter-modals__link.popup-link').click(function (e) {
     $('.navigation-drawer__wrapper, .navigation-drawer').removeClass('active');
 });
+
+const navItems = document.querySelectorAll('.header__inner .navbar .nav-link');
+let mediaQueryXsMax = window.matchMedia('(max-width: 450px)');
+if (mediaQueryXsMax.matches) {
+    for (let index = 0; index < navItems.length; index++) {
+        const element = navItems[index];
+        $(element).text($(element).data('value'));
+    }
+}

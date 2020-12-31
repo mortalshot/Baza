@@ -285,12 +285,22 @@ $(document).ready(function () {
   $('.filter-modals__link.popup-link').click(function (e) {
     $('.navigation-drawer__wrapper, .navigation-drawer').removeClass('active');
   });
+  var navItems = document.querySelectorAll('.header__inner .navbar .nav-link');
+  var mediaQueryXsMax = window.matchMedia('(max-width: 450px)');
+
+  if (mediaQueryXsMax.matches) {
+    for (var index = 0; index < navItems.length; index++) {
+      var element = navItems[index];
+      $(element).text($(element).data('value'));
+    }
+  }
+
   var animItems = document.querySelectorAll('._anim-items');
 
   if (animItems.length > 0) {
     var animOnScroll = function animOnScroll(params) {
-      for (var index = 0; index < animItems.length; index++) {
-        var animItem = animItems[index];
+      for (var _index3 = 0; _index3 < animItems.length; _index3++) {
+        var animItem = animItems[_index3];
         var animItemHeight = animItem.offsetHeight;
         var animItemOffset = offset(animItem).top;
         var animStart = 4; // Коэффициент старта анимации
@@ -467,8 +477,8 @@ $(document).ready(function () {
   }
 
   function selects_init() {
-    for (var index = 0; index < selects.length; index++) {
-      var select = selects[index];
+    for (var _index4 = 0; _index4 < selects.length; _index4++) {
+      var select = selects[_index4];
       select_init(select);
     } //select_callback();
 
@@ -487,8 +497,8 @@ $(document).ready(function () {
     var selects = document.querySelectorAll('.select');
 
     if (!e.target.closest('.select')) {
-      for (var index = 0; index < selects.length; index++) {
-        var select = selects[index];
+      for (var _index5 = 0; _index5 < selects.length; _index5++) {
+        var select = selects[_index5];
         var select_body_options = select.querySelector('.select__options');
         select.classList.remove('_active');
 
@@ -542,8 +552,8 @@ $(document).ready(function () {
     select_item.addEventListener('click', function () {
       var selects = document.querySelectorAll('.select');
 
-      for (var index = 0; index < selects.length; index++) {
-        var _select = selects[index];
+      for (var _index6 = 0; _index6 < selects.length; _index6++) {
+        var _select = selects[_index6];
 
         var _select_body_options = _select.querySelector('.select__options');
 
@@ -559,8 +569,8 @@ $(document).ready(function () {
       select.classList.toggle('_active');
     });
 
-    var _loop = function _loop(index) {
-      var select_option = select_options[index];
+    var _loop = function _loop(_index7) {
+      var select_option = select_options[_index7];
       var select_option_value = select_option.getAttribute('data-value');
       var select_option_text = select_option.innerHTML;
 
@@ -573,8 +583,8 @@ $(document).ready(function () {
       }
 
       select_option.addEventListener('click', function () {
-        for (var _index3 = 0; _index3 < select_options.length; _index3++) {
-          var el = select_options[_index3];
+        for (var _index8 = 0; _index8 < select_options.length; _index8++) {
+          var el = select_options[_index8];
           el.style.display = 'block';
         }
 
@@ -589,8 +599,8 @@ $(document).ready(function () {
       });
     };
 
-    for (var index = 0; index < select_options.length; index++) {
-      _loop(index);
+    for (var _index7 = 0; _index7 < select_options.length; _index7++) {
+      _loop(_index7);
     }
   }
 
@@ -598,8 +608,8 @@ $(document).ready(function () {
     if (select_options) {
       var select_options_content = '';
 
-      for (var index = 0; index < select_options.length; index++) {
-        var select_option = select_options[index];
+      for (var _index9 = 0; _index9 < select_options.length; _index9++) {
+        var select_option = select_options[_index9];
         var select_option_value = select_option.value;
 
         if (select_option_value != '') {
@@ -633,8 +643,8 @@ $(document).ready(function () {
     var selects = document.querySelectorAll('select');
 
     if (selects) {
-      for (var index = 0; index < selects.length; index++) {
-        var select = selects[index];
+      for (var _index10 = 0; _index10 < selects.length; _index10++) {
+        var select = selects[_index10];
         select_item(select);
       }
     }
@@ -717,8 +727,8 @@ $(document).ready(function () {
   var timeout = 800;
 
   if (popupLinks.length > 0) {
-    var _loop2 = function _loop2(index) {
-      var popupLink = popupLinks[index];
+    var _loop2 = function _loop2(_index11) {
+      var popupLink = popupLinks[_index11];
       popupLink.addEventListener("click", function (e) {
         var popupName = popupLink.getAttribute('href').replace('#', '');
         var currentPopup = document.getElementById(popupName);
@@ -727,24 +737,24 @@ $(document).ready(function () {
       });
     };
 
-    for (var index = 0; index < popupLinks.length; index++) {
-      _loop2(index);
+    for (var _index11 = 0; _index11 < popupLinks.length; _index11++) {
+      _loop2(_index11);
     }
   }
 
   var popupCloseIcon = document.querySelectorAll('.close-popup');
 
   if (popupCloseIcon.length > 0) {
-    var _loop3 = function _loop3(_index4) {
-      var el = popupCloseIcon[_index4];
+    var _loop3 = function _loop3(_index12) {
+      var el = popupCloseIcon[_index12];
       el.addEventListener('click', function (e) {
         popupClose(el.closest('.popup'));
         e.preventDefault();
       });
     };
 
-    for (var _index4 = 0; _index4 < popupCloseIcon.length; _index4++) {
-      _loop3(_index4);
+    for (var _index12 = 0; _index12 < popupCloseIcon.length; _index12++) {
+      _loop3(_index12);
     }
   }
 
@@ -783,8 +793,8 @@ $(document).ready(function () {
     var lockPaddingValue = window.innerWidth - document.querySelector('.site__main').offsetWidth + 'px'; //!обратить внимание на контейнер
 
     if (lockPadding.length > 0) {
-      for (var _index5 = 0; _index5 < lockPadding.length; _index5++) {
-        var el = lockPadding[_index5];
+      for (var _index13 = 0; _index13 < lockPadding.length; _index13++) {
+        var el = lockPadding[_index13];
         el.style.paddingRight = lockPaddingValue;
       }
     }
@@ -800,8 +810,8 @@ $(document).ready(function () {
   function bodyUnLock() {
     setTimeout(function () {
       if (lockPadding.length > 0) {
-        for (var _index6 = 0; _index6 < lockPadding.length; _index6++) {
-          var el = lockPadding[_index6];
+        for (var _index14 = 0; _index14 < lockPadding.length; _index14++) {
+          var el = lockPadding[_index14];
           el.style.paddingRight = '0px';
         }
       }
@@ -849,8 +859,8 @@ $(document).ready(function () {
   var quantityButtons = document.querySelectorAll('.quantity__button');
 
   if (quantityButtons.length > 0) {
-    var _loop4 = function _loop4(_index7) {
-      var quantityButton = quantityButtons[_index7];
+    var _loop4 = function _loop4(_index15) {
+      var quantityButton = quantityButtons[_index15];
       quantityButton.addEventListener("click", function (e) {
         var value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
 
@@ -868,8 +878,8 @@ $(document).ready(function () {
       });
     };
 
-    for (var _index7 = 0; _index7 < quantityButtons.length; _index7++) {
-      _loop4(_index7);
+    for (var _index15 = 0; _index15 < quantityButtons.length; _index15++) {
+      _loop4(_index15);
     }
   }
 
@@ -924,6 +934,20 @@ $(document).ready(function () {
     $('.filter-attributes .tab-pane').removeClass('active show');
     $(id).click();
   });
+
+  if ('.market__catalog' && $('.catalog__products').hasClass('catalog__products--card')) {
+    var popupHeight = $('.catalog__product:last-child .product-popup').outerHeight();
+    $('.market__catalog').css({
+      'padding-bottom': popupHeight
+    });
+    $(window).resize(function () {
+      popupHeight = $('.catalog__product:last-child .product-popup').outerHeight();
+      $('.market__catalog').css({
+        'padding-bottom': popupHeight
+      });
+    });
+  }
+
   $('.accordion__title').click(function (event) {
     var accordionid = $(this).closest('.accordion').attr("id");
 

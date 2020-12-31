@@ -1,0 +1,294 @@
+.cart {
+    &__heading {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        @include adaptiv-value("margin-top", 32, 15, 1);
+        @include adaptiv-value("margin-bottom", 40, 20, 1);
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__reset {
+        font-size: 14px;
+        line-height: 1;
+        color: $Gray3;
+        text-decoration: underline;
+    }
+
+    &__item {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        @include adaptiv-value("margin-bottom", 38, 20, 1);
+    }
+
+    &__wrapper {
+        background-color: $White;
+    }
+
+    &__item-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+        border-bottom: 1px solid $LGray3;
+
+        @media screen and (max-width: 575px) {
+            align-items: flex-start;
+        }
+    }
+
+    &__left {
+        @include adaptiv-value("padding-left", 20, 6, 1);
+        padding-right: 15px;
+
+        @media screen and (max-width: 400px) {
+            padding-left: 10px;
+        }
+    }
+
+    &__person {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: $DGray;
+
+        @media screen and (max-width: 575px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        @include adaptiv-value("margin-right", 45, 10, 1);
+
+        @media screen and (min-width: $layoutDesktop + "px") {
+            min-width: 170px;
+        }
+        @media screen and (max-width: 575px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__owner-name {
+        line-height: 18px;
+        color: $Black;
+        text-decoration: underline;
+        display: inline-flex;
+        margin-bottom: 5px;
+    }
+
+    &__owner-rating {
+        display: flex;
+
+        i.icon-star-rating {
+            font-size: 10px;
+            color: $Yellow;
+            display: inline-flex;
+            margin-right: 4px;
+
+            &--dis {
+                color: $DGray;
+            }
+        }
+    }
+
+    &__company {
+        @include adaptiv-value("margin-right", 45, 10, 1);
+
+        @media screen and (max-width: 575px) {
+            margin: 0px 0px 4px 0px;
+        }
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+
+        i {
+            display: inline-flex;
+            margin-right: 6px;
+        }
+    }
+
+    &__right {
+        @include adaptiv-value("padding-right", 20, 6, 1);
+
+        @media screen and (max-width: 400px) {
+            padding-right: 10px;
+        }
+    }
+
+    &__delete {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1;
+        text-decoration: underline;
+        color: $DGray;
+    }
+
+    &__row {
+        display: flex;
+        padding: 9.5px 0;
+        border-bottom: 1px solid $LGray3;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column {
+        @include adaptiv-value("padding-right", 20, 6, 1);
+        @include adaptiv-value("padding-left", 20, 6, 1);
+
+        @media screen and (max-width: 400px) {
+            padding: 0 10px;
+        }
+    }
+
+    &__column--name {
+        flex: 1 1 auto;
+
+        @media screen and (max-width: 767px) {
+            flex: 0 0 100%;
+            margin-bottom: 15px;
+        }
+
+        .product-item {
+            &__content {
+                flex-wrap: wrap;
+            }
+
+            &__product {
+                flex: initial;
+                padding: 5px 0;
+                margin-right: 10px;
+            }
+
+            &__product-name {
+                font-size: 16px;
+                line-height: 21px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            &__category-name {
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__column--num {
+        flex: 0 0 20%;
+
+        @media screen and (max-width: 1200px) {
+            flex: 0 0 25%;
+        }
+        @media screen and (max-width: 991px) {
+            flex: 0 0 30%;
+        }
+        @media screen and (max-width: 767px) {
+            flex: 1 1 auto;
+        }
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+            margin-bottom: 15px;
+        }
+
+        .quantity__wrapper {
+            padding-right: 12px;
+        }
+
+        .quantity__input {
+            input {
+                padding: 6.5px 12px;
+
+                @media screen and (min-width: $layoutDesktop + "px") {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        .quantity__button--minus {
+            margin-right: 8px;
+        }
+
+        .to-cart__measure {
+            padding-left: 14px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    &__column--price {
+        flex: 0 0 16%;
+
+        @media screen and (max-width: 991px) {
+            flex: 0 0 19%;
+        }
+        @media screen and (max-width: 450px) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__price {
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    &__column--delete {
+        i {
+            display: inline-flex;
+            font-size: 19px;
+            color: $Gray;
+        }
+    }
+
+    &__item-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 27px 23px;
+        @include adaptiv-value("padding-right", 23, 6, 1);
+        @include adaptiv-value("padding-left", 23, 6, 1);
+
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+        @media screen and (max-width: 400px) {
+            padding: 16px 10px;
+        }
+    }
+
+    &__footer-label {
+        font-weight: 900;
+        font-size: 16px;
+        padding-right: 15px;
+
+        @media screen and (max-width: 450px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__btn {
+        padding: 7px 14px;
+
+        @media screen and (max-width: 450px) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
