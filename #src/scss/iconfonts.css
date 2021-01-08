@@ -25,6 +25,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-calendar:before {
+  content: "\e91b";
+}
+.icon-info:before {
+  content: "\e91c";
+}
+.icon-truck:before {
+  content: "\e91d";
+}
+.icon-telegram:before {
+  content: "\e91e";
+}
+.icon-line-chart:before {
+  content: "\e91f";
+}
+.icon-edit:before {
+  content: "\e920";
+}
+.icon-eye:before {
+  content: "\e921";
+}
+.icon-chevron-left:before {
+  content: "\e919";
+}
+.icon-chevron-right:before {
+  content: "\e91a";
+}
 .icon-star-rating:before {
   content: "\e918";
 }

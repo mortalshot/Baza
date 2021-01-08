@@ -1,12 +1,4 @@
 .cart {
-    &__heading {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        @include adaptiv-value("margin-top", 32, 15, 1);
-        @include adaptiv-value("margin-bottom", 40, 20, 1);
-    }
-
     &__title {
         margin: 0;
     }

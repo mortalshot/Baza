@@ -31,12 +31,12 @@
         }
     }
     &-market {
-        font-weight: 600;
+        font-weight: 800;
         font-size: 24px;
         line-height: 31px;
-        letter-spacing: 0.8px;
+        margin: 0;
 
-        @media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(20px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(31 / 24);
         }
@@ -46,7 +46,7 @@
         font-size: 20px;
         line-height: 26px;
 
-        @media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(16px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(26 / 20);
         }
