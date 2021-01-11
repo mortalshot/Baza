@@ -39,6 +39,7 @@
 
             &__label {
                 color: $LGray;
+                padding: 0;
                 transition: 0.3s ease all 0s;
 
                 &::before,
@@ -368,6 +369,10 @@
 
         @media screen and (max-width: 1200px) {
             margin-right: 15px;
+        }
+
+        .checkbox__label {
+            padding: 0;
         }
     }
 }

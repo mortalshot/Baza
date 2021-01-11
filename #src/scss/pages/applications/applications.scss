@@ -1,0 +1,220 @@
+.applications {
+    &__heading {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__title {
+        margin-right: 35px;
+    }
+
+    &__add {
+        background-color: $GreenM;
+        border-radius: 3px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @include adaptiv-value("padding", 13, 5, 1);
+    }
+
+    .table {
+        &__column {
+            padding: 14px 10px;
+            border-top: 0;
+            vertical-align: middle;
+
+            @media screen and (min-width: 901px) {
+                border-bottom: 1px solid $LGray3;
+            }
+            @media screen and (max-width: 900px) {
+                padding: 3px 10px;
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__table {
+        background-color: $White;
+    }
+
+    &__row {
+        margin: 0;
+
+        @media screen and (max-width: 900px) {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid $LGray3;
+            padding: 16px 14px;
+        }
+    }
+
+    &__column--request {
+        font-weight: 600;
+        min-width: 14%;
+
+        @media screen and (min-width: 901px) {
+            white-space: nowrap;
+        }
+        @media screen and (max-width: 900px) {
+            order: 1;
+            flex: 0 0 30%;
+        }
+        @media screen and (max-width: 767px) {
+            flex: 0 0 40%;
+        }
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__request {
+        color: $Black;
+    }
+
+    &__column--date {
+        font-size: 14px;
+        line-height: 18px;
+        min-width: 15%;
+
+        @media screen and (min-width: 901px) {
+            white-space: nowrap;
+        }
+        @media screen and (max-width: 900px) {
+            order: 4;
+            flex: 0 0 80%;
+        }
+    }
+
+    &__column--city {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $DGray;
+        width: 14%;
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 6px;
+        }
+
+        @media screen and (min-width: 901px) {
+            white-space: nowrap;
+        }
+        @media screen and (max-width: 900px) {
+            order: 6;
+            flex: 0 0 100%;
+        }
+        @media screen and (max-width: 575px) {
+            flex: 0 0 60%;
+        }
+    }
+
+    &__city {
+        display: flex;
+        align-items: center;
+    }
+
+    &__column--products {
+        max-width: 40%;
+
+        @media screen and (max-width: 900px) {
+            order: 2;
+            flex: 0 0 50%;
+            max-width: 100%;
+            justify-content: flex-end;
+        }
+        @media screen and (max-width: 767px) {
+            flex: 0 0 40%;
+        }
+        @media screen and (max-width: 575px) {
+            flex: 0 0 60%;
+        }
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+            justify-content: flex-start;
+        }
+    }
+
+    &__products {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    &__product {
+        padding: 5px;
+    }
+
+    &__product-img {
+        position: relative;
+        width: 20px;
+        padding-bottom: 20px;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__column--view {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        width: 7%;
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 7px;
+        }
+
+        @media screen and (max-width: 900px) {
+            order: 5;
+            flex: 0 0 20%;
+            justify-content: flex-end;
+        }
+    }
+
+    &__view {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__column--status {
+        text-align: right;
+
+        @media screen and (max-width: 900px) {
+            order: 3;
+            flex: 0 0 20%;
+            justify-content: flex-end;
+        }
+        @media screen and (max-width: 575px) {
+            order: 6;
+            flex: 0 0 40%;
+        }
+    }
+
+    &__status {
+        padding: 2px 5px;
+        border-radius: 2px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: $DGray;
+        display: inline-flex;
+    }
+
+    &__status--open {
+        background-color: $Yellow2;
+    }
+
+    &__status--closed {
+        background-color: $Orange2;
+    }
+}
