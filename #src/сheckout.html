@@ -132,18 +132,67 @@
                                                             <a class="nav-item nav-link" id="deliveryMethodTab-2" data-toggle="tab" href="#deliveryMethodTabLink-2" role="tab" aria-controls="deliveryMethodTabLink-2" aria-selected="true">Самовывоз</a>
                                                         </div>
                                                         <div class="tab-content" id="deliveryMethodTabContent">
-                                                            <div class="tab-pane fade show active" id="deliveryMethodTabLink-1" role="tabpanel" aria-labelledby="deliveryMethodTab-1">Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты.</div>
+                                                            <div class="tab-pane fade show active" id="deliveryMethodTabLink-1" role="tabpanel" aria-labelledby="deliveryMethodTab-1">
+                                                                <div class="row order-terms__address-row">
+                                                                    <div class="col-12 col-lg-5">
+                                                                        <select name="city" class="form__select">
+                                                                            <option value="">Город</option>
+                                                                            <option value="Москва">Москва</option>
+                                                                            <option value="Тверь">Тверь</option>
+                                                                            <option value="Воронеж">Воронеж</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-12 col-lg-7">
+                                                                        <div class="form__input--location">
+                                                                            <input id="formName" type="text" name="name" class="form__input" placeholder="Адреc">
+                                                                            <span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mb-2">
+                                                                    <div class="col-12">
+                                                                        <div class="checkbox">
+                                                                            <input id="formAddressProfile" type="checkbox" name="agreement" class="checkbox__input">
+                                                                            <label for="formAddressProfile" class="checkbox__label"><span>Установить адрес из вашего профиля</span></label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="checkbox">
+                                                                            <input id="formAddressDelivery" type="checkbox" name="agreement" class="checkbox__input">
+                                                                            <label for="formAddressDelivery" class="checkbox__label"><span>Приемка-передача по адресу доставки</span></label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                             <div class="tab-pane fade" id="deliveryMethodTabLink-2" role="tabpanel" aria-labelledby="deliveryMethodTab-2">
-                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, molestias!
+                                                                <div class="order-terms__puckup mb-2">
+                                                                    <div class="order-terms__condition-title">
+                                                                        <i class="icon-map-marker"></i>
+                                                                        <span>Самовывоз по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 61</span>
+                                                                    </div>
+                                                                    <div class="order-terms__condition-text">Приемка-передача по адресу продавца</div>
+                                                                </div>
+                                                                <a href="" class="order-terms__pickup-link">Данные для самовывоза</a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                               
 
-
-
-
+                                                <div class="order-terms__condition">
+                                                    <div class="options">
+                                                        <div class="options__item">
+                                                            <input id="formPaymentCash" checked type="radio" value="cash" name="formPayment" class="options__input">
+                                                            <label for="formPaymentCash" class="options__label"><span>Наличный расчет</span></label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input id="formPaymentCashless" type="radio" value="cashless" name="formPayment" class="options__input">
+                                                            <label for="formPaymentCashless" class="options__label"><span>Безналичный расчет</span></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-terms__postponement">Отсрочка <a href="">0</a> дней</div>
+                                                </div>
 
                                                 <div class="order-terms__condition">
                                                     <div class="order-terms__note">

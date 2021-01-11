@@ -16,8 +16,8 @@
     &__value {
         display: flex;
         font-size: 16px;
-        height: 50px;
-        padding: 0px 20px;
+        height: 41px;
+        padding: 0px 12px;
         align-items: center;
         justify-content: space-between;
         flex-direction: row-reverse;
@@ -48,7 +48,6 @@
         bottom: 0;
         transform: translate(0, 100%);
         background-color: #fff;
-        border-top: 0;
         border: 1px solid #d9d9d9;
         border-top: 0;
         font-size: 16px;
@@ -57,7 +56,7 @@
 
     &__option {
         cursor: pointer;
-        padding: 10px 20px;
+        padding: 10px 12px;
         margin: 0px 0px 0px 0px;
     }
 
