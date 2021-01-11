@@ -23,3 +23,252 @@
 
 // === Pages ===
 @import "pages/index";
+
+.application {
+    &__heading {
+        align-items: center;
+    }
+
+    &__title {
+        @include adaptiv-value("margin-right", 27, 15, 1);
+    }
+
+    .applications__status {
+        @include adaptiv-value("margin-right", 27, 15, 1);
+    }
+
+    .applications__view {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+
+        @media screen and (min-width: $layoutDesktop + "px") {
+            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 12);
+        }
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 7px;
+        }
+    }
+
+    &__tools {
+        display: flex;
+        align-items: center;
+    }
+
+    &__tool {
+        @include adaptiv-value("margin-right", 21, 10, 1);
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            color: $Gray;
+            font-size: 18px;
+            transition: 0.3s ease all 0s;
+
+            i {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__setting {
+    }
+
+    &__delete {
+    }
+}
+
+.application-card {
+    background-color: $White;
+    padding: 16px 0 16px;
+
+    &__heading {
+        border-bottom: 1px solid $LGray3;
+        padding: 0 20px 26px;
+
+        .cart {
+            &__heading-row {
+                @include adaptiv-value("margin-bottom", 31, 15, 1);
+            }
+
+            &__left {
+                padding-left: 0;
+            }
+
+            &__right {
+                font-size: 12px;
+                line-height: 15px;
+                color: $DGray;
+
+                @media screen and (min-width: $layoutDesktop + "px") {
+                    font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+                    line-height: calc(15 / 12);
+                }
+
+                i {
+                    display: inline-flex;
+                }
+            }
+        }
+
+        .order-terms {
+            &__condition {
+                margin: 0 0 14px;
+                padding: 0 9px;
+                border: 0;
+                font-size: 14px;
+                line-height: 18px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__condition-title {
+                font-weight: 500;
+            }
+
+            &__condition-text {
+                font-size: 14px;
+                line-height: 15px;
+                color: $DGray;
+            }
+        }
+    }
+
+    &__body {
+    }
+
+    &__table {
+        color: $DGray;
+        margin: 0;
+
+        .table__column {
+            padding: 11px 0;
+        }
+
+        thead {
+            th {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                border: 0;
+            }
+        }
+
+        tbody {
+            .table__column {
+                border-bottom: 1px solid $LGray3;
+            }
+        }
+    }
+
+    &__row {
+    }
+
+    &__column--product {
+        width: 52%;
+        padding-left: 20px !important;
+
+        .product-item {
+            &__content {
+            }
+
+            &__product {
+                flex: initial;
+                margin-right: 12px;
+            }
+
+            &__product-name {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    }
+
+    &__column--size {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        width: 10%;
+
+        @media screen and (min-width: $layoutDesktop + "px") {
+            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 12);
+        }
+    }
+
+    &__column--quantum {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        width: 10%;
+
+        @media screen and (min-width: $layoutDesktop + "px") {
+            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 12);
+        }
+    }
+
+    &__column--weight {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+        width: 17%;
+        white-space: nowrap;
+        padding: 11px 5px !important;
+    }
+
+    &__column--price {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+        padding-right: 20px !important;
+        white-space: nowrap;
+    }
+
+    &__footer {
+        padding: 25px 20px 9px;
+
+        .table {
+            thead {
+                th {
+                    padding: 0;
+                }
+            }
+            tbody {
+                td {
+                    font-weight: 800;
+                    border: 0;
+                    color: $Black;
+                    padding: 2px 0;
+                }
+
+                .application-card__column--sum-price {
+                    color: $GreenM;
+                }
+            }
+        }
+    }
+
+    &__column--sum-num {
+        width: 80%;
+    }
+
+    &__column--sum-weight {
+        text-align: right;
+    }
+
+    &__column--sum-price {
+        text-align: right;
+    }
+}

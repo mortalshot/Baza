@@ -92,3 +92,10 @@ img {
         }
     }
 }
+
+.table {
+    td, th {
+        padding: 0;
+        border-top: 0;
+    }
+}

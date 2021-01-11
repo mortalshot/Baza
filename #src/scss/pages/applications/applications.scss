@@ -5,7 +5,7 @@
     }
 
     &__title {
-        margin-right: 35px;
+        @include adaptiv-value("margin-right", 35, 15, 1);
     }
 
     &__add {
@@ -99,6 +99,10 @@
             margin-right: 6px;
         }
 
+        @media screen and (min-width: $layoutDesktop + 'px') {
+            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 12);
+        }
         @media screen and (min-width: 901px) {
             white-space: nowrap;
         }
@@ -173,6 +177,10 @@
             margin-right: 7px;
         }
 
+        @media screen and (min-width: $layoutDesktop + 'px') {
+            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 12);
+        }
         @media screen and (max-width: 900px) {
             order: 5;
             flex: 0 0 20%;
@@ -184,6 +192,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        color: $Gray;
     }
 
     &__column--status {
