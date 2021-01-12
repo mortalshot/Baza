@@ -10,7 +10,9 @@
                 <div class="base__title">
                     <a href="" class="base__back"><i class="icon-chevron-left"></i></a>
                     <h1 class="application__title title-market">Заявка №235784</h1>
-                    <div class="applications__status applications__status--open">Открыто 06.12.20 - 18.12.20</div>
+                    <div class="application__status">
+                        <div class="applications__status applications__status--open">Открыто 06.12.20 - 18.12.20</div>
+                    </div>
                     <div class="applications__view">
                         <i class="icon-eye"></i>
                         <span>1203</span>
@@ -49,7 +51,7 @@
                                 </div>
                             </div>
                             <div class="cart__right">
-                                <div class="cart__location">
+                                <div class="cart__location" data-da="cart__owner, last, 450">
                                     <i class="icon-truck"></i>
                                     <span>Санкт-Петербург</span>
                                 </div>
@@ -136,7 +138,7 @@
                     <div class="application-card__footer">
                         <table class="application-card__table table">
                             <thead>
-                                <tr>
+                                <tr class="application-card__row table__row">
                                     <th class="table__column application-card__column--sum-num">Партий</th>
                                     <th class="table__column application-card__column--sum-weight">Вес</th>
                                     <th class="table__column application-card__column--sum-price">Сумма</th>
@@ -151,6 +153,12 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div class="application__responses">
+                    <div class="application__responses-heading">
+                        <h2 class="title-market application__response-title">Отклики <span>(120)</span></h2>
+                    </div>
+                    .application__response
                 </div>
             </div>
         </div>

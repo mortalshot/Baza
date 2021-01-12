@@ -4713,7 +4713,7 @@ textarea.form__input {
   margin-right: 27px;
 }
 
-.application .applications__status {
+.application__status {
   margin-right: 27px;
 }
 
@@ -4825,7 +4825,8 @@ textarea.form__input {
 }
 
 .application-card__table .table__column {
-  padding: 11px 0;
+  padding: 11px 5px;
+  vertical-align: middle;
 }
 
 .application-card__table thead th {
@@ -4835,13 +4836,14 @@ textarea.form__input {
   border: 0;
 }
 
-.application-card__table tbody .table__column {
-  border-bottom: 1px solid #ececec;
+.application-card__column--product {
+  max-width: 51%;
+  padding-left: 20px !important;
 }
 
-.application-card__column--product {
-  width: 52%;
-  padding-left: 20px !important;
+.application-card__column--product .product-item__content {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .application-card__column--product .product-item__product {
@@ -4876,9 +4878,9 @@ textarea.form__input {
   font-size: 14px;
   line-height: 18px;
   text-align: right;
-  width: 17%;
   white-space: nowrap;
   padding: 11px 5px !important;
+  width: 17%;
 }
 
 .application-card__column--price {
@@ -4895,14 +4897,14 @@ textarea.form__input {
 }
 
 .application-card__footer .table thead th {
-  padding: 0;
+  padding: 0 5px;
 }
 
 .application-card__footer .table tbody td {
   font-weight: 800;
   border: 0;
   color: #000;
-  padding: 2px 0;
+  padding: 2px 5px;
 }
 
 .application-card__footer .table tbody .application-card__column--sum-price {
@@ -4915,10 +4917,12 @@ textarea.form__input {
 
 .application-card__column--sum-weight {
   text-align: right;
+  white-space: nowrap;
 }
 
 .application-card__column--sum-price {
   text-align: right;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 451px) {
@@ -4992,6 +4996,10 @@ textarea.form__input {
 @media screen and (min-width: 768px) {
   .phone {
     height: 100%;
+  }
+
+  .application-card__table tbody .table__column {
+    border-bottom: 1px solid #ececec;
   }
 }
 
@@ -5819,7 +5827,7 @@ textarea.form__input {
     margin-right: calc(15px + 12 * ((100vw - 320px) / (1046)));
   }
 
-  .application .applications__status {
+  .application__status {
     margin-right: calc(15px + 12 * ((100vw - 320px) / (1046)));
   }
 
@@ -5871,6 +5879,14 @@ textarea.form__input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
+  }
+
+  .application-card__column--size {
+    width: 12%;
+  }
+
+  .application-card__column--weight {
+    width: 10%;
   }
 }
 
@@ -6496,6 +6512,54 @@ textarea.form__input {
         -ms-flex: 0 0 40%;
             flex: 0 0 40%;
   }
+
+  .application-card__body .application-card__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .application-card__table .table__column {
+    padding: 8px 5px;
+  }
+
+  .application-card__column--product {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .application-card__column--size {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding-left: 50px !important;
+  }
+
+  .application-card__column--quantum {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .application-card__column--weight {
+    padding: 8px 5px 8px 50px !important;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    text-align: left;
+  }
+
+  .application-card__column--price {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -6906,6 +6970,77 @@ textarea.form__input {
         -ms-flex: 0 0 40%;
             flex: 0 0 40%;
   }
+
+  .application__heading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+
+  .application__heading .base__title {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .application__heading .title-market {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .application__status {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 10px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .application .applications__view {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .application__tools {
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .application-card__heading .cart__account {
+    margin-bottom: 0;
+  }
+
+  .application-card__column--product .product-item__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+
+  .application-card__column--product .product-item__product {
+    margin-bottom: 10px;
+  }
+
+  .application-card__column--product .product-item__category {
+    margin-left: 30px;
+  }
 }
 
 @media screen and (max-width: 575px) and (max-width: 1217px) {
@@ -7047,6 +7182,94 @@ textarea.form__input {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+
+  .application-card__heading {
+    padding: 0 16px 16px;
+  }
+
+  .application-card__heading .cart__heading-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+
+  .application-card__column--product {
+    padding-left: 16px !important;
+  }
+
+  .application-card__column--product .product-item__category {
+    margin-left: 26px;
+  }
+
+  .application-card__column--size {
+    padding-left: 46px !important;
+  }
+
+  .application-card__column--weight {
+    padding-left: 46px !important;
+  }
+
+  .application-card__column--price {
+    padding-left: 16px !important;
+  }
+
+  .application-card__footer {
+    padding: 16px 16px 0px;
+  }
+
+  .application-card__footer .table {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .application-card__footer .table thead {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .application-card__footer .table thead th {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 100%;
+    padding: 2px 5px;
+    text-align: left;
+  }
+
+  .application-card__footer .table tbody {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .application-card__footer .table tbody td {
+    font-size: 14px;
+    line-height: 18px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 100%;
+    text-align: right;
+  }
+
+  .application-card__footer .table .application-card__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -7103,6 +7326,22 @@ textarea.form__input {
 
   .base__container {
     padding-right: calc(16px + 21 * ((100vw - 320px) / (1046)));
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .application-card__column--product .product-item__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+
+  .application-card__column--product .product-item__product {
+    margin-bottom: 10px;
   }
 }
 
