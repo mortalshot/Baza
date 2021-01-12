@@ -4767,6 +4767,82 @@ textarea.form__input {
           align-items: center;
 }
 
+.application__responses-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.application__responses-heading-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.application__response-output {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #595959;
+  text-decoration: underline;
+}
+
+.application__responses-list .application-card__column--label {
+  padding-left: 20px !important;
+}
+
+.application__responses-list .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.application__responses-list .checkbox__input:checked + .checkbox__label::before {
+  background-color: #ececec;
+}
+
+.application__responses-list .checkbox__label::before {
+  background-color: #ececec;
+}
+
+.application__responses-list .checkbox__label::after {
+  background: url(../img/icons/check-gray.svg) no-repeat center/cover;
+}
+
+.application__responses-list .application-card__column--product {
+  padding-left: 5px !important;
+}
+
+.application__responses-list .cart__company,
+.application__responses-list .cart__tax {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.application__responses-list--users .application-response {
+  margin-bottom: 30px;
+}
+
+.application__responses-list--users .application-response::last-child {
+  margin-bottom: 0;
+}
+
+.application__response {
+  background-color: #ffffff;
+}
+
 .application-card {
   background-color: #ffffff;
   padding: 16px 0 16px;
@@ -4923,6 +4999,42 @@ textarea.form__input {
 .application-card__column--sum-price {
   text-align: right;
   white-space: nowrap;
+}
+
+.application-response__user {
+  padding: 16px 18px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.application-response__user-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.application-response__user-left {
+  padding-right: 15px;
+}
+
+.application-response__user-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.application-response__user-right .cart__date {
+  padding-right: 20px;
 }
 
 @media screen and (min-width: 451px) {
@@ -5227,6 +5339,12 @@ textarea.form__input {
     line-height: calc(15 / 12);
   }
 
+  .application__responses-list .cart__company,
+  .application__responses-list .cart__tax {
+    font-size: calc(10px + 2 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(15 / 12);
+  }
+
   .application-card__heading .cart__right {
     font-size: calc(10px + 2 * ((100vw - 320px) / (1366 - 320)));
     line-height: calc(15 / 12);
@@ -5238,6 +5356,11 @@ textarea.form__input {
   }
 
   .application-card__column--quantum {
+    font-size: calc(10px + 2 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(15 / 12);
+  }
+
+  .application-response__user {
     font-size: calc(10px + 2 * ((100vw - 320px) / (1366 - 320)));
     line-height: calc(15 / 12);
   }
@@ -5833,6 +5956,18 @@ textarea.form__input {
 
   .application__tool {
     margin-right: calc(10px + 11 * ((100vw - 320px) / (1046)));
+  }
+
+  .application__responses-heading {
+    margin-top: calc(15px + 21 * ((100vw - 320px) / (1046)));
+  }
+
+  .application__responses-heading {
+    margin-bottom: calc(15px + 21 * ((100vw - 320px) / (1046)));
+  }
+
+  .application__responses-list--users .application-response {
+    margin-bottom: calc(24px + 6 * ((100vw - 320px) / (1046)));
   }
 
   .application-card__heading .cart__heading-row {
