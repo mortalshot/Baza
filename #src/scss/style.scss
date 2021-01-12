@@ -147,6 +147,7 @@
     &__responses-list {
         .application-card__column--label {
             padding-left: 20px !important;
+            padding-right: 25px !important;
         }
 
         .checkbox {
@@ -161,6 +162,8 @@
             }
 
             &__label {
+                padding: 0;
+
                 &::before {
                     background-color: $LGray3;
                 }
@@ -175,15 +178,27 @@
         }
 
         .cart {
-            &__company, &__tax {
+            &__person {
+            }
+
+            &__company,
+            &__tax {
                 font-weight: 500;
                 font-size: 12px;
                 line-height: 15px;
-        
+
                 @media screen and (min-width: $layoutDesktop + "px") {
                     font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
                     line-height: calc(15 / 12);
                 }
+            }
+
+            &__tax {
+                flex: 1 1 auto;
+            }
+
+            &__date {
+                padding-right: 20px;
             }
         }
     }
@@ -194,6 +209,39 @@
 
             &::last-child {
                 margin-bottom: 0;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .application-card__row {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .application-card__column--label {
+                order: 2;
+                padding-left: 5px !important;
+                padding-right: 30px !important;
+                flex: 0 0 15%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .application-card__column--product {
+                order: 1;
+                flex: 0 0 85%;
+                padding-left: 20px !important;
+            }
+            .application-card__column--size {
+                order: 3;
+            }
+            .application-card__column--quantum {
+                order: 4;
+            }
+            .application-card__column--weight {
+                order: 5;
+            }
+            .application-card__column--price {
+                order: 6;
             }
         }
     }
@@ -544,19 +592,56 @@
     &__user-row {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-    }
 
-    &__user-left {
-        padding-right: 15px;
-    }
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
 
-    &__user-right {
-        display: flex;
-        align-items: center;
+            .cart {
+                &__person {
+                    order: 1;
+                    flex: 0 0 65%;
+                }
 
-        .cart__date {
-            padding-right: 20px;
+                &__company {
+                    order: 3;
+                    flex: 0 0 50%;
+                    margin: 0;
+                    padding: 16px 0;
+                }
+
+                &__tax {
+                    order: 4;
+                    flex: 0 0 50%;
+                    margin: 0;
+                    padding: 16px 0;
+                }
+
+                &__date {
+                    order: 2;
+                    padding: 0;
+                    flex: 0 0 35%;
+                    text-align: right;
+                }
+            }
+
+            .application-response__btn {
+                order: 5;
+                flex: 0 0 100%;
+            }
+        }
+
+        .cart__account {
+            @media screen and (max-width: 575px) {
+                margin-bottom: 0;
+            }
+        }
+
+        .application-response__btn {
+            @media screen and (max-width: 400px) {
+                .btn {
+                    width: 100%;
+                }
+            }
         }
     }
 }

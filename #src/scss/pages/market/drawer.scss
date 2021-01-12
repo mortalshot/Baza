@@ -109,6 +109,10 @@
 
 	.filter-product {
 		padding-left: 65px;
+
+		@media screen and (max-width: 660px) {
+			padding-left: 0;
+		}
 	}
 }
 
