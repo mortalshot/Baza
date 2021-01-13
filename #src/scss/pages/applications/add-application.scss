@@ -1,0 +1,299 @@
+.add-application {
+    &__card {
+        background-color: $White;
+    }
+
+    &__heading {
+        padding: 17px 20px;
+        @include adaptiv-value("padding-top", 17, 12, 1);
+        @include adaptiv-value("padding-bottom", 17, 12, 1);
+        border-bottom: 1px solid $LGray3;
+    }
+
+    &__title {
+        font-weight: 400;
+    }
+
+    &__body {
+        .application-card__row {
+            @media screen and (max-width: 860px) {
+                display: flex;
+                flex-wrap: wrap;
+                border-bottom: 1px solid $LGray3;
+                width: 100%;
+            }
+        }
+    
+        .table__column {
+            padding: 5px;
+    
+            @media screen and (max-width: 860px) {
+                border-bottom: 0 !important;
+            }
+        }
+    
+        .application-card__column--product {
+            width: 40%;
+    
+            @media screen and (max-width: 860px) {
+                order: 1;
+                flex: 0 0 70%;
+                width: 100%;
+                max-width: 100%;
+            }
+    
+            .product-item__content {
+                @media screen and (max-width: 991px) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+                @media screen and (max-width: 575px) {
+                    flex-direction: column;
+                    align-items: baseline;
+                }
+            }
+    
+            .product-item__product {
+                @media screen and (max-width: 991px) {
+                    margin-bottom: 0;
+                }
+                @media screen and (max-width: 575px) {
+                    margin-bottom: 10px;
+                }
+            }
+    
+            .product-item__category {
+                @media screen and (max-width: 860px) {
+                    margin-left: 30px;
+                }
+                @media screen and (max-width: 450px) {
+                    margin-left: 0px;
+                }
+            }
+        }
+    
+        .application-card__column--size {
+            @media screen and (max-width: 860px) {
+                order: 3;
+                flex: 0 0 30%;
+                margin-left: 45px;
+            }
+            @media screen and (max-width: 767px) {
+                padding-left: 5px !important;
+            }
+            @media screen and (max-width: 450px) {
+                margin-left: 0;
+                padding-left: 16px !important;
+                flex: 0 0 50%;
+            }
+        }
+    
+        .application-card__column--quantum {
+            @media screen and (min-width: 1050px) {
+                width: 17%;
+            }
+            @media screen and (max-width: 860px) {
+                order: 4;
+                flex: 0 0 50%;
+            }
+            @media screen and (max-width: 450px) {
+                padding-right: 16px !important;
+            }
+        }
+    
+        .application-card__column--weight {
+            padding: 5px !important;
+            min-width: 128px;
+    
+            @media screen and (min-width: 1050px) {
+                width: 14%;
+            }
+            @media screen and (max-width: 860px) {
+                order: 5;
+                margin-left: 45px;
+                flex: 0 0 30%;
+            }
+            @media screen and (max-width: 450px) {
+                margin-left: 0;
+                padding-left: 16px !important;
+                flex: 0 0 50%;
+            }
+            @media screen and (max-width: 400px) {
+                flex: 0 0 100%;
+            }
+        }
+    
+        .quantity {
+            &__wrapper {
+                padding-right: 14px;
+                max-width: 123px;
+    
+                @media screen and (max-width: 400px) {
+                    max-width: 170px;
+                }
+            }
+    
+            .to-cart__measure {
+                padding-left: 0;
+            }
+    
+            input {
+                padding: 6px 12px;
+                font-size: 14px;
+                line-height: 18px;
+    
+                @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    
+        .select {
+            &__item {
+            }
+    
+            &__title {
+                border: 0;
+                border-radius: 0;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1;
+                text-decoration: underline dashed;
+                min-width: 40px;
+            }
+    
+            &__value {
+                height: auto;
+                font-size: 14px;
+                line-height: 1;
+    
+                &::before {
+                    display: none;
+                }
+            }
+    
+            &__options {
+                border: 1px solid $LGray3;
+            }
+    
+            &__option {
+                text-align: left;
+                font-size: 14px;
+            }
+        }
+    
+        .application-card__column--price {
+            min-width: 128px;
+            padding-right: 5px !important;
+    
+            @media screen and (min-width: 1050px) {
+                width: 12%;
+            }
+            @media screen and (max-width: 860px) {
+                order: 6;
+                flex: 0 0 50%;
+            }
+            @media screen and (max-width: 450px) {
+                padding-left: 5px !important;
+                padding-right: 16px !important;
+            }
+            @media screen and (max-width: 400px) {
+                flex: 0 0 100%;
+                padding-left: 16px !important;
+            }
+    
+            .form__input {
+                width: 72px;
+    
+                @media screen and (max-width: 400px) {
+                    width: 170px;
+                }
+            }
+        }
+    
+        .form {
+            &__item {
+                margin: 0;
+                display: flex;
+                align-items: center;
+            }
+    
+            &__input {
+                height: 30px;
+                background-color: $LGray3;
+                border-radius: 3px;
+                margin-right: 14px;
+                font-size: 14px;
+                line-height: 18px;
+                color: $Gray;
+            }
+    
+            &__label {
+                margin: 0;
+                font-weight: 600;
+                color: $Black;
+            }
+        }
+    
+        .application-card__column--tools {
+            text-align: right;
+            padding-right: 15px;
+            @include adaptiv-value("padding-left", 25, 5, 1);
+    
+            @media screen and (max-width: 860px) {
+                order: 2;
+                flex: 0 0 30%;
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 16px !important;
+            }
+        }
+    
+        .application-card__tools {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    
+        .application-card__tool {
+            color: $Gray;
+            font-size: 18px;
+            display: flex;
+            margin-right: 12px;
+    
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__footer {
+        @include adaptiv-value("padding-top", 25, 20, 1);
+        @include adaptiv-value("padding-bottom", 25, 20, 1);
+        @include adaptiv-value("padding-right", 26, 16, 1);
+        @include adaptiv-value("padding-left", 26, 16, 1);
+    }
+
+    &__add {
+    }
+
+    &__add-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 15px;
+        border: 1px dashed #c4c4c4;
+        color: $Gray;
+        font-size: 24px;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 10 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+        }
+
+        i {
+            display: inline-flex;
+        }
+    }
+}

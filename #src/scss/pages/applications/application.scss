@@ -1,0 +1,249 @@
+.application {
+    &__heading {
+        align-items: center;
+
+        @media screen and (max-width: 575px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        .base__title {
+            @media screen and (max-width: 575px) {
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+
+        .base__back {
+        }
+
+        .title-market {
+            @media screen and (max-width: 575px) {
+                flex: 1 1 auto;
+            }
+        }
+    }
+
+    &__title {
+        @include adaptiv-value("margin-right", 27, 15, 1);
+    }
+
+    &__status {
+        @include adaptiv-value("margin-right", 27, 15, 1);
+
+        @media screen and (max-width: 575px) {
+            order: 2;
+            margin-top: 10px;
+            flex: 0 0 100%;
+            justify-content: flex-start;
+        }
+    }
+
+    .applications__view {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+
+        @media screen and (min-width: $layoutDesktop + "px") {
+            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 12);
+        }
+        @media screen and (max-width: 575px) {
+            order: 1;
+        }
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 7px;
+        }
+    }
+
+    &__tools {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 575px) {
+            width: 100%;
+            justify-content: flex-end;
+        }
+    }
+
+    &__tool {
+        @include adaptiv-value("margin-right", 21, 10, 1);
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            color: $Gray;
+            font-size: 18px;
+            transition: 0.3s ease all 0s;
+
+            i {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__responses {
+    }
+
+    &__responses-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptiv-value("margin-top", 30, 32, 1);
+        @include adaptiv-value("margin-bottom", 36, 15, 1);
+
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        .title-market {
+            font-weight: 400;
+        }
+
+        .catalog-sorting__item {
+            @media screen and (max-width: 450px) {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    &__responses-heading-left {
+        @media screen and (max-width: 450px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__responses-heading-right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__response-title {
+    }
+
+    &__response-output {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $DGray;
+        text-decoration: underline;
+    }
+
+    &__responses-list {
+        .application-card__column--label {
+            padding-left: 20px !important;
+            padding-right: 25px !important;
+        }
+
+        .checkbox {
+            display: flex;
+
+            &__input {
+                &:checked {
+                    & + .checkbox__label::before {
+                        background-color: $LGray3;
+                    }
+                }
+            }
+
+            &__label {
+                padding: 0;
+
+                &::before {
+                    width: 18px;
+                    height: 18px;
+                    background-color: $LGray3;
+                }
+                &::after {
+                    width: 13px;
+                    height: 10px;
+                    left: 3px;
+                    background: url(../img/icons/check-gray.svg) no-repeat center/cover;
+                }
+            }
+        }
+
+        .application-card__column--product {
+            padding-left: 5px !important;
+        }
+
+        .cart {
+            &__person {
+            }
+
+            &__company,
+            &__tax {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+
+                @media screen and (min-width: $layoutDesktop + "px") {
+                    font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+                    line-height: calc(15 / 12);
+                }
+            }
+
+            &__tax {
+                flex: 1 1 auto;
+            }
+
+            &__date {
+                padding-right: 20px;
+            }
+        }
+    }
+
+    &__responses-list--users {
+        .application-response {
+            @include adaptiv-value("margin-bottom", 30, 24, 1);
+
+            &::last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .application-card__row {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .application-card__column--label {
+                order: 2;
+                padding-left: 5px !important;
+                padding-right: 30px !important;
+                flex: 0 0 15%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .application-card__column--product {
+                order: 1;
+                flex: 0 0 85%;
+                padding-left: 20px !important;
+            }
+            .application-card__column--size {
+                order: 3;
+            }
+            .application-card__column--quantum {
+                order: 4;
+            }
+            .application-card__column--weight {
+                order: 5;
+            }
+            .application-card__column--price {
+                order: 6;
+            }
+        }
+    }
+
+    &__response {
+        background-color: $White;
+    }
+}

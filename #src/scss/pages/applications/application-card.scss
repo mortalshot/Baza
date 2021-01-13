@@ -1,0 +1,324 @@
+.application-card {
+    background-color: $White;
+    padding: 16px 0 16px;
+
+    &__heading {
+        border-bottom: 1px solid $LGray3;
+        padding: 0 20px 26px;
+
+        @media screen and (max-width: 450px) {
+            padding: 0 16px 16px;
+        }
+
+        .cart {
+            &__heading-row {
+                @include adaptiv-value("margin-bottom", 31, 15, 1);
+
+                @media screen and (max-width: 450px) {
+                    flex-direction: column;
+                    align-items: baseline;
+                }
+            }
+
+            &__left {
+                padding-left: 0;
+            }
+
+            &__account {
+                @media screen and (max-width: 575px) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__right {
+                font-size: 12px;
+                line-height: 15px;
+                color: $DGray;
+
+                @media screen and (min-width: $layoutDesktop + "px") {
+                    font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+                    line-height: calc(15 / 12);
+                }
+
+                i {
+                    display: inline-flex;
+                }
+            }
+        }
+
+        .order-terms {
+            &__condition {
+                margin: 0 0 14px;
+                padding: 0 9px;
+                border: 0;
+                font-size: 14px;
+                line-height: 18px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__condition-title {
+                font-weight: 500;
+            }
+
+            &__condition-text {
+                font-size: 14px;
+                line-height: 15px;
+                color: $DGray;
+            }
+        }
+    }
+
+    &__body {
+        .application-card__row {
+            @media screen and (max-width: 767px) {
+                display: flex;
+                flex-wrap: wrap;
+                border-bottom: 1px solid $LGray3;
+            }
+        }
+    }
+
+    &__table {
+        color: $DGray;
+        margin: 0;
+
+        .table__column {
+            padding: 11px 5px;
+            vertical-align: middle;
+
+            @media screen and (max-width: 767px) {
+                padding: 8px 5px;
+            }
+        }
+
+        thead {
+            th {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                border: 0;
+            }
+        }
+
+        tbody {
+            .table__column {
+                @media screen and (min-width: 768px) {
+                    border-bottom: 1px solid $LGray3;
+                }
+            }
+        }
+    }
+
+    &__column--product {
+        max-width: 51%;
+        padding-left: 20px !important;
+
+        @media screen and (max-width: 767px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        @media screen and (max-width: 450px) {
+            padding-left: 16px !important;
+        }
+
+        .product-item {
+            &__content {
+                flex-wrap: wrap;
+
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    flex-direction: column;
+                    align-items: baseline;
+                }
+                @media screen and (max-width: 575px) {
+                    flex-direction: column;
+                    align-items: baseline;
+                }
+            }
+
+            &__product {
+                flex: initial;
+                margin-right: 12px;
+
+                @media screen and (min-width: 768px) and (max-width: 991px) {
+                    margin-bottom: 10px;
+                }
+                @media screen and (max-width: 575px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &__product-name {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 21px;
+            }
+
+            &__category {
+                @media screen and (max-width: 575px) {
+                    margin-left: 30px;
+                }
+                @media screen and (max-width: 450px) {
+                    margin-left: 26px;
+                }
+            }
+        }
+    }
+
+    &__column--size {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        width: 10%;
+
+        @media screen and (min-width: $layoutDesktop + "px") {
+            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 12);
+        }
+        @media screen and (max-width: 1200px) {
+            width: 12%;
+        }
+        @media screen and (max-width: 767px) {
+            flex: 0 0 50%;
+            padding-left: 50px !important;
+        }
+        @media screen and (max-width: 450px) {
+            padding-left: 46px !important;
+        }
+    }
+
+    &__column--quantum {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        width: 10%;
+
+        @media screen and (min-width: $layoutDesktop + "px") {
+            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 12);
+        }
+        @media screen and (max-width: 767px) {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__column--weight {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+        white-space: nowrap;
+        padding: 11px 5px !important;
+        width: 17%;
+
+        @media screen and (max-width: 1200px) {
+            width: 10%;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 8px 5px 8px 50px !important;
+            flex: 0 0 50%;
+            text-align: left;
+        }
+        @media screen and (max-width: 450px) {
+            padding-left: 46px !important;
+        }
+    }
+
+    &__column--price {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+        padding-right: 20px !important;
+        white-space: nowrap;
+
+        @media screen and (max-width: 767px) {
+            flex: 0 0 50%;
+            text-align: left;
+        }
+        @media screen and (max-width: 450px) {
+            padding-left: 16px !important;
+        }
+    }
+
+    &__footer {
+        padding: 25px 20px 9px;
+
+        @media screen and (max-width: 450px) {
+            padding: 16px 16px 0px;
+        }
+
+        .table {
+            @media screen and (max-width: 450px) {
+                display: flex;
+            }
+
+            thead {
+                @media screen and (max-width: 450px) {
+                    flex: 0 0 50%;
+                }
+
+                th {
+                    padding: 0 5px;
+
+                    @media screen and (max-width: 450px) {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 18px;
+                        flex: 0 0 50%;
+                        width: 100%;
+                        padding: 2px 5px;
+                        text-align: left;
+                    }
+                }
+            }
+            tbody {
+                @media screen and (max-width: 450px) {
+                    flex: 0 0 50%;
+                }
+
+                td {
+                    font-weight: 800;
+                    border: 0;
+                    color: $Black;
+                    padding: 2px 5px;
+
+                    @media screen and (max-width: 450px) {
+                        font-size: 14px;
+                        line-height: 18px;
+                        flex: 0 0 50%;
+                        width: 100%;
+                        text-align: right;
+                    }
+                }
+
+                .application-card__column--sum-price {
+                    color: $GreenM;
+                }
+            }
+
+            .application-card__row {
+                @media screen and (max-width: 450px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    &__column--sum-num {
+        width: 80%;
+    }
+
+    &__column--sum-weight {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    &__column--sum-price {
+        text-align: right;
+        white-space: nowrap;
+    }
+}

@@ -197,7 +197,7 @@
             @include adaptiv-value("padding-left", 9, 5, 0);
             @include adaptiv-value("padding-right", 9, 5, 0);
 
-            @media screen and (max-width: 800px) {
+            @media screen and (max-width: 900px) {
                 flex: 0 0 50%;
             }
 
