@@ -3,6 +3,7 @@
     &__title {
         position: relative;
         cursor: pointer;
+        margin: 0;
 
         &::before,
         &::after {

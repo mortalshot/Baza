@@ -116,6 +116,15 @@
 	}
 }
 
+.drawer-deliveries {
+	.filter__products {
+		display: none;
+	}
+	.filter__delivery {
+		display: block;
+	}
+}
+
 .navigation-drawer {
 	z-index: 51;
 
@@ -328,6 +337,14 @@
 }
 
 .filter {
+	&__products{ 
+
+	}
+
+	&__delivery {
+		display: none;
+	}
+	
 	&__stirps {
 		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
 		padding-top: 40px;

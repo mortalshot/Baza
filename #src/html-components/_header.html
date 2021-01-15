@@ -45,141 +45,238 @@
                     </div>
                 </div>
                 <div class="navigation-drawer__content filter">
-                    <div class="filter__stirps filter-stirps">
-                        <div class="filter-stirps__row row">
-                            <div class="filter-stirps__item col-6">
-                                <div class="filter-stirps__checkbox checkbox">
-                                    <input id="filterStirps-1" type="checkbox" name="stirp" class="checkbox__input">
-                                    <label for="filterStirps-1" class="checkbox__label">
-                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-1.png" alt="">
-                                        </div>
-                                        <div class="filter-stirps__name">Овощи</div>
-                                    </label>
+                    <div class="filter__products">
+                        <div class="filter__stirps filter-stirps">
+                            <div class="filter-stirps__row row">
+                                <div class="filter-stirps__item col-6">
+                                    <div class="filter-stirps__checkbox checkbox">
+                                        <input id="filterStirps-1" type="checkbox" name="stirp" class="checkbox__input">
+                                        <label for="filterStirps-1" class="checkbox__label">
+                                            <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-1.png" alt="">
+                                            </div>
+                                            <div class="filter-stirps__name">Овощи</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-stirps__item col-6">
+                                    <div class="filter-stirps__checkbox checkbox">
+                                        <input id="filterStirps-2" type="checkbox" name="stirp" class="checkbox__input">
+                                        <label for="filterStirps-2" class="checkbox__label">
+                                            <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-2.png" alt="">
+                                            </div>
+                                            <div class="filter-stirps__name">Грибы</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-stirps__item col-6">
+                                    <div class="filter-stirps__checkbox checkbox">
+                                        <input id="filterStirps-3" type="checkbox" name="stirp" class="checkbox__input">
+                                        <label for="filterStirps-3" class="checkbox__label">
+                                            <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-3.png" alt="">
+                                            </div>
+                                            <div class="filter-stirps__name">Фрукты</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-stirps__item col-6">
+                                    <div class="filter-stirps__checkbox checkbox">
+                                        <input id="filterStirps-4" type="checkbox" name="stirp" class="checkbox__input">
+                                        <label for="filterStirps-4" class="checkbox__label">
+                                            <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-4.png" alt="">
+                                            </div>
+                                            <div class="filter-stirps__name">Экзотика</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-stirps__item col-6">
+                                    <div class="filter-stirps__checkbox checkbox">
+                                        <input id="filterStirps-5" type="checkbox" name="stirp" class="checkbox__input">
+                                        <label for="filterStirps-5" class="checkbox__label">
+                                            <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-5.png" alt="">
+                                            </div>
+                                            <div class="filter-stirps__name">Ягоды</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-stirps__item col-6">
+                                    <div class="filter-stirps__checkbox checkbox">
+                                        <input id="filterStirps-6" type="checkbox" name="stirp" class="checkbox__input">
+                                        <label for="filterStirps-6" class="checkbox__label">
+                                            <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-6.png" alt="">
+                                            </div>
+                                            <div class="filter-stirps__name">Зелень</div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="filter-stirps__item col-6">
-                                <div class="filter-stirps__checkbox checkbox">
-                                    <input id="filterStirps-2" type="checkbox" name="stirp" class="checkbox__input">
-                                    <label for="filterStirps-2" class="checkbox__label">
-                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-2.png" alt="">
-                                        </div>
-                                        <div class="filter-stirps__name">Грибы</div>
-                                    </label>
-                                </div>
+                        </div>
+                        <div class="filter__modals filter-modals">
+                            <div class="filter-modals__item">
+                                <a href="#filterProduct" class="filter-modals__link popup-link" data-tab="#filterAttrTab-1">
+                                    <div class="filter-modals__name">
+                                        <span>Продукт</span>
+                                        <div class="filter-modals__quantity"></div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="filter-stirps__item col-6">
-                                <div class="filter-stirps__checkbox checkbox">
-                                    <input id="filterStirps-3" type="checkbox" name="stirp" class="checkbox__input">
-                                    <label for="filterStirps-3" class="checkbox__label">
-                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-3.png" alt="">
-                                        </div>
-                                        <div class="filter-stirps__name">Фрукты</div>
-                                    </label>
-                                </div>
+                            <div class="filter-modals__item">
+                                <a href="#filterProduct" class="filter-modals__link popup-link" data-tab="#filterAttrTab-1">
+                                    <div class="filter-modals__name">
+                                        <span>Сорт</span>
+                                        <div class="filter-modals__quantity"></div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="filter-stirps__item col-6">
-                                <div class="filter-stirps__checkbox checkbox">
-                                    <input id="filterStirps-4" type="checkbox" name="stirp" class="checkbox__input">
-                                    <label for="filterStirps-4" class="checkbox__label">
-                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-4.png" alt="">
-                                        </div>
-                                        <div class="filter-stirps__name">Экзотика</div>
-                                    </label>
-                                </div>
+                            <div class="filter-modals__item">
+                                <a href="#filterProduct" class="filter-modals__link popup-link" data-tab="#filterAttrTab-2">
+                                    <div class="filter-modals__name">
+                                        <span>Страна</span>
+                                        <div class="filter-modals__quantity">4</div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="filter-stirps__item col-6">
-                                <div class="filter-stirps__checkbox checkbox">
-                                    <input id="filterStirps-5" type="checkbox" name="stirp" class="checkbox__input">
-                                    <label for="filterStirps-5" class="checkbox__label">
-                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-5.png" alt="">
-                                        </div>
-                                        <div class="filter-stirps__name">Ягоды</div>
-                                    </label>
-                                </div>
+                            <div class="filter-modals__item">
+                                <a href="#filterProduct" class="filter-modals__link popup-link" data-tab="#filterAttrTab-3">
+                                    <div class="filter-modals__name">
+                                        <span>Местонахождение</span>
+                                        <div class="filter-modals__quantity"></div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="filter-stirps__item col-6">
-                                <div class="filter-stirps__checkbox checkbox">
-                                    <input id="filterStirps-6" type="checkbox" name="stirp" class="checkbox__input">
-                                    <label for="filterStirps-6" class="checkbox__label">
-                                        <div class="filter-stirps__icon"><img src="img/market/stirp/stirp-6.png" alt="">
-                                        </div>
-                                        <div class="filter-stirps__name">Зелень</div>
-                                    </label>
+                        </div>
+                        <div class="filter__category filter-category">
+                            <div class="filter-category__title">Категория</div>
+                            <div class="filter-category__row row">
+                                <div class="filter-category__item col-6">
+                                    <div class="filter-category__checkbox checkbox">
+                                        <input id="filterCategory-1" type="checkbox" name="category" class="checkbox__input">
+                                        <label for="filterCategory-1" class="checkbox__label">
+                                            <div class="filter-category__name">Высший сорт</div>
+                                            <div class="filter-category__icon"><i class="icon-up"></i></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-category__item col-6">
+                                    <div class="filter-category__checkbox checkbox">
+                                        <input id="filterCategory-2" type="checkbox" name="category" class="checkbox__input">
+                                        <label for="filterCategory-2" class="checkbox__label">
+                                            <div class="filter-category__name">Первый сорт</div>
+                                            <div class="filter-category__icon"><i class="icon-1"></i></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-category__item col-6">
+                                    <div class="filter-category__checkbox checkbox">
+                                        <input id="filterCategory-3" type="checkbox" name="category" class="checkbox__input">
+                                        <label for="filterCategory-3" class="checkbox__label">
+                                            <div class="filter-category__name">Некондиция</div>
+                                            <div class="filter-category__icon"><i class="icon-down"></i></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-category__item col-6">
+                                    <div class="filter-category__checkbox checkbox">
+                                        <input id="filterCategory-4" type="checkbox" name="category" class="checkbox__input">
+                                        <label for="filterCategory-4" class="checkbox__label">
+                                            <div class="filter-category__name">Второй сорт</div>
+                                            <div class="filter-category__icon"><i class="icon-2"></i></div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="filter__modals filter-modals">
-                        <div class="filter-modals__item">
-                            <a href="#filterProduct" class="filter-modals__link popup-link" data-tab="#filterAttrTab-1">
-                                <div class="filter-modals__name">
-                                    <span>Продукт</span>
-                                    <div class="filter-modals__quantity"></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="filter-modals__item">
-                            <a href="#filterProduct" class="filter-modals__link popup-link" data-tab="#filterAttrTab-1">
-                                <div class="filter-modals__name">
-                                    <span>Сорт</span>
-                                    <div class="filter-modals__quantity"></div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="filter-modals__item">
-                            <a href="#filterProduct" class="filter-modals__link popup-link" data-tab="#filterAttrTab-2">
-                                <div class="filter-modals__name">
-                                    <span>Страна</span>
-                                    <div class="filter-modals__quantity">4</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="filter-modals__item">
-                            <a href="#filterProduct" class="filter-modals__link popup-link" data-tab="#filterAttrTab-3">
-                                <div class="filter-modals__name">
-                                    <span>Местонахождение</span>
-                                    <div class="filter-modals__quantity"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="filter__category filter-category">
-                        <div class="filter-category__title">Категория</div>
-                        <div class="filter-category__row row">
-                            <div class="filter-category__item col-6">
-                                <div class="filter-category__checkbox checkbox">
-                                    <input id="filterCategory-1" type="checkbox" name="category" class="checkbox__input">
-                                    <label for="filterCategory-1" class="checkbox__label">
-                                        <div class="filter-category__name">Высший сорт</div>
-                                        <div class="filter-category__icon"><i class="icon-up"></i></div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="filter-category__item col-6">
-                                <div class="filter-category__checkbox checkbox">
-                                    <input id="filterCategory-2" type="checkbox" name="category" class="checkbox__input">
-                                    <label for="filterCategory-2" class="checkbox__label">
-                                        <div class="filter-category__name">Первый сорт</div>
-                                        <div class="filter-category__icon"><i class="icon-1"></i></div>
-                                    </label>
+                    <div class="filter__delivery filter-delivery">
+                        <div id="filterDelivery" class="accordion filter-delivery__accordion">
+                            <div class="accordion__item">
+                                <h2 class="accordion__title">
+                                    <span>
+                                        Поставщик
+                                    </span>
+                                    <div class="filter-modals__quantity">1</div>
+                                </h2>
+                                <div class="accordion__text">
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryProvider-1" type="checkbox" name="delivery" class="checkbox__input">
+                                            <label for="filterDeliveryProvider-1" class="checkbox__label">ИП Картошкин</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryProvider-2" type="checkbox" name="delivery" class="checkbox__input">
+                                            <label for="filterDeliveryProvider-2" class="checkbox__label">ООО “Синьор-Помидор”</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryProvider-3" type="checkbox" name="delivery" class="checkbox__input">
+                                            <label for="filterDeliveryProvider-3" class="checkbox__label">ЗАО “Киш-миш и Ко”</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryProvider-4" type="checkbox" name="delivery" class="checkbox__input">
+                                            <label for="filterDeliveryProvider-4" class="checkbox__label">ООО “ОвощныеТехнологии”</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryProvider-5" type="checkbox" name="delivery" class="checkbox__input">
+                                            <label for="filterDeliveryProvider-5" class="checkbox__label">ООО “Синьор-Помидор”</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryProvider-6" type="checkbox" name="delivery" class="checkbox__input">
+                                            <label for="filterDeliveryProvider-6" class="checkbox__label">ИП Картошкин</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="filter-category__item col-6">
-                                <div class="filter-category__checkbox checkbox">
-                                    <input id="filterCategory-3" type="checkbox" name="category" class="checkbox__input">
-                                    <label for="filterCategory-3" class="checkbox__label">
-                                        <div class="filter-category__name">Некондиция</div>
-                                        <div class="filter-category__icon"><i class="icon-down"></i></div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="filter-category__item col-6">
-                                <div class="filter-category__checkbox checkbox">
-                                    <input id="filterCategory-4" type="checkbox" name="category" class="checkbox__input">
-                                    <label for="filterCategory-4" class="checkbox__label">
-                                        <div class="filter-category__name">Второй сорт</div>
-                                        <div class="filter-category__icon"><i class="icon-2"></i></div>
-                                    </label>
+                            <div class="accordion__item">
+                                <h2 class="accordion__title">
+                                    <span>
+                                        Статус
+                                    </span>
+                                </h2>
+                                <div class="accordion__text">
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryStatus-1" type="checkbox" name="delivery-status" class="checkbox__input">
+                                            <label for="filterDeliveryStatus-1" class="checkbox__label">Открыто</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryStatus-2" type="checkbox" name="delivery-status" class="checkbox__input">
+                                            <label for="filterDeliveryStatus-2" class="checkbox__label">Собрано</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryStatus-3" type="checkbox" name="delivery-status" class="checkbox__input">
+                                            <label for="filterDeliveryStatus-3" class="checkbox__label">Подтверждено</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryStatus-4" type="checkbox" name="delivery-status" class="checkbox__input">
+                                            <label for="filterDeliveryStatus-4" class="checkbox__label">Завершено</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryStatus-5" type="checkbox" name="delivery-status" class="checkbox__input">
+                                            <label for="filterDeliveryStatus-5" class="checkbox__label">Подтверждение</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-delivery__item">
+                                        <div class="filter-delivery__checkbox checkbox">
+                                            <input id="filterDeliveryStatus-6" type="checkbox" name="delivery-status" class="checkbox__input">
+                                            <label for="filterDeliveryStatus-6" class="checkbox__label">Отменено</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -311,6 +408,9 @@
                                     </li>
                                     <li class="nav-item">
                                         <a href="applications.html" class="nav-link" data-value="заявки">Мои заявки</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="deliveries.html" class="nav-link" data-value="Поставки">Поставки</a>
                                     </li>
                                 </ul>
                                 <ul class="header__controls controls" data-da="header__inner .navbar, first, 660">

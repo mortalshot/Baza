@@ -45,8 +45,6 @@ $(function () {
 const lockPaddingValue = window.innerWidth - document.querySelector('.site__main').offsetWidth + 'px';
 
 $('.navigation-drawer__mobile').not('.filter-selected__reset').on('click', function () {
-    console.log('qweqweqwe');
-
     $('.navigation-drawer__wrapper, .navigation-drawer').addClass('active');
 
     if (lockPadding.length > 0) {

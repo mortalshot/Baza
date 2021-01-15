@@ -118,6 +118,11 @@
     &__city {
         display: flex;
         align-items: center;
+
+        i {
+            margin-right: 6px;
+            display: inline-flex;
+        }
     }
 
     &__column--products {
@@ -226,4 +231,14 @@
     &__status--closed {
         background-color: $Orange2;
     }
+
+    &__status--collected {
+        background-color: $LBlue;
+    }
+
+    &__status--confirmed {
+        background-color: $Yellow2;
+    }
+
+
 }
