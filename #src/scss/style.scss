@@ -113,6 +113,10 @@
     }
 
     &__table {
+        .table__row {
+            padding: 16px 6px;
+        }
+
         .table__column {
             padding: 19px 10px;
         }
@@ -293,10 +297,9 @@
     }
     @media screen and (max-width: 575px) {
         justify-content: baseline;
-        margin:  24px 0;
+        margin: 24px 0;
         padding: 22px 30px;
     }
-
 
     &__item {
         display: flex;
@@ -330,7 +333,7 @@
         font-size: 24px;
         line-height: 31px;
 
-        @media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(18px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(31 / 24);
         }
@@ -341,9 +344,450 @@
         font-size: 16px;
         line-height: 21px;
 
-        @media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(18 / 14);
+        }
+    }
+}
+
+.delivery {
+    &__heading {
+        justify-content: flex-start;
+        align-items: center;
+
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
+
+    &__title {
+        @media screen and (min-width: 451px) {
+            margin-right: 19px;
+        }
+    }
+
+    &__status {
+        @media screen and (max-width: 450px) {
+            margin-top: 10px;
+        }
+    }
+
+    &__details {
+        display: flex;
+
+        @media screen and (max-width: 991px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__left {
+        flex: 1 1 auto;
+        @include adaptiv-value("margin-right", 34, 0, 1);
+
+        @media screen and (max-width: 991px) {
+            margin-right: 0;
+        }
+    }
+
+    &__card {
+        background-color: $White;
+        margin-bottom: 39px;
+    }
+
+    &__right {
+        flex: 0 0 292px;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            flex: 0 0 24%;
+        }
+        @media screen and (max-width: 991px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__timeline {
+    }
+
+    .order-terms__condition-title {
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(21 / 16);
+        }
+    }
+}
+
+.delivery-card {
+    &__seller {
+        padding: 20px;
+        border-bottom: 1px solid $LGray3;
+
+        @media screen and (min-width: 451px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media screen and (max-width: 575px) {
+            padding: 16px;
+        }
+    }
+
+    &__seller-info {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 575px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+        @media screen and (max-width: 450px) {
+            margin-bottom: 16px;
+        }
+
+        .cart__account {
+            margin-right: 8px;
+
+            @media screen and (max-width: 991px) {
+                @include adaptiv-value("margin-right", 35, 10, 1);
+            }
+        }
+
+        .cart__about {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: $DGray;
+        }
+    }
+
+    &__seller-btn {
+    }
+
+    &__btn {
+        padding: 7px 14px;
+    }
+
+    &__body {
+        .nav-tabs {
+            padding: 27px 20px 23px;
+            border-color: $LGray3;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            .nav-item {
+                @include adaptiv-value("margin-right", 34, 20, 1);
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .nav-link {
+                border: none;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 21px;
+                color: $Black;
+                position: relative;
+                padding: 0 0 10px;
+                white-space: nowrap;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $GreenM;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transform: scale(0);
+                    transition: 0.3s ease all 0s;
+                }
+
+                &.active {
+                    &::before {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        .application-card__table {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $DGray;
+
+            @media screen and (max-width: 575px) {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+
+        tbody {
+            @media screen and (max-width: 575px) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .table__row {
+                @media screen and (max-width: 575px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    border-bottom: 1px solid $LGray3;
+
+                    .delivery-card__column--name {
+                        flex: 0 0 100%;
+                    }
+
+                    .delivery-card__column--price {
+                        flex: 1 1 auto;
+                        text-align: left;
+                        padding-left: 16px;
+                    }
+
+                    .delivery-card__column--weight {
+                        flex: 0 0 10%;
+                        text-align: left;
+                    }
+
+                    .delivery-card__column--sum {
+                        flex: 0 0 40%;
+                    }
+                }
+
+                .table__column {
+                    padding: 8px 5px;
+
+                    @media screen and (min-width: 576px) {
+                        padding: 10px 5px;
+                        border-bottom: 1px solid $LGray3;
+                    }
+
+                    &:first-child {
+                        padding-left: 20px;
+
+                        @media screen and (max-width: 575px) {
+                            padding-left: 16px;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-right: 20px;
+
+                        @media screen and (max-width: 575px) {
+                            padding-right: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        tfoot {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+
+            .table__row {
+                @media screen and (max-width: 575px) {
+                    display: flex;
+                    width: 100%;
+                }
+
+                .table__column {
+                    padding: 22px 5px;
+
+                    &:first-child {
+                        padding-left: 22px;
+
+                        @media screen and (max-width: 575px) {
+                            padding-left: 16px;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-right: 21px;
+
+                        @media screen and (max-width: 575px) {
+                            padding-right: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__tabs {
+    }
+
+    &__column--name {
+    }
+
+    &__column--price {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    &__column--weight {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    &__column--sum {
+        font-weight: 600;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    &__column--sum-num {
+        flex: 1 1 auto;
+    }
+
+    &__column--sum-weight {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    &__column--sum-price {
+        text-align: right;
+        white-space: nowrap;
+    }
+}
+
+.delivery-timeline {
+    @media screen and (max-width: 991px) {
+        position: relative;
+        background-color: $White;
+        padding: 35px 24px 24px;
+        @include adaptiv-value("padding-top", 35, 24, 1);
+        @include adaptiv-value("padding-bottom", 24, 16, 1);
+    }
+
+    &__wrapper {
+        position: sticky;
+        top: calc(#{$size-header-height} + 15px);
+        @include adaptiv-value("padding-top", 34, 0, 1);
+        @include adaptiv-value("padding-bottom", 34, 0, 1);
+        @include adaptiv-value("padding-right", 31, 0, 1);
+        @include adaptiv-value("padding-left", 31, 0, 1);
+
+        @media screen and (min-width: 576px) and (max-width: 991px) {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 0;
+                border: 1px dashed $LGray;
+                position: absolute;
+                left: 50%;
+                top: 7px;
+                transform: translate(-50%, 0);
+            }
+        }
+        @media screen and (max-width: 575px) {
+            padding: 0;
+            max-height: 70px;
+            overflow-y: hidden;
+            transition: 0.3s ease all 0s;
+
+            &.active {
+                max-height: 1000px;
+                transition: 0.3s ease all 0s;
+            }
+        }
+    }
+
+    &__item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1;
+        color: $DGray;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        margin-bottom: 35px;
+        position: relative;
+        transition: 0.3s ease all 0s;
+
+        @media screen and (min-width: 576px) and (max-width: 991px) {
+            flex-direction: column;
+            font-size: 12px;
+            margin: 0;
+            z-index: 1;
+            background-color: $White;
+            padding: 0 5px;
+            flex: 0 0 71px;
+            white-space: normal;
+            text-align: center;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid $LGray;
+            border-radius: 50%;
+            margin-right: 10px;
+
+            @media screen and (min-width: 576px) and (max-width: 991px) {
+                margin: 0px 0px 5px 0px;
+            }
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 23px;
+            border: 1px dashed $LGray;
+            position: absolute;
+            left: 6px;
+            bottom: -6px;
+            transform: translate(0, 100%);
+
+            @media screen and (min-width: 576px) and (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+
+    &__item--active {
+        color: $Black;
+
+        &::before {
+            border: 0;
+            background: $GreenM url(../img/icons/check-delivery-timeline.svg) no-repeat center/cover;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @media screen and (max-width: 575px) {
+            font-size: 14px;
+            line-height: 18px;
+            color: $DGray;
+            text-align: center;
+            text-decoration: underline;
+            display: block;
+            margin: 24px auto 0;
         }
     }
 }

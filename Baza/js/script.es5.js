@@ -986,4 +986,12 @@ $(document).ready(function () {
       slider.scrollLeft = scrollLeft - walk;
     });
   }
+
+  ;
+  var deliveryTimelineItemHeight = $('.delivery-timeline__item').outerHeight(true);
+  var deliveryTimelineBtn = $('.delivery-timeline__btn');
+  deliveryTimelineBtn.click(function (e) {
+    e.preventDefault();
+    $('.delivery-timeline__wrapper').toggleClass('active');
+  });
 });
