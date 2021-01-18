@@ -1,0 +1,95 @@
+@@include('html-components/_header.html', {
+"title": "Рынок продуктов",
+"draverClass": "drawer-on drawer-closed drawer-deliveries",
+})
+
+<main class="site__main">
+    <section class="provider base">
+        <div class="base__container container">
+            <div class="base__content">
+                <div class="provider__personal">
+                    <div class="provider__row">
+                        <div class="provider__left">
+                            <div class="provider__title">
+                                <a href="" class="base__back"><i class="icon-chevron-left"></i></a>
+                                <h1 class="title-market">Хасан Аббасов</h1>
+                            </div>
+
+                            <div class="provider__card">
+                                <div class="providers__item-wrapper">
+                                    <div class="providers__item-person">
+                                        <div class="cart__person">
+                                            <div class="cart__account">
+                                                <a href="provider.html" class="cart__avatar account__avatar">
+                                                    <img src="img/market/users/user-1.png" alt="">
+                                                </a>
+                                                <div class="cart__owner">
+                                                    <a href="provider.html" class="cart__owner-name">Хасан Аббасов</a>
+                                                    <div class="cart__owner-rating">
+                                                        <i class="icon-star-rating"></i>
+                                                        <i class="icon-star-rating"></i>
+                                                        <i class="icon-star-rating"></i>
+                                                        <i class="icon-star-rating"></i>
+                                                        <i class="icon-star-rating icon-star-rating--dis"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cart__about">
+                                            <div class="cart__registration">Зарегистрирован: 15.11.20</div>
+                                            <div class="cart__company">ООО "ЮЭФСИ"</div>
+                                            <div class="cart__location">
+                                                <i class="icon-map-marker"></i>
+                                                <span>Санкт-Петербург</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="" class="providers__item-btn btn btn-green">Начать чат</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="provider__right">
+                            <div class="provider__tabs">
+                                <ul class="nav nav-tabs" id="providerTabs" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="providerTab-1" data-toggle="tab" href="#providerTabLink-1" role="tab" aria-controls="providerTabLink-1" aria-selected="true">Основное</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="providerTab-2" data-toggle="tab" href="#providerTabLink-2" role="tab" aria-controls="providerTabLink-2" aria-selected="false">Продукты</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="providerTab-3" data-toggle="tab" href="#providerTabLink-3" role="tab" aria-controls="providerTabLink-3" aria-selected="false">Сообщения</a>
+                                    </li>
+                                  </ul>
+                                  <div class="tab-content" id="providerTabsContent">
+                                    <div class="tab-pane fade show active" id="providerTabLink-1" role="tabpanel" aria-labelledby="providerTab-1">
+                                        <div class="provider__main">
+                                            <div class="provider__main-wrapper">
+                                                <div class="provider__main-item">
+                                                    <div class="provider__main-title">Хасан Аббасов</div>
+                                                    <div class="provider__main-text">Директор</div>
+                                                </div>
+                                                <div class="provider__main-item">
+                                                    <div class="provider__main-title"></div>
+                                                    <div class="provider__main-text"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="providerTabLink-2" role="tabpanel" aria-labelledby="providerTab-2">Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.</div>
+                                    <div class="tab-pane fade" id="providerTabLink-3" role="tabpanel" aria-labelledby="providerTab-3">...</div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html-components/modals.html')
+</main>
+
+@@include('html-components/_footer.html', {
+"footerClass": "d-none"
+})

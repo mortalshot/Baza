@@ -369,7 +369,7 @@
 			height: 22px;
 			flex: 0 0 22px;
 		}
-	}	
+	}
 }
 
 .controls {
@@ -389,6 +389,12 @@
 		@media screen and (max-width: 660px) {
 			margin: 0;
 		}
+
+		&.active {
+			.controls__link {
+				color: rgba($color: $Gray2, $alpha: 0.3);
+			}
+		}
 	}
 
 	&__link {
@@ -397,6 +403,11 @@
 		color: $Gray;
 		transition: 0.3s ease all 0s;
 
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: rgba($color: $Gray2, $alpha: 0.3);
+			}
+		}
 		@media screen and (max-width: 660px) {
 			color: $White;
 		}

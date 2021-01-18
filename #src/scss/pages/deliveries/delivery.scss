@@ -1,0 +1,64 @@
+.delivery {
+    &__heading {
+        justify-content: flex-start;
+        align-items: center;
+
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
+
+    &__title {
+        @media screen and (min-width: 451px) {
+            margin-right: 19px;
+        }
+    }
+
+    &__status {
+        @media screen and (max-width: 450px) {
+            margin-top: 10px;
+        }
+    }
+
+    &__details {
+        display: flex;
+        @include adaptiv-value("margin-bottom", 39, 24, 1);
+
+        @media screen and (max-width: 991px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__left {
+        flex: 1 1 auto;
+        @include adaptiv-value("margin-right", 34, 0, 1);
+
+        @media screen and (max-width: 991px) {
+            margin-right: 0;
+        }
+    }
+
+    &__card {
+        background-color: $White;
+        margin-bottom: 39px;
+    }
+
+    &__right {
+        flex: 0 0 292px;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            flex: 0 0 24%;
+        }
+        @media screen and (max-width: 991px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    .order-terms__condition-title {
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(21 / 16);
+        }
+    }
+}

@@ -1,0 +1,170 @@
+.deliveries {
+    &__statistics {
+    }
+
+    &__table {
+        .table__row {
+            padding: 16px 6px;
+        }
+
+        .table__column {
+            padding: 19px 10px;
+        }
+    }
+
+    &__row {
+    }
+
+    &__column--request {
+        padding-left: 20px !important;
+        width: 9%;
+
+        @media screen and (max-width: 900px) {
+            order: 1;
+            flex: 0 0 30%;
+            padding-left: 10px !important;
+        }
+        @media screen and (max-width: 575px) {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__request {
+        font-weight: 600;
+        color: $Black;
+    }
+
+    &__column--date {
+        font-size: 14px;
+        line-height: 18px;
+        width: 6%;
+
+        @media screen and (max-width: 900px) {
+            order: 4;
+            flex: 0 0 30%;
+        }
+        @media screen and (max-width: 575px) {
+            order: 3;
+            flex: 0 0 100%;
+        }
+    }
+
+    &__column--location {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: $DGray;
+        width: 37%;
+
+        @media screen and (max-width: 900px) {
+            order: 7;
+            flex: 0 0 30%;
+        }
+        @media screen and (max-width: 575px) {
+            order: 4;
+            flex: 0 0 100%;
+        }
+    }
+
+    &__column--firm {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: $DGray;
+        width: 12%;
+
+        @media screen and (min-width: 992px) {
+            white-space: nowrap;
+        }
+        @media screen and (max-width: 900px) {
+            order: 2;
+            flex: 0 0 40%;
+        }
+        @media screen and (max-width: 575px) {
+            order: 5;
+            flex: 0 0 50%;
+        }
+    }
+
+    &__column--owner {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: $DGray;
+
+        @media screen and (min-width: 992px) {
+            white-space: nowrap;
+        }
+        @media screen and (max-width: 900px) {
+            order: 5;
+            flex: 0 0 40%;
+        }
+        @media screen and (max-width: 575px) {
+            order: 7;
+            flex: 0 0 50%;
+        }
+    }
+
+    &__person {
+        text-decoration: underline;
+        color: $DGray;
+    }
+
+    &__column--weight {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+        width: 5%;
+        white-space: nowrap;
+
+        @media screen and (max-width: 900px) {
+            order: 6;
+            flex: 0 0 30%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        @media screen and (max-width: 575px) {
+            order: 8;
+            flex: 0 0 50%;
+        }
+    }
+
+    &__column--price {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: $Black;
+        text-align: right;
+        white-space: nowrap;
+
+        @media screen and (max-width: 900px) {
+            order: 8;
+            flex: 0 0 70%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        @media screen and (max-width: 575px) {
+            order: 6;
+            flex: 0 0 50%;
+        }
+    }
+
+    &__column--status {
+        text-align: right;
+        width: 11%;
+
+        @media screen and (max-width: 900px) {
+            order: 3;
+            flex: 0 0 30%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        @media screen and (max-width: 575px) {
+            order: 2;
+            flex: 0 0 50%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

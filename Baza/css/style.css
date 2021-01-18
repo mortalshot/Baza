@@ -592,6 +592,10 @@ img {
   margin-right: 36px;
 }
 
+.controls__item.active .controls__link {
+  color: rgba(144, 144, 144, 0.3);
+}
+
 .controls__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5820,6 +5824,87 @@ textarea.form__input {
   margin: 0 0 22px 0;
 }
 
+.providers__heading {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 17px;
+}
+
+.providers__title {
+  margin-bottom: 36px;
+}
+
+.providers__search {
+  width: 100%;
+}
+
+.providers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -18.5px;
+  margin-left: -18.5px;
+}
+
+.providers__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  padding: 19px 18.5px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-right: 18.5px;
+  padding-left: 18.5px;
+}
+
+.providers__item-wrapper {
+  background-color: #ffffff;
+  padding: 24px 19px 16px;
+  padding-right: 19px;
+  padding-left: 19px;
+  border-radius: 3px;
+}
+
+.providers__item-person {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #595959;
+  margin-bottom: 23px;
+}
+
+.providers__item-person .cart__account {
+  margin: 0px 0px 23px 0px;
+  margin-bottom: 23px;
+}
+
+.providers__item-person .cart__about {
+  padding-left: 8px;
+}
+
+.providers__item-person .cart__registration {
+  margin-bottom: 6px;
+}
+
+.providers__item-person .cart__company {
+  margin-bottom: 6px;
+}
+
+.providers__item-person .cart__location {
+  margin-bottom: 6px;
+}
+
+.providers__item-btn {
+  padding: 7px 18px;
+}
+
 @media screen and (min-width: 451px) {
   .to-cart__footer {
     display: -webkit-box;
@@ -5976,6 +6061,10 @@ textarea.form__input {
 
   .header__inner .container-fluid {
     padding: 0 35px;
+  }
+
+  .controls__link:hover {
+    color: rgba(144, 144, 144, 0.3);
   }
 
   .header-cart {
@@ -6209,6 +6298,14 @@ textarea.form__input {
 @media screen and (min-width: 1600px) {
   .firstscreen {
     margin-bottom: -300px;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .providers__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
   }
 }
 
@@ -6922,6 +7019,50 @@ textarea.form__input {
   .delivery-history__title {
     margin-bottom: calc(24px + 36 * ((100vw - 320px) / (1046)));
   }
+
+  .providers__title {
+    margin-bottom: calc(16px + 20 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__list {
+    margin-right: calc(-8px + -10.5 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__list {
+    margin-left: calc(-8px + -10.5 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__item {
+    padding-top: calc(8px + 11 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__item {
+    padding-bottom: calc(8px + 11 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__item {
+    padding-right: calc(8px + 10.5 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__item {
+    padding-left: calc(8px + 10.5 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__item-wrapper {
+    padding-right: calc(16px + 3 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__item-wrapper {
+    padding-left: calc(16px + 3 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__item-person {
+    margin-bottom: calc(17px + 6 * ((100vw - 320px) / (1046)));
+  }
+
+  .providers__item-person .cart__account {
+    margin-bottom: calc(16px + 7 * ((100vw - 320px) / (1046)));
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -7291,6 +7432,12 @@ textarea.form__input {
 
   .delivery-history__item--reverse::after {
     margin: 0px 8px 0px 0;
+  }
+
+  .providers__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333%;
+            flex: 0 0 33.333%;
   }
 }
 
@@ -8065,6 +8212,12 @@ textarea.form__input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .providers__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 }
 
@@ -9081,6 +9234,12 @@ textarea.form__input {
 
   .delivery-history__item-wrapper {
     max-width: 106px;
+  }
+
+  .providers__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 }
 
