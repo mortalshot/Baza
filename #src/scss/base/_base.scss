@@ -94,8 +94,36 @@ img {
 }
 
 .table {
-    td, th {
+    td,
+    th {
         padding: 0;
         border-top: 0;
+    }
+}
+
+.slick-slider {
+    position: relative;
+
+    .slick-arrow {
+        background-color: transparent;
+        font-size: 28px;
+        display: inline-flex;
+        color: rgba($color: $White, $alpha: 0.5);
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    .slick-prev {
+        left: 0;
+        z-index: 1;
+    }
+
+    .slick-next {
+        right: 0;
     }
 }

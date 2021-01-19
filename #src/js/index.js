@@ -10,4 +10,5 @@
 @@include('components/form.js')
 @@include('components/accordion.js')
 @@include('components/table.js')
+@@include('components/slider.js')
 

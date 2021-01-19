@@ -52,7 +52,7 @@
             flex-wrap: nowrap;
             overflow-x: auto;
 
-            &__item {
+            .nav-item {
                 @include adaptiv-value("padding-right", 34, 20, 1);
             }
 
