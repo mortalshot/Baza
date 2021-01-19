@@ -1017,6 +1017,14 @@ $(document).ready(function () {
   //     $('.gallery__thumbnails').slick('refresh');
   // })
 
+  var chat = $('.chat');
+
+  if (chat) {
+    $(".chat__window").scrollTop(function () {
+      return this.scrollHeight;
+    });
+  }
+
   ;
   $('.delivery-timeline__btn').click(function (e) {
     e.preventDefault();
@@ -1028,5 +1036,16 @@ $(document).ready(function () {
       'padding-top': $('.delivery-history__item').outerHeight() / 2,
       'padding-bottom': $('.delivery-history__item').outerHeight() / 2
     });
+  }
+
+  $('#providerTabs .nav-link:not(#providerTab-1)').click(function () {
+    $('.provider-reviews').slideUp(300);
+  });
+  $('#providerTab-1').click(function () {
+    $('.provider-reviews').slideDown(300);
+  });
+
+  if (!$('#providerTab-1').hasClass('active')) {
+    $('.provider-reviews').slideUp(300);
   }
 });

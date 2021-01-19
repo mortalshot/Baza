@@ -11,4 +11,5 @@
 @@include('components/accordion.js')
 @@include('components/table.js')
 @@include('components/slider.js')
+@@include('components/chat.js')
 

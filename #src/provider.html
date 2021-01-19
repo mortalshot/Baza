@@ -53,17 +53,17 @@
                             <div class="provider__tabs">
                                 <ul class="nav nav-tabs" id="providerTabs" role="tablist">
                                     <li class="nav-item">
-                                      <a class="nav-link active" id="providerTab-1" data-toggle="tab" href="#providerTabLink-1" role="tab" aria-controls="providerTabLink-1" aria-selected="true">Основное</a>
+                                      <a class="nav-link" id="providerTab-1" data-toggle="tab" href="#providerTabLink-1" role="tab" aria-controls="providerTabLink-1" aria-selected="false">Основное</a>
                                     </li>
                                     <li class="nav-item">
                                       <a class="nav-link" id="providerTab-2" data-toggle="tab" href="#providerTabLink-2" role="tab" aria-controls="providerTabLink-2" aria-selected="false">Продукты</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" id="providerTab-3" data-toggle="tab" href="#providerTabLink-3" role="tab" aria-controls="providerTabLink-3" aria-selected="false">Сообщения</a>
+                                      <a class="nav-link active" id="providerTab-3" data-toggle="tab" href="#providerTabLink-3" role="tab" aria-controls="providerTabLink-3" aria-selected="true">Сообщения</a>
                                     </li>
                                   </ul>
                                   <div class="tab-content" id="providerTabsContent">
-                                    <div class="tab-pane fade show active" id="providerTabLink-1" role="tabpanel" aria-labelledby="providerTab-1">
+                                    <div class="tab-pane fade" id="providerTabLink-1" role="tabpanel" aria-labelledby="providerTab-1">
                                         <div class="provider__main">
                                             <div class="provider__main-wrapper">
                                                 <div class="provider__main-item">
@@ -467,7 +467,46 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="providerTabLink-3" role="tabpanel" aria-labelledby="providerTab-3">lorem1000</div>
+                                    <div class="tab-pane fade show active" id="providerTabLink-3" role="tabpanel" aria-labelledby="providerTab-3">
+                                        <div class="provider__chat chat">
+                                            <div class="chat__window">
+                                                <div class="chat__message">
+                                                    <div class="chat__message-text">Здравствуйте</div>
+                                                    <div class="chat__message-date">10:11</div>
+                                                </div>
+                                                <div class="chat__message chat__message--owner">
+                                                    <div class="chat__message-text">Здравствуйте, вы хотите приобретсти в тарах или в мешках. Как к вам обращаться?</div>
+                                                    <div class="chat__message-date">10:11</div>
+                                                </div>
+                                                <div class="chat__message">
+                                                    <div class="chat__message-text">Меня зовут Хасан, а вас? Еще какой-то</div>
+                                                    <div class="chat__message-date">11:11</div>
+                                                </div>
+                                                <div class="chat__message chat__message--owner">
+                                                    <div class="chat__message-text">напшиите еще какой-то текс</div>
+                                                    <div class="chat__message-date">11:25</div>
+                                                </div>
+                                                <div class="chat__message">
+                                                    <div class="chat__message-text">Самый большой и длинный текст который можно вместить в один блок текстового сообщения, он более широкий чем остальные блоки, посмотри на его размер, он значительно больше</div>
+                                                    <div class="chat__message-date">11:11</div>
+                                                </div>
+                                                <div class="chat__message chat__message--owner">
+                                                    <div class="chat__message-text">напшиите еще какой-то текс</div>
+                                                    <div class="chat__message-date">11:25</div>
+                                                </div>
+                                                <div class="chat__message chat__message--owner">
+                                                    <div class="chat__message-text">Тут еще текст всякий, который нужно написать или прочитать или еще что-то </div>
+                                                    <div class="chat__message-date">11:25</div>
+                                                </div>
+                                            </div>
+                                            <form action="" class="chat__form">
+                                                <div class="chat__form-wrapper">
+                                                    <input type="search" name="search" pattern=".*\S.*" required placeholder="Пишите тут сообщение">
+                                                    <button class="chat__btn" type="submit"><i class="icon-telegram"></i></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                   </div>
                             </div>
                         </div>
