@@ -10,14 +10,16 @@ $(document).ready(function () {
         $('.delivery-history__timeline').css({ 'padding-top': $('.delivery-history__item').outerHeight() / 2, 'padding-bottom': $('.delivery-history__item').outerHeight() / 2 });
     }
 
-    $('#providerTabs .nav-link:not(#providerTab-1)').click(function () {
-        $('.provider-reviews').slideUp(300);
-    })
-    $('#providerTab-1').click(function () {
-        $('.provider-reviews').slideDown(300);
-    })
+    if ($('#providerTabs').length > 0) {
+        $('#providerTabs .nav-link:not(#providerTab-1)').click(function () {
+            $('.provider-reviews').slideUp(300);
+        })
+        $('#providerTab-1').click(function () {
+            $('.provider-reviews').slideDown(300);
+        })
 
-    if(!$('#providerTab-1').hasClass('active')) {
-        $('.provider-reviews').slideUp(300);
+        if (!$('#providerTab-1').hasClass('active')) {
+            $('.provider-reviews').slideUp(300);
+        }
     }
 })

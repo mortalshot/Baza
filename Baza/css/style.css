@@ -62,6 +62,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mail:before {
+  content: "\e905";
+}
+
+.icon-lock-closed:before {
+  content: "\e925";
+}
+
+.icon-share:before {
+  content: "\e924";
+}
+
 .icon-settings:before {
   content: "\e922";
   color: #919191;
@@ -6508,6 +6520,56 @@ textarea.form__input {
   height: calc(100vh - 76px - 66px);
 }
 
+.profile .provider__card {
+  position: initial;
+  top: auto;
+  margin-bottom: 31px;
+}
+
+.profile .providers__item-person {
+  margin-bottom: 0;
+}
+
+.profile__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 13px;
+}
+
+.profile__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #595959;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+}
+
+.profile__link:last-child {
+  margin-bottom: 0;
+}
+
+.profile__link i {
+  margin-right: 8px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 18px;
+}
+
+.profile__link span {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 451px) {
   .to-cart__footer {
     display: -webkit-box;
@@ -6812,6 +6874,13 @@ textarea.form__input {
 
   .messages__person-time {
     text-align: right;
+  }
+
+  .profile__actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -7847,6 +7916,10 @@ textarea.form__input {
   .messages__right {
     padding-left: calc(10px + 19 * ((100vw - 320px) / (1046)));
   }
+
+  .profile .provider__card {
+    margin-bottom: calc(15px + 16 * ((100vw - 320px) / (1046)));
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -8260,6 +8333,14 @@ textarea.form__input {
 
   .provider__chat {
     height: calc(100vh - 76px - 320px);
+  }
+
+  .profile .provider__card {
+    margin-bottom: 15px;
+  }
+
+  .profile__link {
+    margin: 0px 16px 0px 0px;
   }
 }
 
@@ -10137,6 +10218,17 @@ textarea.form__input {
     -webkit-transform: translate(0);
         -ms-transform: translate(0);
             transform: translate(0);
+  }
+
+  .profile__actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .profile__link {
+    margin: 0px 0 10px 0px;
   }
 }
 

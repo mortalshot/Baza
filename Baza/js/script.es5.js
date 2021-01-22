@@ -1038,14 +1038,16 @@ $(document).ready(function () {
     });
   }
 
-  $('#providerTabs .nav-link:not(#providerTab-1)').click(function () {
-    $('.provider-reviews').slideUp(300);
-  });
-  $('#providerTab-1').click(function () {
-    $('.provider-reviews').slideDown(300);
-  });
+  if ($('#providerTabs').length > 0) {
+    $('#providerTabs .nav-link:not(#providerTab-1)').click(function () {
+      $('.provider-reviews').slideUp(300);
+    });
+    $('#providerTab-1').click(function () {
+      $('.provider-reviews').slideDown(300);
+    });
 
-  if (!$('#providerTab-1').hasClass('active')) {
-    $('.provider-reviews').slideUp(300);
+    if (!$('#providerTab-1').hasClass('active')) {
+      $('.provider-reviews').slideUp(300);
+    }
   }
 });
