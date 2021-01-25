@@ -109,6 +109,8 @@
 }
 
 .options {
+    display: flex;
+    
     // .options__item
     &__item {
         margin: 0px 0px 10px 0px;
