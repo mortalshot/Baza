@@ -1,8 +1,12 @@
 .footer {
 	background-color: $GreenM;
 	color: $White;
+	position: relative;
+	z-index: 2;
 
 	&__top {
+		background-color: $GreenM;
+		color: $White;
 		@include adaptiv-value("padding-top", 244, 45, 1);
 		@include adaptiv-value("padding-bottom", 155, 45, 1);
 	}
@@ -63,6 +67,8 @@
 	&__bottom-left {
 		padding-right: 15px;
 		display: flex;
+		font-size: 14px;
+		line-height: 18px;
 
 		@media screen and (max-width: 575px) {
 			flex-direction: column;

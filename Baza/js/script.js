@@ -252,7 +252,7 @@ $('.navigation-drawer__mobile').not('.filter-selected__reset').on('click', funct
 });
 
 $(document).mouseup(function (e) {
-    if (!$('.popup').hasClass('open')) {
+    if (!$('.popup').hasClass('open') && !$('.header__menu').hasClass('active')) {
         var div = $('.navigation-drawer__wrapper');
         if (!div.is(e.target)
             && div.has(e.target).length === 0) {
