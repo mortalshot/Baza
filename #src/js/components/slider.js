@@ -7,6 +7,15 @@ $('.provider-reviews').slick({
     dots: false,
 });
 
+$('.item-popup__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="icon-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="icon-chevron-right"></i></button>',
+    dots: false,
+});
+
 // $('.gallery__thumbnails').slick({
 //     slidesToShow: 3,
 //     slidesToScroll: 1,

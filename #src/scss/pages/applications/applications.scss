@@ -99,7 +99,7 @@
             margin-right: 6px;
         }
 
-        @media screen and (min-width: $layoutDesktop + 'px') {
+        @media screen and (min-width: $layoutDesktop + "px") {
             font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(15 / 12);
         }
@@ -182,7 +182,7 @@
             margin-right: 7px;
         }
 
-        @media screen and (min-width: $layoutDesktop + 'px') {
+        @media screen and (min-width: $layoutDesktop + "px") {
             font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(15 / 12);
         }
@@ -198,6 +198,10 @@
         justify-content: flex-end;
         align-items: center;
         color: $Gray;
+
+        i {
+            display: inline-flex;
+        }
     }
 
     &__column--status {
@@ -239,6 +243,4 @@
     &__status--confirmed {
         background-color: $Yellow2;
     }
-
-
 }
