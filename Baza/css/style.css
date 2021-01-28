@@ -8272,6 +8272,48 @@ textarea.form__input {
   margin-top: 32px;
 }
 
+.success {
+  margin: 0;
+  padding-top: 84px;
+  height: calc(100vh - 76px);
+  overflow: hidden;
+}
+
+.success .firstscreen__content {
+  padding-top: 100px;
+}
+
+.success__wrapper {
+  max-width: 253px;
+  margin: 0 auto;
+}
+
+.success__title {
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.success__title a {
+  font-weight: 600;
+  color: #1d9f3a;
+  -webkit-transition: 0.3s ease all 0s;
+  -o-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+}
+
+.success__text {
+  font-size: 16px;
+  line-height: 21px;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.success__btn {
+  font-size: 18px;
+  line-height: 23px;
+}
+
 @media screen and (min-width: 451px) {
   .to-cart__footer {
     display: -webkit-box;
@@ -8300,6 +8342,10 @@ textarea.form__input {
   .delivery-card__body tbody .table__row .table__column {
     padding: 10px 5px;
     border-bottom: 1px solid #ececec;
+  }
+
+  .success .firstscreen__image {
+    margin: 0;
   }
 }
 
@@ -9136,6 +9182,16 @@ textarea.form__input {
   .article__sidebar-date {
     font-size: calc(12px + 2 * ((100vw - 320px) / (1366 - 320)));
     line-height: calc(18 / 14);
+  }
+
+  .success__text {
+    font-size: calc(14px + 2 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(21 / 16);
+  }
+
+  .success__btn {
+    font-size: calc(16px + 2 * ((100vw - 320px) / (1366 - 320)));
+    line-height: calc(23 / 18);
   }
 }
 
@@ -10107,6 +10163,22 @@ textarea.form__input {
 
   .article__footer {
     margin-top: calc(20px + 12 * ((100vw - 320px) / (1046)));
+  }
+
+  .success {
+    padding-top: calc(50px + 34 * ((100vw - 320px) / (1046)));
+  }
+
+  .success .firstscreen__content {
+    padding-top: calc(50px + 50 * ((100vw - 320px) / (1046)));
+  }
+
+  .success__title {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / (1046)));
+  }
+
+  .success__text {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / (1046)));
   }
 }
 
@@ -11636,6 +11708,10 @@ textarea.form__input {
   .article__content {
     padding: 0px 0px 30px 0px;
   }
+
+  .success {
+    height: calc(100vh - 54px);
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -11838,6 +11914,10 @@ textarea.form__input {
 
   .messages__people {
     height: calc(100vh - 91px - 240px);
+  }
+
+  .success {
+    height: calc(100vh - 91px);
   }
 }
 
@@ -12381,6 +12461,15 @@ textarea.form__input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+
+  .success {
+    padding-top: 20px;
+    overflow-y: auto;
+  }
+
+  .success .firstscreen__content {
+    padding-top: 0;
   }
 }
 
