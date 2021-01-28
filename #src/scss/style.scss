@@ -339,9 +339,6 @@
         }
 
         .product-item {
-            &__wrapper {
-            }
-
             &__heading {
                 display: flex;
                 justify-content: space-between;
@@ -400,9 +397,6 @@
                 margin-right: 20px;
             }
 
-            &__descr {
-            }
-
             &__cart {
                 border-radius: 3px 0;
                 position: absolute;
@@ -430,9 +424,6 @@
     color: $White;
     @include adaptiv-value("padding-top", 169, 32, 1);
     @include adaptiv-value("padding-bottom", 189, 101, 1);
-
-    &__review {
-    }
 
     &__wrapper {
         text-align: center;
@@ -501,9 +492,6 @@
 // ! provider page end
 
 .messages {
-    &__container {
-    }
-
     &__row {
         @media screen and (min-width: 768px) {
             display: flex;
@@ -1057,7 +1045,24 @@
 
     &__nav-list {
         display: flex;
-        @include adaptiv-value("margin-bottom", 48, 20, 1);
+        @include adaptiv-value("padding-bottom", 48, 20, 1);
+
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #f6f6f6;
+            border-radius: 3px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            background-color: #ccc3c3;
+        }
     }
 
     &__nav-item {
@@ -1242,6 +1247,7 @@
                 }
                 @media screen and (max-width: 450px) {
                     flex: 0 0 100%;
+                    padding: 15px 8px;
                 }
             }
 

@@ -3,7 +3,7 @@
     background-color: $GreenM;
     color: $White;
     padding: 27px 32px;
-    margin: 33px 0 40px;
+    margin: 18px 0 40px;
     display: flex;
     align-items: center;
 
@@ -24,7 +24,11 @@
         display: flex;
         align-items: center;
         padding: 10px;
-        @include adaptiv-value("padding-right", 104, 0, 1);
+        @include adaptiv-value("padding-right", 104, -100, 1);
+        
+        &::last-child {
+            padding-right: 0;
+        }
 
         @media screen and (max-width: 991px) {
             padding-right: 10px;
@@ -48,6 +52,7 @@
         font-weight: 800;
         font-size: 24px;
         line-height: 31px;
+        white-space: nowrap;
 
         @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(18px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));

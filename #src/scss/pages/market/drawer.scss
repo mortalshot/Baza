@@ -12,6 +12,7 @@
 		width: auto;
 		left: 280px;
 		right: 0px;
+		transition: 0.3s ease all 0s;
 
 		@media screen and (max-width: 1100px) {
 			left: 65px;
@@ -28,6 +29,7 @@
 	.site__main,
 	.footer {
 		padding-left: 280px;
+		transition: 0.3s ease all 0s;
 
 		@media screen and (max-width: 1100px) {
 			padding-left: 65px;
@@ -39,6 +41,25 @@
 			padding-top: $size-inner-header-height-mobile;
 			padding-left: 0;
 			padding-bottom: 50px;
+		}
+	}
+
+	&.active {
+		.header {
+			width: auto;
+			left: 280px;
+			right: 0px;
+			transition: 0.3s ease all 0s;
+		}
+
+		.site__main,
+		.footer {
+			padding-left: 280px;
+			transition: 0.3s ease all 0s;
+		}
+
+		.filter-product {
+			padding-left: 280px;
 		}
 	}
 }
@@ -95,7 +116,6 @@
 				pointer-events: none;
 				visibility: hidden;
 				transition: 0.3s ease all 0s;
-				
 
 				&.active {
 					transform: translate(0);
@@ -115,6 +135,8 @@
 		}
 	}
 }
+
+
 
 .drawer-deliveries {
 	.filter__products {
@@ -224,6 +246,7 @@
 		padding: 18px 25px;
 		display: flex;
 		flex-direction: column;
+		transition: 0.3s ease all 0s;
 
 		@media screen and (max-width: 1100px) {
 			z-index: 51;
@@ -337,14 +360,13 @@
 }
 
 .filter {
-	&__products{ 
-
+	&__products {
 	}
 
 	&__delivery {
 		display: none;
 	}
-	
+
 	&__stirps {
 		border-bottom: 1px solid rgba($color: $Black, $alpha: 0.05);
 		padding-top: 40px;

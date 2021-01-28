@@ -393,6 +393,10 @@
 		&.active {
 			.controls__link {
 				color: rgba($color: $Gray2, $alpha: 0.3);
+
+				@media screen and (max-width: 660px) {
+					color: rgba($color: $White, $alpha: 0.8);
+				}
 			}
 		}
 	}

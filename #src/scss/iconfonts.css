@@ -23,7 +23,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-coins:before {
+  content: "\e926";
+}
+.icon-wallet:before {
+  content: "\e927";
+}
+.icon-exchange:before {
+  content: "\e928";
+}
+.icon-up-circle:before {
+  content: "\e929";
+}
+.icon-down-circle:before {
+  content: "\e92a";
+}
 .icon-mail:before {
   content: "\e905";
 }
@@ -86,10 +100,10 @@
   content: "\e903";
 }
 .icon-down:before {
-  content: "\e905";
+  content: "\e906";
 }
 .icon-exit:before {
-  content: "\e906";
+  content: "\e923";
 }
 .icon-kan:before {
   content: "\e907";
