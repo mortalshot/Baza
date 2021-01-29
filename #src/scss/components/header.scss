@@ -77,6 +77,10 @@
 		display: flex;
 		align-items: center;
 
+		@media screen and (max-width: 660px) {
+			padding: 0;
+		}
+
 		&__link {
 			font-weight: 700;
 			font-size: 30px;
@@ -91,6 +95,9 @@
 				&:hover {
 					color: rgba($color: $GreenM, $alpha: 0.75);
 				}
+			}
+			@media screen and (max-width: 660px) {
+				color: $White;
 			}
 		}
 
@@ -316,7 +323,13 @@
 			}
 
 			.nav-item {
-				@include adaptiv-value("margin-right", 32, 5, 1);
+				@include adaptiv-value("margin-right", 32, 0, 1);
+
+				@media screen and (max-width: 660px) {
+					&:last-child {
+						margin-right: 0;
+					}
+				}
 			}
 
 			.nav-link {
@@ -341,7 +354,7 @@
 		}
 
 		.navbar-brand {
-			@include adaptiv-value("margin-right", 66, 15, 1);
+			@include adaptiv-value("margin-right", 66, 0, 1);
 		}
 
 		.header__menu {
@@ -384,7 +397,7 @@
 	}
 
 	&__item {
-		@include adaptiv-value("margin-right", 36, 10, 1);
+		@include adaptiv-value("margin-right", 36, 0, 1);
 
 		@media screen and (max-width: 660px) {
 			margin: 0;
@@ -414,6 +427,11 @@
 		}
 		@media screen and (max-width: 660px) {
 			color: $White;
+		}
+
+		i {
+			display: inline-flex;
+			font-size: 18px;
 		}
 	}
 }

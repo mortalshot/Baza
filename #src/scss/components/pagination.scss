@@ -1,9 +1,13 @@
 .pagination {
-    display: flex;
-    align-items: center;
-    background: $White;
-    padding: 8px 12px;
     margin: 0;
+    
+    &__list {
+        background: $White;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        margin: 0;
+    }
 
     &__item {
         margin-right: 7px;
@@ -49,9 +53,12 @@
     }
 
     &--fixed {
-        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
         position: fixed;
         @include adaptiv-value("right", 36, 15, 1);
         @include adaptiv-value("bottom", 36, 15, 1);
+
+        .pagination__list {
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+        }
     }
 }

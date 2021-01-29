@@ -670,6 +670,13 @@ img {
   transition: 0.3s ease all 0s;
 }
 
+.controls__link i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 18px;
+}
+
 .header-cart {
   height: 100%;
   display: -webkit-box;
@@ -1926,13 +1933,17 @@ textarea.form__input {
 }
 
 .pagination {
+  margin: 0;
+}
+
+.pagination__list {
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ffffff;
   padding: 8px 12px;
   margin: 0;
 }
@@ -1993,11 +2004,14 @@ textarea.form__input {
 }
 
 .pagination--fixed {
-  -webkit-box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
   position: fixed;
   right: 36px;
   bottom: 36px;
+}
+
+.pagination--fixed .pagination__list {
+  -webkit-box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .firstscreen {
@@ -2387,9 +2401,6 @@ textarea.form__input {
   width: auto;
   left: 280px;
   right: 0px;
-  -webkit-transition: 0.3s ease all 0s;
-  -o-transition: 0.3s ease all 0s;
-  transition: 0.3s ease all 0s;
 }
 
 .drawer-on .header__home {
@@ -9509,15 +9520,15 @@ textarea.form__input {
   }
 
   .header__inner .navbar .nav-item {
-    margin-right: calc(5px + 27 * ((100vw - 320px) / (1046)));
+    margin-right: calc(0px + 32 * ((100vw - 320px) / (1046)));
   }
 
   .header__inner .navbar-brand {
-    margin-right: calc(15px + 51 * ((100vw - 320px) / (1046)));
+    margin-right: calc(0px + 66 * ((100vw - 320px) / (1046)));
   }
 
   .controls__item {
-    margin-right: calc(10px + 26 * ((100vw - 320px) / (1046)));
+    margin-right: calc(0px + 36 * ((100vw - 320px) / (1046)));
   }
 
   .rating__item {
@@ -12055,6 +12066,14 @@ textarea.form__input {
 }
 
 @media screen and (max-width: 660px) {
+  .header .navbar-brand {
+    padding: 0;
+  }
+
+  .header .navbar-brand__link {
+    color: #ffffff;
+  }
+
   .header__inner .container-fluid {
     padding: 0;
   }
@@ -12069,6 +12088,10 @@ textarea.form__input {
   .header__inner .navbar__row {
     padding: 0 20px;
     height: auto;
+  }
+
+  .header__inner .navbar .nav-item:last-child {
+    margin-right: 0;
   }
 
   .controls {
