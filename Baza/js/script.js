@@ -793,6 +793,7 @@ $('.attributes-summary__reset').on('click', function (e) {
     $('.filter-attributes__item').slideUp(300);
 });
 
+
 // open modal window and change tab
 $('.filter-modals__link').on('click', function (e) {
     const id = $(this).data('tab');

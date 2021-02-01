@@ -259,11 +259,11 @@
                                             </div>
                                         </div>
                                         <div class="bank-book__actions">
-                                            <a href="" class="bank-book__btn btn btn-green">
+                                            <a href="#fillUpPurse" class="bank-book__btn btn btn-green popup-link">
                                                 <i class="icon-purse"></i>
                                                 <span>Пополнить</span>
                                             </a>
-                                            <a href="" class="bank-book__btn btn btn-green">
+                                            <a href="#withdrawPurse" class="bank-book__btn btn btn-green popup-link">
                                                 <i class="icon-down-circle"></i>
                                                 <span>Вывести</span>
                                             </a>
@@ -463,7 +463,100 @@
                 </div>
             </div>
         </div>
+
+        <div id="withdrawPurse" class="popup popup-purse">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <form action="">
+                        <div class="popup-purse__top">
+                            <a href="" class="popup__close close-popup">
+                                <svg width="18" height="18" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.239502" y="2.31989" width="2.2461" height="23.2097"
+                                        transform="rotate(-45 0.239502 2.31989)" fill="#C4C4C4" />
+                                    <rect width="2.2461" height="23.2097"
+                                        transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 18.2395 2.31989)"
+                                        fill="#C4C4C4" />
+                                </svg>
+                            </a>
+                            <h2 class="popup-purse__title title-market">
+                                <i class="icon-down-circle"></i>
+                                <span>Вывести</span>
+                            </h2>
+                            <div class="form-group">
+                                <label class="form-label" for="fillUpPurseInput">Введите сумму</label>
+                                <div class="form-item col-sm-5">
+                                    <input type="text" class="form-control" id="fillUpPurseInput" placeholder="1000">
+                                    <span>₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-purse__body">
+                            <h3 class="popup-purse__body-title">Введите данные компании</h3>
+
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label for="companyFullName" class="form-label">Полное наименование</label>
+                                    <input type="text" class="form-control" id="companyFullName" placeholder='Общество с ограниченной ответственностью "Юнайтед Фрут Компани"'>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-sm-5">
+                                    <label for="companyPublicName" class="form-label">Публичное наименование</label>
+                                    <input type="text" class="form-control" id="companyPublicName" placeholder='ООО "ЮФК"'>
+                                </div>
+                                <div class="form-group col-sm-7">
+                                    <label for="companyCEO" class="form-label">Генеральный директор</label>
+                                    <input type="text" class="form-control" id="companyCEO" placeholder="Бабиров Захид Закир оглы">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <label for="companyOGRN" class="form-label">ОГРН</label>
+                                    <input type="text" class="form-control" id="companyOGRN" placeholder="1187847052007">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="companyINN" class="form-label">ИНН</label>
+                                    <input type="text" class="form-control" id="companyINN" placeholder="7816658485">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="companyCPP" class="form-label">КПП</label>
+                                    <input type="text" class="form-control" id="companyCPP" placeholder="7816010001">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-sm-12 col-md-12 col-lg-5">
+                                    <label for="companyBankName" class="form-label">Наименование банка</label>
+                                    <input type="text" class="form-control" id="companyBankName" placeholder='Ф. АКБ "ФОРА-БАНК" АО'>
+                                </div>
+                                <div class="form-group col-sm-5 col-md-5 col-lg-3">
+                                    <label for="companyBIK" class="form-label">БИК</label>
+                                    <input type="text" class="form-control" id="companyBIK" placeholder="044030831">
+                                </div>
+                                <div class="form-group col-sm-7 col-md-7 col-lg-4">
+                                    <label for="companyPayment" class="form-label">Расчетный счет</label>
+                                    <input type="text" class="form-control" id="companyPayment" placeholder="40702810300060000173">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label for="companyLegalAddress" class="form-label">Юридический адрес</label>
+                                    <input type="text" class="form-control" id="companyLegalAddress" placeholder="192007, Санкт-Петербург, ул. Тамбовская, д. 33, лит.А, пом. 2-Н ">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="popup-purse__btn btn btn-green">Вывести</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
+
 
     @@include('html-components/modals.html')
 </main>

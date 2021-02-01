@@ -260,6 +260,10 @@
 		.navbar-brand {
 			.navbar-brand__link {
 				@include adaptiv-value("margin-right", 30, 15, 1);
+
+				@media screen and (max-width: 660px) {
+					color: $GreenM;
+				}
 			}
 		}
 

@@ -20,13 +20,16 @@
                 background-color: #ccc3c3;
             }
 
+            .nav-item {
+                margin: 0 40px 0 0;
+                @include adaptiv-value("margin-right", 40, 10, 1);
+            }
+
             .nav-link {
                 font-weight: 600;
                 color: $Black;
                 border-color: transparent;
                 position: relative;
-                margin: 0 40px 0 0;
-                @include adaptiv-value("margin-right", 40, 10, 1);
                 padding: 0;
                 white-space: nowrap;
 
@@ -764,6 +767,10 @@
         @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(21 / 16);
+        }
+        @media screen and (max-width: 450px) {
+            min-width: initial;
+            margin-right: 10px;;
         }
 
         &:last-child {
