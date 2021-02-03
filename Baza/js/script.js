@@ -936,4 +936,21 @@ if (chat) {
             $('.provider-reviews').slideUp(300);
         }
     }
+
+    if ($('.auth').length > 0) {
+        let mediaQueryHeight = window.matchMedia('(min-height: 550px)');
+        if (mediaQueryHeight.matches) {
+            $(window).resize(function () {
+                let headerHeight = $('.site__header').innerHeight();
+                let footerHeight = $('.site__footer').innerHeight();
+                let resultHeight = $(window).height() - headerHeight - footerHeight;
+                $('.auth').css({ 'height': resultHeight });
+            });
+
+            let headerHeight = $('.site__header').innerHeight();
+            let footerHeight = $('.site__footer').innerHeight();
+            let resultHeight = $(window).height() - headerHeight - footerHeight;
+            $('.auth').css({ 'height': resultHeight });
+        }
+    }
 })

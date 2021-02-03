@@ -1079,4 +1079,25 @@ $(document).ready(function () {
       $('.provider-reviews').slideUp(300);
     }
   }
+
+  if ($('.auth').length > 0) {
+    var mediaQueryHeight = window.matchMedia('(min-height: 550px)');
+
+    if (mediaQueryHeight.matches) {
+      $(window).resize(function () {
+        var headerHeight = $('.site__header').innerHeight();
+        var footerHeight = $('.site__footer').innerHeight();
+        var resultHeight = $(window).height() - headerHeight - footerHeight;
+        $('.auth').css({
+          'height': resultHeight
+        });
+      });
+      var headerHeight = $('.site__header').innerHeight();
+      var footerHeight = $('.site__footer').innerHeight();
+      var resultHeight = $(window).height() - headerHeight - footerHeight;
+      $('.auth').css({
+        'height': resultHeight
+      });
+    }
+  }
 });

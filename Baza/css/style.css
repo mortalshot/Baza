@@ -6746,8 +6746,8 @@ textarea.form__input {
 
 .auth {
   background-color: #f5f5f5;
+  margin: 0 !important;
   height: 100%;
-  margin-bottom: -350px;
 }
 
 .auth .firstscreen__content {
@@ -6937,11 +6937,6 @@ textarea.form__input {
   height: 7px;
   left: 3px;
   background: url(../img/icons/check-green.svg) no-repeat center/cover;
-}
-
-.auth .firstscreen__image {
-  position: relative;
-  z-index: 3;
 }
 
 .cart__title {
@@ -12391,10 +12386,6 @@ textarea.form__input {
         -ms-transform: translate(0, 24px) scale(1);
             transform: translate(0, 24px) scale(1);
   }
-
-  .auth {
-    margin: 0 !important;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -12843,6 +12834,16 @@ textarea.form__input {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+
+  .auth .firstscreen__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .auth__image {
+    display: none;
   }
 
   .cart__row {
@@ -13570,10 +13571,6 @@ textarea.form__input {
 
   .auth .firstscreen__content {
     margin-bottom: 0;
-  }
-
-  .auth .firstscreen__image {
-    display: none;
   }
 
   .cart__item-heading {
@@ -14643,11 +14640,5 @@ textarea.form__input {
 
   .catalog__products--card .product-item__content {
     margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-height: 680px) {
-  .auth {
-    height: calc(100vh - 54px - 91px);
   }
 }
