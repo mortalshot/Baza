@@ -1,12 +1,18 @@
 .auth {
     background-color: $LGray4;
-    margin-bottom: -360px;
+    height: 100%;
+    margin-bottom: -350px;
 
-    @media screen and (max-width: 575px) {
+    @media screen and (min-height: 680px) {
         height: calc(100vh - #{$size-header-height-mobile} - #{$size-inner-header-height-mobile});
+    }
+    @media screen and (max-width: 800px) {
+        margin: 0 !important;
     }
 
     .firstscreen__content {
+        padding-top: 0 !important;
+
         @media screen and (max-width: 575px) {
             margin-bottom: 0;
         }
@@ -153,6 +159,9 @@
     }
 
     .firstscreen__image {
+        position: relative;
+        z-index: 3;
+        
         @media screen and (max-width: 575px) {
             display: none;
         }
