@@ -401,6 +401,7 @@
 	}
 
 	&__item {
+		position: relative;
 		@include adaptiv-value("margin-right", 36, 0, 1);
 
 		@media screen and (max-width: 660px) {
@@ -413,6 +414,49 @@
 
 				@media screen and (max-width: 660px) {
 					color: rgba($color: $White, $alpha: 0.8);
+				}
+			}
+		}
+
+		.controls {
+			&__sub-menu {
+				position: absolute;
+				bottom: -40px;
+				right: 0;
+				z-index: 1;
+				transform: translate(0, -100%);
+				background: $White;
+				box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+				@include adaptiv-value("padding", 30, 15, 1);
+				width: 252px;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transition: 0.5s ease all 0s;
+
+				@media screen and (max-width: 660px) {
+					bottom: -10px;
+				}
+
+				&.active {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: auto;
+					transform: translate(0, 100%);
+				}
+			}
+
+			&__menu-item {
+				font-weight: 500;
+				margin-bottom: 14px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				a {
+					color: $Black;
+					transition: 0.3s ease all 0s;
 				}
 			}
 		}

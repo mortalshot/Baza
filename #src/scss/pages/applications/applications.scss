@@ -240,6 +240,11 @@
         background-color: $LBlue;
     }
 
+    &__status--best {
+        background-color: $Yellow;
+        color: $DGray2;
+    }
+
     &__status--confirmed {
         background-color: $Yellow2;
     }

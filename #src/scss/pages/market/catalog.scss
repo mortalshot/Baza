@@ -65,7 +65,7 @@
         &--list {
             margin: 27px 0 0;
 
-            @media screen and (min-width: $layoutDesktop + 'px') {
+            @media screen and (min-width: $layoutDesktop + "px") {
                 padding-bottom: 20px;
             }
         }
@@ -238,9 +238,37 @@
             @include adaptiv-value("padding-right", 23, 15, 1);
             border-radius: 0 0 3px 3px;
         }
+
+        .catalog__products-group {
+            margin: 20px 0;
+
+            @media screen and (max-width: 450px) {
+                margin: 0 0 20px;
+            }
+        }
+
+        .catalog__group-title {
+            font-weight: 400;
+            margin-bottom: 4px;
+
+            @media screen and (max-width: 575px) {
+                margin-bottom: 10px;
+            }
+        }
     }
 
     &__products--list {
+        .catalog__products-group {
+
+        }
+
+        .catalog__group-title {
+            font-weight: 600;
+            background-color: $White;
+            padding: 10px;
+            border-bottom: 1px solid $LGray;
+        }
+
         .product-item {
             &__table {
                 background-color: $LBlue;

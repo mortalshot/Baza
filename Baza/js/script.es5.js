@@ -304,6 +304,17 @@ $(document).ready(function () {
     }
   }
 
+  $('.controls__link--has-children').click(function (e) {
+    e.preventDefault();
+    $(this).next('.controls__sub-menu').toggleClass('active');
+  });
+  $(document).mouseup(function (e) {
+    var div = $(".controls__sub-menu");
+
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      $('.controls__sub-menu').removeClass('active');
+    }
+  });
   var animItems = document.querySelectorAll('._anim-items');
 
   if (animItems.length > 0) {

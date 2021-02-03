@@ -23,6 +23,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-dots:before {
+  content: "\e92b";
+}
 .icon-coins:before {
   content: "\e926";
 }
