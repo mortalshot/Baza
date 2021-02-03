@@ -111,6 +111,27 @@
 	.icon-kan {
 		font-size: 26px;
 	}
+
+	&--auth {
+		background-color: transparent;
+		color: $Gray;
+
+		@media screen and (max-width: 767px) {
+			background-color: $LGray4;
+		}
+
+		.popup-over__title {
+			color: $Gray;
+
+			&::before {
+				border-color: $Gray;
+			}
+		}
+
+		.kan-logo {
+			display: none;
+		}
+	}
 }
 
 .info {

@@ -1,0 +1,182 @@
+.messages {
+    &__row {
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__left {
+        @media screen and (min-width: 768px) {
+            @include adaptiv-value("flex-basis", 318, 200, 1);
+            padding-right: 5px;
+            height: calc(100vh - #{$size-header-height} - 66px);
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 22px;
+                background-color: #ececec;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 22px;
+                background-color: #737373;
+            }
+        }
+    }
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 32, 16, 1);
+    }
+
+    &__search {
+        @include adaptiv-value("margin-bottom", 36, 32, 1);
+    }
+
+    &__people {
+        border-radius: 3px;
+        margin: 0;
+
+        @media screen and (max-width: 767px) {
+            padding-right: 5px;
+            height: calc(100vh - #{$size-header-height} - 170px);
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+            &::-webkit-scrollbar-track {
+                border-radius: 22px;
+                background-color: #ececec;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 22px;
+                background-color: #737373;
+            }
+        }
+        @media screen and (max-width: 660px) {
+            height: calc(100vh - #{$size-inner-header-height-mobile} - 240px);
+        }
+    }
+
+    &__person {
+        display: flex;
+        align-items: center;
+        padding: 13px 20px;
+        border-bottom: 1px solid $LGray3;
+        background-color: $White;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 8px;
+            background-color: $GreenM;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transform: scale(0);
+            transition: 0.3s ease all 0s;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &.active {
+            &::before {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                background-color: rgba($color: $White, $alpha: 0.7);
+                &::before {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    &__person-avatar {
+        position: relative;
+        flex: 0 0 34px;
+        width: 34px;
+        height: 34px;
+        margin-right: 12px;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__person-body {
+        flex: 1 1 auto;
+    }
+
+    &__person-top {
+        margin-bottom: 2px;
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__person-name {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: $Black;
+        padding-right: 5px;
+    }
+
+    &__person-time {
+        font-size: 12px;
+        line-height: 15px;
+        color: $DGray;
+        white-space: nowrap;
+
+        @media screen and (min-width: 992px) {
+            text-align: right;
+        }
+    }
+
+    &__person-text {
+        font-size: 14px;
+        line-height: 18px;
+        color: $DGray;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    &__right {
+        flex: 1 1 auto;
+        @include adaptiv-value("padding-left", 29, 10, 1);
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__chat {
+        height: calc(100vh - #{$size-header-height} - 66px);
+    }
+}
+//! messages page end

@@ -1,0 +1,335 @@
+.bargaining {
+    .accordion {
+        &__title {
+            padding-right: 30px;
+
+            @media screen and (max-width: 767px) {
+                padding-right: 20px;
+            }
+
+            &::before {
+                display: none;
+            }
+            &::after {
+                width: 19px;
+                height: 19px;
+                background: $White url(../img/icons/chevron-right-bargaining.svg) no-repeat center/cover;
+                top: 50%;
+                right: 16px;
+                transform: translate(0, -50%) rotate(0deg);
+
+                @media screen and (max-width: 767px) {
+                    right: 5px;
+                }
+            }
+
+            &.active {
+                &::after {
+                    transform: translate(0, -50%) rotate(90deg);
+                }
+            }
+        }
+    }
+
+    .product-item {
+        &__row {
+            border-bottom: 1px solid $LGray3;
+
+            @media screen and (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+        }
+
+        &__column {
+            border-bottom-color: transparent;
+            padding: 12px 10px;
+
+            @media screen and (max-width: 767px) {
+                padding: 8px 10px;
+            }
+
+            &:first-child {
+                padding-left: 20px;
+
+                @media screen and (max-width: 767px) {
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        &__column--name {
+            flex: 0 0 32%;
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 100%;
+            }
+        }
+
+        &__product {
+            flex: initial;
+            padding-right: 10px;
+        }
+
+        &__product-name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+
+            @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+                font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+                line-height: calc(21 / 16);
+            }
+        }
+
+        &__column--size {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: $DGray;
+            flex: 0 0 120px;
+            @include adaptiv-value("flex-basis", 120, 70, 1);
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 30%;
+                padding-left: 15px;
+            }
+        }
+
+        &__column--quantum {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: $DGray;
+            flex: 0 0 120px;
+            @include adaptiv-value("flex-basis", 120, 70, 1);
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 30%;
+            }
+        }
+
+        &__column--weight {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            justify-content: flex-end;
+            padding-right: 29px;
+            white-space: nowrap;
+
+            @media screen and (max-width: 767px) {
+                padding-right: 10px;
+                flex: 0 0 30%;
+            }
+        }
+
+        &__location {
+            white-space: normal;
+        }
+    }
+
+    .application-card {
+        padding-bottom: 0;
+        border-radius: 3px 3px 0 0;
+
+        .table__column {
+            &:first-child {
+                padding-left: 16px;
+            }
+            &:last-child {
+                padding-right: 20px;
+            }
+
+            @media screen and (max-width: 767px) {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 5px 10px !important;
+            }
+        }
+
+        &__column--rating {
+            font-weight: 600;
+            font-size: 12px;
+            max-width: 40px;
+            color: $Black;
+
+            i {
+                display: inline-flex;
+                margin-right: 2px;
+                color: $Yellow;
+            }
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 15%;
+                max-width: initial;
+                flex-wrap: nowrap !important;
+            }
+        }
+
+        &__column--name {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: $Black;
+
+            @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+                font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+                line-height: calc(18 / 14);
+            }
+            @media screen and (max-width: 767px) {
+                flex: 0 0 27%;
+            }
+            @media screen and (max-width: 450px) {
+                flex: 0 0 40%;
+            }
+        }
+
+        &__column--company {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: $DGray;
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 29%;
+            }
+            @media screen and (max-width: 450px) {
+                flex: 0 0 41%;
+                justify-content: flex-end;
+            }
+        }
+
+        &__column--location {
+            color: $DGray;
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 29%;
+                justify-content: flex-end;
+            }
+            @media screen and (max-width: 450px) {
+                justify-content: flex-start;
+                flex: 0 0 59%;
+            }
+
+            i {
+                display: inline-flex;
+                margin-right: 6px;
+            }
+        }
+
+        &__column--lot {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: $DGray;
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 33.333%;
+            }
+            @media screen and (max-width: 450px) {
+                justify-content: flex-end;
+                flex: 0 0 41%;
+            }
+        }
+
+        &__column--label {
+            @media screen and (max-width: 767px) {
+                flex: 0 0 33.333%;
+            }
+            @media screen and (max-width: 450px) {
+                flex: 0 0 50%;
+            }
+        }
+
+        &__column--price {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+            color: $Black;
+
+            @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+                font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+                line-height: calc(21 / 16);
+            }
+            @media screen and (max-width: 767px) {
+                flex: 0 0 33.333%;
+                justify-content: flex-end;
+            }
+            @media screen and (max-width: 450px) {
+                justify-content: flex-end;
+                flex: 0 0 50%;
+            }
+        }
+    }
+
+    &__accept {
+        @include adaptiv-value("padding", 20, 15, 1);
+        background-color: $Yellow;
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__accept-label {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        padding-right: 15px;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(21 / 16);
+        }
+        @media screen and (max-width: 991px) {
+            padding: 0px 0px 20px 0px;
+        }
+    }
+
+    &__accept-tools {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 991px) {
+            justify-content: flex-end;
+        }
+
+        a {
+            font-size: 14px;
+            line-height: 1;
+        }
+    }
+
+    &__accept-cancel {
+        @include adaptiv-value("margin-right", 25, 15, 1);
+        color: $DGray;
+        text-decoration: underline;
+        transition: 0.3s ease all 0s;
+    }
+
+    &__accept-save {
+        padding: 5px 10px;
+    }
+
+    &__footer {
+        background-color: $GreenM;
+        @include adaptiv-value("padding-top", 33, 20, 1);
+        @include adaptiv-value("padding-bottom", 33, 20, 1);
+        @include adaptiv-value("padding-left", 28, 15, 1);
+        @include adaptiv-value("padding-right", 28, 15, 1);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        color: $White;
+        border-radius: 0 0 3px 3px;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(23 / 18);
+        }
+    }
+}
+//! bargaining page end

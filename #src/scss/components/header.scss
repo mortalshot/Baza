@@ -328,10 +328,31 @@
 
 			.nav-item {
 				@include adaptiv-value("margin-right", 32, 0, 1);
+				position: relative;
 
 				@media screen and (max-width: 660px) {
 					&:last-child {
 						margin-right: 0;
+					}
+				}
+
+				&--notification {
+					.nav-link {
+						&::after {
+							content: '';
+							display: block;
+							width: 6px;
+							height: 6px;
+							background-color: $Red;
+							border-radius: 50%;
+							position: absolute;
+							right: 0;
+							top: 7px;
+
+							@media screen and (max-width: 450px) {
+								top: 4px;
+							}
+						}
 					}
 				}
 			}
@@ -508,6 +529,34 @@
 		font-size: 26px;
 		color: $GreenM;
 		transition: 0.3s ease all 0s;
+	}
+
+	&--notification {
+		position: relative;
+
+		.header-cart__link {
+			&::after {
+				content: '';
+				display: block;
+				width: 6px;
+				height: 6px;
+				background-color: $Red;
+				border-radius: 50%;
+				position: absolute;
+				right: 0;
+				top: 25px;
+
+				@media screen and (max-width: 767px) {
+					top: 13px;
+				}
+				@media screen and (max-width: 660px) {
+					top: 3px;
+				}
+				@media screen and (max-width: 450px) {
+					top: 0px;
+				}
+			}
+		}
 	}
 }
 

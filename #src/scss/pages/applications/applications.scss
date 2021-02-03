@@ -232,11 +232,14 @@
         background-color: $Yellow2;
     }
 
-    &__status--closed {
-        background-color: $Orange2;
+    &__status--closed,
+    &__status--expired,
+    &__status--incorrect {
+        background-color: $Pink;
     }
 
-    &__status--collected {
+    &__status--agreement,
+    &__status--new {
         background-color: $LBlue;
     }
 
@@ -245,7 +248,19 @@
         color: $DGray2;
     }
 
-    &__status--confirmed {
-        background-color: $Yellow2;
+    &__status--confirmed,
+    &__status--collected,
+    &__status--shipped,
+    &__status--fixed,
+    &__status--paid-up {
+        background-color: $Green3;
+    }
+
+    &__status--waiting-car,
+    &__status--loading,
+    &__status--dispute,
+    &__status--expected,
+    &__status--acceptance {
+        background-color: $Orange;
     }
 }
