@@ -819,6 +819,16 @@ img {
   transition: 0.3s ease all 0s;
 }
 
+.site__wrap--auth .header::before {
+  background: transparent;
+}
+
+.site__wrap--auth .navbar-brand__text,
+.site__wrap--auth .header__burger,
+.site__wrap--auth .header__menu {
+  display: none !important;
+}
+
 .btn {
   font-weight: 600;
   font-size: 16px;

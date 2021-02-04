@@ -622,3 +622,14 @@
 		}
 	}
 }
+
+.site__wrap--auth {
+	.header {
+		&::before {
+			background: transparent;
+		}
+	}
+	.navbar-brand__text, .header__burger, .header__menu{
+		display: none !important;
+	}
+}
