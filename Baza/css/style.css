@@ -6751,7 +6751,7 @@ textarea.form__input {
 }
 
 .auth .firstscreen__content {
-  padding-top: 0 !important;
+  padding-top: 25px;
 }
 
 .auth__form {
@@ -11145,6 +11145,10 @@ textarea.form__input {
 
   .bargaining__footer {
     padding-right: calc(15px + 13 * ((100vw - 320px) / (1046)));
+  }
+
+  .auth .firstscreen__content {
+    padding-top: calc(0px + 25 * ((100vw - 320px) / (1046)));
   }
 
   .auth__heading {

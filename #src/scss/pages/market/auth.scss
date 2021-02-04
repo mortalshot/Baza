@@ -4,7 +4,7 @@
     height: 100%;
 
     .firstscreen__content {
-        padding-top: 0 !important;
+        @include adaptiv-value("padding-top", 25, 0, 1);
 
         @media screen and (max-width: 767px) {
             flex: 0 0 100%;

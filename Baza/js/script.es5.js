@@ -1081,7 +1081,7 @@ $(document).ready(function () {
   }
 
   if ($('.auth').length > 0) {
-    var mediaQueryHeight = window.matchMedia('(min-height: 550px)');
+    var mediaQueryHeight = window.matchMedia('(min-height: 568px)');
 
     if (mediaQueryHeight.matches) {
       $(window).resize(function () {

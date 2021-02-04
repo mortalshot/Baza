@@ -24,7 +24,7 @@ $(document).ready(function () {
     }
 
     if ($('.auth').length > 0) {
-        let mediaQueryHeight = window.matchMedia('(min-height: 550px)');
+        let mediaQueryHeight = window.matchMedia('(min-height: 568px)');
         if (mediaQueryHeight.matches) {
             $(window).resize(function () {
                 let headerHeight = $('.site__header').innerHeight();
