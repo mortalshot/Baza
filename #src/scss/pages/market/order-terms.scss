@@ -73,6 +73,7 @@
         @include adaptiv-value("padding-top", 34, 24, 1);
         @include adaptiv-value("padding-bottom", 34, 24, 1);
         @include adaptiv-value("margin-left", 40, 16, 1);
+        @include adaptiv-value("margin-right", 40, 16, 1);
         border-bottom: 1px solid $LGray3;
 
         &:last-child {
@@ -116,14 +117,25 @@
         display: flex;
         align-items: center;
         color: $GreenM;
+        margin-bottom: 6px;
 
-        img {
-            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
-            margin-right: 8px;
+        &:last-child {
+            margin-bottom: 0;
         }
 
         span {
+            display: inline-block;
             text-decoration: underline;
+        }
+    }
+
+    &__img {
+        flex: 0 0 16px;
+        width: 16px;
+        margin-right: 8px;
+
+        img {
+            filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
         }
     }
 

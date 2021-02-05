@@ -42,7 +42,28 @@
     }
 
     &__btn {
-        padding: 7px 14px;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: $GreenM;
+        transition: 0.3s ease all 0s;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(21 / 16);
+        }
+
+        i {
+            display: inline-flex;
+            font-size: 18px;
+            margin-right: 6px;
+        }
+
+        span {
+            text-decoration: underline;
+        }
     }
 
     &__body {
@@ -93,21 +114,21 @@
             line-height: 18px;
             color: $DGray;
 
-            @media screen and (max-width: 575px) {
+            @media screen and (max-width: 650px) {
                 display: flex;
                 flex-direction: column-reverse;
             }
         }
 
         tbody {
-            @media screen and (max-width: 575px) {
+            @media screen and (max-width: 650px) {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
             }
 
             .table__row {
-                @media screen and (max-width: 575px) {
+                @media screen and (max-width: 650px) {
                     display: flex;
                     flex-wrap: wrap;
                     width: 100%;
@@ -118,25 +139,31 @@
                     }
 
                     .delivery-card__column--price {
-                        flex: 1 1 auto;
+                        flex: 0 0 55%;
                         text-align: left;
                         padding-left: 16px;
                     }
 
                     .delivery-card__column--weight {
-                        flex: 0 0 10%;
+                        flex: 0 0 45%;
                         text-align: left;
                     }
 
                     .delivery-card__column--sum {
-                        flex: 0 0 40%;
+                        flex: 0 0 70%;
+                        text-align: left;
+                        padding-left: 16px;
+                    }
+
+                    .delivery-card__column--tools {
+                        flex: 0 0 30%;
                     }
                 }
 
                 .table__column {
                     padding: 8px 5px;
 
-                    @media screen and (min-width: 576px) {
+                    @media screen and (min-width: 651px) {
                         padding: 10px 5px;
                         border-bottom: 1px solid $LGray3;
                     }
@@ -144,15 +171,16 @@
                     &:first-child {
                         padding-left: 20px;
 
-                        @media screen and (max-width: 575px) {
+                        @media screen and (max-width: 650px) {
                             padding-left: 16px;
+                            padding-right: 16px;
                         }
                     }
 
                     &:last-child {
                         padding-right: 20px;
 
-                        @media screen and (max-width: 575px) {
+                        @media screen and (max-width: 650px) {
                             padding-right: 16px;
                         }
                     }
@@ -166,7 +194,7 @@
             line-height: 21px;
 
             .table__row {
-                @media screen and (max-width: 575px) {
+                @media screen and (max-width: 650px) {
                     display: flex;
                     width: 100%;
                 }
@@ -177,7 +205,7 @@
                     &:first-child {
                         padding-left: 22px;
 
-                        @media screen and (max-width: 575px) {
+                        @media screen and (max-width: 650px) {
                             padding-left: 16px;
                         }
                     }
@@ -185,12 +213,56 @@
                     &:last-child {
                         padding-right: 21px;
 
-                        @media screen and (max-width: 575px) {
+                        @media screen and (max-width: 650px) {
                             padding-right: 16px;
                         }
                     }
                 }
             }
+        }
+
+        .form {
+            &-row {
+                margin: 0;
+            }
+
+            &-label {
+                margin: 0px 0px 0px 14px;
+                @include adaptiv-value("margin-left", 14, 8, 0);
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 14px;
+                color: $Black;
+            }
+
+            &-control {
+                height: 30px;
+                font-size: 14px;
+                line-height: 18px;
+                width: 72px;
+            }
+        }
+    }
+
+    &__column--name {
+        @media screen and (max-width: 450px) {
+            position: relative;
+
+            .notice {
+                position: initial;
+
+                &__wrapper {
+                    box-shadow: 3px 1px 24px rgba(0, 0, 0, 0.22);
+                }
+            }
+        }
+    }
+
+    &__name {
+        display: flex;
+
+        & > span {
+            margin-right: 8px;
         }
     }
 

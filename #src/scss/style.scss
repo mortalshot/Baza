@@ -23,3 +23,55 @@
 
 // === Pages ===
 @import "pages/index";
+
+.notice {
+    position: relative;
+    display: inline-flex;
+
+    &__btn {
+        display: inline-flex;
+        width: 16px;
+        flex: 0 0 16px;
+    }
+
+    &__wrapper {
+        font-size: 14px;
+        line-height: 15px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 100%);
+        z-index: 2;
+        width: 275px;
+        padding: 10px;
+        background-color: $White;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 0.3s ease all 0s;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+            font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 14);
+        }
+        @media screen and (max-width: 575px) {
+            left: 50%;
+            transform: translate(-50%, 100%);
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            font-weight: 500;
+        }
+    }
+}

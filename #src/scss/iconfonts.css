@@ -23,6 +23,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-edit-save:before {
+  content: "\e92d";
+}
+.icon-edit-cancel:before {
+  content: "\e92e";
+}
+.icon-chat:before {
+  content: "\e92c";
+}
 .icon-dots:before {
   content: "\e92b";
 }

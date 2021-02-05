@@ -953,4 +953,16 @@ if (chat) {
             $('.auth').css({ 'height': resultHeight });
         }
     }
+
+    $('.notice__btn').click(function(e) {
+        e.preventDefault();
+        $(this).next('.notice__wrapper').addClass('active');
+    })
+    $(document).mouseup(function (e) {
+        var div = $(".notice__wrapper");
+        if (!div.is(e.target)
+            && div.has(e.target).length === 0) {
+            $('.notice__wrapper').removeClass('active');
+        }
+    });
 })
