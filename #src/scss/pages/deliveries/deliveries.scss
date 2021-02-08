@@ -570,9 +570,6 @@
         }
     }
 
-    &__documents {
-    }
-
     &__document {
         display: flex;
         align-items: center;
@@ -664,9 +661,6 @@
             }
         }
     }
-
-    &__btn {
-    }
 }
 
 .bank-book {
@@ -722,9 +716,6 @@
             display: inline-flex;
             font-size: 32px;
         }
-    }
-
-    &__text {
     }
 
     &__score {
@@ -952,9 +943,6 @@
         .bank-book__balance-wrapper {
             border-radius: 3px 3px 0 0;
         }
-    }
-
-    &__bonus-top {
     }
 
     &__exchange {

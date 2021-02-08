@@ -101,9 +101,6 @@
         }
     }
 
-    &__attention {
-    }
-
     &__attention-wrapper {
         background-color: $LBlue;
         border-radius: 3px;
@@ -148,6 +145,21 @@
         @media screen and (max-width: 767px) {
             width: 100%;
             justify-content: flex-end;
+        }
+    }
+
+    .delivery__attention-tools--column {
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+            align-items: flex-end;
+
+            a {
+                margin: 0px 0px 15px 0px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 
@@ -316,5 +328,202 @@
         color: $Black;
         text-decoration: underline dashed;
         @include adaptiv-value("padding-left", 20, 8, 1);
+    }
+}
+
+.notice {
+    position: relative;
+    display: inline-flex;
+
+    &__btn {
+        display: inline-flex;
+        width: 16px;
+        flex: 0 0 16px;
+    }
+
+    &__wrapper {
+        font-size: 14px;
+        line-height: 15px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 100%);
+        z-index: 2;
+        width: 275px;
+        padding: 10px;
+        background-color: $White;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 0.3s ease all 0s;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(15 / 14);
+        }
+        @media screen and (max-width: 575px) {
+            left: 50%;
+            transform: translate(-50%, 100%);
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            font-weight: 500;
+        }
+    }
+}
+
+.delivery-report {
+    .popup {
+        &__content {
+            max-width: 500px;
+        }
+    }
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 25, 20, 1);
+        font-size: 18px;
+        line-height: 23px;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(23 / 18);
+        }
+    }
+
+    &__label {
+        text-align: right;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $Gray;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $LGray3;
+        padding-right: 2px;
+    }
+    
+    .accordion {
+        &__item {
+            padding: 12.5px 0;
+            border-bottom: 1px solid $LGray3;
+        }
+
+        &__title {
+            padding: 0 12.5px;
+            @include adaptiv-value("padding-left", 50, 20, 1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &::before,
+            &::after {
+                background-color: $Gray;
+                right: auto;
+            }
+            &::before {
+                @include adaptiv-value("left", 15, 0, 1);
+            }
+            &::after {
+                @include adaptiv-value("left", 21, 6, 1);
+            }
+        }
+
+        &__text {
+            padding-top: 20px;
+            @include adaptiv-value("padding-bottom", 17.5, 7.5, 1);
+        }
+    }
+
+    .product-item {
+        &__product-name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+        }
+
+        &__product {
+            @include adaptiv-value("padding-right", 10, 6, 1);
+        }
+    }
+
+    &__accepted-delivered {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: $DGray;
+        white-space: nowrap;
+    }
+
+    .form {
+        &-row {
+            @include adaptiv-value("margin-left", -22, -11, 0);
+            @include adaptiv-value("margin-right", -22, -11, 0);
+        }
+
+        &-group {
+            @include adaptiv-value("padding-left", 22, 11, 0);
+            @include adaptiv-value("padding-right", 22, 11, 0);
+        }
+
+        &-label {
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: $Gray;
+        }
+    }
+
+    .to-cart__quantity {
+        .quantity__wrapper {
+            height: 41px;
+            width: 100%;
+
+            @media screen and (max-width: 450px) {
+                width: 100%;
+            }
+        }
+        .quantity__input input {
+            height: 41px;
+            color: $Gray;
+        }
+    }
+
+    .to-cart__measure {
+        text-decoration: none;
+        @include adaptiv-value("padding-left", 14, 8, 1);
+    }
+
+    textarea {
+        height: 62px !important;
+        width: 100%;
+        resize: none;
+        padding: 10px 12px;
+    }
+
+    .deliveries-documents__document {
+        font-weight: 400;
+    }
+
+    .add-application__add {
+        @include adaptiv-value("margin-top", 24, 20, 1);
+    }
+
+    &__button {
+        @include adaptiv-value("margin-top", 44, 20, 1);
+
+        button {
+            width: 100%;
+        }
     }
 }
