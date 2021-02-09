@@ -339,7 +339,7 @@
 				&--notification {
 					.nav-link {
 						&::after {
-							content: '';
+							content: "";
 							display: block;
 							width: 6px;
 							height: 6px;
@@ -406,6 +406,26 @@
 			width: 22px;
 			height: 22px;
 			flex: 0 0 22px;
+		}
+	}
+
+	&__provider {
+		.header__controls .controls__item:last-child {
+			margin-right: 0;
+		}
+
+		.header__menu .navbar-nav {
+			@media screen and (max-width: 450px) {
+				justify-content: space-between;
+			}
+		}
+
+		.account__avatar {
+			margin: 0;
+			
+			@media screen and (max-width: 450px) {
+				margin: 0 0 0 10px;
+			}
 		}
 	}
 }
@@ -536,7 +556,7 @@
 
 		.header-cart__link {
 			&::after {
-				content: '';
+				content: "";
 				display: block;
 				width: 6px;
 				height: 6px;
@@ -629,7 +649,9 @@
 			background: transparent;
 		}
 	}
-	.navbar-brand__text, .header__burger, .header__menu{
+	.navbar-brand__text,
+	.header__burger,
+	.header__menu {
 		display: none !important;
 	}
 }

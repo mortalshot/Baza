@@ -300,22 +300,22 @@
             @include adaptiv-value("margin-bottom", 38, 20, 1);
 
             &__item {
-                margin: 0px 0px 0px 0px !important;
+                margin: 0px 0px 0px 0px;
             }
 
             &__input {
                 &:checked + .options__label {
                     background-color: $White;
                     color: $Black;
-                    font-weight: 500;
                 }
             }
 
             &__label {
                 padding: 5px 14px;
                 background-color: transparent;
-                font-weight: 400;
+                font-weight: 500;
                 color: $Gray;
+                border-radius: 3px;
                 transition: 0.3s ease all 0s;
 
                 &::before,

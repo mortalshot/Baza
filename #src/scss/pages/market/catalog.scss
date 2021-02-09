@@ -121,6 +121,7 @@
                 font-size: 12px;
                 line-height: 15px;
                 padding-bottom: 20px;
+                color: $Gray;
 
                 @media screen and (max-height: 768px) {
                     padding-bottom: calc(10px + (20 - 10) * ((100vh - 650px) / (768 - 650)));

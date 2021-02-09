@@ -527,3 +527,61 @@
         }
     }
 }
+
+.delivery-details {
+    &__wrapper {
+        @include adaptiv-value("padding", 20, 15, 1);
+        background-color: $White;
+    }
+
+    &__item {
+        @include adaptiv-value("margin-bottom", 22, 10, 1);
+        @include adaptiv-value("padding-bottom", 22, 10, 1);
+        border-bottom: 1px solid $LGray3;
+
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: $Black;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(21 / 16);
+        }
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 18px;
+        color: $DGray;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(18 / 14);
+        }
+    }
+
+    .text-link,
+    .btn {
+        font-size: 16px;
+        line-height: 21px;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(21 / 16);
+        }
+    }
+
+    .text-link {
+        &::before {
+            border-bottom: 1px solid $GreenM;
+        }
+    }
+}

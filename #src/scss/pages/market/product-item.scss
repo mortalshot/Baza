@@ -30,6 +30,14 @@
         color: $Gray;
         font-size: 12px;
         line-height: 15px;
+
+        span {
+            margin-right: 6px;
+        }
+
+        i {
+            display: inline-flex;
+        }
     }
 
     &__content {
@@ -100,6 +108,11 @@
         line-height: 23px;
         color: $Black;
         white-space: nowrap;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+            font-size: calc(14px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(23 / 18);
+        }
     }
 
     &__descr {
@@ -306,6 +319,7 @@
         &__content {
             max-width: 730px;
             padding: 0;
+            border-radius: 3px;
         }
 
         &__close {

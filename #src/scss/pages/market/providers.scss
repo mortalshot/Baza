@@ -330,14 +330,6 @@
                 font-weight: 500;
                 display: flex;
                 align-items: center;
-
-                span {
-                    margin-right: 6px;
-                }
-
-                i {
-                    display: inline-flex;
-                }
             }
 
             &__content {
@@ -461,6 +453,365 @@
 
     .slick-next {
         @include adaptiv-value("right", 87, 16, 1);
+    }
+}
+
+.provider-add {
+    .popup {
+        &__content {
+            overflow-y: auto;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__heading {
+        @include adaptiv-value("margin-bottom", 42, 30, 1);
+    }
+
+    &__body {
+        display: flex;
+        flex: 1 1 auto;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    &__left {
+        flex: 1 1 auto;
+
+        @media screen and (max-width: 767px) {
+            padding: 0px 0px 20px 0px;
+        }
+    }
+
+    &__left-wrapper {
+        background-color: $White;
+        border-radius: 3px;
+    }
+
+    &__top {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $LGray3;
+    }
+
+    .product-item__product-name {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .product-item__location {
+        font-weight: 600;
+        color: $DGray;
+
+        i {
+            color: $Gray;
+        }
+    }
+
+    &__content {
+        @include adaptiv-value("padding-top", 22, 20, 1);
+        @include adaptiv-value("padding-bottom", 29, 20, 1);
+        @include adaptiv-value("padding-left", 33, 15, 1);
+        @include adaptiv-value("padding-right", 33, 15, 1);
+    }
+
+    &__section {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        color: $Black;
+        @include adaptiv-value("margin-bottom", 22, 20, 1);
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(16px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(23 / 18);
+        }
+    }
+
+    .profile-edit__business {
+        .options {
+            margin: 0;
+            align-items: center;
+            text-align: center;
+
+            @media screen and (max-width: 450px) {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &__item {
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                @media screen and (max-width: 450px) {
+                    margin: 0 0 5px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &__label {
+                padding: 5px 8px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .form {
+        &-row {
+            @include adaptiv-value("margin-left", -10, -8, 1);
+            @include adaptiv-value("margin-right", -10, -8, 1);
+        }
+
+        &-group {
+            @include adaptiv-value("padding-left", 10, 8, 1);
+            @include adaptiv-value("padding-right", 10, 8, 1);
+            @include adaptiv-value("margin-bottom", 22, 16, 1);
+        }
+
+        &-label {
+            margin: 0px 14px 0px 0px;
+            @include adaptiv-value("margin-right", 14, 8, 1);
+            color: $Gray;
+        }
+
+        &-control {
+            border-radius: 3px;
+            background-color: $LGray3;
+            padding: 10px 12px;
+            font-size: 16px;
+            line-height: 21px;
+            border-color: transparent;
+            height: 41px;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-calendar-picker-indicator {
+                -webkit-appearance: none;
+                opacity: 0;
+            }
+
+            &::placeholder {
+                transition: 0.3s ease all 0s;
+            }
+
+            &:focus {
+                box-shadow: none;
+                border-color: transparent;
+
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .select {
+        &__title {
+            background-color: $LGray3;
+            border: 0;
+            color: $DGray;
+        }
+
+        &__options {
+            background-color: $LGray3;
+            color: $DGray;
+            border: 0;
+            bottom: 3px;
+            border-radius: 4px;
+        }
+    }
+
+    .to-cart__measure {
+        @include adaptiv-value("padding-left", 14, 8, 1);
+
+        .select {
+            &__title {
+                border: 0;
+                border-radius: 0;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1;
+                text-decoration: underline dashed;
+                background-color: transparent;
+            }
+
+            &__value {
+                height: auto;
+                font-size: 14px;
+                line-height: 1;
+                padding: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            &__options {
+                border: 1px solid $LGray3;
+                bottom: -5px;
+                background-color: $White;
+            }
+
+            &__option {
+                text-align: left;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -5px -12px 0;
+    }
+
+    &__img {
+        padding: 5px 12px;
+    }
+
+    &__photo {
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border: 1px solid $LGray3;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            background: url(../img/icons/reset.svg) no-repeat center/cover;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        border: 1px dashed $LGray3;
+        font-size: 24px;
+        color: $DGray;
+        transition: 0.3s ease all 0s;
+    }
+
+    &__right {
+        flex: 0 0 33%;
+        @include adaptiv-value("padding-left", 42, -10, 1);
+
+        @media screen and (max-width: 1200px) {
+            .form-label {
+                flex: 0 0 100%;
+                margin-bottom: 10px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            padding: 0;
+        }
+
+        .options__label {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: $Black;
+        }
+
+        .options__item {
+            margin: 0;
+        }
+
+        .form-label {
+            white-space: nowrap;
+        }
+    }
+
+    &__price-card {
+        background-color: $White;
+        border-radius: 3px;
+        @include adaptiv-value("padding-top", 22, 20, 1);
+        @include adaptiv-value("padding-bottom", 29, 20, 1);
+        @include adaptiv-value("padding-left", 33, 15, 1);
+        @include adaptiv-value("padding-right", 33, 15, 1);
+    }
+
+    &__weight {
+        @media screen and (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__footer {
+        padding: 15px 0;
+
+        @media screen and (max-width: 660px) {
+            padding-bottom: 65px;
+        }
+    }
+
+    &__btn {
+        button {
+            font-weight: 600;
+            padding: 12px 25px;
+            font-size: 18px;
+            line-height: 23px;
+
+            @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+                font-size: calc(16px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+                line-height: calc(23 / 18);
+            }
+        }
+    }
+
+    .to-cart__quantity {
+        .quantity__wrapper {
+            height: 41px;
+            width: 100%;
+
+            @media screen and (max-width: 450px) {
+                width: 100%;
+            }
+        }
+        .quantity__input input {
+            height: 41px;
+            color: $Gray;
+        }
     }
 }
 // ! provider page end

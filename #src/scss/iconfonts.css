@@ -23,6 +23,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-eye2:before {
+  content: "\e92f";
+}
+.icon-refresh:before {
+  content: "\e930";
+}
 .icon-edit-save:before {
   content: "\e92d";
 }

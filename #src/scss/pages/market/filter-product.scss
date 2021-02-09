@@ -115,10 +115,13 @@
         flex: 0 0 57.3%;
         overflow-y: hidden;
         overflow-x: auto;
+        padding: 0;
+        border-bottom: 0;
+
         &::-webkit-scrollbar {
             height: 0px;
         }
-       
+
         @media screen and (max-width: 450px) {
             flex: 0 0 50%;
         }
@@ -161,7 +164,11 @@
         justify-content: space-between;
         height: 100%;
         overflow: hidden;
-        padding-bottom: 57px;
+        padding-bottom: 87px;
+
+        @media screen and (max-width: 575px) {
+            padding-bottom: 57px;
+        }
     }
 
     .filter-stirps {
