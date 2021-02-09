@@ -246,19 +246,30 @@
         display: block;
         position: relative;
         border-radius: 50%;
-        max-width: 160px;
         margin: 0 auto;
+        width: 160px;
+        height: 160px;
+        cursor: pointer;
 
         @media screen and (min-width: 992px) {
             &:hover {
                 &::before {
                     opacity: 1;
-                    transform: translate(-50%, -50%) scale(1);
                 }
             }
         }
         @media screen and (max-width: 767px) {
-            max-width: 100px;
+            width: 100px;
+            height: 100px;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         &::before {
@@ -268,15 +279,24 @@
             height: 30px;
             background: url(../img/icons/picture-f.svg) no-repeat center/cover;
             position: absolute;
+            z-index: 1;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
             transition: 0.3s ease all 0s;
+            pointer-events: none;
+        }
 
-            @media screen and (min-width: 992px) {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0);
-            }
+        input {
+            font-size: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
         }
     }
 

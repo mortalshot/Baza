@@ -6479,8 +6479,20 @@ textarea.form__input {
   display: block;
   position: relative;
   border-radius: 50%;
-  max-width: 160px;
   margin: 0 auto;
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+}
+
+.profile-edit__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .profile-edit__img::before {
@@ -6490,14 +6502,28 @@ textarea.form__input {
   height: 30px;
   background: url(../img/icons/picture-f.svg) no-repeat center/cover;
   position: absolute;
+  z-index: 1;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
       -ms-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
   -webkit-transition: 0.3s ease all 0s;
   -o-transition: 0.3s ease all 0s;
   transition: 0.3s ease all 0s;
+  pointer-events: none;
+}
+
+.profile-edit__img input {
+  font-size: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
 }
 
 .profile-edit__organization .form-label {
@@ -10735,16 +10761,6 @@ textarea.form__input {
 
   .profile-edit__img:hover::before {
     opacity: 1;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-        -ms-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-  }
-
-  .profile-edit__img::before {
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%) scale(0);
-        -ms-transform: translate(-50%, -50%) scale(0);
-            transform: translate(-50%, -50%) scale(0);
   }
 
   .bargaining__accept {
@@ -13990,7 +14006,8 @@ textarea.form__input {
   }
 
   .profile-edit__img {
-    max-width: 100px;
+    width: 100px;
+    height: 100px;
   }
 
   .blog__body {
