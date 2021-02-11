@@ -67,7 +67,7 @@ img {
     font-weight: 500;
     color: $GreenM;
     position: relative;
-    transition: 0.3s ease all 0s;
+    transition: 0.3s ease opacity 0s;
 
     &::before {
         content: "";
@@ -79,15 +79,15 @@ img {
         bottom: 0;
         left: 0;
         transform: translate(0, 100%);
-        transition: 0.3s ease all 0s;
+        transition: 0.3s ease opacity 0s;
     }
 
     @media screen and (min-width: 992px) {
         &:hover {
-            color: $Blue;
+            opacity: 0.6;
 
             &::before {
-                border-bottom: 2px dashed $Blue;
+                opacity: 0.6;
             }
         }
     }

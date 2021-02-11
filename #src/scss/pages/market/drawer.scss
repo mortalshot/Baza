@@ -131,6 +131,8 @@
 
 		@media screen and (max-width: 660px) {
 			padding-left: 0;
+			z-index: 52;
+			padding: 0;
 		}
 	}
 }
@@ -227,6 +229,11 @@
 				display: inline-block;
 				font-size: 14px;
 				line-height: 14px;
+				text-decoration: none;
+
+				&::before {
+					border-bottom: 1px solid $White;
+				}
 			}
 		}
 	}
@@ -276,10 +283,11 @@
 		flex-direction: column;
 		overflow-y: auto;
 		overflow-x: hidden;
+		padding-right: 10px;
 
 		scrollbar-width: thin;
 		&::-webkit-scrollbar {
-			width: 10px;
+			width: 8px;
 		}
 		&::-webkit-scrollbar-track {
 			border-radius: 3px;
@@ -350,9 +358,17 @@
 	}
 
 	&__logout {
+		display: flex;
 		color: $White;
 		font-size: 20px;
-		transition: 0.3s ease all 0s;
+		transition: 0.3s ease opacity 0s;
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: $White;
+				opacity: 0.6;
+			}
+		}
 	}
 }
 
@@ -372,7 +388,7 @@
 		padding-bottom: calc(0px + (21 - 0) * ((100vh - 650px) / (768 - 650)));
 	}
 	@media screen and (max-height: 650px) {
-		padding-top: 10px;
+		padding-top: 0;
 		padding-bottom: 0;
 	}
 
@@ -526,7 +542,7 @@
 			}
 		}
 		.checkbox__input:checked + .checkbox__label {
-			background-color: rgba($color: $Pink, $alpha: 0.8);
+			background-color: rgba($color: $Pink, $alpha: 0.6);
 		}
 	}
 
@@ -642,10 +658,13 @@
 		align-items: center;
 		transition: 0.3s ease all 0s;
 
-		i {
-			font-size: 8px;
-			display: inline-flex;
-			margin-left: 2px;
+		&::after {
+			content: '';
+			display: block;
+			width: 9px;
+			height: 9px;
+			background: url(../img/icons/reset.svg) no-repeat center/cover;
+			margin-left: 4px;
 		}
 	}
 
@@ -671,9 +690,17 @@
 		font-size: 14px;
 		line-height: 1;
 		color: $White;
-		text-decoration: underline;
 		transition: 0.3s ease all 0s;
 
+		&::before {
+			border-bottom: 1px solid $White;
+		}
+
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: $White;
+			}
+		}
 		@media screen and (max-width: 660px) {
 			display: none;
 		}

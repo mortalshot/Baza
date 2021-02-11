@@ -150,9 +150,6 @@
         }
 
         .select {
-            &__item {
-            }
-
             &__title {
                 border: 0;
                 border-radius: 0;
@@ -261,6 +258,13 @@
             font-size: 18px;
             display: flex;
             margin-right: 12px;
+            transition: 0.3s ease color 0s;
+
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    color: rgba($color: $Gray, $alpha: 0.6);
+                }
+            }
 
             &:last-child {
                 margin-right: 0;
@@ -275,9 +279,6 @@
         @include adaptiv-value("padding-left", 26, 16, 1);
     }
 
-    &__add {
-    }
-
     &__add-btn {
         width: 100%;
         display: flex;
@@ -287,13 +288,16 @@
         border: 1px dashed #c4c4c4;
         color: $Gray;
         font-size: 24px;
+        transition: 0.3s ease color 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: rgba($color: $Gray, $alpha: 0.6);
+            }
+        }
 
         @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(14px + 10 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-        }
-
-        i {
-            display: inline-flex;
         }
     }
 }

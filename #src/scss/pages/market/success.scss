@@ -44,7 +44,14 @@
         a {
             font-weight: 600;
             color: $GreenM;
-            transition: 0.3s ease all 0s;
+            transition: 0.3s ease opacity 0s;
+
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    color: $GreenM;
+                    opacity: 0.6;
+                }
+            }
         }
     }
 

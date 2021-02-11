@@ -81,6 +81,13 @@
         text-decoration: underline;
         display: inline-flex;
         margin-bottom: 5px;
+        transition: 0.3s ease color 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: rgba($color: $Black, $alpha: 0.6);
+            }
+        }
     }
 
     &__owner-reviews {
@@ -118,7 +125,6 @@
         align-items: center;
 
         i {
-            display: inline-flex;
             margin-right: 6px;
         }
     }
@@ -255,10 +261,20 @@
     }
 
     &__column--delete {
-        i {
-            display: inline-flex;
-            font-size: 19px;
+        a {
             color: $Gray;
+            transition: 0.3s ease color 0s;
+
+            i {
+                display: inline-flex;
+                font-size: 19px;
+            }
+
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    color: rgba($color: $Gray, $alpha: 0.6);
+                }
+            }
         }
     }
 

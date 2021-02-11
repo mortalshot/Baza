@@ -40,15 +40,17 @@
             &__label {
                 color: $LGray;
                 padding: 0;
-                transition: 0.3s ease all 0s;
+                transition: 0.3s ease color 0s;
+
+                @media screen and (min-width: 992px) {
+                    &:hover {
+                        color: rgba($color: $LGray, $alpha: 0.6);
+                    }
+                }
 
                 &::before,
                 &::after {
                     display: none;
-                }
-
-                i {
-                    display: flex;
                 }
             }
         }
@@ -112,6 +114,10 @@
                         pointer-events: auto;
                     }
                 }
+            }
+
+            &__body-wrapper {
+                position: relative;
             }
 
             &__heading {
@@ -239,15 +245,9 @@
             @include adaptiv-value("padding-right", 23, 15, 1);
             border-radius: 0 0 3px 3px;
         }
+    }
 
-        .catalog__products-group {
-            margin: 20px 0;
-
-            @media screen and (max-width: 450px) {
-                margin: 0 0 20px;
-            }
-        }
-
+    &__products--card-group {
         .catalog__group-title {
             font-weight: 400;
             margin-bottom: 4px;
@@ -256,18 +256,25 @@
                 margin-bottom: 10px;
             }
         }
+
+        .catalog__products-group {
+            margin: 20px 0;
+
+            @media screen and (max-width: 450px) {
+                margin: 0 0 20px;
+            }
+        }
     }
 
     &__products--list {
         .catalog__products-group {
-
         }
 
         .catalog__group-title {
             font-weight: 600;
             background-color: $White;
             padding: 10px;
-            border-bottom: 1px solid $LGray;
+            border-bottom: 1px solid $LGray3;
         }
 
         .product-item {
@@ -354,6 +361,9 @@
                 position: relative;
                 transform: translate(0);
             }
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
 
             &__row {
                 margin: 0;
@@ -437,6 +447,7 @@
         }
 
         img {
+            padding-top: 3px;
             transition: 0.3s ease all 0s;
         }
 

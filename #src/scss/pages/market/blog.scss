@@ -129,8 +129,14 @@
         color: $Black;
         display: block;
         @include adaptiv-value("margin-bottom", 12, 8, 1);
-        transition: 0.3s ease all 0s;
+        transition: 0.3s ease opacity 0s;
 
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: $Black;
+                opacity: 0.6;
+            }
+        }
         @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(19 / 16);
@@ -175,6 +181,14 @@
         color: $Black;
         display: block;
         @include adaptiv-value("margin-bottom", 21, 10, 1);
+        transition: 0.3s ease opacity 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: $Black;
+                opacity: 0.6;
+            }
+        }
     }
 
     &__sidebar-date {
@@ -314,6 +328,14 @@
     &__share {
         font-size: 20px;
         color: $Gray;
+        transition: 0.3s ease opacity 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: $Gray;
+                opacity: 0.6
+            }
+        }
     }
 
     &__inner {
@@ -458,8 +480,14 @@
         color: $Black;
         display: block;
         @include adaptiv-value("margin-bottom", 12, 10, 1);
-        transition: 0.3s ease all 0s;
+        transition: 0.3s ease opacity 0s;
 
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: $Black;
+                opacity: 0.6;
+            }
+        }
         @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(19 / 16);

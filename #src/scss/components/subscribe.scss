@@ -55,13 +55,16 @@
         color: $Gray;
         padding: 0 18px;
         font-size: 14px;
+        transition: 0.3s ease opacity 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                opacity: 0.6;
+            }
+        }
 
         &:focus {
             outline: 0;
-        }
-
-        i {
-            display: inline-flex;
         }
     }
 }

@@ -33,12 +33,17 @@
         font-size: 14px;
         line-height: 18px;
         color: $DGray;
-        transition: 0.3s ease all 0s;
+        transition: 0.3s ease color 0s;
 
         &:last-child {
             margin-bottom: 0;
         }
 
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: rgba($color: $DGray, $alpha: 0.6);
+            }
+        }
         @media screen and (max-width: 991px) {
             margin: 0px 16px 0px 0px;
         }

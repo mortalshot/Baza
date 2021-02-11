@@ -100,9 +100,12 @@
         right: 18px;
         transform: translate(0, -50%);
         cursor: pointer;
+        transition: 0.3s ease opacity 0s;
 
-        i {
-            display: inline-flex;
+        @media screen and (min-width: 992px) {
+            &:hover {
+                opacity: 0.6;
+            }
         }
     }
 }

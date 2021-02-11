@@ -175,9 +175,10 @@
         overflow-x: hidden;
         overflow-y: auto;
         scrollbar-width: thin;
+        padding-right: 10px;
 
         &::-webkit-scrollbar {
-            width: 10px;
+            width: 8px;
         }
 
         &::-webkit-scrollbar-track {
@@ -187,13 +188,13 @@
 
         &::-webkit-scrollbar-thumb {
             border-radius: 3px;
-            background-color: #ccc3c3;
+            background-color: #C4C4C4;
         }
 
         &__row {
             display: flex;
             flex-wrap: wrap;
-            margin: -10px -9px 0;
+            margin: -10px -9px;
             @include adaptiv-value("margin-left", -9, -5, 0);
             @include adaptiv-value("margin-right", -9, -5, 0);
         }
@@ -269,19 +270,20 @@
             overflow-x: hidden;
             overflow-y: auto;
             scrollbar-width: thin;
+            padding-right: 10px;
 
             &::-webkit-scrollbar {
-                width: 10px;
+                width: 8px;
             }
-
+    
             &::-webkit-scrollbar-track {
                 border-radius: 3px;
                 background-color: #f6f6f6;
             }
-
+    
             &::-webkit-scrollbar-thumb {
                 border-radius: 3px;
-                background-color: #ccc3c3;
+                background-color: #C4C4C4;
             }
         }
 
@@ -390,7 +392,10 @@
             color: $Black;
             font-size: 14px;
             line-height: 1;
-            text-decoration: underline;
+
+            &::before {
+                border-bottom: 1px solid $Black;
+            }
 
             @media screen and (max-width: 575px) {
                 margin-bottom: 10px;
@@ -404,6 +409,21 @@
                 width: 100%;
                 max-width: 100%;
             }
+        }
+    }
+
+    .filter-location__item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        @include adaptiv-value("margin-bottom", 14, 10, 1);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .checkbox__label {
+            padding-left: 24px;
         }
     }
 }

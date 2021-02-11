@@ -13,6 +13,13 @@
         font-size: 12px;
         line-height: 15px;
         color: $DGray;
+        transition: 0.3s ease color 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: rgba($color: $DGray, $alpha: 0.6);
+            }
+        }
     }
 
     &__tax {
@@ -34,10 +41,6 @@
         span {
             margin-right: 6px;
         }
-
-        i {
-            display: inline-flex;
-        }
     }
 
     &__content {
@@ -50,6 +53,16 @@
         display: flex;
         align-items: center;
         flex: 1 1 auto;
+    }
+
+    a.product-item__product {
+        transition: 0.3s ease opacity 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                opacity: 0.6;
+            }
+        }
     }
 
     &__product-image {
@@ -132,7 +145,14 @@
         color: $White;
         padding: 10px;
         background-color: $GreenM;
-        transition: 0.3s ease all 0s;
+        transition: 0.3s ease opacity 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: $White;
+                opacity: 0.6;
+            }
+        }
     }
 
     &__table {
@@ -184,7 +204,7 @@
         display: flex;
         align-items: center;
         background-color: $White;
-        border-bottom: 1px solid $LGray;
+        border-bottom: 1px solid $LGray3;
 
         &--name {
             flex: 0 0 40%;
@@ -481,7 +501,6 @@
         @include adaptiv-value("margin-bottom", 28, 15, 1);
 
         i {
-            display: inline-flex;
             color: $Gray;
             font-size: 12px;
             margin-right: 6px;

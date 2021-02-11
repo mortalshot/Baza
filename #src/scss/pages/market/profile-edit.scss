@@ -217,10 +217,13 @@
 
     &__reset {
         background-color: transparent;
-        text-decoration: underline;
         font-size: 14px;
         line-height: 1;
         color: $DGray;
+
+        &::before {
+            border-bottom: 1px solid $DGray;
+        }
     }
 
     &__photo {

@@ -52,6 +52,17 @@
         right: 27px;
         display: flex;
 
+        svg rect {
+            transition: 0.3s ease opacity 0s;
+        }
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                svg rect {
+                    opacity: 0.6;
+                }
+            }
+        }
         @media screen and (max-width: 767px) {
             top: 15px;
             right: 7px;

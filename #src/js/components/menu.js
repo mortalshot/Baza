@@ -88,9 +88,7 @@ if (mediaQueryLgMin.matches) {
 }
 
 
-$('.filter-modals__link.popup-link').click(function (e) {
-    $('.navigation-drawer__wrapper, .navigation-drawer, .drawer-on').removeClass('active');
-});
+
 
 const navItems = document.querySelectorAll('.header__inner .navbar .nav-link');
 let mediaQueryXsMax = window.matchMedia('(max-width: 450px)');

@@ -39,8 +39,16 @@
         a {
             display: inline-block;
             color: $GreenM;
-            transition: 0.3s ease all 0s;
-            text-decoration: underline;
+            
+            &::before {
+                border-bottom: 1px solid $GreenM;
+            }
+
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    color: $GreenM; 
+                }
+            }
         }
     }
 
@@ -48,7 +56,14 @@
         font-size: 12px;
         line-height: 15px;
         color: $Gray;
-        transition: 0.3s ease all 0s;
+        transition: 0.3s ease opacity 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: $Gray;
+                opacity: 0.6;
+            }
+        }
     }
 
     &__save {
@@ -72,7 +87,14 @@
 
         a {
             color: $GreenM;
-            transition: 0.3s ease all 0s;
+            transition: 0.3s ease opacity 0s;
+
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    color: $GreenM;
+                    opacity: 0.6;
+                }
+            }
         }
     }
 

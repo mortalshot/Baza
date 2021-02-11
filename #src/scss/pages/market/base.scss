@@ -31,9 +31,12 @@
         color: $Black;
         font-size: 22px;
         margin-right: 10px;
+        transition: 0.3s ease color 0s;
 
-        i {
-            display: inline-block;
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: rgba($color: $Black, $alpha: 0.5);
+            }
         }
     }
 }

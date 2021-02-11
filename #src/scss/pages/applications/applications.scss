@@ -15,6 +15,13 @@
         align-items: center;
         justify-content: center;
         @include adaptiv-value("padding", 13, 5, 1);
+        transition: 0.3s ease opacity 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                opacity: 0.6;
+            }
+        }
     }
 
     .table {
@@ -94,8 +101,6 @@
         width: 14%;
 
         i {
-            display: inline-flex;
-            align-items: center;
             margin-right: 6px;
         }
 
@@ -177,8 +182,6 @@
         width: 7%;
 
         i {
-            display: inline-flex;
-            align-items: center;
             margin-right: 7px;
         }
 
@@ -198,10 +201,6 @@
         justify-content: flex-end;
         align-items: center;
         color: $Gray;
-
-        i {
-            display: inline-flex;
-        }
     }
 
     &__column--status {

@@ -91,8 +91,6 @@
         display: flex;
 
         i {
-            display: inline-flex;
-            align-items: center;
             font-size: 16px;
             color: $Gray;
             margin-right: 8px;
@@ -118,9 +116,16 @@
         align-items: center;
         color: $GreenM;
         margin-bottom: 6px;
+        transition: 0.3s ease color 0s;
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: rgba($color: $GreenM, $alpha: 0.6);
+            }
         }
 
         span {
@@ -191,7 +196,6 @@
         display: flex;
 
         i {
-            display: inline-flex;
             font-size: 20px;
             margin-right: 10px;
         }
@@ -306,9 +310,6 @@
         }
 
         .select {
-            &__item {
-            }
-
             &__title {
                 background-color: $LGray3;
                 border: 0;
@@ -321,9 +322,6 @@
                 border-radius: 4px;
                 bottom: 3px;
                 border: 0;
-            }
-
-            &__option {
             }
         }
 
