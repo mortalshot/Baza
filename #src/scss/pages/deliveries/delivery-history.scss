@@ -1,6 +1,7 @@
 .delivery-history {
     overflow-x: hidden;
     background-color: $GreenM;
+    border-radius: 3px;
     color: $White;
     @include adaptiv-value("padding-top", 30, 24, 1);
     @include adaptiv-value("padding-bottom", 30, 24, 1);

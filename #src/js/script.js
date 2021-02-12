@@ -40,7 +40,7 @@ $(document).ready(function () {
         }
     }
 
-    $('.notice__btn').click(function(e) {
+    $('.notice__btn').click(function (e) {
         e.preventDefault();
         $(this).next('.notice__wrapper').addClass('active');
     })
@@ -51,4 +51,20 @@ $(document).ready(function () {
             $('.notice__wrapper').removeClass('active');
         }
     });
+
+    // phone input mask
+    $('.form-control--phone').mask("+7(999) 999-9999");
+    // phone input mask end
+
+    // rating stars
+    const ratingItemsList = document.querySelectorAll('.rating__item');
+    const ratingItemsArray = Array.prototype.slice.call(ratingItemsList);
+
+    ratingItemsArray.forEach(item =>
+        item.addEventListener('click', () => {
+            const { itemValue } = item.dataset;
+            item.parentNode.dataset.totalValue = itemValue;
+        })
+    );
+    // rating stars end
 })

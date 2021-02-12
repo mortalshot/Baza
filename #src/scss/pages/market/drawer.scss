@@ -545,9 +545,8 @@
 		.checkbox__label {
 			border-radius: 2px;
 			padding: 2px 5px;
-			background-color: $Orange;
 			margin: 0;
-			transition: 0.3s ease all 0s;
+			transition: 0.3s ease opacity 0s;
 
 			&::before,
 			&::after {
@@ -555,7 +554,7 @@
 			}
 		}
 		.checkbox__input:checked + .checkbox__label {
-			background-color: rgba($color: $Pink, $alpha: 0.6);
+			opacity: 0.6;
 		}
 	}
 

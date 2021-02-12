@@ -1,6 +1,7 @@
 .add-application {
     &__card {
         background-color: $White;
+        border-radius: 3px;
     }
 
     &__heading {
@@ -131,10 +132,6 @@
                 @media screen and (max-width: 400px) {
                     max-width: 170px;
                 }
-            }
-
-            .to-cart__measure {
-                padding-left: 0;
             }
 
             input {

@@ -60,6 +60,7 @@
                                             <td class="table__column delivery-card__column--sum-num">3 шт
                                             </td>
                                             <td class="table__column"></td>
+                                            <td class="table__column"></td>
                                             <td class="table__column delivery-card__column--sum-weight">525
                                                 т</td>
                                             <td class="table__column delivery-card__column--sum-price">6 200
@@ -162,12 +163,24 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="table__column delivery-card__column--price">11,5 руб.
-                                                / кг. </td>
-                                            <td class="table__column delivery-card__column--weight">500 т
+                                            <td class="table__column delivery-card__column--price">
+                                                <div class="d-flex align-items-center justify-content-end flex-wrap">
+                                                    <span class="delivery-card__old pr-1">15,5</span>
+                                                    11,5 руб. / кг.
+                                                </div>
                                             </td>
-                                            <td class="table__column delivery-card__column--sum">200 000
-                                                руб.</td>
+                                            <td class="table__column delivery-card__column--weight">
+                                                <div class="d-flex align-items-center justify-content-end flex-wrap">
+                                                    <span class="delivery-card__old pr-1">1000</span>
+                                                    500 кг
+                                                </div>
+                                            </td>
+                                            <td class="table__column delivery-card__column--sum">
+                                                <div class="d-flex align-items-center justify-content-end flex-wrap">
+                                                    <span class="delivery-card__old pr-1">5 750 000</span>
+                                                    200 000 руб.
+                                                </div>
+                                            </td>
                                             <td class="table__column delivery-card__column--tools">
                                                 <div class="delivery__tools">
                                                     <a href="" class="delivery__edit"><i class="icon-edit"></i></a>
@@ -183,11 +196,12 @@
                         <div class="delivery__attention">
                             <div class="delivery__attention-wrapper">
                                 <div class="delivery__attention-left">
-                                    <div class="delivery__assembled">Уведомите покупателя о завершении сборки заказа нажав на кнопку “Товар собран”</div>
+                                    <div class="delivery__assembled">Отредактируйте, если необходио состав заказа и уведомите клиента об изменениях</div>
                                 </div>
                                 <div class="delivery__attention-right">
                                     <div class="delivery__attention-tools">
-                                        <a href="" class="delivery__attention-save delivery__attention-btn btn btn-green">Товар собран</a>
+                                        <a href="" class="delivery__attention-save delivery__attention-btn btn btn-green btn-disabled">Товар отгружен</a>
+                                        <a href="" class="delivery__attention-save delivery__attention-btn btn btn-green">Изменить заказ</a>
                                     </div>
                                 </div>
                             </div>
@@ -285,17 +299,17 @@
                         <div class="delivery__timeline delivery-timeline">
                             <div class="delivery-timeline__wrapper">
                                 <div class="delivery-timeline__item delivery-timeline__item--active">Заказ</div>
-                                <div class="delivery-timeline__item">Согласование</div>
-                                <div class="delivery-timeline__item">Оплата</div>
-                                <div class="delivery-timeline__item">Сборка</div>
+                                <div class="delivery-timeline__item delivery-timeline__item--active">Согласование</div>
+                                <div class="delivery-timeline__item delivery-timeline__item--active">Сборка</div>
                                 <div class="delivery-timeline__item">Доставка</div>
                                 <div class="delivery-timeline__item">Приемка-передача</div>
+                                <div class="delivery-timeline__item">Отзыв</div>
                             </div>
                             <a href="" class="delivery-timeline__btn">Раскрыть</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="delivery__history delivery-history">
                     <h2 class="title-market delivery-history__title">История сделки</h2>
                     <div class="delivery-history__timeline">

@@ -41,6 +41,30 @@
         }
     }
 
+    &__seller-btn {
+        @media screen and (max-width: 450px) {
+            .delivery-card__btn {
+                background-color: $GreenM;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 21px;
+                color: $White;
+                height: 47px;
+                width: 100%;
+                justify-content: center;
+                border-radius: 3px;
+                padding: 12px 20px;
+
+                span {
+                    text-decoration: none;
+                }
+                i {
+                    display: none;
+                }
+            }
+        }
+    }
+
     &__btn {
         display: inline-flex;
         align-items: center;
@@ -118,21 +142,21 @@
             line-height: 18px;
             color: $DGray;
 
-            @media screen and (max-width: 650px) {
+            @media screen and (max-width: 767px) {
                 display: flex;
                 flex-direction: column-reverse;
             }
         }
 
         tbody {
-            @media screen and (max-width: 650px) {
+            @media screen and (max-width: 767px) {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
             }
 
             .table__row {
-                @media screen and (max-width: 650px) {
+                @media screen and (max-width: 767px) {
                     display: flex;
                     flex-wrap: wrap;
                     width: 100%;
@@ -146,17 +170,26 @@
                         flex: 0 0 55%;
                         text-align: left;
                         padding-left: 16px;
+
+                        .justify-content-end {
+                            justify-content: flex-start !important;
+                        }
                     }
 
                     .delivery-card__column--weight {
                         flex: 0 0 45%;
-                        text-align: left;
+                        padding-right: 16px;
+                        text-align: right;
                     }
 
                     .delivery-card__column--sum {
                         flex: 0 0 70%;
                         text-align: left;
                         padding-left: 16px;
+
+                        .justify-content-end {
+                            justify-content: flex-start !important;
+                        }
                     }
 
                     .delivery-card__column--tools {
@@ -167,7 +200,7 @@
                 .table__column {
                     padding: 8px 5px;
 
-                    @media screen and (min-width: 651px) {
+                    @media screen and (min-width: 768px) {
                         padding: 10px 5px;
                         border-bottom: 1px solid $LGray3;
                     }
@@ -175,7 +208,7 @@
                     &:first-child {
                         padding-left: 20px;
 
-                        @media screen and (max-width: 650px) {
+                        @media screen and (max-width: 767px) {
                             padding-left: 16px;
                             padding-right: 16px;
                         }
@@ -184,7 +217,7 @@
                     &:last-child {
                         padding-right: 20px;
 
-                        @media screen and (max-width: 650px) {
+                        @media screen and (max-width: 767px) {
                             padding-right: 16px;
                         }
                     }
@@ -196,9 +229,10 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 21px;
+            color: $Black;
 
             .table__row {
-                @media screen and (max-width: 650px) {
+                @media screen and (max-width: 767px) {
                     display: flex;
                     width: 100%;
                 }
@@ -209,7 +243,7 @@
                     &:first-child {
                         padding-left: 22px;
 
-                        @media screen and (max-width: 650px) {
+                        @media screen and (max-width: 767px) {
                             padding-left: 16px;
                         }
                     }
@@ -217,7 +251,7 @@
                     &:last-child {
                         padding-right: 21px;
 
-                        @media screen and (max-width: 650px) {
+                        @media screen and (max-width: 767px) {
                             padding-right: 16px;
                         }
                     }
@@ -298,5 +332,12 @@
     &__column--sum-price {
         text-align: right;
         white-space: nowrap;
+    }
+
+    &__old {
+        font-size: 12px;
+        line-height: 15px;
+        color: $GreenM;
+        text-decoration: line-through;
     }
 }

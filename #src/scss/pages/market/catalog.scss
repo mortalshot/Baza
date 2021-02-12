@@ -175,9 +175,6 @@
                 span {
                     margin-right: 6px;
                 }
-
-                i {
-                }
             }
 
             &__content {
@@ -203,9 +200,6 @@
                 }
             }
 
-            &__product-image {
-            }
-
             &__product-name {
                 padding-right: 15px;
                 display: -webkit-box;
@@ -226,9 +220,6 @@
             &__price {
                 font-weight: 800;
                 margin-right: 20px;
-            }
-
-            &__descr {
             }
 
             &__cart {
@@ -267,9 +258,6 @@
     }
 
     &__products--list {
-        .catalog__products-group {
-        }
-
         .catalog__group-title {
             font-weight: 600;
             background-color: $White;
@@ -281,6 +269,7 @@
             &__table {
                 background-color: $LBlue;
                 margin: 0;
+                border-radius: 3px;
 
                 @media screen and (min-width: $layoutDesktop + "px") {
                     overflow: visible;

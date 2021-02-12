@@ -23,3 +23,69 @@
 
 // === Pages ===
 @import "pages/index";
+
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+
+    &__item {
+        @include adaptiv-value("margin-right", 20, 10, 1);
+        cursor: pointer;
+        color: $DGray;
+        transition: 0.3s ease color 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover,
+            &:hover ~ .rating__item {
+                color: $Yellow;
+            }
+        }
+
+        &:first-child {
+            margin-right: 0;
+        }
+
+        .icon-star {
+            font-size: 33px;
+
+            @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+                font-size: calc(25px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            }
+        }
+    }
+
+    &[data-total-value="1"] .rating__item:nth-child(n + 5),
+    &[data-total-value="2"] .rating__item:nth-child(n + 4),
+    &[data-total-value="3"] .rating__item:nth-child(n + 3),
+    &[data-total-value="4"] .rating__item:nth-child(n + 2),
+    &[data-total-value="5"] .rating__item:nth-child(n + 1) {
+        color: $Yellow;
+    }
+}
+
+.send-review {
+    .popup {
+        &__content {
+            max-width: 500px;
+        }
+    }
+
+    &__title {
+        @include adaptiv-value("margin-bottom", 35, 20, 1);
+    }
+
+    .rating {
+        @include adaptiv-value("margin-bottom", 35, 20, 1);
+    }
+
+    textarea {
+        resize: none;
+        height: 72px !important;
+        padding: 15px 12px;
+        overflow: hidden;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+}

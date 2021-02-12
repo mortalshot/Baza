@@ -43,6 +43,7 @@
 
     &__table {
         background-color: $White;
+        border-radius: 3px;
     }
 
     &__row {
@@ -53,6 +54,14 @@
             flex-wrap: wrap;
             border-bottom: 1px solid $LGray3;
             padding: 16px 14px;
+        }
+
+        &:last-child {
+            border: 0;
+            
+            .table__column {
+                border: 0;
+            }
         }
     }
 
@@ -101,6 +110,7 @@
         width: 14%;
 
         i {
+            color: $Gray;
             margin-right: 6px;
         }
 
@@ -127,6 +137,7 @@
         i {
             margin-right: 6px;
             display: inline-flex;
+            color: $Gray;
         }
     }
 

@@ -265,6 +265,14 @@
                     border-bottom: 0;
                 }
             }
+
+            &:last-child {
+                @media screen and (min-width: 901px) {
+                    .table__column {
+                        border-bottom: 0;
+                    }
+                }
+            }
         }
 
         .deliveries {
@@ -765,7 +773,7 @@
         }
         @media screen and (max-width: 450px) {
             min-width: initial;
-            margin-right: 10px;;
+            margin-right: 10px;
         }
 
         &:last-child {
@@ -781,10 +789,7 @@
 
     &__table {
         background-color: $White;
-
-        @media screen and (max-width: 767px) {
-            border-radius: 3px;
-        }
+        border-radius: 3px;
 
         .table__row {
             @media screen and (max-width: 767px) {
@@ -795,6 +800,14 @@
 
                 &:last-child {
                     border-bottom: 0;
+                }
+            }
+
+            &:last-child {
+                @media screen and (min-width: 901px) {
+                    .table__column {
+                        border-bottom: 0;
+                    }
                 }
             }
         }

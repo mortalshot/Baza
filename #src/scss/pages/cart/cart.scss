@@ -19,6 +19,7 @@
 
     &__wrapper {
         background-color: $White;
+        border-radius: 3px;
     }
 
     &__item-heading {
@@ -123,9 +124,12 @@
     &__location {
         display: flex;
         align-items: center;
+        color: $DGray;
+        font-weight: 500;
 
         i {
             margin-right: 6px;
+            color: $Gray
         }
     }
 

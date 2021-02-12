@@ -33,6 +33,7 @@
 
     &__content {
         background: $White;
+        border-radius: 3px;
         color: $Black;
         @include adaptiv-value("padding-top", 27, 20, 1);
         @include adaptiv-value("padding-bottom", 27, 20, 1);

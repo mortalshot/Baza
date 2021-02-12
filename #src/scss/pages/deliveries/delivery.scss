@@ -41,6 +41,7 @@
 
     &__card {
         background-color: $White;
+        border-radius: 3px;
         margin-bottom: 39px;
     }
 
@@ -138,7 +139,11 @@
 
     &__attention-left {
         padding-right: 15px;
+        max-width: 455px;
 
+        @media screen and (min-width: $layoutDesktop + 'px') {
+            max-width: 55%;
+        }
         @media screen and (max-width: 767px) {
             padding: 0px 0px 20px 0px;
         }
@@ -547,8 +552,34 @@
         padding: 10px 12px;
     }
 
+    &__button {
+        @include adaptiv-value("margin-top", 44, 20, 1);
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+.deliveries-documents__documents {
+    font-weight: 400;
+    
     .deliveries-documents__document {
         font-weight: 400;
+
+        &--success {
+            i.icon-check {
+                background-color: $GreenM;
+                color: $White;
+                width: 21px;
+                height: 23px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 7px;
+                border-radius: 3px;
+            }
+        }
     }
 
     .add-application__add {
@@ -581,17 +612,14 @@
             cursor: pointer;
         }
     }
-
-    &__button {
-        @include adaptiv-value("margin-top", 44, 20, 1);
-
-        button {
-            width: 100%;
-        }
-    }
 }
 
 .delivery-details {
+    @media screen and (min-width: 992px) {
+        position: sticky;
+        top: calc(#{$size-header-height} + 5px);
+    }
+    
     &__wrapper {
         @include adaptiv-value("padding", 20, 15, 1);
         background-color: $White;

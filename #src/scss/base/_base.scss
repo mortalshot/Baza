@@ -93,6 +93,33 @@ img {
     }
 }
 
+.link-dashed {
+    position: relative;
+    transition: 0.3s ease color 0s;
+
+    @media screen and (min-width: 992px) {
+        &:hover {
+            color: $Blue;
+
+            &::after {
+                border-bottom-color: $Blue;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed $Black;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        transition: 0.3s ease border-color 0s;
+    }
+}
+
 .table {
     td,
     th {
@@ -126,4 +153,9 @@ img {
     .slick-next {
         right: 0;
     }
+}
+
+.disabled {
+    opacity: 0.6;
+    pointer-events: none !important;
 }
