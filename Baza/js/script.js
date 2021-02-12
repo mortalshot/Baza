@@ -813,7 +813,7 @@ $('.filter-modals__link.popup-link').click(function (e) {
 $('.filter-modals__link').on('click', function (e) {
     const id = $(this).data('tab');
     $(id).closest('#filterAttrTabs').find('.nav-link').removeClass('active');
-    $('.filter-attributes .tab-pane').removeClass('active show');
+    $(id).closest('#filterAttrTabs').find('.filter-attributes .tab-pane').removeClass('active show');
     $(id)[0].click();
 });
 

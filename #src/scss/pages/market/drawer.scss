@@ -291,7 +291,7 @@
 		}
 		&::-webkit-scrollbar-track {
 			border-radius: 3px;
-			background-color: #000;
+			background-color: rgba($color: #000000, $alpha: 0.3);
 		}
 		&::-webkit-scrollbar-thumb {
 			border-radius: 3px;
@@ -498,6 +498,19 @@
 			left: 0;
 			top: 0;
 			z-index: -1;
+		}
+	}
+
+	&__desktop {
+		@media screen and (max-width: 660px) {
+			display: none;
+		}
+	}
+
+	&__mobile {
+		display: none;
+		@media screen and (max-width: 660px) {
+			display: block;
 		}
 	}
 }

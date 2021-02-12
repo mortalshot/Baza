@@ -951,7 +951,7 @@ $(document).ready(function () {
   $('.filter-modals__link').on('click', function (e) {
     var id = $(this).data('tab');
     $(id).closest('#filterAttrTabs').find('.nav-link').removeClass('active');
-    $('.filter-attributes .tab-pane').removeClass('active show');
+    $(id).closest('#filterAttrTabs').find('.filter-attributes .tab-pane').removeClass('active show');
     $(id)[0].click();
   });
 
