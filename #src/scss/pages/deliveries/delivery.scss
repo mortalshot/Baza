@@ -163,6 +163,9 @@
             width: 100%;
             justify-content: flex-end;
         }
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+        }
     }
 
     .delivery__attention-tools--column {
@@ -214,6 +217,19 @@
 
     &__attention-btn {
         @include adaptiv-value("margin-right", 32, 15, 1);
+
+        @media screen and (max-width: 450px) {
+            width: 100%;
+            margin: 0 0 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.text-link {
+                width: initial;
+            }
+        }
 
         &:last-child {
             margin-right: 0;

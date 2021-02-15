@@ -90,7 +90,7 @@ if (mediaQueryLgMin.matches) {
 
 
 
-const navItems = document.querySelectorAll('.header__inner .navbar .nav-link');
+const navItems = document.querySelectorAll('.header__inner .navbar .nav-link, .delivery-card__body .nav-link');
 let mediaQueryXsMax = window.matchMedia('(max-width: 450px)');
 if (mediaQueryXsMax.matches) {
     for (let index = 0; index < navItems.length; index++) {

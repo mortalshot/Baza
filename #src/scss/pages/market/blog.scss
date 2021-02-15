@@ -20,15 +20,15 @@
         scrollbar-width: thin;
 
         &::-webkit-scrollbar {
-            height: 8px;
+            height: 5px;
         }
         &::-webkit-scrollbar-track {
-            background-color: #f6f6f6;
+            background-color: #909090;
             border-radius: 3px;
         }
         &::-webkit-scrollbar-thumb {
             border-radius: 3px;
-            background-color: #ccc3c3;
+            background-color: #363636;
         }
     }
 
@@ -417,15 +417,15 @@
             @include adaptiv-value("margin-bottom", 30, 15, 1);
 
             &::-webkit-scrollbar {
-                height: 8px;
+                height: 5px;
             }
             &::-webkit-scrollbar-track {
-                background-color: #f6f6f6;
+                background-color: #909090;
                 border-radius: 3px;
             }
             &::-webkit-scrollbar-thumb {
                 border-radius: 3px;
-                background-color: #ccc3c3;
+                background-color: #363636;
             }
         }
 

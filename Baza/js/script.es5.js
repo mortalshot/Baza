@@ -534,7 +534,7 @@ $(document).ready(function () {
     });
   }
 
-  var navItems = document.querySelectorAll('.header__inner .navbar .nav-link');
+  var navItems = document.querySelectorAll('.header__inner .navbar .nav-link, .delivery-card__body .nav-link');
   var mediaQueryXsMax = window.matchMedia('(max-width: 450px)');
 
   if (mediaQueryXsMax.matches) {

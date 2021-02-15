@@ -181,13 +181,12 @@
         }
 
         &::-webkit-scrollbar-track {
+            background-color: #909090;
             border-radius: 3px;
-            background-color: #f6f6f6;
         }
-
         &::-webkit-scrollbar-thumb {
             border-radius: 3px;
-            background-color: #C4C4C4;
+            background-color: #363636;
         }
 
         &__row {
@@ -275,13 +274,12 @@
             }
     
             &::-webkit-scrollbar-track {
+                background-color: #909090;
                 border-radius: 3px;
-                background-color: #f6f6f6;
             }
-    
             &::-webkit-scrollbar-thumb {
                 border-radius: 3px;
-                background-color: #C4C4C4;
+                background-color: #363636;
             }
         }
 

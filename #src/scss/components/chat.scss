@@ -14,15 +14,15 @@
         scrollbar-width: thin;
 
         &::-webkit-scrollbar {
-            width: 6px;
+            width: 5px;
         }
         &::-webkit-scrollbar-track {
             border-radius: 22px;
-            background-color: #ececec;
+            background-color: #909090;
         }
         &::-webkit-scrollbar-thumb {
             border-radius: 22px;
-            background-color: #737373;
+            background-color: #363636;
         }
     }
 

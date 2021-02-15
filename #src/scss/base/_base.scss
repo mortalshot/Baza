@@ -6,6 +6,19 @@ body {
     color: $Black;
     overflow-x: hidden;
 
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #909090;
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #363636;
+    }
+
     &.lock {
         overflow: hidden;
     }
