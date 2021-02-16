@@ -195,8 +195,13 @@
         line-height: 21px;
         color: $Black;
 
-        a {
+        .text-link {
             color: $Black;
+
+            &::before {
+                border-color: $Black;
+                border-width: 1px;
+            }
         }
     }
 

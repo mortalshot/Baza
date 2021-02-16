@@ -8,20 +8,11 @@
     &__left {
         @media screen and (min-width: 768px) {
             @include adaptiv-value("flex-basis", 318, 200, 1);
-            padding-right: 5px;
             height: calc(100vh - #{$size-header-height} - 66px);
             overflow-y: auto;
 
             &::-webkit-scrollbar {
-                width: 5px;
-            }
-            &::-webkit-scrollbar-track {
-                background-color: #909090;
-                border-radius: 22px;
-            }
-            &::-webkit-scrollbar-thumb {
-                border-radius: 22px;
-                background-color: #363636;
+                width: 0;
             }
         }
     }

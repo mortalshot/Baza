@@ -82,6 +82,7 @@
 
         @media screen and (min-width: 901px) {
             white-space: nowrap;
+            width: 17%;
         }
         @media screen and (max-width: 900px) {
             order: 1;
@@ -123,6 +124,7 @@
 
         @media screen and (min-width: 901px) {
             white-space: nowrap;
+            width: 17%;
         }
         @media screen and (max-width: 900px) {
             order: 4;
@@ -218,7 +220,7 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 15px;
-        width: 7%;
+        width: 5%;
 
         i {
             margin-right: 7px;
@@ -252,6 +254,9 @@
     &__column--status {
         text-align: right;
 
+        @media screen and (min-width: 901px) {
+            width: 10%;
+        }
         @media screen and (max-width: 900px) {
             order: 3;
             flex: 0 0 20%;

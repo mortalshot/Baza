@@ -75,6 +75,9 @@
             flex: 0 0 100%;
             padding-left: 10px !important;
         }
+        @media screen and (max-width: 575px) {
+            order: 1;
+        }
     }
 
     &__request {
@@ -138,6 +141,7 @@
         }
         @media screen and (max-width: 575px) {
             flex: 0 0 50%;
+            order: 2;
         }
     }
 
@@ -156,6 +160,7 @@
         }
         @media screen and (max-width: 575px) {
             flex: 0 0 50%;
+            order: 3;
         }
     }
 
@@ -163,11 +168,13 @@
         text-align: right;
 
         @media screen and (max-width: 900px) {
-            flex: 0 0 30%;
+            flex: 1 1 auto;
             display: flex;
             justify-content: flex-end;
         }
         @media screen and (max-width: 575px) {
+            order: 0;
+            justify-content: flex-start;
             flex: 0 0 100%;
         }
     }

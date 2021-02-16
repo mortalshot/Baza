@@ -4,7 +4,7 @@
 	top: 0;
 	left: 0;
 	z-index: 50;
-	box-shadow: 0 4px 30px rgba($Black, 0.1);
+	transition: 0.3s ease box-shadow 0s;
 
 	&::before {
 		content: "";
@@ -441,6 +441,10 @@
 				margin: 0 0 0 10px;
 			}
 		}
+	}
+
+	&.active {
+		box-shadow: 0 4px 30px rgba($Black, 0.1);
 	}
 }
 

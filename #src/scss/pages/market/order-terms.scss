@@ -390,9 +390,14 @@
             line-height: calc(21 / 16);
         }
 
-        a {
-            color: $Black;
+        .text-link {
             padding: 0 5px;
+            color: $Black;
+
+            &::before {
+                border-width: 1px;
+                border-color: $Black;
+            }
         }
     }
 }

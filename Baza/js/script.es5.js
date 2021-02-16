@@ -490,6 +490,15 @@ $(document).ready(function () {
       return false;
     });
   });
+  $(window).on('scroll', function () {
+    var position = $(this).scrollTop();
+
+    if (position > 50) {
+      $('.site__header').addClass('active');
+    } else {
+      $('.site__header').removeClass('active');
+    }
+  });
   var lockPaddingValue = window.innerWidth - document.querySelector('.site__main').offsetWidth + 'px';
   var mediaQueryLgMin = window.matchMedia('(min-width: 1250px)');
 

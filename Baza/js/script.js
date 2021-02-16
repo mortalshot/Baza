@@ -240,6 +240,15 @@ $(function () {
     });
 });
 
+$(window).on('scroll', function () {
+    const position = $(this).scrollTop();
+    if(position>50) {
+        $('.site__header').addClass('active');
+    } else {
+        $('.site__header').removeClass('active');
+    }
+});
+
 
 const lockPaddingValue = window.innerWidth - document.querySelector('.site__main').offsetWidth + 'px';
 
