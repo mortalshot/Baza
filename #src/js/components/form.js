@@ -5,6 +5,9 @@ if (quantityButtons.length > 0) {
         quantityButton.addEventListener("click", function (e) {
             let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
             if (quantityButton.classList.contains('quantity__button--plus')) {
+                if (isNaN(value)) {
+                    value = 0;
+                }
                 value++;
             } else {
                 value = value - 1;
@@ -93,6 +96,5 @@ if ('.market__catalog' && $('.catalog__products').hasClass('catalog__products--c
 }
 
 $('.drawer-closed .navigation-drawer__wrapper').dblclick(function (e) {
-    console.log('qweqweqw');
     $('.drawer-closed, .navigation-drawer__wrapper').removeClass('active');
 })

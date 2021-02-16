@@ -67,4 +67,30 @@ $(document).ready(function () {
         })
     );
     // rating stars end
+
+    // delivery statistics toggle window
+    $('.delivery-statistics__close').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $(this).next('.delivery-statistics__body').fadeToggle(300);
+    })
+    // delivery statistics toggle window end
+
+    // toggle fields on radio change
+    $('input[name="Fill up props"]').on('change', function () {
+        if ($('input[value="Fill up new props"]').is(':checked')) {
+            $(this).closest('.popup-purse').find('.popup-purse__wrapper').slideDown(300);
+        } else {
+            $(this).closest('.popup-purse').find('.popup-purse__wrapper').slideUp(300);
+        }
+    })
+
+    $('input[name="Withdraw props"]').on('change', function () {
+        if ($('input[value="Withdraw new props"]').is(':checked')) {
+            $(this).closest('.popup-purse').find('.popup-purse__wrapper').slideDown(300);
+        } else {
+            $(this).closest('.popup-purse').find('.popup-purse__wrapper').slideUp(300);
+        }
+    })
+    // toggle fields on radio change end
 })

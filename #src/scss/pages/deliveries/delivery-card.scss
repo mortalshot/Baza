@@ -307,11 +307,25 @@
     &__column--price {
         text-align: right;
         white-space: nowrap;
+        @media screen and (min-width: 768px) {
+            padding: 2px 10px !important;
+        }
     }
 
     &__column--weight {
         text-align: right;
         white-space: nowrap;
+        @media screen and (min-width: 768px) {
+            padding: 2px 10px !important;
+        }
+    }
+
+    &__column--tools {
+        text-align: right;
+        white-space: nowrap;
+        @media screen and (min-width: 768px) {
+            padding: 2px 20px 2px 10px !important;
+        }
     }
 
     &__column--sum {

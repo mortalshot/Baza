@@ -138,6 +138,8 @@
         cursor: pointer;
         padding-left: 26px;
         margin: 0;
+        font-size: 16px;
+        line-height: 120%;
 
         &::before,
         &::after {
@@ -335,6 +337,16 @@ textarea.form__input {
 
             @media screen and (min-width: $layoutDesktop + "px") {
                 font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            }
+
+            &::placeholder {
+                transition: 0.3s ease opacity 0s;
+            }
+            
+            &:focus {
+                &::placeholder {
+                    opacity: 0;
+                }
             }
         }
     }

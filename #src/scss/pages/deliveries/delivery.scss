@@ -99,7 +99,6 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        margin-left: 5px;
         transition: 0.3s ease background-color 0s !important;
 
         @media screen and (min-width: 992px) {
@@ -486,6 +485,8 @@
             &::after {
                 background-color: $Gray;
                 right: auto;
+                height: 2px;
+                border-radius: 3px;
             }
             &::before {
                 @include adaptiv-value("left", 15, 0, 1);
@@ -584,6 +585,10 @@
         font-weight: 400;
 
         &--success {
+            .deliveries-documents__document {
+                margin-right: 16px;
+            }
+
             i.icon-check {
                 background-color: $GreenM;
                 color: $White;

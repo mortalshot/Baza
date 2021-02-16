@@ -69,91 +69,53 @@
 
     &__column--request {
         padding-left: 20px !important;
-        width: 9%;
+        width: 100%;
 
         @media screen and (max-width: 900px) {
-            order: 1;
-            flex: 0 0 30%;
+            flex: 0 0 100%;
             padding-left: 10px !important;
-        }
-        @media screen and (max-width: 575px) {
-            flex: 0 0 50%;
         }
     }
 
     &__request {
         font-weight: 600;
-        color: $Black;
-    }
-
-    &__column--date {
         font-size: 14px;
         line-height: 18px;
-        width: 6%;
+        color: $Black;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
 
-        @media screen and (max-width: 900px) {
-            order: 4;
-            flex: 0 0 30%;
+        .text-link {
+            &::before {
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+            }
         }
-        @media screen and (max-width: 575px) {
-            order: 3;
-            flex: 0 0 100%;
-        }
-    }
 
-    &__column--location {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 16px;
-        color: $DGray;
-        width: 37%;
-
-        @media screen and (max-width: 900px) {
-            order: 7;
-            flex: 0 0 30%;
-        }
-        @media screen and (max-width: 575px) {
-            order: 4;
-            flex: 0 0 100%;
-        }
-    }
-
-    &__column--firm {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 16px;
-        color: $DGray;
-        width: 12%;
-
-        @media screen and (min-width: 992px) {
+        .deliveries__firm {
+            color: $Black;
             white-space: nowrap;
-        }
-        @media screen and (max-width: 900px) {
-            order: 2;
-            flex: 0 0 40%;
-        }
-        @media screen and (max-width: 575px) {
-            order: 5;
-            flex: 0 0 50%;
-        }
-    }
 
-    &__column--owner {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 16px;
-        color: $DGray;
+            &::before {
+                border-bottom-color: $Black;
+            }
+        }
 
-        @media screen and (min-width: 992px) {
-            white-space: nowrap;
-        }
-        @media screen and (max-width: 900px) {
-            order: 5;
-            flex: 0 0 40%;
-        }
-        @media screen and (max-width: 575px) {
-            order: 7;
-            flex: 0 0 50%;
+        .applications__city {
+            font-size: 12px;
+            line-height: 15px;
+            color: $DGray;
+            @include adaptiv-value("padding-left", 28, 10, 1);
+
+            @media screen and (min-width: 901px) and (max-width: 991px) {
+                flex: 0 0 100%;
+                padding: 10px 0px 0px 0px;
+            }
+            @media screen and (max-width: 575px) {
+                flex: 0 0 100%;
+                padding: 10px 0px 0px 0px;
+            }
         }
     }
 
@@ -167,17 +129,14 @@
         font-size: 14px;
         line-height: 18px;
         text-align: right;
-        width: 5%;
         white-space: nowrap;
 
         @media screen and (max-width: 900px) {
-            order: 6;
             flex: 0 0 30%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
         }
         @media screen and (max-width: 575px) {
-            order: 8;
             flex: 0 0 50%;
         }
     }
@@ -191,32 +150,25 @@
         white-space: nowrap;
 
         @media screen and (max-width: 900px) {
-            order: 8;
-            flex: 0 0 70%;
+            flex: 0 0 30%;
             display: flex;
             justify-content: flex-end;
         }
         @media screen and (max-width: 575px) {
-            order: 6;
             flex: 0 0 50%;
         }
     }
 
     &__column--status {
         text-align: right;
-        width: 11%;
 
         @media screen and (max-width: 900px) {
-            order: 3;
             flex: 0 0 30%;
             display: flex;
             justify-content: flex-end;
         }
         @media screen and (max-width: 575px) {
-            order: 2;
-            flex: 0 0 50%;
-            display: flex;
-            justify-content: flex-end;
+            flex: 0 0 100%;
         }
     }
 
@@ -303,9 +255,14 @@
                     margin: 8px 0 16px;
                 }
 
-                a {
+                .text-link {
                     color: $Black;
-                    text-decoration: underline;
+
+                    &::before {
+                        border-bottom-color: $Black;
+                        border-bottom-width: 1px;
+                        border-bottom-style: solid;
+                    }
                 }
             }
 
@@ -341,7 +298,7 @@
 
                 @media screen and (max-width: 900px) {
                     order: 1;
-                    flex: 0 0 25%;
+                    flex: 0 0 65%;
                 }
             }
 
@@ -368,7 +325,7 @@
 
             &__documents-link {
                 color: $DGray;
-                padding: 6px;
+                padding: 5px;
                 border: 1px dashed $LGray;
                 border-radius: 3px;
                 position: relative;
@@ -416,7 +373,7 @@
                 }
 
                 i {
-                    font-size: 23px;
+                    font-size: 14px;
                     display: flex;
 
                     @media screen and (max-width: 900px) {
@@ -426,6 +383,7 @@
                         justify-content: center;
                         border: 1px dashed $LGray;
                         border-radius: 3px;
+                        font-size: 26px;
                     }
                 }
             }
@@ -572,7 +530,7 @@
         margin-bottom: 12px;
         font-size: 14px;
         line-height: 18px;
-        color: $DGray;
+        color: $Gray;
         transition: 0.3s ease all 0s;
 
         i {
@@ -723,7 +681,7 @@
 
     &__balance-icon {
         display: flex;
-        margin-right: 24px;
+        margin-right: 20px;
 
         i {
             font-size: 32px;
@@ -731,7 +689,7 @@
     }
 
     &__score {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 24px;
         line-height: 31px;
         color: $Black;
@@ -761,6 +719,7 @@
     }
 
     &__btn {
+        padding: 6.5px 18px;
         min-width: 127px;
         margin-right: 18px;
         font-size: 16px;
@@ -782,7 +741,7 @@
 
         i {
             font-size: 18px;
-            margin-right: 4px;
+            margin-right: 8px;
             display: inline-flex;
         }
     }
@@ -848,10 +807,12 @@
         line-height: 18px;
         color: $Red;
         white-space: nowrap;
+        width: 15%;
 
         @media screen and (max-width: 767px) {
             flex: 0 0 70%;
             order: 1;
+            width: initial;
         }
     }
 
@@ -891,6 +852,8 @@
         font-size: 12px;
         line-height: 15px;
         color: $DGray;
+        text-align: right;
+        width: 50%;
 
         a {
             color: $DGray;
@@ -900,6 +863,7 @@
 
         @media screen and (max-width: 767px) {
             order: 4;
+            width: initial;
         }
     }
 
@@ -957,8 +921,16 @@
             @include adaptiv-value("margin-bottom", 24, 19, 1);
         }
 
-        .bank-book__balance-wrapper {
-            border-radius: 3px 3px 0 0;
+        @media screen and (max-width: 575px) {
+            .bank-book__balance-wrapper {
+                border-radius: 3px 3px 0 0;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .bank-book__balance {
+                padding: 0px 10px 0px 0px;
+            }
         }
     }
 
@@ -1007,10 +979,5 @@
         font-size: 12px;
         line-height: 15px;
         color: $DGray;
-
-        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
-            font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-            line-height: calc(15 / 12);
-        }
     }
 }

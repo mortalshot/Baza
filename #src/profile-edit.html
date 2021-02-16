@@ -25,7 +25,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="profileTab-3" data-toggle="tab" href="#profileTabLink-3" role="tab"
-                                aria-controls="profileTabLink-3" aria-selected="false">Изменить пароль</a>
+                                aria-controls="profileTabLink-3" aria-selected="false" data-value="Пароль">Изменить пароль</a>
                         </li>
                     </ul>
 
@@ -33,7 +33,7 @@
                         <div class="tab-pane fade show active" id="profileTabLink-1" role="tabpanel"
                             aria-labelledby="profileTab-1">
                             <form class="profile-edit__main">
-                                <div class="profile-edit__condition pb-1">
+                                <div class="profile-edit__condition pb-2">
                                     <div class="form-row">
                                         <div class="form-group col-sm-6 col-lg-7 ">
                                             <input type="text" class="form-control" id="profileName"
@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
 
-                                <div class="profile-edit__condition pb-1">
+                                <div class="profile-edit__condition pb-2">
                                     <div class="order-terms__delivery-method">
                                         <div class="nav nav-tabs" id="deliveryMethodTabs" role="tablist">
                                             <a class="nav-item nav-link active" id="deliveryMethodTab-1"
@@ -116,7 +116,7 @@
                                                     <div class="order-terms__condition-text">Приемка-передача по адресу
                                                         продавца</div>
                                                 </div>
-                                                <a href="" class="order-terms__pickup-link">Данные для самовывоза</a>
+                                                <a href="" class="order-terms__pickup-link mb-1">Данные для самовывоза</a>
                                             </div>
                                         </div>
                                     </div>
@@ -229,7 +229,7 @@
 
                                     <div class="profile-edit__buttons">
                                         <button type="submit" class="profile-edit__save btn btn-green">Сохранить</button>
-                                        <button type="reset" class="profile-edit__reset">Отменить</button>
+                                        <button type="reset" class="profile-edit__reset text-link">Отменить</button>
                                     </div>
                                 </form>
                             </div>
@@ -252,7 +252,7 @@
                                     </div>
                                     <div class="profile-edit__buttons">
                                         <button type="submit" class="profile-edit__save btn btn-green">Сохранить</button>
-                                        <button type="reset" class="profile-edit__reset">Отменить</button>
+                                        <button type="reset" class="profile-edit__reset text-link">Отменить</button>
                                     </div>
                                 </form>
                             </div>
@@ -263,6 +263,11 @@
                     <form class="profile-edit__img">
                         <img src="img/market/profile-edit-avatar.png" alt="">
                         <input type="file">
+                    </form>
+                    <form class="profile-edit__img profile-edit__img--empty mt-4">
+                        <input type="file">
+                        <img src="img/icons/picture-f.svg" alt="" width="31" height="30">
+                        <div class="profile-edit__img-text">Добавить фотографию</div>
                     </form>
                 </div>
             </div>

@@ -129,7 +129,7 @@
 
         i {
             margin-right: 6px;
-            color: $Gray
+            color: $Gray;
         }
     }
 
@@ -155,7 +155,7 @@
         border-bottom: 1px solid $LGray3;
         align-items: center;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 991px) {
             flex-wrap: wrap;
         }
     }
@@ -172,8 +172,9 @@
     &__column--name {
         flex: 1 1 auto;
 
-        @media screen and (max-width: 767px) {
-            flex: 0 0 100%;
+        @media screen and (max-width: 991px) {
+            flex: 0 0 86%;
+            order: 1;
             margin-bottom: 15px;
         }
 
@@ -183,8 +184,9 @@
             }
 
             &__product {
+                align-items: flex-start;
                 flex: initial;
-                padding: 5px 0;
+                padding: 0 0 5px;
                 margin-right: 10px;
             }
 
@@ -210,14 +212,11 @@
             flex: 0 0 25%;
         }
         @media screen and (max-width: 991px) {
-            flex: 0 0 30%;
-        }
-        @media screen and (max-width: 767px) {
             flex: 1 1 auto;
+            order: 3;
         }
         @media screen and (max-width: 450px) {
-            flex: 0 0 100%;
-            margin-bottom: 15px;
+            flex: 0 0 58%;
         }
 
         .quantity__wrapper {
@@ -232,6 +231,9 @@
                     font-size: 14px;
                     line-height: 18px;
                 }
+                @media screen and (max-width: 450px) {
+                    padding: 6.5px 10px;
+                }
             }
         }
 
@@ -240,7 +242,7 @@
         }
 
         .to-cart__measure {
-            padding-left: 14px;
+            @include adaptiv-value("padding-left", 14, 6, 1);
             font-size: 14px;
             line-height: 18px;
         }
@@ -251,9 +253,14 @@
 
         @media screen and (max-width: 991px) {
             flex: 0 0 19%;
+            order: 4;
+
+            .cart__price {
+                text-align: right;
+            }
         }
         @media screen and (max-width: 450px) {
-            flex: 1 1 auto;
+            flex: 0 0 42%;
         }
     }
 
@@ -265,6 +272,14 @@
     }
 
     &__column--delete {
+        @media screen and (max-width: 991px) {
+            flex: 1 1 auto;
+            order: 1;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+        }
+
         a {
             color: $Gray;
             transition: 0.3s ease color 0s;

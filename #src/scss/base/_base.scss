@@ -133,6 +133,14 @@ img {
     }
 }
 
+.copy-link {
+    i {
+        font-size: 18px;
+        margin-left: 6px;
+        color: $Gray;
+    }
+}
+
 .table {
     td,
     th {
@@ -172,3 +180,4 @@ img {
     opacity: 0.6;
     pointer-events: none !important;
 }
+

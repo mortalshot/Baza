@@ -26,6 +26,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-bxs-copy:before {
+  content: "\e932";
+}
+.icon-plus2:before {
+  content: "\e931";
+}
 .icon-eye2:before {
   content: "\e92f";
 }

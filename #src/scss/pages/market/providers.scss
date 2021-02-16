@@ -307,6 +307,7 @@
 
     &__main-link {
         a {
+            font-weight: 400;
             color: $DGray;
 
             &::before {
@@ -378,6 +379,7 @@
 
             &__footer {
                 display: flex;
+                align-items: center;
                 flex-wrap: wrap;
                 position: relative;
                 padding: 0 54px 17px 20px;

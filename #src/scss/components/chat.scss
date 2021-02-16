@@ -46,7 +46,7 @@
         font-size: 16px;
         line-height: 21px;
 
-        @media screen and (max-width: $layoutDesktop - 0.02 + 'px') {
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(21 / 16);
         }
@@ -74,6 +74,16 @@
         padding-right: 20px;
     }
 
+    &__gradient {
+        width: calc(100% - 10px);
+        height: 120px;
+        background: linear-gradient(0deg, #f5f5f5 36.67%, rgba(245, 245, 245, 0) 100%);
+        position: absolute;
+        top: -50px;
+        left: 0;
+        pointer-events: none;
+    }
+
     &__form-wrapper {
         position: relative;
         display: flex;
@@ -88,6 +98,16 @@
             padding: 14px 36px 14px 18px;
             flex: 1 1 auto;
             filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+
+            &::placeholder {
+                transition: 0.3s ease opacity 0s;
+            }
+
+            &:focus {
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
         }
     }
 
