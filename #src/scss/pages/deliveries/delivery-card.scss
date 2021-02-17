@@ -283,6 +283,8 @@
     }
 
     &__column--name {
+        width: 100%;
+        
         @media screen and (max-width: 450px) {
             position: relative;
 
@@ -317,6 +319,10 @@
         white-space: nowrap;
         @media screen and (min-width: 768px) {
             padding: 2px 10px !important;
+        }
+
+        .to-cart__quantity {
+            margin-left: auto;
         }
     }
 

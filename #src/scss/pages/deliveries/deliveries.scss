@@ -90,6 +90,8 @@
         flex-wrap: wrap;
 
         .text-link {
+            font-weight: 600;
+            
             &::before {
                 border-bottom-style: solid;
                 border-bottom-width: 1px;
@@ -113,11 +115,11 @@
 
             @media screen and (min-width: 901px) and (max-width: 991px) {
                 flex: 0 0 100%;
-                padding: 10px 0px 0px 0px;
+                padding: 15px 0px 5px 0px;
             }
             @media screen and (max-width: 575px) {
                 flex: 0 0 100%;
-                padding: 10px 0px 0px 0px;
+                padding: 15px 0px 5px 0px;
             }
         }
     }
@@ -862,10 +864,12 @@
         text-align: right;
         width: 50%;
 
-        a {
+        .text-link {
             color: $DGray;
-            text-decoration: underline;
-            transition: 0.3s ease all 0s;
+
+            &::before {
+                border-bottom: 1px solid $DGray;
+            }
         }
 
         @media screen and (max-width: 767px) {
@@ -952,14 +956,6 @@
         @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
             font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(21 / 16);
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            border-bottom: 1px dashed $GreenM;
-            position: absolute;
         }
 
         i {
