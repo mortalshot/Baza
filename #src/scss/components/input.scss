@@ -36,11 +36,14 @@
     }
 
     // .form__input
-    &__input {
+    &__input,
+    &-control {
         height: 41px;
         padding: 0px 12px;
         border-radius: 5px;
         width: 100%;
+        background-color: $LGray3;
+        border-color: transparent;
         transition: all 0.5s ease 0s;
 
         &::placeholder {
@@ -48,6 +51,10 @@
         }
 
         &:focus {
+            border-color: transparent;
+            background-color: $LGray3;
+            box-shadow: none;
+
             &::placeholder {
                 opacity: 0;
             }
@@ -106,11 +113,64 @@
             box-shadow: 0 2px 0 #161b13;
         }
     }
+
+    &-group--phone {
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 24px;
+            transform: translate(0, -50%);
+            pointer-events: none;
+
+            i {
+                display: inline-flex;
+                font-size: 16px;
+                color: $Gray;
+            }
+        }
+    }
+
+    &-control--phone {
+        padding-left: 38px;
+    }
+
+    &-group--calendar {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 0;
+
+        span {
+            display: flex;
+            position: absolute;
+            @include adaptiv-value("right", 22, 17, 1);
+            top: 50%;
+            transform: translate(0, -50%);
+            pointer-events: none;
+
+            i {
+                font-size: 14px;
+                color: $Gray;
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &-control--calendar {
+        &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator {
+            -webkit-appearance: none;
+            opacity: 0;
+        }
+    }
 }
 
 .options {
     display: flex;
-    
+
     // .options__item
     &__item {
         margin: 0px 0px 10px 0px;
@@ -342,7 +402,7 @@ textarea.form__input {
             &::placeholder {
                 transition: 0.3s ease opacity 0s;
             }
-            
+
             &:focus {
                 &::placeholder {
                     opacity: 0;

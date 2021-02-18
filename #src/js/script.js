@@ -93,4 +93,15 @@ $(document).ready(function () {
         }
     })
     // toggle fields on radio change end
+
+    // show hidden element
+    $('.btn-show').click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('show-once')) {
+            $(this).fadeToggle(300);
+        }
+        $(this).next('.block-hidden').slideDown(300);
+    })
+    // show hidden element end
+   
 })

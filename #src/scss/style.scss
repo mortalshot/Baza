@@ -63,29 +63,6 @@
     }
 }
 
-.send-review {
-    .popup {
-        &__content {
-            max-width: 500px;
-        }
-    }
-
-    &__title {
-        @include adaptiv-value("margin-bottom", 35, 20, 1);
-    }
-
-    .rating {
-        @include adaptiv-value("margin-bottom", 35, 20, 1);
-    }
-
-    textarea {
-        resize: none;
-        height: 72px !important;
-        padding: 15px 12px;
-        overflow: hidden;
-    }
-
-    &__btn {
-        width: 100%;
-    }
+.block-hidden {
+    display: none;
 }

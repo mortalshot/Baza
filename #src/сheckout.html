@@ -70,7 +70,15 @@
                                     <div class="order-terms__row">
                                         <div class="order-terms__left">
                                             <div class="order-terms__data">
-                                                дата, заглушка
+                                                <div class="form-row">
+                                                    <div class="form-group form-group--calendar col-6">
+                                                        <input type="date" class="form-control form-control--calendar" placeholder="Дата">
+                                                        <span><i class="icon-calendar"></i></span>
+                                                    </div>
+                                                    <div class="form-group col-6">
+                                                        <input type="text" class="form-control" id="deliveriesDocumentsPaidSum" placeholder="Сумма">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="order-terms__conditions">
                                                 <div class="order-terms__condition">
@@ -89,16 +97,16 @@
                                                 </div>
                                                 <div class="order-terms__condition">
                                                     <div class="order-terms__note">
-                                                       <strong>Примечание:</strong> Итоговая стоимость с учетом доставки будет предоставлена после подтверждения сделки Продавцом.
+                                                        <strong>Примечание:</strong> Итоговая стоимость с учетом доставки будет предоставлена после подтверждения сделки Продавцом.
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="order-terms__right">
                                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10.0003 2.16669C5.40033 2.16669 1.66699 5.90002 1.66699 10.5C1.66699 15.1 5.40033 18.8334 10.0003 18.8334C14.6003 18.8334 18.3337 15.1 18.3337 10.5C18.3337 5.90002 14.6003 2.16669 10.0003 2.16669ZM10.0003 14.6667C9.54199 14.6667 9.16699 14.2917 9.16699 13.8334V10.5C9.16699 10.0417 9.54199 9.66669 10.0003 9.66669C10.4587 9.66669 10.8337 10.0417 10.8337 10.5V13.8334C10.8337 14.2917 10.4587 14.6667 10.0003 14.6667ZM10.8337 8.00002H9.16699V6.33335H10.8337V8.00002Z" fill="#C4C4C4"/>
+                                                <path d="M10.0003 2.16669C5.40033 2.16669 1.66699 5.90002 1.66699 10.5C1.66699 15.1 5.40033 18.8334 10.0003 18.8334C14.6003 18.8334 18.3337 15.1 18.3337 10.5C18.3337 5.90002 14.6003 2.16669 10.0003 2.16669ZM10.0003 14.6667C9.54199 14.6667 9.16699 14.2917 9.16699 13.8334V10.5C9.16699 10.0417 9.54199 9.66669 10.0003 9.66669C10.4587 9.66669 10.8337 10.0417 10.8337 10.5V13.8334C10.8337 14.2917 10.4587 14.6667 10.0003 14.6667ZM10.8337 8.00002H9.16699V6.33335H10.8337V8.00002Z" fill="#C4C4C4" />
                                             </svg>
-                                                
+
                                             <div class="order-terms__description">
                                                 <div class="order-terms__description-title">
                                                     <i class="icon-info"></i>
@@ -127,7 +135,7 @@
                                             <div class="order-terms__conditions">
                                                 <div class="order-terms__condition">
                                                     <div class="order-terms__delivery-method">
-                                                        <div class="nav nav-tabs" id="deliveryMethodTabs" role="tablist">
+                                                        <div class="nav nav-tabs flex-nowrap" id="deliveryMethodTabs" role="tablist">
                                                             <a class="nav-item nav-link active" id="deliveryMethodTab-1" data-toggle="tab" href="#deliveryMethodTabLink-1" role="tab" aria-controls="deliveryMethodTabLink-1" aria-selected="true">Доставка</a>
                                                             <a class="nav-item nav-link" id="deliveryMethodTab-2" data-toggle="tab" href="#deliveryMethodTabLink-2" role="tab" aria-controls="deliveryMethodTabLink-2" aria-selected="true">Самовывоз</a>
                                                         </div>
@@ -139,6 +147,12 @@
                                                                             <option value="">Город</option>
                                                                             <option value="Москва">Москва</option>
                                                                             <option value="Тверь">Тверь</option>
+                                                                            <option value="Воронеж">Воронеж</option>
+                                                                            <option value="Воронеж">Воронеж</option>
+                                                                            <option value="Воронеж">Воронеж</option>
+                                                                            <option value="Воронеж">Воронеж</option>
+                                                                            <option value="Воронеж">Воронеж</option>
+                                                                            <option value="Воронеж">Воронеж</option>
                                                                             <option value="Воронеж">Воронеж</option>
                                                                         </select>
                                                                     </div>
@@ -174,7 +188,44 @@
                                                                     </div>
                                                                     <div class="order-terms__condition-text">Приемка-передача по адресу продавца</div>
                                                                 </div>
-                                                                <a href="" class="order-terms__pickup-link">Данные для самовывоза</a>
+                                                                <a href="" class="text-link btn-show show-once">Данные для самовывоза</a>
+                                                                <div class="order-terms__form block-hidden">
+                                                                    <div class="form-item">
+                                                                        <div class="form-label">Контактное лицо</div>
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-sm-6 col-lg-7 ">
+                                                                                <input type="text" class="form-control" id="deliveryContact" placeholder="ФИО">
+                                                                            </div>
+                                                                            <div class="form-group col-sm-6 col-lg-5 form-group--phone">
+                                                                                <input type="text" class="form-control form-control--phone" id="deliveryContactPhone" placeholder="+7">
+                                                                                <span><i class="icon-phone"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-item">
+                                                                        <div class="form-label">Прицеп</div>
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-sm-6">
+                                                                                <input type="text" class="form-control" id="deliveryCarModel" placeholder="Марка модель">
+                                                                            </div>
+                                                                            <div class="form-group col-sm-6">
+                                                                                <input type="text" class="form-control" id="deliveryCarGos" placeholder="Госзнак">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-item">
+                                                                        <div class="form-label">Транспорт</div>
+                                                                        <div class="form-row">
+                                                                            <div class="form-group col-sm-6">
+                                                                                <input type="text" class="form-control" id="deliveryTrailerModel" placeholder="Марка модель">
+                                                                            </div>
+                                                                            <div class="form-group col-sm-6">
+                                                                                <input type="text" class="form-control" id="deliveryTrailerGos" placeholder="Госзнак">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <button class="form-btn text-link">Указать данные</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -191,21 +242,21 @@
                                                             <label for="formPaymentCashless" class="options__label"><span>Безналичный расчет</span></label>
                                                         </div>
                                                     </div>
-                                                    <div class="order-terms__postponement">Отсрочка <a href="" class="link-dashed">0</a> дней</div>
+                                                    <div class="order-terms__postponement">Отсрочка <a href="" class="text-link">0</a> дней</div>
                                                 </div>
 
                                                 <div class="order-terms__condition">
                                                     <div class="order-terms__note">
-                                                       <strong>Примечание:</strong> Итоговая стоимость с учетом доставки будет предоставлена после подтверждения сделки Продавцом.
+                                                        <strong>Примечание:</strong> Итоговая стоимость с учетом доставки будет предоставлена после подтверждения сделки Продавцом.
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="order-terms__right">
                                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10.0003 2.16669C5.40033 2.16669 1.66699 5.90002 1.66699 10.5C1.66699 15.1 5.40033 18.8334 10.0003 18.8334C14.6003 18.8334 18.3337 15.1 18.3337 10.5C18.3337 5.90002 14.6003 2.16669 10.0003 2.16669ZM10.0003 14.6667C9.54199 14.6667 9.16699 14.2917 9.16699 13.8334V10.5C9.16699 10.0417 9.54199 9.66669 10.0003 9.66669C10.4587 9.66669 10.8337 10.0417 10.8337 10.5V13.8334C10.8337 14.2917 10.4587 14.6667 10.0003 14.6667ZM10.8337 8.00002H9.16699V6.33335H10.8337V8.00002Z" fill="#C4C4C4"/>
+                                                <path d="M10.0003 2.16669C5.40033 2.16669 1.66699 5.90002 1.66699 10.5C1.66699 15.1 5.40033 18.8334 10.0003 18.8334C14.6003 18.8334 18.3337 15.1 18.3337 10.5C18.3337 5.90002 14.6003 2.16669 10.0003 2.16669ZM10.0003 14.6667C9.54199 14.6667 9.16699 14.2917 9.16699 13.8334V10.5C9.16699 10.0417 9.54199 9.66669 10.0003 9.66669C10.4587 9.66669 10.8337 10.0417 10.8337 10.5V13.8334C10.8337 14.2917 10.4587 14.6667 10.0003 14.6667ZM10.8337 8.00002H9.16699V6.33335H10.8337V8.00002Z" fill="#C4C4C4" />
                                             </svg>
-                                                
+
                                             <div class="order-terms__description">
                                                 <div class="order-terms__description-title">
                                                     <i class="icon-info"></i>

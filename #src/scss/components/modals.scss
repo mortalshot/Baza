@@ -70,3 +70,104 @@
         }
     }
 }
+
+.nameplate {
+    &__content {
+        position: relative;
+        max-width: 472px;
+        background-color: $White;
+        border-radius: 3px;
+        @include adaptiv-value("padding-top", 24, 20, 1);
+        @include adaptiv-value("padding-bottom", 24, 20, 1);
+        @include adaptiv-value("padding-right", 27, 20, 1);
+        @include adaptiv-value("padding-left", 27, 20, 1);
+    }
+
+    .popup__close {
+        right: 10px;
+        top: 10px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left {
+        @include adaptiv-value("margin-right", 24, 15, 1);
+    }
+
+    &__label {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 2px;
+        color: $Black;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(16px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(23 / 18);
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 21px;
+        color: $DGray;
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            line-height: calc(21 / 16);
+        }
+    }
+}
+
+.confirmation {
+    &__content {
+        position: relative;
+        max-width: 330px;
+        background-color: $White;
+        border-radius: 3px;
+        @include adaptiv-value("padding-top", 40, 30, 1);
+        @include adaptiv-value("padding-bottom", 44, 20, 1);
+        @include adaptiv-value("padding-right", 33, 20, 1);
+        @include adaptiv-value("padding-left", 33, 20, 1);
+    }
+
+    .popup__close {
+        right: 10px;
+        top: 10px;
+    }
+
+    &__image {
+        margin-bottom: 23px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__body {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .nameplate__label {
+        margin-bottom: 8px;
+    }
+
+    &__tools {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__tool {
+        margin-right: 16px;
+        width: 120px;
+        height: 36px;
+        padding: 5px 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

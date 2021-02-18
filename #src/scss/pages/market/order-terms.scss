@@ -268,6 +268,9 @@
             @media screen and (max-width: 991px) {
                 padding: 0;
             }
+            @media screen and (max-width: 768px) {
+                padding: 0;
+            }
 
             .nav-item {
                 display: flex;
@@ -275,6 +278,9 @@
                 position: relative;
                 padding: 0 0 0 24px;
                 margin-right: 26px;
+                &:last-child {
+                    margin-right: 0;
+                }
 
                 &::before,
                 &::after {
@@ -332,6 +338,15 @@
         .form__input {
             background-color: $LGray3;
         }
+
+        .text-link {
+            color: $Black;
+
+            &::before {
+                border-width: 1px;
+                border-color: $Black;
+            }
+        }
     }
 
     &__address-row {
@@ -359,7 +374,6 @@
 
     .options {
         display: flex;
-        flex-wrap: wrap;
 
         &__item {
             margin: 0 28px 12px 0;
@@ -398,6 +412,22 @@
                 border-width: 1px;
                 border-color: $Black;
             }
+        }
+    }
+
+    &__form {
+        margin-top: 24px;
+
+        .form-item {
+            @include adaptiv-value("margin-bottom", 8, 4, 1);
+        }
+
+        .form-label {
+            margin-bottom: 12px;
+        }
+
+        .text-link {
+            background-color: transparent;
         }
     }
 }

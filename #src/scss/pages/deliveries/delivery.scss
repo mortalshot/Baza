@@ -215,7 +215,7 @@
     }
 
     &__attention-btn {
-        @include adaptiv-value("margin-right", 32, 15, 1);
+        @include adaptiv-value("margin-right", 25, 15, 1);
 
         @media screen and (max-width: 450px) {
             width: 100%;
@@ -301,28 +301,6 @@
             color: $Red;
             margin: 5px 0;
             display: none;
-        }
-
-        &-group--phone {
-            position: relative;
-
-            span {
-                position: absolute;
-                top: 50%;
-                left: 24px;
-                transform: translate(0, -50%);
-                pointer-events: none;
-
-                i {
-                    display: inline-flex;
-                    font-size: 16px;
-                    color: $Gray;
-                }
-            }
-        }
-
-        &-control--phone {
-            padding-left: 38px;
         }
     }
 

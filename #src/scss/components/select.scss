@@ -52,6 +52,21 @@
         border-top: 0;
         font-size: 16px;
         padding: 0px 0px 5px 0px;
+        height: calc(41px * 5);
+        overflow-y: auto;
+
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #909090;
+            border-radius: 3px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            background-color: #363636;
+        }
     }
 
     &__option {
