@@ -31,11 +31,29 @@
         }
     }
 
+    .delivery-card__seller-info {
+        .cart__person {
+            @media screen and (max-width: 575px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .cart__right {
+        padding-right: 0;
+    }
+
+    .order-terms__condition {
+        @media screen and (max-width: 575px) {
+            padding: 0;
+        }
+    }
+
     .product-item {
         &__row {
             border-bottom: 1px solid $LGray3;
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 900px) {
                 flex-wrap: wrap;
             }
         }
@@ -44,7 +62,7 @@
             border-bottom-color: transparent;
             padding: 12px 10px;
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 900px) {
                 padding: 8px 10px;
             }
 
@@ -58,9 +76,12 @@
         }
 
         &__column--name {
-            flex: 0 0 32%;
+            flex: 1 1 auto;
 
-            @media screen and (max-width: 767px) {
+            @media screen and (min-width: 1250px) {
+                flex: 0 0 32%;
+            }
+            @media screen and (max-width: 900px) {
                 flex: 0 0 100%;
             }
         }
@@ -89,7 +110,7 @@
             flex: 0 0 120px;
             @include adaptiv-value("flex-basis", 120, 70, 1);
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 900px) {
                 flex: 0 0 30%;
                 padding-left: 15px;
             }
@@ -103,7 +124,7 @@
             flex: 0 0 120px;
             @include adaptiv-value("flex-basis", 120, 70, 1);
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 900px) {
                 flex: 0 0 30%;
             }
         }
@@ -115,21 +136,49 @@
             justify-content: flex-end;
             padding-right: 29px;
             white-space: nowrap;
+            position: relative;
 
-            @media screen and (max-width: 767px) {
-                padding-right: 10px;
-                flex: 0 0 30%;
+            @media screen and (max-width: 900px) {
+                padding-right: 25px;
+                flex: 0 0 40%;
+                min-height: 47px;
             }
-        }
+            @media screen and (max-width: 450px) {
+                padding-right: 20px;
+            }
 
-        &__location {
-            white-space: normal;
+            .messages__person-notification {
+                @media screen and (min-width: 768px) {
+                    top: 14px;
+                    right: 10px;
+                    transform: translate(0);
+                }
+                @media screen and (max-width: 900px) {
+                    position: absolute;
+                    right: 20px;
+                    top: 3px;
+                    transform: translate(50%, 0);
+                }
+                @media screen and (max-width: 450px) {
+                    transform: translate(0);
+                    right: 10px;
+                    top: 5px;
+                }
+            }
         }
     }
 
     .application-card {
         padding-bottom: 0;
         border-radius: 3px 3px 0 0;
+
+        .table__row {
+            @media screen and (max-width: 900px) {
+                display: flex;
+                flex-wrap: wrap;
+                border-bottom: 1px solid $LGray3;
+            }
+        }
 
         .table__column {
             &:first-child {
@@ -139,11 +188,12 @@
                 padding-right: 20px;
             }
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 900px) {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
                 padding: 5px 10px !important;
+                border: 0;
             }
         }
 
@@ -152,6 +202,8 @@
             font-size: 12px;
             max-width: 40px;
             color: $Black;
+            white-space: nowrap;
+            width: 55px;
 
             i {
                 display: inline-flex;
@@ -159,7 +211,7 @@
                 color: $Yellow;
             }
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 900px) {
                 flex: 0 0 15%;
                 max-width: initial;
                 flex-wrap: nowrap !important;
@@ -171,17 +223,28 @@
             font-size: 14px;
             line-height: 18px;
             color: $Black;
+            width: 20%;
 
             @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
                 font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
                 line-height: calc(18 / 14);
             }
-            @media screen and (max-width: 767px) {
-                flex: 0 0 27%;
+            @media screen and (max-width: 900px) {
+                flex: 0 0 33.333%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             @media screen and (max-width: 450px) {
-                flex: 0 0 40%;
+                flex: 0 0 50%;
             }
+        }
+
+        .bargaining__name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 160px;
         }
 
         &__column--company {
@@ -189,31 +252,43 @@
             font-size: 12px;
             line-height: 15px;
             color: $DGray;
+            white-space: nowrap;
+            width: 10%;
 
-            @media screen and (max-width: 767px) {
-                flex: 0 0 29%;
+            @media screen and (max-width: 900px) {
+                flex: 0 0 33.333%;
             }
             @media screen and (max-width: 450px) {
-                flex: 0 0 41%;
+                flex: 0 0 50%;
                 justify-content: flex-end;
             }
         }
 
         &__column--location {
             color: $DGray;
+            white-space: nowrap;
+            width: 12%;
 
-            @media screen and (max-width: 767px) {
-                flex: 0 0 29%;
+            @media screen and (max-width: 900px) {
+                flex: 0 0 33.333%;
                 justify-content: flex-end;
             }
             @media screen and (max-width: 450px) {
                 justify-content: flex-start;
-                flex: 0 0 59%;
+                flex: 0 0 50%;
             }
 
-            i {
-                display: inline-flex;
-                margin-right: 6px;
+            .product-item__location {
+                font-weight: 500;
+
+                i {
+                    display: inline-flex;
+                    margin-right: 6px;
+                }
+
+                span {
+                    margin: 0;
+                }
             }
         }
 
@@ -223,17 +298,20 @@
             line-height: 15px;
             color: $DGray;
 
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 900px) {
                 flex: 0 0 33.333%;
             }
             @media screen and (max-width: 450px) {
                 justify-content: flex-end;
-                flex: 0 0 41%;
+                text-align: right;
+                flex: 0 0 50%;
             }
         }
 
         &__column--label {
-            @media screen and (max-width: 767px) {
+            text-align: right;
+
+            @media screen and (max-width: 900px) {
                 flex: 0 0 33.333%;
             }
             @media screen and (max-width: 450px) {
@@ -246,12 +324,13 @@
             font-size: 16px;
             line-height: 21px;
             color: $Black;
+            width: 7%;
 
             @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
                 font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
                 line-height: calc(21 / 16);
             }
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 900px) {
                 flex: 0 0 33.333%;
                 justify-content: flex-end;
             }

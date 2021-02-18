@@ -192,6 +192,10 @@
         }
     }
 
+    &__person-notification--viewed {
+        background-color: $LGray;
+    }
+
     &__right {
         flex: 1 1 auto;
         @include adaptiv-value("padding-left", 29, 10, 1);

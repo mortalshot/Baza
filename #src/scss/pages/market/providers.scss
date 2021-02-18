@@ -504,7 +504,7 @@
         opacity: 0.3;
         pointer-events: none;
 
-        .provider__column--request {
+        .provider__column--request, .product-item__product-name {
             text-decoration: line-through;
         }
     }
@@ -716,7 +716,7 @@
 
 .person {
     color: $DGray;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     &__rating {
