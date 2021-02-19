@@ -60,8 +60,8 @@
     }
 
     &__data {
-        @include adaptiv-value("padding-top", 34, 24, 1);
-        @include adaptiv-value("padding-bottom", 34, 24, 1);
+        @include adaptiv-value("padding-top", 8, 0, 1);
+        @include adaptiv-value("padding-bottom", 29, 24, 1);
         @include adaptiv-value("margin-left", 40, 16, 1);
         border-bottom: 1px solid $LGray3;
 
@@ -149,7 +149,7 @@
     &__note {
         background-color: $LBlue;
         padding: 10px;
-        font-weight: 500;
+        font-weight: 400;
         max-width: 516px;
 
         @media screen and (min-width: $layoutDesktop + "px") {
@@ -159,8 +159,8 @@
             max-width: 100%;
         }
 
-        strong {
-            font-weight: 600;
+        span {
+            font-weight: 500;
         }
     }
 
@@ -205,6 +205,8 @@
     }
 
     &__description-text {
+        color: $DGray;
+
         a {
             color: $GreenM;
             text-decoration: underline;
@@ -413,6 +415,15 @@
                 border-color: $Black;
             }
         }
+
+        .notice {
+            &__wrapper {
+                @media screen and (max-width: 575px) {
+                    left: 0;
+                    transform: translate(0, 100%);
+                }
+            }
+        }
     }
 
     &__form {
@@ -428,6 +439,12 @@
 
         .text-link {
             background-color: transparent;
+        }
+    }
+
+    .form-group--calendar {
+        @media screen and (max-width: 400px) {
+            max-width: 150px;
         }
     }
 }

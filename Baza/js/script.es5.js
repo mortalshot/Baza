@@ -1,5 +1,7 @@
 "use strict";
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 $(document).ready(function () {
@@ -10,6 +12,8 @@ $(document).ready(function () {
   // Andrikanych Yevhen 2020
   // https://www.youtube.com/c/freelancerlifestyle
   "use strict";
+
+  var _locale;
 
   (function () {
     var originalPositions = [];
@@ -501,6 +505,50 @@ $(document).ready(function () {
   });
   var lockPaddingValue = window.innerWidth - document.querySelector('.site__main').offsetWidth + 'px';
   var mediaQueryLgMin = window.matchMedia('(min-width: 1250px)');
+  mediaQueryLgMin.addListener(handleTabletChangeLgMin);
+
+  function handleTabletChangeLgMin(e) {
+    if (e.matches) {
+      $('.navigation-drawer__mobile').not('.filter-selected__reset').on('click', function () {
+        $('.drawer-on').addClass('active');
+        $('.navigation-drawer__wrapper, .navigation-drawer').addClass('active');
+      });
+    } else {
+      $('.navigation-drawer__mobile').not('.filter-selected__reset').on('click', function () {
+        $('.navigation-drawer__wrapper, .navigation-drawer').addClass('active');
+
+        if (lockPadding.length > 0) {
+          for (var index = 0; index < lockPadding.length; index++) {
+            var el = lockPadding[index];
+            el.style.paddingRight = lockPaddingValue;
+          }
+        }
+
+        body.style.paddingRight = lockPaddingValue;
+        body.classList.add('lock');
+        $('.filter-product').removeClass('open');
+      });
+      $(document).mouseup(function (e) {
+        if (!$('.popup').hasClass('open') && !$('.header__menu').hasClass('active')) {
+          var div = $('.navigation-drawer__wrapper');
+
+          if (!div.is(e.target) && div.has(e.target).length === 0) {
+            $('.navigation-drawer__wrapper, .navigation-drawer, .drawer-on').removeClass('active');
+
+            if (lockPadding.length > 0) {
+              for (var index = 0; index < lockPadding.length; index++) {
+                var el = lockPadding[index];
+                el.style.paddingRight = '0px';
+              }
+            }
+
+            body.style.paddingRight = '0px';
+            body.classList.remove('lock');
+          }
+        }
+      });
+    }
+  }
 
   if (mediaQueryLgMin.matches) {
     $('.navigation-drawer__mobile').not('.filter-selected__reset').on('click', function () {
@@ -545,6 +593,16 @@ $(document).ready(function () {
 
   var navItems = document.querySelectorAll('.header__inner .navbar .nav-link, .delivery-card__body .nav-link, #deliveriesTabs .nav-link, #profileTabs .nav-link');
   var mediaQueryXsMax = window.matchMedia('(max-width: 450px)');
+  mediaQueryXsMax.addListener(handleTabletChangeXsMax);
+
+  function handleTabletChangeXsMax(e) {
+    if (e.matches) {
+      for (var index = 0; index < navItems.length; index++) {
+        var element = navItems[index];
+        $(element).text($(element).data('value'));
+      }
+    }
+  }
 
   if (mediaQueryXsMax.matches) {
     for (var index = 0; index < navItems.length; index++) {
@@ -1201,6 +1259,15 @@ $(document).ready(function () {
     $('.filter-attributes__item').slideUp(300);
   });
   var mediaQuery = window.matchMedia('(max-width: 1250px)');
+  mediaQuery.addListener(handleTabletChangeMediaQuery);
+
+  function handleTabletChangeMediaQuery(e) {
+    if (e.matches) {
+      $('.filter-modals__link.popup-link').click(function (e) {
+        $('.navigation-drawer__wrapper, .navigation-drawer, .drawer-on').removeClass('active');
+      });
+    }
+  }
 
   if (mediaQuery.matches) {
     $('.filter-modals__link.popup-link').click(function (e) {
@@ -1367,9 +1434,21 @@ $(document).ready(function () {
     e.preventDefault();
 
     if ($(this).hasClass('show-once')) {
-      $(this).fadeToggle(300);
+      $(this).fadeToggle(100);
     }
 
-    $(this).next('.block-hidden').slideDown(300);
+    $(this).next('.block-hidden').fadeToggle(300);
   }); // show hidden element end
+
+  $('input[name="datetimes"]').daterangepicker({
+    autoUpdateInput: true,
+    showCustomRangeLabel: false,
+    applyButtonClasses: "btn btn-green",
+    cancelButtonClasses: "text-link",
+    locale: (_locale = {
+      cancelLabel: 'Clear',
+      format: 'DD/M/Y',
+      "applyLabel": "Принять"
+    }, _defineProperty(_locale, "cancelLabel", "Сбросить"), _defineProperty(_locale, "daysOfWeek", ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]), _defineProperty(_locale, "monthNames", ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]), _defineProperty(_locale, "firstDay", 1), _locale)
+  });
 });

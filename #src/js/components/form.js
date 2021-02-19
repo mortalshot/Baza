@@ -71,6 +71,14 @@ $('.attributes-summary__reset').on('click', function (e) {
 });
 
 let mediaQuery = window.matchMedia('(max-width: 1250px)');
+mediaQuery.addListener(handleTabletChangeMediaQuery);
+function handleTabletChangeMediaQuery(e) {
+    if (e.matches) {
+        $('.filter-modals__link.popup-link').click(function (e) {
+            $('.navigation-drawer__wrapper, .navigation-drawer, .drawer-on').removeClass('active');
+        });
+    }
+}
 if (mediaQuery.matches) {
     $('.filter-modals__link.popup-link').click(function (e) {
         $('.navigation-drawer__wrapper, .navigation-drawer, .drawer-on').removeClass('active');

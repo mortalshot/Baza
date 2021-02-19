@@ -1,6 +1,6 @@
 .base {
     @include adaptiv-value("padding-top", 33, 26, 1);
-    @include adaptiv-value("padding-bottom", 33, 26, 1);
+    @include adaptiv-value("padding-bottom", 33, 15, 1);
 
     &__container {
         max-width: 100%;

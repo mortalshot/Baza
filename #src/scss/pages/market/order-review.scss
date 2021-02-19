@@ -55,6 +55,17 @@
             flex: 0 0 100%;
             margin-bottom: 10px;
         }
+        @media screen and (max-width: 450px) {
+            position: relative;
+
+            .notice {
+                position: initial;
+
+                &__wrapper {
+                    box-shadow: 3px 1px 24px rgba(0, 0, 0, 0.22);
+                }
+            }
+        }
     }
 
     &__position-weight {
@@ -114,7 +125,7 @@
     &__price {
         text-align: right;
         white-space: nowrap;
-        flex: 0 0 13%;
+        flex: 0 0 10%;
     }
 
     &__footer {

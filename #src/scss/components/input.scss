@@ -140,7 +140,6 @@
         display: flex;
         align-items: center;
         position: relative;
-        margin-bottom: 0;
 
         span {
             display: flex;
@@ -351,8 +350,8 @@ textarea.form__input {
     align-items: center;
 
     &__button {
-        flex: 0 0 9px;
-        padding: 10px 8px;
+        flex: 0 0 10px;
+        padding: 10px;
         position: relative;
         cursor: pointer;
 
@@ -363,7 +362,7 @@ textarea.form__input {
             top: 50%;
             left: 50%;
             transition: 0.3s ease background-color 0s;
-            margin: 0px 0px 0px -3px;
+            margin: 0px 0px 0px -4px;
             background-color: $Black;
             width: 7px;
             height: 1px;
@@ -376,6 +375,10 @@ textarea.form__input {
                     background-color: rgba($Black, 0.5);
                 }
             }
+        }
+
+        &--minus {
+            margin-right: 5px;
         }
 
         &--plus {
@@ -408,6 +411,156 @@ textarea.form__input {
                     opacity: 0;
                 }
             }
+        }
+    }
+}
+
+.select {
+    position: relative;
+
+    &__item {
+        position: relative;
+    }
+
+    &__title {
+        color: #000;
+        border: 1px solid #d9d9d9;
+        background-color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    &__value {
+        display: flex;
+        font-size: 16px;
+        height: 41px;
+        padding: 0px 12px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        &::before {
+            content: "";
+            display: inline-block;
+            transition: all 0.3s ease 0s;
+            width: 14px;
+            height: 15px;
+            background: url("../img/icons/select.svg") center / 100% no-repeat;
+        }
+
+        span {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    &__options {
+        color: #000;
+        display: none;
+        position: absolute;
+        border-radius: 0 0 4px 4px;
+        min-width: 100%;
+        left: 0;
+        bottom: 0;
+        transform: translate(0, 100%);
+        background-color: #fff;
+        border: 1px solid #d9d9d9;
+        border-top: 0;
+        font-size: 16px;
+        padding: 0px 0px 5px 0px;
+        max-height: calc(41px * 5);
+        overflow-y: auto;
+
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #909090;
+            border-radius: 3px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            background-color: #363636;
+        }
+    }
+
+    &__option {
+        cursor: pointer;
+        padding: 10px 12px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    &._active {
+        z-index: 5;
+
+        .select__value::before {
+            transform: rotate(-180deg);
+        }
+
+        .select__options {
+            display: block;
+        }
+    }
+
+    &.form__select--time {
+        @media screen and (max-width: 991px) {
+            margin: 0 !important;
+        }
+
+        .select__title {
+            background-color: transparent;
+            border: 0;
+        }
+
+        .select__value {
+            flex-direction: row;
+            justify-content: flex-start;
+            font-size: 14px;
+            line-height: 18px;
+            color: $DGray;
+
+            &::before {
+                background: url(../img/icons/plus3.svg) no-repeat center/cover;
+                width: 24px;
+                height: 24px;
+                @include adaptiv-value("margin-right", 11, 6, 1);
+            }
+        }
+
+        .select__options {
+            border-top: 1px solid #d9d9d9;
+            border-radius: 3px;
+        }
+    }
+
+    &.form__select--time2 {
+        .select__title {
+            background-color: $LGray3;
+            border: 0;
+        }
+
+        .select__value {
+            color: $Gray;
+            flex-direction: row;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 14px;
+                height: 14px;
+                background: url(../img/icons/time.svg) no-repeat center/cover;
+                margin-left: 8px;
+            }
+            &::before {
+                display: none;
+            }
+        }
+
+        .select__options {
+            border-top: 1px solid #d9d9d9;
+            border-radius: 3px;
         }
     }
 }

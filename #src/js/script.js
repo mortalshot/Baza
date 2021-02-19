@@ -98,10 +98,47 @@ $(document).ready(function () {
     $('.btn-show').click(function (e) {
         e.preventDefault();
         if ($(this).hasClass('show-once')) {
-            $(this).fadeToggle(300);
+            $(this).fadeToggle(100);
         }
-        $(this).next('.block-hidden').slideDown(300);
+        $(this).next('.block-hidden').fadeToggle(300);
     })
     // show hidden element end
-   
+
+    $('input[name="datetimes"]').daterangepicker({
+        autoUpdateInput: true,
+        showCustomRangeLabel: false,
+        applyButtonClasses: "btn btn-green",
+        cancelButtonClasses: "text-link",
+        locale: {
+            cancelLabel: 'Clear',
+            format: 'DD/M/Y',
+            "applyLabel": "Принять",
+            "cancelLabel": "Сбросить",
+            "daysOfWeek": [
+                "Пн",
+                "Вт",
+                "Ср",
+                "Чт",
+                "Пт",
+                "Сб",
+                "Вс"
+            ],
+            "monthNames": [
+                "Январь",
+                "Февраль",
+                "Март",
+                "Апрель",
+                "Май",
+                "Июнь",
+                "Июль",
+                "Август",
+                "Сентябрь",
+                "Октябрь",
+                "Ноябрь",
+                "Декабрь"
+            ],
+            "firstDay": 1
+        },
+    });
+
 })

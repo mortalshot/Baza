@@ -38,7 +38,7 @@
             }
         }
         @media screen and (max-width: 660px) {
-            height: calc(100vh - #{$size-inner-header-height-mobile} - 240px);
+            height: calc(100vh - #{$size-inner-header-height-mobile} - 227px);
         }
     }
 
@@ -155,7 +155,7 @@
         @media screen and (min-width: 1100px) {
             text-align: right;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 991px) {
             display: none;
         }
     }
@@ -169,7 +169,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 991px) {
             display: none;
         }
     }

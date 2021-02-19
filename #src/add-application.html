@@ -36,12 +36,12 @@
                                             </div>
                                         </td>
                                         <td class="table__column application-card__column--size">—</td>
-                                        <td class="table__column application-card__column--quantum">Квант  15</td>
+                                        <td class="table__column application-card__column--quantum">Квант 15</td>
                                         <td class="table__column application-card__column--weight">
                                             <div class="to-cart__quantity quantity">
                                                 <div class="quantity__wrapper">
                                                     <div class="quantity__input">
-                                                        <input autocomplete="off" type="text" value="1">
+                                                        <input autocomplete="off" type="text" placeholder="Вес">
                                                     </div>
                                                     <div class="quantity__button quantity__button--minus"></div>
                                                     <div class="quantity__button quantity__button--plus"></div>
@@ -82,12 +82,12 @@
                                             </div>
                                         </td>
                                         <td class="table__column application-card__column--size">Калибр 56-72 мм</td>
-                                        <td class="table__column application-card__column--quantum">Квант  15</td>
+                                        <td class="table__column application-card__column--quantum">Квант 15</td>
                                         <td class="table__column application-card__column--weight">
                                             <div class="to-cart__quantity quantity">
                                                 <div class="quantity__wrapper">
                                                     <div class="quantity__input">
-                                                        <input autocomplete="off" type="text" value="1">
+                                                        <input autocomplete="off" type="text" placeholder="Вес">
                                                     </div>
                                                     <div class="quantity__button quantity__button--minus"></div>
                                                     <div class="quantity__button quantity__button--plus"></div>
@@ -119,7 +119,7 @@
                         </div>
                         <div class="add-application__footer">
                             <div class="add-application__add">
-                                <a href="#addToApplication" class="popup-link add-application__add-btn"><i class="icon-plus"></i></a>
+                                <a href="#addToApplication" class="popup-link add-application__add-btn"><i class="icon-plus2"></i></a>
                             </div>
                         </div>
                     </div>
@@ -136,8 +136,88 @@
                                     <div class="order-terms__form">
                                         <div class="order-terms__row">
                                             <div class="order-terms__left">
+                                                <div class="add-application__confines order-terms__condition">
+                                                    <div class="profile-edit__business">
+                                                        <div class="options m-0">
+                                                            <div class="options__item">
+                                                                <input id="addApplicationTransitRequest" checked type="radio" value="Заявка" name="addApplicationTransitRequest" class="options__input">
+                                                                <label for="addApplicationTransitRequest" class="options__label"><span>Заявка</span></label>
+                                                            </div>
+                                                            <div class="options__item">
+                                                                <input id="addApplicationTransitBargaining" type="radio" value="Торги" name="addApplicationTransitRequest" class="options__input">
+                                                                <label for="addApplicationTransitBargaining" class="options__label"><span>Торги</span></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="text-link btn-show show-once">Ограничить срок приема заявок</a>
+                                                    <div class="add-application__time block-hidden"> 
+                                                        <div class="form-row">
+                                                            <div class="form-group col mb-0 form-group--calendar">
+                                                                <input type="text" class="form-control" name="datetimes">
+                                                                <span><i class="icon-calendar"></i></span>
+                                                            </div>
+                                                            <div class="form-group col mb-0">
+                                                                <select name="city" class="form__select form__select--time2">
+                                                                    <option value="">-- : --</option>
+                                                                    <option value="9:00">9:00</option>
+                                                                    <option value="9:30">9:30</option>
+                                                                    <option value="10:00">10:00</option>
+                                                                    <option value="10:30">10:30</option>
+                                                                    <option value="11:00">11:00</option>
+                                                                    <option value="11:30">11:30</option>
+                                                                    <option value="12:00">12:00</option>
+                                                                    <option value="12:30">12:30</option>
+                                                                    <option value="13:00">13:00</option>
+                                                                    <option value="13:30">13:30</option>
+                                                                    <option value="14:00">14:00</option>
+                                                                    <option value="14:30">14:30</option>
+                                                                    <option value="15:00">15:00</option>
+                                                                    <option value="15:30">15:30</option>
+                                                                    <option value="16:00">16:00</option>
+                                                                    <option value="16:30">16:30</option>
+                                                                    <option value="17:00">17:00</option>
+                                                                    <option value="17:30">17:30</option>
+                                                                    <option value="18:00">18:00</option>
+                                                                    <option value="18:30">18:30</option>
+                                                                    <option value="19:00">19:00</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="order-terms__data">
-                                                    дата, заглушка
+                                                    <div class="form-row flex-nowrap">
+                                                        <div class="form-group form-group--calendar m-0">
+                                                            <input type="date" class="form-control form-control--calendar" placeholder="Дата">
+                                                            <span><i class="icon-calendar"></i></span>
+                                                        </div>
+                                                        <div class="form-group m-0">
+                                                            <select name="confinesTime" class="form__select form__select--time">
+                                                                <option>Время поставки</option>
+                                                                <option value="9:00">9:00</option>
+                                                                <option value="9:30">9:30</option>
+                                                                <option value="10:00">10:00</option>
+                                                                <option value="10:30">10:30</option>
+                                                                <option value="11:00">11:00</option>
+                                                                <option value="11:30">11:30</option>
+                                                                <option value="12:00">12:00</option>
+                                                                <option value="12:30">12:30</option>
+                                                                <option value="13:00">13:00</option>
+                                                                <option value="13:30">13:30</option>
+                                                                <option value="14:00">14:00</option>
+                                                                <option value="14:30">14:30</option>
+                                                                <option value="15:00">15:00</option>
+                                                                <option value="15:30">15:30</option>
+                                                                <option value="16:00">16:00</option>
+                                                                <option value="16:30">16:30</option>
+                                                                <option value="17:00">17:00</option>
+                                                                <option value="17:30">17:30</option>
+                                                                <option value="18:00">18:00</option>
+                                                                <option value="18:30">18:30</option>
+                                                                <option value="19:00">19:00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="order-terms__conditions">
                                                     <div class="order-terms__condition">
@@ -158,9 +238,9 @@
                                             </div>
                                             <div class="order-terms__right">
                                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10.0003 2.16669C5.40033 2.16669 1.66699 5.90002 1.66699 10.5C1.66699 15.1 5.40033 18.8334 10.0003 18.8334C14.6003 18.8334 18.3337 15.1 18.3337 10.5C18.3337 5.90002 14.6003 2.16669 10.0003 2.16669ZM10.0003 14.6667C9.54199 14.6667 9.16699 14.2917 9.16699 13.8334V10.5C9.16699 10.0417 9.54199 9.66669 10.0003 9.66669C10.4587 9.66669 10.8337 10.0417 10.8337 10.5V13.8334C10.8337 14.2917 10.4587 14.6667 10.0003 14.6667ZM10.8337 8.00002H9.16699V6.33335H10.8337V8.00002Z" fill="#C4C4C4"/>
+                                                    <path d="M10.0003 2.16669C5.40033 2.16669 1.66699 5.90002 1.66699 10.5C1.66699 15.1 5.40033 18.8334 10.0003 18.8334C14.6003 18.8334 18.3337 15.1 18.3337 10.5C18.3337 5.90002 14.6003 2.16669 10.0003 2.16669ZM10.0003 14.6667C9.54199 14.6667 9.16699 14.2917 9.16699 13.8334V10.5C9.16699 10.0417 9.54199 9.66669 10.0003 9.66669C10.4587 9.66669 10.8337 10.0417 10.8337 10.5V13.8334C10.8337 14.2917 10.4587 14.6667 10.0003 14.6667ZM10.8337 8.00002H9.16699V6.33335H10.8337V8.00002Z" fill="#C4C4C4" />
                                                 </svg>
-                                                    
+
                                                 <div class="order-terms__description">
                                                     <div class="order-terms__description-title">
                                                         <i class="icon-info"></i>
@@ -180,11 +260,91 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="orderTermsTabLink-2" role="tabpanel" aria-labelledby="orderTermsTab-2">
-                                    <form action="" class="order-terms__form">
+                                    <div class="order-terms__form">
                                         <div class="order-terms__row">
                                             <div class="order-terms__left">
+                                                <div class="add-application__confines order-terms__condition">
+                                                    <div class="profile-edit__business">
+                                                        <div class="options m-0">
+                                                            <div class="options__item">
+                                                                <input id="addApplicationLineRequest" checked type="radio" value="Заявка" name="addApplicationLineRequest" class="options__input">
+                                                                <label for="addApplicationLineRequest" class="options__label"><span>Заявка</span></label>
+                                                            </div>
+                                                            <div class="options__item">
+                                                                <input id="addApplicationLineBargaining" type="radio" value="Торги" name="addApplicationLineRequest" class="options__input">
+                                                                <label for="addApplicationLineBargaining" class="options__label"><span>Торги</span></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="text-link btn-show show-once">Ограничить срок приема заявок</a>
+                                                    <div class="add-application__time block-hidden"> 
+                                                        <div class="form-row">
+                                                            <div class="form-group col form-group--calendar mb-0">
+                                                                <input type="text" class="form-control" name="datetimes">
+                                                                <span><i class="icon-calendar"></i></span>
+                                                            </div>
+                                                            <div class="form-group col mb-0">
+                                                                <select name="city" class="form__select form__select--time2">
+                                                                    <option value="">-- : --</option>
+                                                                    <option value="9:00">9:00</option>
+                                                                    <option value="9:30">9:30</option>
+                                                                    <option value="10:00">10:00</option>
+                                                                    <option value="10:30">10:30</option>
+                                                                    <option value="11:00">11:00</option>
+                                                                    <option value="11:30">11:30</option>
+                                                                    <option value="12:00">12:00</option>
+                                                                    <option value="12:30">12:30</option>
+                                                                    <option value="13:00">13:00</option>
+                                                                    <option value="13:30">13:30</option>
+                                                                    <option value="14:00">14:00</option>
+                                                                    <option value="14:30">14:30</option>
+                                                                    <option value="15:00">15:00</option>
+                                                                    <option value="15:30">15:30</option>
+                                                                    <option value="16:00">16:00</option>
+                                                                    <option value="16:30">16:30</option>
+                                                                    <option value="17:00">17:00</option>
+                                                                    <option value="17:30">17:30</option>
+                                                                    <option value="18:00">18:00</option>
+                                                                    <option value="18:30">18:30</option>
+                                                                    <option value="19:00">19:00</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="order-terms__data">
-                                                    дата, заглушка
+                                                    <div class="form-row flex-nowrap">
+                                                        <div class="form-group form-group--calendar m-0">
+                                                            <input type="date" class="form-control form-control--calendar" placeholder="Дата поставки">
+                                                            <span><i class="icon-calendar"></i></span>
+                                                        </div>
+                                                        <div class="form-group m-0">
+                                                            <select name="city" class="form__select form__select--time">
+                                                                <option value="">Время поставки</option>
+                                                                <option value="9:00">9:00</option>
+                                                                <option value="9:30">9:30</option>
+                                                                <option value="10:00">10:00</option>
+                                                                <option value="10:30">10:30</option>
+                                                                <option value="11:00">11:00</option>
+                                                                <option value="11:30">11:30</option>
+                                                                <option value="12:00">12:00</option>
+                                                                <option value="12:30">12:30</option>
+                                                                <option value="13:00">13:00</option>
+                                                                <option value="13:30">13:30</option>
+                                                                <option value="14:00">14:00</option>
+                                                                <option value="14:30">14:30</option>
+                                                                <option value="15:00">15:00</option>
+                                                                <option value="15:30">15:30</option>
+                                                                <option value="16:00">16:00</option>
+                                                                <option value="16:30">16:30</option>
+                                                                <option value="17:00">17:00</option>
+                                                                <option value="17:30">17:30</option>
+                                                                <option value="18:00">18:00</option>
+                                                                <option value="18:30">18:30</option>
+                                                                <option value="19:00">19:00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="order-terms__conditions">
                                                     <div class="order-terms__condition">
@@ -236,7 +396,44 @@
                                                                         </div>
                                                                         <div class="order-terms__condition-text">Приемка-передача по адресу продавца</div>
                                                                     </div>
-                                                                    <a href="" class="order-terms__pickup-link link-dashed">Данные для самовывоза</a>
+                                                                    <a href="" class="text-link btn-show show-once">Данные для самовывоза</a>
+                                                                    <div class="order-terms__form block-hidden">
+                                                                        <div class="form-item">
+                                                                            <div class="form-label">Контактное лицо</div>
+                                                                            <div class="form-row">
+                                                                                <div class="form-group col-sm-6 col-lg-7 ">
+                                                                                    <input type="text" class="form-control" id="deliveryContact" placeholder="ФИО">
+                                                                                </div>
+                                                                                <div class="form-group col-sm-6 col-lg-5 form-group--phone">
+                                                                                    <input type="text" class="form-control form-control--phone" id="deliveryContactPhone" placeholder="+7">
+                                                                                    <span><i class="icon-phone"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-item">
+                                                                            <div class="form-label">Прицеп</div>
+                                                                            <div class="form-row">
+                                                                                <div class="form-group col-sm-6">
+                                                                                    <input type="text" class="form-control" id="deliveryCarModel" placeholder="Марка модель">
+                                                                                </div>
+                                                                                <div class="form-group col-sm-6">
+                                                                                    <input type="text" class="form-control" id="deliveryCarGos" placeholder="Госзнак">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-item">
+                                                                            <div class="form-label">Транспорт</div>
+                                                                            <div class="form-row">
+                                                                                <div class="form-group col-sm-6">
+                                                                                    <input type="text" class="form-control" id="deliveryTrailerModel" placeholder="Марка модель">
+                                                                                </div>
+                                                                                <div class="form-group col-sm-6">
+                                                                                    <input type="text" class="form-control" id="deliveryTrailerGos" placeholder="Госзнак">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <button class="form-btn text-link">Указать данные</button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -253,15 +450,33 @@
                                                                 <label for="formPaymentCashless" class="options__label"><span>Безналичный расчет</span></label>
                                                             </div>
                                                         </div>
-                                                        <div class="order-terms__postponement">Отсрочка <a href="">0</a> дней</div>
+                                                        <div class="order-terms__postponement">
+                                                            <div class="notice">
+                                                                Отсрочка <a href="" class="text-link notice__btn">0</a> дней
+                                                                <div class="notice__wrapper">
+                                                                    <div class="d-flex align-items-center justify-content-between">
+                                                                        <div class="quantity to-cart__quantity">
+                                                                            <div class="quantity__wrapper">
+                                                                                <div class="quantity__input">
+                                                                                    <input autocomplete="off" type="text" value="0">
+                                                                                </div>
+                                                                                <div class="quantity__button quantity__button--minus"></div>
+                                                                                <div class="quantity__button quantity__button--plus"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="" class="btn btn-green"><i class="icon-check"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="order-terms__right">
                                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10.0003 2.16669C5.40033 2.16669 1.66699 5.90002 1.66699 10.5C1.66699 15.1 5.40033 18.8334 10.0003 18.8334C14.6003 18.8334 18.3337 15.1 18.3337 10.5C18.3337 5.90002 14.6003 2.16669 10.0003 2.16669ZM10.0003 14.6667C9.54199 14.6667 9.16699 14.2917 9.16699 13.8334V10.5C9.16699 10.0417 9.54199 9.66669 10.0003 9.66669C10.4587 9.66669 10.8337 10.0417 10.8337 10.5V13.8334C10.8337 14.2917 10.4587 14.6667 10.0003 14.6667ZM10.8337 8.00002H9.16699V6.33335H10.8337V8.00002Z" fill="#C4C4C4"/>
+                                                    <path d="M10.0003 2.16669C5.40033 2.16669 1.66699 5.90002 1.66699 10.5C1.66699 15.1 5.40033 18.8334 10.0003 18.8334C14.6003 18.8334 18.3337 15.1 18.3337 10.5C18.3337 5.90002 14.6003 2.16669 10.0003 2.16669ZM10.0003 14.6667C9.54199 14.6667 9.16699 14.2917 9.16699 13.8334V10.5C9.16699 10.0417 9.54199 9.66669 10.0003 9.66669C10.4587 9.66669 10.8337 10.0417 10.8337 10.5V13.8334C10.8337 14.2917 10.4587 14.6667 10.0003 14.6667ZM10.8337 8.00002H9.16699V6.33335H10.8337V8.00002Z" fill="#C4C4C4" />
                                                 </svg>
-                                                    
+
                                                 <div class="order-terms__description">
                                                     <div class="order-terms__description-title">
                                                         <i class="icon-info"></i>
@@ -277,7 +492,7 @@
                                             <div class="order-terms__label">Итого 3 позиции весом 525 т на сумму 500 750 000 руб. </div>
                                             <button class="order-terms__btn btn btn-white">Отправить продавцу</button>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>

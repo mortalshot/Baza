@@ -100,6 +100,7 @@
 			@media screen and (max-width: 660px) {
 				color: $White;
 				font-size: 16px;
+				padding: 9px 5px;
 			}
 		}
 
@@ -466,7 +467,7 @@
 		flex: 0 0 100%;
 		background-color: $GreenM;
 		justify-content: space-between;
-		padding: 9px 30px;
+		padding: 0 30px;
 	}
 
 	&__item {
@@ -536,6 +537,7 @@
 		font-size: 20px;
 		color: $Gray;
 		transition: 0.3s ease all 0s;
+		padding: 9px 5px;
 
 		@media screen and (min-width: 992px) {
 			&:hover {

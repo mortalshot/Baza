@@ -1,12 +1,6 @@
 .bargaining {
     .accordion {
         &__title {
-            padding-right: 30px;
-
-            @media screen and (max-width: 767px) {
-                padding-right: 20px;
-            }
-
             &::before {
                 display: none;
             }
@@ -52,9 +46,11 @@
     .product-item {
         &__row {
             border-bottom: 1px solid $LGray3;
+            padding: 0 33px 0 10px;
 
             @media screen and (max-width: 900px) {
                 flex-wrap: wrap;
+                padding: 8px 33px 8px 6px;
             }
         }
 
@@ -64,14 +60,6 @@
 
             @media screen and (max-width: 900px) {
                 padding: 8px 10px;
-            }
-
-            &:first-child {
-                padding-left: 20px;
-
-                @media screen and (max-width: 767px) {
-                    padding-left: 15px;
-                }
             }
         }
 
@@ -86,9 +74,20 @@
             }
         }
 
+        &__content {
+            @media screen and (max-width: 400px) {
+                flex-wrap: wrap;
+            }
+        }
+
         &__product {
             flex: initial;
             padding-right: 10px;
+
+            @media screen and (max-width: 400px) {
+                flex: 0 0 100%;
+                padding: 0px 0px 16px 0px;
+            }
         }
 
         &__product-name {
@@ -112,7 +111,6 @@
 
             @media screen and (max-width: 900px) {
                 flex: 0 0 30%;
-                padding-left: 15px;
             }
         }
 
@@ -139,12 +137,8 @@
             position: relative;
 
             @media screen and (max-width: 900px) {
-                padding-right: 25px;
                 flex: 0 0 40%;
                 min-height: 47px;
-            }
-            @media screen and (max-width: 450px) {
-                padding-right: 20px;
             }
 
             .messages__person-notification {
@@ -177,15 +171,18 @@
                 display: flex;
                 flex-wrap: wrap;
                 border-bottom: 1px solid $LGray3;
+                padding: 7px 6px;
             }
         }
 
         .table__column {
-            &:first-child {
-                padding-left: 16px;
-            }
-            &:last-child {
-                padding-right: 20px;
+            @media screen and (min-width: 901px) {
+                &:first-child {
+                    padding-left: 16px;
+                }
+                &:last-child {
+                    padding-right: 20px;
+                }
             }
 
             @media screen and (max-width: 900px) {
@@ -391,6 +388,44 @@
 
     &__accept-save {
         padding: 5px 10px;
+    }
+
+    &__bet {
+        @include adaptiv-value("padding", 20, 15, 1);
+        background-color: $LBlue;
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .form {
+            &-group {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                @include adaptiv-value("padding-right", 32, 15, 1);
+            }
+
+            &-control {
+                background-color: $White;
+                height: 30px;
+                max-width: 72px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            &-label {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1;
+                @include adaptiv-value("padding-left", 14, 8, 1);
+                white-space: nowrap;
+                margin: 0;
+            }
+        }
     }
 
     &__footer {

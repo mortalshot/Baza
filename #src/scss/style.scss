@@ -66,3 +66,29 @@
 .block-hidden {
     display: none;
 }
+
+// calendar
+.drp-selected {
+    display: none !important;
+}
+
+.drp-buttons {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cancelBtn {
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 1;
+    color: $Black;
+    margin-right: 6px;
+    padding: 0 !important;
+
+    &::before {
+        border-bottom: 1px solid $Black;
+    }
+}
+// calenda end
+
