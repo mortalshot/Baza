@@ -17,8 +17,8 @@
 				<nav class="blog__nav">
 					<ul class="blog__nav-list">
 						<li class="blog__nav-item"><a href="news-last.html" class="blog__nav-link">Последние</a></li>
-						<li class="blog__nav-item"><a href="news-market.html" class="blog__nav-link active">Новости рынка</a></li>
-						<li class="blog__nav-item"><a href="news-platform.html" class="blog__nav-link">Новости платформы</a></li>
+						<li class="blog__nav-item"><a href="news-market.html" class="blog__nav-link active" data-value="Рынок">Новости рынка</a></li>
+						<li class="blog__nav-item"><a href="news-platform.html" class="blog__nav-link" data-value="Платформа">Новости платформы</a></li>
 					</ul>
 				</nav>
 				<div class="blog__body">
@@ -109,7 +109,7 @@
 						</div>
 					</div>
 					<nav class="catalog__pagination pagination pagination--fixed lock-padding">
-                        <ul class="pagination__list">
+                        <ul class="pagination__list pagination__list--desktop">
                             <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-left"></i></a></li>
                             <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
                             <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
@@ -119,6 +119,13 @@
                             <li class="pagination__item"><a class="pagination__link" href="#">10</a></li>
                             <li class="pagination__item"><a class="pagination__link" href="#">11</a></li>
                             <li class="pagination__item"><a class="pagination__link" href="#">12</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-right"></i></a></li>
+                        </ul>
+                        <ul class="pagination__list pagination__list--mobile">
+                            <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-left"></i></a></li>
+                            <li class="pagination__item"><a class="pagination__link active" href="#">1</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
                             <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-right"></i></a></li>
                         </ul>
 					</nav>

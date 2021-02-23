@@ -75,6 +75,7 @@
         position: fixed;
         @include adaptiv-value("right", 36, 15, 1);
         @include adaptiv-value("bottom", 36, 15, 1);
+        z-index: 1;
 
         @media screen and (max-width: 660px) {
             bottom: 70px;

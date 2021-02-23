@@ -17,8 +17,8 @@
 				<nav class="blog__nav">
 					<ul class="blog__nav-list">
 						<li class="blog__nav-item"><a href="news-last.html" class="blog__nav-link">Последние</a></li>
-						<li class="blog__nav-item"><a href="news-market.html" class="blog__nav-link">Новости рынка</a></li>
-						<li class="blog__nav-item"><a href="news-platform.html" class="blog__nav-link active">Новости платформы</a></li>
+						<li class="blog__nav-item"><a href="news-market.html" class="blog__nav-link" data-value="Рынок">Новости рынка</a></li>
+						<li class="blog__nav-item"><a href="news-platform.html" class="blog__nav-link active" data-value="Платформа">Новости платформы</a></li>
 					</ul>
 				</nav>
 				<div class="blog__body">
@@ -72,18 +72,27 @@
 							<div class="blog__card-date">12 января 2021, 10:18</div>
 						</div>
 					</div>
-					<ul class="blog__pagination pagination pagination--fixed">
-						<li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-left"></i></a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-						<li class="pagination__item"><a class="pagination__link active" href="#">3</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">...</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">10</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">11</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">12</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-right"></i></a></li>
-					</ul>
+					<nav class="catalog__pagination pagination pagination--fixed lock-padding">
+                        <ul class="pagination__list pagination__list--desktop">
+                            <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-left"></i></a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                            <li class="pagination__item"><a class="pagination__link active" href="#">3</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">...</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">10</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">11</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">12</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-right"></i></a></li>
+                        </ul>
+                        <ul class="pagination__list pagination__list--mobile">
+                            <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-left"></i></a></li>
+                            <li class="pagination__item"><a class="pagination__link active" href="#">1</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                            <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-right"></i></a></li>
+                        </ul>
+					</nav>
 				</div>
 			</div>
 		</div>

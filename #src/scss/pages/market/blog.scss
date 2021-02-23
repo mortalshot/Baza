@@ -110,6 +110,13 @@
         position: relative;
         padding-bottom: 67%;
         @include adaptiv-value("margin-bottom", 24, 10, 1);
+        transition: 0.3s ease opacity 0s;
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                opacity: 0.6;
+            }
+        }
 
         img {
             position: absolute;
@@ -172,7 +179,7 @@
         }
 
         @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
-            font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+            font-size: calc(14px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(21 / 16);
         }
     }
@@ -247,6 +254,44 @@
                     line-height: calc(21 / 16);
                 }
             }
+        }
+    }
+
+    .text-link {
+        color: $GreenM;
+        display: inline-flex;
+        align-items: center;
+        transition: 0.3s ease color, opacity 0s;
+
+        &::before {
+            display: none;
+        }
+
+        @media screen and (min-width: 992px) {
+            &:hover {
+                color: rgba($color: $GreenM, $alpha: 0.6);
+            }
+        }
+
+        span {
+            margin-right: 8px;
+        }
+
+        i {
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            background-color: $GreenM;
+            font-size: 10px;
+            color: $White;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .pagination--fixed {
+        @media screen and (max-width: 660px) {
+            bottom: 25px;
         }
     }
 }
@@ -461,6 +506,9 @@
                 padding: 10px 0;
             }
         }
+    }
+
+    &__sidebar {
     }
 
     &__sidebar-item {

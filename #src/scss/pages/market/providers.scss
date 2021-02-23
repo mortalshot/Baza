@@ -565,11 +565,21 @@
     }
 
     &__row--closed {
-        opacity: 0.3;
+        // opacity: 0.3;
         pointer-events: none;
 
+        .accordion__title {
+            &::before, &::after {
+                opacity: 0.3;
+            }
+        }
+
+        .product-item__column {
+            opacity: 0.3;
+        }
         .provider__column--request, .product-item__product-name {
             text-decoration: line-through;
+            
         }
     }
 

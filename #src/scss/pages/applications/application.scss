@@ -16,29 +16,35 @@
             }
 
             @media screen and (max-width: 575px) {
-                flex-direction: row;
-                align-items: center;
-                flex-wrap: wrap;
                 margin-bottom: 10px;
                 width: 100%;
                 padding-right: 0;
             }
         }
 
+        .base__back {
+            @media screen and (max-width: 991px) {
+                margin-bottom: 15px;
+            }
+        }
+
         .title-market {
-            @media screen and (max-width: 575px) {
-                flex: 1 1 auto;
+            @include adaptiv-value("margin-right", 27, 15, 1);
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 15px;
+                margin-right: 0;
             }
         }
     }
-
-    &__title {
-        @include adaptiv-value("margin-right", 27, 15, 1);
-    }
-
     &__status {
         @include adaptiv-value("margin-right", 27, 15, 1);
         white-space: nowrap;
+
+        @media screen and (max-width: 450px) {
+            flex: 0 0 100%;
+            margin: 0px 0px 10px 0px;
+        }
     }
 
     .applications__view {
@@ -49,6 +55,9 @@
         @media screen and (min-width: $layoutDesktop + "px") {
             font-size: calc(10px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
             line-height: calc(15 / 12);
+        }
+        @media screen and (max-width: 450px) {
+            margin: 0px 0px 10px 0px;
         }
 
         i {
@@ -187,13 +196,76 @@
     }
 
     &__responses-list {
-        .application-card__column--label {
-            padding-left: 20px !important;
-            padding-right: 25px !important;
+        .application-response__table {
+            .application-card__column--label {
+                @media screen and (max-width: 991px) {
+                    order: 2;
+                    flex: 0 0 15%;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                }
+            }
+
+            .application-card__column--product {
+                @media screen and (max-width: 991px) {
+                    order: 1;
+                    flex: 0 0 85%;
+
+                    .product-item__content {
+                        justify-content: flex-start;
+                    }
+                }
+            }
+
+            .application-card__column--size {
+                @media screen and (max-width: 991px) {
+                    order: 3;
+                    flex: 0 0 25%;
+                }
+                @media screen and (max-width: 500px) {
+                    flex: 0 0 50%;
+                }
+            }
+
+            .application-card__column--quantum {
+                @media screen and (max-width: 991px) {
+                    order: 4;
+                    flex: 0 0 25%;
+                }
+                @media screen and (max-width: 500px) {
+                    flex: 0 0 50%;
+                }
+            }
+
+            .application-card__column--weight {
+                @media screen and (max-width: 991px) {
+                    order: 5;
+                    flex: 0 0 25%;
+                    justify-content: flex-end;
+                }
+                @media screen and (max-width: 500px) {
+                    flex: 0 0 50%;
+                    justify-content: flex-start;
+                }
+            }
+
+            .application-card__column--price {
+                @media screen and (max-width: 991px) {
+                    order: 6;
+                    flex: 0 0 25%;
+                    justify-content: flex-end;
+                }
+                @media screen and (max-width: 500px) {
+                    flex: 0 0 50%;
+                    justify-content: flex-start;
+                }
+            }
         }
 
         .checkbox {
             display: flex;
+            width: 18px;
+            height: 18px;
 
             &__input {
                 &:checked {
@@ -220,10 +292,6 @@
             }
         }
 
-        .application-card__column--product {
-            padding-left: 5px !important;
-        }
-
         .cart {
             &__company,
             &__tax {
@@ -247,51 +315,17 @@
         }
     }
 
-    &__responses-list--users {
-        .application-response {
-            @include adaptiv-value("margin-bottom", 30, 24, 1);
-
-            &::last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            .application-card__row {
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-            }
-            .application-card__column--label {
-                order: 2;
-                padding-left: 5px !important;
-                padding-right: 30px !important;
-                flex: 0 0 15%;
-                display: flex;
-                justify-content: flex-end;
-            }
-            .application-card__column--product {
-                order: 1;
-                flex: 0 0 85%;
-                padding-left: 20px !important;
-            }
-            .application-card__column--size {
-                order: 3;
-            }
-            .application-card__column--quantum {
-                order: 4;
-            }
-            .application-card__column--weight {
-                order: 5;
-            }
-            .application-card__column--price {
-                order: 6;
-            }
-        }
-    }
-
     &__response {
         background-color: $White;
         border-radius: 3px;
+        @include adaptiv-value("margin-bottom", 30, 24, 1);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-response__user {
+        color: $DGray;
     }
 }

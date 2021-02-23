@@ -146,6 +146,14 @@
                 display: flex;
                 flex-direction: column-reverse;
             }
+
+            .disabled {
+                opacity: 1;
+
+                .table__column {
+                    opacity: 0.6;
+                }
+            }
         }
 
         tbody {

@@ -591,7 +591,7 @@ $(document).ready(function () {
     });
   }
 
-  var navItems = document.querySelectorAll('.header__inner .navbar .nav-link, .delivery-card__body .nav-link, #deliveriesTabs .nav-link, #profileTabs .nav-link');
+  var navItems = document.querySelectorAll('.header__inner .navbar .nav-link, .delivery-card__body .nav-link, #deliveriesTabs .nav-link, #profileTabs .nav-link, .blog__nav-link');
   var mediaQueryXsMax = window.matchMedia('(max-width: 450px)');
   mediaQueryXsMax.addListener(handleTabletChangeXsMax);
 

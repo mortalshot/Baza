@@ -399,6 +399,13 @@
             margin-right: 15px;
         }
 
+        &.active {
+            .checkbox__label {
+                text-decoration: none;
+                color: $GreenM;
+            }
+        }
+
         .checkbox__label {
             padding: 0;
         }
