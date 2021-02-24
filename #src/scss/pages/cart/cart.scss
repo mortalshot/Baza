@@ -251,12 +251,6 @@
         .quantity__button--minus {
             margin-right: 8px;
         }
-
-        .to-cart__measure {
-            @include adaptiv-value("padding-left", 14, 6, 1);
-            font-size: 14px;
-            line-height: 18px;
-        }
     }
 
     &__column--price {

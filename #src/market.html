@@ -15,57 +15,87 @@
 
             <div class="market__catalog">
                 <div class="catalog__top">
-                    <div class="d-flex align-items-center">
-                        <div class="catalog__filter catalog-filter">
-                            <div class="catalog-filter__checkbox checkbox">
-                                <input id="catalogFilter-1" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="catalogFilter-1" class="checkbox__label"><div class="catalog-filter__name">Только новые</div></label>
+                    <div class="catalog__top-desktop">
+                        <div class="d-flex align-items-center">
+                            <div class="catalog__filter catalog-filter">
+                                <div class="catalog-filter__checkbox checkbox">
+                                    <input id="catalogFilter-1" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="catalogFilter-1" class="checkbox__label">
+                                        <div class="catalog-filter__name">Только новые</div>
+                                    </label>
+                                </div>
+                                <div class="catalog-filter__checkbox checkbox">
+                                    <input id="catalogFilter-2" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="catalogFilter-2" class="checkbox__label">
+                                        <div class="catalog-filter__name">За сегодня</div>
+                                    </label>
+                                </div>
+                                <div class="catalog-filter__checkbox checkbox">
+                                    <input id="catalogFilter-3" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="catalogFilter-3" class="checkbox__label">
+                                        <div class="catalog-filter__name">Срочные</div>
+                                    </label>
+                                </div>
+                                <div class="catalog-filter__checkbox checkbox">
+                                    <input id="catalogFilter-4" type="checkbox" name="stirp" class="checkbox__input">
+                                    <label for="catalogFilter-4" class="checkbox__label">
+                                        <div class="catalog-filter__name">Другая ссылка</div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="catalog__sorting catalog-sorting">
+                                <div class="catalog-sorting__item">
+                                    <a href="" class="catalog-sorting__link">
+                                        <span>По цене</span>
+                                        <img src="img/icons/select.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="catalog-sorting__item">
+                                    <a href="" class="catalog-sorting__link">
+                                        <span>По названию</span>
+                                        <img src="img/icons/select.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="catalog-sorting__item">
+                                    <a href="" class="catalog-sorting__link">
+                                        <span>По дате</span>
+                                        <img src="img/icons/select.svg" alt="">
+                                    </a>
+                                </div>
                             </div>
                             <div class="catalog-filter__checkbox checkbox">
-                                <input id="catalogFilter-2" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="catalogFilter-2" class="checkbox__label"><div class="catalog-filter__name">За сегодня</div></label>
+                                <input id="catalogFilter-5" type="checkbox" name="stirp" class="checkbox__input">
+                                <label for="catalogFilter-5" class="checkbox__label">
+                                    <div class="catalog-filter__name">Группами</div>
+                                </label>
                             </div>
-                            <div class="catalog-filter__checkbox checkbox">
-                                <input id="catalogFilter-3" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="catalogFilter-3" class="checkbox__label"><div class="catalog-filter__name">Срочные</div></label>
-                            </div>
-                            <div class="catalog-filter__checkbox checkbox">
-                                <input id="catalogFilter-4" type="checkbox" name="stirp" class="checkbox__input">
-                                <label for="catalogFilter-4" class="checkbox__label"><div class="catalog-filter__name">Другая ссылка</div></label>
+                            <div class="catalog__output catalog-output">
+                                <div class="catalog-output__options">
+                                    <a href="market.html" class="options__item active">
+                                        <div class="options__label active"><i class="icon-tile"></i></div>
+                                    </a>
+                                    <a href="market-list.html" class="options__item">
+                                        <div class="options__label"><i class="icon-list"></i></div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="catalog__sorting catalog-sorting">
-                            <div class="catalog-sorting__item">
-                                <a href="" class="catalog-sorting__link">
-                                    <span>По цене</span>
-                                    <img src="img/icons/select.svg" alt="">
-                                </a>
+                    </div>
+                    <div class="catalog__top-mobile">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="form__select">
+                                <select name="sorting">
+                                    <option value="" selected>Сортировать</option>
+                                    <option value="По названию">По названию</option>
+                                    <option value="По цене">По цене</option>
+                                    <option value="По дате">По дате</option>
+                                </select>
                             </div>
-                            <div class="catalog-sorting__item">
-                                <a href="" class="catalog-sorting__link">
-                                    <span>По названию</span>
-                                    <img src="img/icons/select.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="catalog-sorting__item">
-                                <a href="" class="catalog-sorting__link">
-                                    <span>По дате</span>
-                                    <img src="img/icons/select.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="catalog-filter__checkbox checkbox">
-                            <input id="catalogFilter-5" type="checkbox" name="stirp" class="checkbox__input">
-                            <label for="catalogFilter-5" class="checkbox__label"><div class="catalog-filter__name">Группами</div></label>
-                        </div>
-                        <div class="catalog__output catalog-output">
-                            <div class="catalog-output__options">
-                                <a href="market.html" class="options__item active">
-                                    <div class="options__label active"><i class="icon-tile"></i></div>
-                                </a>
-                                <a href="market-list.html" class="options__item">
-                                    <div class="options__label"><i class="icon-list"></i></div>
-                                </a>
+                            <div class="catalog-filter__checkbox checkbox">
+                                <input id="catalogFilter-group" type="checkbox" name="group" class="checkbox__input">
+                                <label for="catalogFilter-group" class="checkbox__label">
+                                    <div class="catalog-filter__name">Группами</div>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -1005,7 +1035,7 @@
                             <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
                             <li class="pagination__item"><a class="pagination__link" href="#"><i class="icon-chevron-right"></i></a></li>
                         </ul>
-					</nav>
+                    </nav>
                 </div>
             </div>
         </div>

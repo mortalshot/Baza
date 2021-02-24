@@ -492,6 +492,8 @@
 
             &__value {
                 height: initial;
+                font-size: 12px;
+                line-height: 15px;
 
                 @media screen and (max-width: 450px) {
                     padding: 0;
@@ -503,8 +505,16 @@
             }
 
             &__options {
-                border-top: 1px solid #d9d9d9;
+                border: 1px solid $LGray3;
                 border-radius: 3px;
+                font-size: 14px;
+            }
+        }
+
+        &:last-child {
+            .select__options {
+                left: auto;
+                right: 0;
             }
         }
     }

@@ -75,4 +75,72 @@
             }
         }
     }
+
+    &__table {
+        .application-card__column--label {
+            width: 50px;
+
+            @media screen and (max-width: 991px) {
+                order: 2;
+                flex: 0 0 15%;
+                justify-content: flex-end;
+                align-items: flex-start;
+            }
+        }
+
+        .application-card__column--product {
+            @media screen and (max-width: 991px) {
+                order: 1;
+                flex: 0 0 85%;
+
+                .product-item__content {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        .application-card__column--size {
+            @media screen and (max-width: 991px) {
+                order: 3;
+                flex: 0 0 25%;
+            }
+            @media screen and (max-width: 500px) {
+                flex: 0 0 50%;
+            }
+        }
+
+        .application-card__column--quantum {
+            @media screen and (max-width: 991px) {
+                order: 4;
+                flex: 0 0 25%;
+            }
+            @media screen and (max-width: 500px) {
+                flex: 0 0 50%;
+            }
+        }
+
+        .application-card__column--weight {
+            @media screen and (max-width: 991px) {
+                order: 5;
+                flex: 0 0 25%;
+                justify-content: flex-end;
+            }
+            @media screen and (max-width: 500px) {
+                flex: 0 0 50%;
+                justify-content: flex-start;
+            }
+        }
+
+        .application-card__column--price {
+            @media screen and (max-width: 991px) {
+                order: 6;
+                flex: 0 0 25%;
+                justify-content: flex-end;
+            }
+            @media screen and (max-width: 500px) {
+                flex: 0 0 50%;
+                justify-content: flex-start;
+            }
+        }
+    }
 }

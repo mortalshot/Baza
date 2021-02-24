@@ -196,102 +196,6 @@
     }
 
     &__responses-list {
-        .application-response__table {
-            .application-card__column--label {
-                @media screen and (max-width: 991px) {
-                    order: 2;
-                    flex: 0 0 15%;
-                    justify-content: flex-end;
-                    align-items: flex-start;
-                }
-            }
-
-            .application-card__column--product {
-                @media screen and (max-width: 991px) {
-                    order: 1;
-                    flex: 0 0 85%;
-
-                    .product-item__content {
-                        justify-content: flex-start;
-                    }
-                }
-            }
-
-            .application-card__column--size {
-                @media screen and (max-width: 991px) {
-                    order: 3;
-                    flex: 0 0 25%;
-                }
-                @media screen and (max-width: 500px) {
-                    flex: 0 0 50%;
-                }
-            }
-
-            .application-card__column--quantum {
-                @media screen and (max-width: 991px) {
-                    order: 4;
-                    flex: 0 0 25%;
-                }
-                @media screen and (max-width: 500px) {
-                    flex: 0 0 50%;
-                }
-            }
-
-            .application-card__column--weight {
-                @media screen and (max-width: 991px) {
-                    order: 5;
-                    flex: 0 0 25%;
-                    justify-content: flex-end;
-                }
-                @media screen and (max-width: 500px) {
-                    flex: 0 0 50%;
-                    justify-content: flex-start;
-                }
-            }
-
-            .application-card__column--price {
-                @media screen and (max-width: 991px) {
-                    order: 6;
-                    flex: 0 0 25%;
-                    justify-content: flex-end;
-                }
-                @media screen and (max-width: 500px) {
-                    flex: 0 0 50%;
-                    justify-content: flex-start;
-                }
-            }
-        }
-
-        .checkbox {
-            display: flex;
-            width: 18px;
-            height: 18px;
-
-            &__input {
-                &:checked {
-                    & + .checkbox__label::before {
-                        background-color: $LGray3;
-                    }
-                }
-            }
-
-            &__label {
-                padding: 0;
-
-                &::before {
-                    width: 18px;
-                    height: 18px;
-                    background-color: $LGray3;
-                }
-                &::after {
-                    width: 13px;
-                    height: 10px;
-                    left: 3px;
-                    background: url(../img/icons/check-gray.svg) no-repeat center/cover;
-                }
-            }
-        }
-
         .cart {
             &__company,
             &__tax {
@@ -323,9 +227,61 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        .checkbox {
+            display: flex;
+            width: 18px;
+            height: 18px;
+
+            &__input {
+                &:checked {
+                    & + .checkbox__label::before {
+                        background-color: $LGray3;
+                    }
+                }
+            }
+
+            &__label {
+                padding: 0;
+                width: 18px;
+                height: 18px;
+                flex: 0 0 18px;
+
+                &::before {
+                    width: 18px;
+                    height: 18px;
+                    background-color: $LGray3;
+                }
+                &::after {
+                    width: 13px;
+                    height: 10px;
+                    left: 3px;
+                    background: url(../img/icons/check-gray.svg) no-repeat center/cover;
+                }
+            }
+        }
     }
 
     &-response__user {
         color: $DGray;
+    }
+
+    .application-title {
+        @media screen and (max-width: 575px) {
+            width: 100%;
+        }
+
+        .application__title {
+            @media screen and (max-width: 575px) {
+                width: 100%;
+            }
+        }
+
+        .application__tools {
+            @media screen and (max-width: 575px) {
+                width: initial;
+                margin-bottom: 15px;
+            }
+        }
     }
 }

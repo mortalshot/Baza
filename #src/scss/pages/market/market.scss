@@ -1,17 +1,9 @@
 .market {
     &__title {
-        @include adaptiv-value("margin-bottom", 36, 20, 1);
-
-        @media screen and (max-width: 450px) {
-            display: none;
-        }
+        @include adaptiv-value("margin-bottom", 36, 24, 1);
     }
 
     &__search {
-        @include adaptiv-value("margin-bottom", 41, 20, 1);
-
-        @media screen and (max-width: 450px) {
-            display: none;
-        }
+        @include adaptiv-value("margin-bottom", 41, 23, 1);
     }
 }

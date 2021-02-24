@@ -378,13 +378,13 @@
         @media screen and (min-width: 992px) {
             &:hover {
                 color: $Gray;
-                opacity: 0.6
+                opacity: 0.6;
             }
         }
     }
 
     &__inner {
-        @include adaptiv-value("padding-bottom", 30, 20, 1);
+        @include adaptiv-value("margin-bottom", 30, 20, 1);
         border-bottom: 1px solid $LGray3;
 
         li {
@@ -505,6 +505,18 @@
                 color: $Black;
                 padding: 10px 0;
             }
+        }
+
+        figure {
+            @include adaptiv-value("margin-top", 30, 20, 1);
+            @include adaptiv-value("margin-bottom", 30, 20, 1);
+        }
+
+        figcaption {
+            font-size: 12px;
+            line-height: 18px;
+            color: $Gray;
+            margin-top: 6px;
         }
     }
 

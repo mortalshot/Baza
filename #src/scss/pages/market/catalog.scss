@@ -3,7 +3,7 @@
         margin-bottom: 6px;
 
         @media screen and (max-width: 450px) {
-            display: none;
+            margin-bottom: 14px;
         }
 
         .checkbox {
@@ -53,6 +53,44 @@
                     display: none;
                 }
             }
+        }
+    }
+
+    &__top-desktop {
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
+    }
+
+    &__top-mobile {
+        @media screen and (min-width: 451px) {
+            display: none;
+        }
+
+        .select__title {
+            border: 0;
+            background-color: transparent;
+        }
+
+        .select__value {
+            padding: 0;
+            height: initial;
+            font-size: 12px;
+            line-height: 15px;
+            color: $DGray;
+
+            &::before {
+                margin-left: 6px;
+            }
+        }
+
+        .select__options {
+            border-radius: 4px;
+            border: 1px solid $LGray3;
+            font-size: 14px;
+            line-height: 15px;
+            white-space: nowrap;
+            bottom: -10px;
         }
     }
 
@@ -185,7 +223,7 @@
                 }
 
                 @media screen and (max-height: 650px) {
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
                 }
 
                 @media screen and (max-width: 991px) {
