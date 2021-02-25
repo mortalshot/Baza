@@ -913,6 +913,12 @@ if ('.market__catalog' && $('.catalog__products').hasClass('catalog__products--c
 $('.drawer-closed .navigation-drawer__wrapper').dblclick(function (e) {
     $('.drawer-closed, .navigation-drawer__wrapper').removeClass('active');
 })
+
+$('.navigation-drawer .account__logout').click(function (e) {
+    e.preventDefault();
+    $('.drawer-on').addClass('drawer-closed');
+    $('.navigation-drawer__wrapper, .navigation-drawer, .drawer-on').removeClass('active');
+});
 $('.accordion__title').click(function (event) {
 
     let accordionid = $(this).closest('.accordion').attr("id");

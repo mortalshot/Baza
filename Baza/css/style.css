@@ -3236,6 +3236,8 @@ textarea.form__input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 20px;
+  height: 20px;
   color: #ffffff;
   font-size: 20px;
   -webkit-transition: 0.3s ease opacity 0s;
@@ -5265,7 +5267,7 @@ textarea.form__input {
   position: sticky;
   left: 0;
   bottom: 0;
-  margin-top: -47px;
+  margin-top: -37px;
   pointer-events: none;
 }
 
@@ -7232,9 +7234,9 @@ textarea.form__input {
 }
 
 .profile__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -7258,6 +7260,7 @@ textarea.form__input {
   display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 18px;
+  color: #919191;
 }
 
 .profile__link span {
@@ -8359,6 +8362,15 @@ textarea.form__input {
   padding-right: 29px;
   white-space: nowrap;
   position: relative;
+}
+
+.bargaining .product-item__column--weight .messages__person-notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(100%, -50%);
+      -ms-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
 }
 
 .bargaining .application-card {
@@ -12336,14 +12348,6 @@ textarea.form__input {
     display: flex;
   }
 
-  .bargaining .product-item__column--weight .messages__person-notification {
-    top: 14px;
-    right: 10px;
-    -webkit-transform: translate(0);
-        -ms-transform: translate(0);
-            transform: translate(0);
-  }
-
   .support {
     height: calc(100vh - 76px);
   }
@@ -16134,6 +16138,10 @@ textarea.form__input {
     padding: 8px 33px 8px 6px;
   }
 
+  .bargaining .product-item__row::after {
+    top: 26px;
+  }
+
   .bargaining .product-item__column {
     padding: 8px 10px;
   }
@@ -16161,15 +16169,6 @@ textarea.form__input {
         -ms-flex: 0 0 40%;
             flex: 0 0 40%;
     min-height: 47px;
-  }
-
-  .bargaining .product-item__column--weight .messages__person-notification {
-    position: absolute;
-    right: 20px;
-    top: 3px;
-    -webkit-transform: translate(50%, 0);
-        -ms-transform: translate(50%, 0);
-            transform: translate(50%, 0);
   }
 
   .bargaining .application-card .table__row {
@@ -18477,12 +18476,29 @@ textarea.form__input {
     padding: 15px 8px;
   }
 
-  .bargaining .product-item__column--weight .messages__person-notification {
-    -webkit-transform: translate(0);
-        -ms-transform: translate(0);
-            transform: translate(0);
-    right: 10px;
-    top: 5px;
+  .bargaining .product-item__row {
+    padding-right: 24px;
+  }
+
+  .bargaining .product-item__column--size {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .bargaining .product-item__column--quantum {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .bargaining .product-item__column--weight {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .bargaining .application-card__column--name {
@@ -18521,8 +18537,8 @@ textarea.form__input {
 
   .bargaining .application-card__column--label {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+        -ms-flex: 0 0 53%;
+            flex: 0 0 53%;
   }
 
   .bargaining .application-card__column--price {
@@ -18530,8 +18546,8 @@ textarea.form__input {
         -ms-flex-pack: end;
             justify-content: flex-end;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%;
   }
 
   .cart__column--num {

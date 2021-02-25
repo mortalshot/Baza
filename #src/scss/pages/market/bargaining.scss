@@ -51,6 +51,13 @@
             @media screen and (max-width: 900px) {
                 flex-wrap: wrap;
                 padding: 8px 33px 8px 6px;
+
+                &::after {
+                    top: 26px;
+                }
+            }
+            @media screen and (max-width: 450px) {
+                padding-right: 24px;
             }
         }
 
@@ -112,6 +119,9 @@
             @media screen and (max-width: 900px) {
                 flex: 0 0 30%;
             }
+            @media screen and (max-width: 450px) {
+                flex: 0 0 50%;
+            }
         }
 
         &__column--quantum {
@@ -124,6 +134,9 @@
 
             @media screen and (max-width: 900px) {
                 flex: 0 0 30%;
+            }
+            @media screen and (max-width: 450px) {
+                flex: 0 0 50%;
             }
         }
 
@@ -140,24 +153,16 @@
                 flex: 0 0 40%;
                 min-height: 47px;
             }
+            @media screen and (max-width: 450px) {
+                flex: 0 0 100%;
+                justify-content: flex-start;
+            }
 
             .messages__person-notification {
-                @media screen and (min-width: 768px) {
-                    top: 14px;
-                    right: 10px;
-                    transform: translate(0);
-                }
-                @media screen and (max-width: 900px) {
-                    position: absolute;
-                    right: 20px;
-                    top: 3px;
-                    transform: translate(50%, 0);
-                }
-                @media screen and (max-width: 450px) {
-                    transform: translate(0);
-                    right: 10px;
-                    top: 5px;
-                }
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translate(100%, -50%);
             }
         }
     }
@@ -312,7 +317,7 @@
                 flex: 0 0 33.333%;
             }
             @media screen and (max-width: 450px) {
-                flex: 0 0 50%;
+                flex: 0 0 53%;
             }
         }
 
@@ -333,7 +338,7 @@
             }
             @media screen and (max-width: 450px) {
                 justify-content: flex-end;
-                flex: 0 0 50%;
+                flex: 0 0 47%;
             }
         }
     }
