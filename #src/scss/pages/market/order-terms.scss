@@ -418,10 +418,21 @@
 
         .notice {
             &__wrapper {
+                width: 171px;
+                padding: 8px;
+                border-radius: 3px;
+
                 @media screen and (max-width: 575px) {
                     left: 0;
                     transform: translate(0, 100%);
                 }
+            }
+
+            .btn {
+                width: 30px;
+                height: 30px;
+                font-size: 10px;
+                margin-left: 8px;
             }
         }
     }

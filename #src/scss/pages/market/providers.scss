@@ -404,6 +404,10 @@
                 align-items: center;
             }
 
+            &__time {
+                white-space: nowrap;
+            }
+
             &__content {
                 flex-direction: column;
                 align-items: baseline;

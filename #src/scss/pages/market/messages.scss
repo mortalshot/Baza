@@ -38,7 +38,7 @@
             }
         }
         @media screen and (max-width: 660px) {
-            height: calc(100vh - #{$size-inner-header-height-mobile} - 227px);
+            height: initial;
         }
     }
 

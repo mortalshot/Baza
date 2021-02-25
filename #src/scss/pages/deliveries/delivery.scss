@@ -71,14 +71,17 @@
         width: 100%;
         display: inline-flex;
         justify-content: flex-end;
-        margin: 0 -5px;
 
         a {
             display: inline-flex;
             align-items: center;
             color: $Gray;
-            padding: 0 5px;
             transition: 0.3s ease color 0s;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             @media screen and (min-width: 992px) {
                 &:hover {
@@ -353,8 +356,6 @@
 
     &__btn {
         display: inline-flex;
-        width: 16px;
-        flex: 0 0 16px;
 
         @media screen and (min-width: 992px) {
             &:hover {
@@ -407,6 +408,22 @@
 
         li {
             font-weight: 500;
+        }
+    }
+
+    .quantity {
+        width: 100%;
+        max-width: 117px;
+        height: 30px;
+
+        &__wrapper {
+            padding-right: 12px;
+        }
+
+        input {
+            height: 30px;
+            font-size: 14px;
+            padding: 6px 12px;
         }
     }
 }

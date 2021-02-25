@@ -195,12 +195,72 @@
         line-height: 21px;
         color: $Black;
 
+        @media screen and (min-width: 451px) {
+            display: flex;
+        }
+
         .text-link {
             color: $Black;
 
             &::before {
                 border-color: $Black;
                 border-width: 1px;
+            }
+        }
+
+        .select {
+            display: inline-flex;
+            
+            &__title {
+                background-color: transparent;
+                color: $Black;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 21px;
+            }
+
+            &__value {
+                height: initial;
+                padding: 0;
+
+                &::before {
+                    display: block;
+                    width: 100%;
+                    height: initial;
+                    border-bottom: 1px dashed $Black;
+                    background: initial;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transform: translate(0, 100%);
+                    transition: 0.3s ease opacity 0s;
+                }
+
+                span {
+                    -webkit-line-clamp: 2;
+                }
+            }
+
+            &__options {
+                background-color: $White;
+                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 25px;
+                color: $Black;
+                padding: 9px 11px;
+                width: 200px;
+                border-radius: 0;
+                bottom: -10px;
+            }
+
+            &__option {
+                padding: 0;
+                margin-bottom: 4px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
