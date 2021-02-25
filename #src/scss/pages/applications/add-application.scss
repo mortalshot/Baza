@@ -303,7 +303,7 @@
         }
 
         .profile-edit__business {
-            @include adaptiv-value("margin-right", 34, 15, 1);
+            @include adaptiv-value("margin-right", 22, 15, 1);
 
             @media screen and (max-width: 991px) {
                 margin: 0px 0px 20px 0px;
@@ -347,5 +347,12 @@
     }
 
     &__time {
+        .form-row {
+            margin: 0 -11px;
+        }
+        
+        .form-group {
+            padding: 0 11px;
+        }
     }
 }

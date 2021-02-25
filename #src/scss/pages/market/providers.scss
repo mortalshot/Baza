@@ -145,6 +145,18 @@
             padding: 11px 18px;
         }
     }
+
+    &__item-tax {
+        width: 100%;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        margin-top: 15px;
+
+        span {
+            font-weight: 600;
+        }
+    }
 }
 
 .providers-page {

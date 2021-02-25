@@ -5265,7 +5265,7 @@ textarea.form__input {
   position: sticky;
   left: 0;
   bottom: 0;
-  margin-top: -107px;
+  margin-top: -47px;
   pointer-events: none;
 }
 
@@ -6121,6 +6121,18 @@ textarea.form__input {
 
 .providers__item-btn {
   padding: 7px 18px;
+}
+
+.providers__item-tax {
+  width: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.providers__item-tax span {
+  font-weight: 600;
 }
 
 .providers-page .providers__item-person .cart__account {
@@ -9833,7 +9845,7 @@ textarea.form__input {
 }
 
 .add-application__confines .profile-edit__business {
-  margin-right: 34px;
+  margin-right: 22px;
 }
 
 .add-application__confines .form-control {
@@ -9851,6 +9863,14 @@ textarea.form__input {
 
 .add-application__confines input[name="datetimes"] {
   cursor: pointer;
+}
+
+.add-application__time .form-row {
+  margin: 0 -11px;
+}
+
+.add-application__time .form-group {
+  padding: 0 11px;
 }
 
 .filter-delivery__accordion .accordion__item {
@@ -11984,6 +12004,33 @@ textarea.form__input {
           flex: 0 0 21px;
 }
 
+.support__mobile .base__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 32px;
+}
+
+.support__mobile .base__title {
+  margin-bottom: 16px;
+}
+
+.support__mobile .search {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.support__mobile .support__form {
+  margin-top: 24px;
+}
+
 .support__items {
   margin: 0;
   background-color: #ffffff;
@@ -12299,6 +12346,10 @@ textarea.form__input {
 
   .support {
     height: calc(100vh - 76px);
+  }
+
+  .support__mobile {
+    display: none;
   }
 
   .support__left {
@@ -14728,7 +14779,7 @@ textarea.form__input {
   }
 
   .add-application__confines .profile-edit__business {
-    margin-right: calc(15px + 19 * ((100vw - 320px) / (1046)));
+    margin-right: calc(15px + 7 * ((100vw - 320px) / (1046)));
   }
 
   .deliveries__tabs .nav-tabs .nav-item {
@@ -17143,6 +17194,10 @@ textarea.form__input {
     min-height: calc(100vh - 54px);
   }
 
+  .support__desktop {
+    display: none;
+  }
+
   .support__left {
     margin-bottom: 20px;
   }
@@ -18100,6 +18155,10 @@ textarea.form__input {
   .provider-request .order-terms__condition {
     padding-left: 0;
   }
+
+  .support__mobile .support__button {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 575px) and (max-width: 1217px) {
@@ -18826,6 +18885,27 @@ textarea.form__input {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     margin-bottom: 20px !important;
+  }
+
+  .delivery__details .delivery-card__column--price .form-row {
+    width: 100%;
+  }
+
+  .delivery__details .delivery-card__column--price .form-control {
+    width: 100%;
+  }
+
+  .delivery__details .delivery-card__column--weight .form-row {
+    width: 100%;
+  }
+
+  .delivery__details .delivery-card__column--weight .quantity {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .delivery__details .delivery-card__column--weight .quantity__wrapper {
+    width: 100%;
   }
 
   .delivery-card__column--price {
