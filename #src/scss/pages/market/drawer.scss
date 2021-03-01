@@ -367,13 +367,13 @@
 		display: flex;
 		width: 20px;
 		height: 20px;
-		color: $White;
+		color: $Gray;
 		font-size: 20px;
 		transition: 0.3s ease opacity 0s;
 
 		@media screen and (min-width: 992px) {
 			&:hover {
-				color: $White;
+				color: $Gray;
 				opacity: 0.6;
 			}
 		}

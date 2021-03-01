@@ -3238,7 +3238,7 @@ textarea.form__input {
   display: flex;
   width: 20px;
   height: 20px;
-  color: #ffffff;
+  color: #919191;
   font-size: 20px;
   -webkit-transition: 0.3s ease opacity 0s;
   -o-transition: 0.3s ease opacity 0s;
@@ -12548,7 +12548,7 @@ textarea.form__input {
   }
 
   .account__logout:hover {
-    color: #ffffff;
+    color: #919191;
     opacity: 0.6;
   }
 
